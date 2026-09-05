@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "fecha": "2026-09-04",
+    "total": 1217,
+    "tras_estado": 448,
+    "tras_tipo": 372,
+    "tras_region": 3,
+    "excluidas": 87,
+    "candidatas": 3,
+    "nuevas": 3,
+    "observaciones": [
+      {
+        "codigo": "757-73-LE26",
+        "nombre": "[DGP] Curso de Inteligencia Artificial Generativa",
+        "rubro": "ia",
+        "termino_match": "inteligencia artificial"
+      }
+    ],
+    "barrido_activas": {
+      "total": 4751,
+      "tras_estado": 4751,
+      "tras_tipo": 4030,
+      "tras_region": 45,
+      "excluidas": 1033,
+      "candidatas": 45,
+      "nuevas": 42
+    }
+  }
+]
