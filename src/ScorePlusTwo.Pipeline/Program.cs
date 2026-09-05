@@ -20,11 +20,13 @@ public static class Program
             List<LicitacionRaw> loteDiario;
             DateOnly fecha;
             ResultadoFiltro? resultadoActivas = null;
+            string estadoActivas;
 
             if (opciones.RutaFixture is not null)
             {
                 // Modo local: sin red, sin MP_TICKET, sin barrido activas.
                 fecha = opciones.Fecha ?? DateOnly.FromDateTime(DateTime.UtcNow.AddDays(-1));
+                estadoActivas = "omitido (modo --fixture, sin red)";
                 var rutaFixture = Path.IsPathRooted(opciones.RutaFixture)
                     ? opciones.RutaFixture
                     : Path.Combine(Directory.GetCurrentDirectory(), opciones.RutaFixture);
@@ -50,7 +52,8 @@ public static class Program
                 AcumularAdjudicadas(repoRoot, fecha, respuestaAdjudicada.Listado);
                 loteDiario = respuestaDiaria.Listado;
 
-                if (CorrespondeBarridoActivas(repoRoot))
+                var (corresponde, motivoActivas) = DecidirBarridoActivas(repoRoot);
+                if (corresponde)
                 {
                     // Asimetría deliberada: un fallo aquí NUNCA es fatal para el resto del pipeline.
                     try
@@ -61,11 +64,17 @@ public static class Program
                         var criteriosParaActivas = JsonStore.Cargar<Criterios>(
                             Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
                         resultadoActivas = FiltroLicitaciones.Filtrar(respuestaActivas.Listado, criteriosParaActivas);
+                        estadoActivas = $"corrió ({motivoActivas})";
                     }
                     catch (MercadoPublicoApiException ex)
                     {
+                        estadoActivas = $"omitido este día — {ex.Message}";
                         Console.Error.WriteLine($"[ADVERTENCIA] Barrido 'activas' omitido este día: {ex.Message}");
                     }
+                }
+                else
+                {
+                    estadoActivas = $"no corresponde hoy ({motivoActivas})";
                 }
             }
 
@@ -121,6 +130,8 @@ public static class Program
             var dashboard = GeneradorDashboard.Construir(todasLasCandidatas, informes, DateTime.UtcNow);
             JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
 
+            ImprimirResumen(resultadoDiario, nuevasDiario.Count, estadoActivas, resultadoActivas, nuevasActivas.Count);
+
             return 0;
         }
         catch (MercadoPublicoApiException ex)
@@ -162,7 +173,7 @@ public static class Program
     // data/raw/activas-*.json, siembra inicial) o si hoy es lunes en
     // huso horario de Chile (no UTC: el cron corre a las 09:00 UTC, que
     // puede caer en domingo o lunes en Chile según la época del año).
-    private static bool CorrespondeBarridoActivas(string repoRoot)
+    private static (bool Corresponde, string Motivo) DecidirBarridoActivas(string repoRoot)
     {
         var directorioRaw = Path.Combine(repoRoot, "data", "raw");
         var yaHuboActivas = Directory.Exists(directorioRaw)
@@ -170,12 +181,14 @@ public static class Program
 
         if (!yaHuboActivas)
         {
-            return true;
+            return (true, "primera corrida, siembra inicial");
         }
 
         var zonaChile = TimeZoneInfo.FindSystemTimeZoneById("America/Santiago");
         var ahoraChile = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zonaChile);
-        return ahoraChile.DayOfWeek == DayOfWeek.Monday;
+        return ahoraChile.DayOfWeek == DayOfWeek.Monday
+            ? (true, "lunes en Chile")
+            : (false, $"hoy es {ahoraChile.DayOfWeek} en Chile, no lunes");
     }
 
     private static Candidata CrearCandidata(CandidataDetectada detectada, DateOnly fechaLote, OrigenCandidata origen) =>
@@ -221,4 +234,29 @@ public static class Program
 
     private static string FormatearFecha(DateOnly fecha) =>
         fecha.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+
+    // La primera corrida real estuvo nueve segundos en silencio total sin
+    // esto — cuando el pipeline corre automático a diario, este resumen por
+    // consola (visible en el log del job de GitHub Actions) es lo único que
+    // alguien va a mirar para saber si la corrida tuvo sentido.
+    private static void ImprimirResumen(
+        ResultadoFiltro resultadoDiario, int nuevasDiario, string estadoActivas,
+        ResultadoFiltro? resultadoActivas, int nuevasActivas)
+    {
+        Console.WriteLine("== Resumen de la corrida ==");
+        Console.WriteLine(
+            $"Lote diario: total={resultadoDiario.Total} tras_estado={resultadoDiario.TrasEstado} " +
+            $"tras_tipo={resultadoDiario.TrasTipo} excluidas={resultadoDiario.Excluidas} " +
+            $"candidatas={resultadoDiario.Candidatas.Count} nuevas={nuevasDiario} " +
+            $"observaciones={resultadoDiario.Observaciones.Count}");
+
+        Console.WriteLine(resultadoActivas is null
+            ? $"Barrido 'activas': {estadoActivas}"
+            : $"Barrido 'activas': {estadoActivas} -> total={resultadoActivas.Total} " +
+              $"tras_estado={resultadoActivas.TrasEstado} tras_tipo={resultadoActivas.TrasTipo} " +
+              $"excluidas={resultadoActivas.Excluidas} candidatas={resultadoActivas.Candidatas.Count} " +
+              $"nuevas={nuevasActivas}");
+
+        Console.WriteLine($"Nuevas candidatas totales: {nuevasDiario + nuevasActivas}");
+    }
 }

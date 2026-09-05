@@ -59,6 +59,32 @@ header p {
   margin: 0 0 1rem;
 }
 
+.panel-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.panel-header h2 {
+  margin: 0 0 1rem;
+}
+
+.boton-secundario {
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+}
+
+.boton-secundario:hover {
+  filter: brightness(0.97);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
