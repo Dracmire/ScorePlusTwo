@@ -1,0 +1,156 @@
+:root {
+  --bg: #f7f7f5;
+  --panel: #ffffff;
+  --border: #e2e2df;
+  --text: #1f1f1d;
+  --text-muted: #6b6b66;
+  --accent: #2c5f4f;
+  --accent-soft: #e6efeb;
+  --warn: #a4470e;
+  --warn-soft: #fbe9dd;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.45;
+}
+
+.contenedor {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.panel h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.codigo {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  background: var(--accent-soft);
+  padding: 0.15rem 0.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.codigo:hover {
+  filter: brightness(0.97);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.badge-urgente {
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+
+.badge-normal {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.vacio {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding: 0.5rem 0;
+}
+
+.grafico-serie {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.grafico-serie text {
+  font-size: 10px;
+  fill: var(--text-muted);
+}
+
+.grafico-linea {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.grafico-punto {
+  fill: var(--accent);
+}
+
+.grafico-eje {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+footer {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 2rem;
+}

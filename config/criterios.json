@@ -1,0 +1,90 @@
+{
+  "version": "2026-09-04",
+  "tipos": ["LE", "LP", "LR", "LS"],
+  "estados": [5],
+  "regiones": ["Metropolitana", "Valparaíso", "Coquimbo"],
+  "rubros": [
+    {
+      "id": "compliance",
+      "activo": true,
+      "terminos": [
+        "auditor",
+        "cumplimiento normativ",
+        "protección de datos",
+        "datos personales",
+        "privacidad",
+        "compliance",
+        "21.719",
+        "19.628",
+        "20.393",
+        "prevención de delitos",
+        "lavado de activos",
+        "jurídic",
+        "asesoría legal",
+        "gobernanza",
+        "probidad",
+        "due diligence"
+      ]
+    },
+    {
+      "id": "ti",
+      "activo": true,
+      "terminos": [
+        "informátic",
+        "plataforma",
+        "ciberseguridad",
+        "sistema de gestión",
+        "sistema informático",
+        "digitalización",
+        "transformación digital",
+        "sysadmin",
+        "administrador de sistemas",
+        "soporte ti",
+        "gestión documental",
+        "base de datos",
+        "interoperabilidad"
+      ]
+    },
+    {
+      "id": "ia",
+      "activo": false,
+      "terminos": [
+        "inteligencia artificial",
+        "machine learning",
+        "analítica de datos",
+        "automatización de procesos"
+      ]
+    }
+  ],
+  "exclusiones": [
+    "insumo",
+    "medicamento",
+    "fármaco",
+    "alimentación",
+    "aseo",
+    "construcción",
+    "conservación",
+    "vehículo",
+    "ambulancia",
+    "mobiliario",
+    "ferretería",
+    "uniforme",
+    "vestuario",
+    "quirúrgic",
+    "clínic",
+    "dental",
+    "catéter",
+    "jeringa",
+    "fiestas patrias",
+    "producción de evento",
+    "baños químicos",
+    "carpa",
+    "árido",
+    "pavimento",
+    "luminaria",
+    "extintor",
+    "neumático",
+    "software",
+    "servidor"
+  ]
+}

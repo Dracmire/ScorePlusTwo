@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Licitaciones — Candidatas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <header>
+      <h1>Candidatas de Mercado Público</h1>
+      <p id="generado-en">Cargando…</p>
+    </header>
+
+    <section class="panel">
+      <h2>Candidatas vigentes</h2>
+      <div id="tabla-candidatas"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Tasa de rubro por día</h2>
+      <div id="grafico-serie"></div>
+    </section>
+
+    <footer>
+      Tablero de solo lectura — F1 (MVP). El triage se hace editando
+      <code>data/candidatas.json</code> en el repo.
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
