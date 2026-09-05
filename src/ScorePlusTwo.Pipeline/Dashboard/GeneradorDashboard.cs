@@ -12,6 +12,8 @@ public sealed record DashboardCandidata(
     string TerminoMatch,
     string? Region,
     string? Organismo,
+    string? Moneda,
+    decimal? Monto,
     EstadoFlujo EstadoFlujo,
     string? UrlFicha);
 
@@ -24,15 +26,16 @@ public sealed record DashboardData(
 
 public static class GeneradorDashboard
 {
-    // Patrón verificado externamente (fuera de este entorno, cuyo proxy de
-    // red bloquea mercadopublico.cl) contra la ficha real de la licitación
-    // 976-28-O125: el servidor acepta el código plano como "idlicitacion" y
-    // redirige internamente a la forma "?qs=<cadena codificada>". Resuelve
-    // correctamente a la ficha — no volver a cuestionar este patrón sin
-    // evidencia de que dejó de funcionar.
-    private const string PatronUrlFicha =
-        "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion={0}";
-
+    // UrlFicha queda en null: el patrón "?idlicitacion={codigo}" NO resuelve
+    // a la ficha del código pedido — es estado de sesión de ASP.NET, no un
+    // parámetro independiente. Caso concreto que lo confirmó: se pidió
+    // "?idlicitacion=598-16-LE26" y el servidor devolvió la ficha de
+    // "976-28-O125" (la que se había pedido en una verificación anterior),
+    // redirigiendo igual a la forma "?qs=<cadena codificada>". Una demo a
+    // clientes mostraría la licitación equivocada, que es peor que no tener
+    // link — así que el tablero muestra el código como texto plano copiable
+    // (ver docs/app.js). No reintentar este patrón sin una forma de probarlo
+    // contra dos códigos distintos en la misma sesión del navegador.
     public static DashboardData Construir(IEnumerable<Candidata> candidatas, IEnumerable<InformeDiario> informes, DateTime ahora)
     {
         var candidatasOrdenadas = candidatas
@@ -49,8 +52,10 @@ public static class GeneradorDashboard
                 TerminoMatch: c.TerminoMatch,
                 Region: c.Region,
                 Organismo: c.Organismo,
+                Moneda: c.Moneda,
+                Monto: c.Monto,
                 EstadoFlujo: c.EstadoFlujo,
-                UrlFicha: string.Format(PatronUrlFicha, Uri.EscapeDataString(c.Codigo))))
+                UrlFicha: null))
             .ToList();
 
         var serie = informes

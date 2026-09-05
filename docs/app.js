@@ -30,6 +30,16 @@
     return '<span class="badge ' + clase + '">' + etiqueta + "</span>";
   }
 
+  // Monto y moneda se muestran juntos y SIN CONVERTIR (ver Candidata.cs):
+  // "11.000 CLF" nunca se reduce a un número en pesos, porque eso haría que
+  // UF o USD parezcan pesos chilenos. Ninguno de los dos llega poblado
+  // todavía en F1 (requiere el detalle de sobrevivientes de F2).
+  function renderMonto(candidata) {
+    if (candidata.monto == null || !candidata.moneda) return '<span class="vacio">—</span>';
+    var monto = Number(candidata.monto).toLocaleString("es-CL");
+    return escaparHtml(monto) + " " + escaparHtml(candidata.moneda);
+  }
+
   function renderTabla(candidatas) {
     var contenedor = document.getElementById("tabla-candidatas");
 
@@ -44,6 +54,7 @@
         "<td>" + escaparHtml(c.nombre) + "</td>" +
         "<td>" + escaparHtml(c.tipo) + "</td>" +
         "<td>" + escaparHtml(c.rubro_match) + " · " + escaparHtml(c.termino_match) + "</td>" +
+        "<td>" + renderMonto(c) + "</td>" +
         "<td>" + formatearFecha(c.fecha_cierre) + "</td>" +
         "<td>" + renderDiasParaCierre(c.dias_para_cierre) + "</td>" +
         "<td>" + escaparHtml(c.estado_flujo) + "</td>" +
@@ -53,7 +64,7 @@
     contenedor.innerHTML =
       "<table>" +
       "<thead><tr>" +
-      "<th>Código</th><th>Nombre</th><th>Tipo</th><th>Rubro</th>" +
+      "<th>Código</th><th>Nombre</th><th>Tipo</th><th>Rubro</th><th>Monto</th>" +
       "<th>Cierre</th><th>Plazo</th><th>Estado</th>" +
       "</tr></thead>" +
       "<tbody>" + filas + "</tbody>" +
@@ -71,6 +82,44 @@
         });
       });
     });
+  }
+
+  // Exportación a CSV generada enteramente en el cliente, sin servidor.
+  // Comillas RFC4180 correctas en los campos de texto — el problema real que
+  // motivó esto fue justo lo contrario: el CSV que exporta Mercado Público
+  // usa ';' sin encomillar campos que contienen ';' embebido y desalinea
+  // columnas en silencio (ver JsonStore.cs, caso 85-34-LP26).
+  function csvEscapar(valor) {
+    var texto = valor == null ? "" : String(valor);
+    if (/["\n,]/.test(texto)) {
+      return '"' + texto.replace(/"/g, '""') + '"';
+    }
+    return texto;
+  }
+
+  function candidatasACsv(candidatas) {
+    var columnas = [
+      "codigo", "nombre", "tipo", "rubro_match", "termino_match",
+      "moneda", "monto", "fecha_cierre", "dias_para_cierre", "estado_flujo",
+    ];
+    var filas = [columnas.join(",")];
+    candidatas.forEach(function (c) {
+      filas.push(columnas.map(function (col) { return csvEscapar(c[col]); }).join(","));
+    });
+    return filas.join("\r\n");
+  }
+
+  function descargarCsv(candidatas) {
+    // BOM UTF-8 para que Excel abra bien las tildes.
+    var blob = new Blob(["﻿" + candidatasACsv(candidatas)], { type: "text/csv;charset=utf-8;" });
+    var url = URL.createObjectURL(blob);
+    var enlace = document.createElement("a");
+    enlace.href = url;
+    enlace.download = "candidatas-" + new Date().toISOString().slice(0, 10) + ".csv";
+    document.body.appendChild(enlace);
+    enlace.click();
+    document.body.removeChild(enlace);
+    URL.revokeObjectURL(url);
   }
 
   function renderGrafico(serie) {
@@ -121,11 +170,18 @@
   fetch("data.json")
     .then(function (respuesta) { return respuesta.json(); })
     .then(function (datos) {
+      var candidatas = datos.candidatas || [];
       document.getElementById("generado-en").textContent = datos.generado_en
         ? "Última actualización: " + new Date(datos.generado_en).toLocaleString("es-CL")
         : "Todavía sin corridas.";
-      renderTabla(datos.candidatas || []);
+      renderTabla(candidatas);
       renderGrafico(datos.serie_tasa_rubro || []);
+
+      var botonCsv = document.getElementById("btn-descargar-csv");
+      if (candidatas.length) {
+        botonCsv.hidden = false;
+        botonCsv.addEventListener("click", function () { descargarCsv(candidatas); });
+      }
     })
     .catch(function (error) {
       document.getElementById("generado-en").textContent = "No se pudo cargar data.json.";
