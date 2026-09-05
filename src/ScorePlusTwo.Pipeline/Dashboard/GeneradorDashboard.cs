@@ -24,15 +24,15 @@ public sealed record DashboardData(
 
 public static class GeneradorDashboard
 {
-    // UrlFicha queda en null en F1: el patrón "?idlicitacion={codigo}" no
-    // pudo verificarse (el dominio mercadopublico.cl está bloqueado por el
-    // proxy de red del entorno de desarrollo — no se pudo confirmar ni
-    // descartar). Lo único documentado que sí funciona es la forma
-    // "?qs=<cadena codificada>", que no es el código plano. Un link no
-    // verificado que resulte roto cuesta más en una demo a clientes que no
-    // tener link — así que el tablero muestra el código como texto plano
-    // copiable (ver docs/app.js) hasta confirmar el patrón correcto contra
-    // un caso real y completar este método con un solo cambio localizado.
+    // Patrón verificado externamente (fuera de este entorno, cuyo proxy de
+    // red bloquea mercadopublico.cl) contra la ficha real de la licitación
+    // 976-28-O125: el servidor acepta el código plano como "idlicitacion" y
+    // redirige internamente a la forma "?qs=<cadena codificada>". Resuelve
+    // correctamente a la ficha — no volver a cuestionar este patrón sin
+    // evidencia de que dejó de funcionar.
+    private const string PatronUrlFicha =
+        "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion={0}";
+
     public static DashboardData Construir(IEnumerable<Candidata> candidatas, IEnumerable<InformeDiario> informes, DateTime ahora)
     {
         var candidatasOrdenadas = candidatas
@@ -50,7 +50,7 @@ public static class GeneradorDashboard
                 Region: c.Region,
                 Organismo: c.Organismo,
                 EstadoFlujo: c.EstadoFlujo,
-                UrlFicha: null))
+                UrlFicha: string.Format(PatronUrlFicha, Uri.EscapeDataString(c.Codigo))))
             .ToList();
 
         var serie = informes
