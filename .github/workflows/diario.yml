@@ -2,11 +2,22 @@ name: Pipeline diario
 
 on:
   schedule:
-    - cron: '0 9 * * *' # 09:00 UTC = 06:00 CLT (hora de invierno) / 05:00 CLT (hora de verano)
+    # GitHub Actions interpreta el cron SIEMPRE en UTC — no hay forma de
+    # pedirle que use hora de Chile directamente. Chile alterna entre
+    # UTC-4 (hora de invierno) y UTC-3 (hora de verano) según la época del
+    # año, así que un solo valor de cron cae en horas locales distintas
+    # dependiendo de la temporada. '0 5 * * *' UTC da 01:00 CLT en invierno
+    # y 02:00 CLT en verano — ambas dentro de la ventana 22:00–07:00 que
+    # ChileCompra recomienda para consultas pesadas (SPEC §2). NO usar
+    # '0 4 * * *': en invierno cae exactamente a medianoche en Chile, y el
+    # programa calcula "ayer" a partir de la fecha local (America/Santiago,
+    # ver Program.cs) — una corrida que dispare unos segundos antes o
+    # después de esa medianoche pediría el día equivocado a la API.
+    - cron: '0 5 * * *'
   workflow_dispatch:
     inputs:
       fecha:
-        description: 'Fecha a procesar (DD-MM-YYYY). Vacío = ayer (UTC).'
+        description: 'Fecha a procesar (DD-MM-YYYY). Vacío = ayer en Chile (America/Santiago).'
         required: false
         type: string
 

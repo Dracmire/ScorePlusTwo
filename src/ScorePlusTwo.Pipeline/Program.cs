@@ -25,7 +25,7 @@ public static class Program
             if (opciones.RutaFixture is not null)
             {
                 // Modo local: sin red, sin MP_TICKET, sin barrido activas.
-                fecha = opciones.Fecha ?? DateOnly.FromDateTime(DateTime.UtcNow.AddDays(-1));
+                fecha = opciones.Fecha ?? DateOnly.FromDateTime(AhoraChile()).AddDays(-1);
                 estadoActivas = "omitido (modo --fixture, sin red)";
                 var rutaFixture = Path.IsPathRooted(opciones.RutaFixture)
                     ? opciones.RutaFixture
@@ -39,7 +39,7 @@ public static class Program
             {
                 var ticket = Environment.GetEnvironmentVariable("MP_TICKET")
                     ?? throw new MercadoPublicoApiException("Falta la variable de entorno MP_TICKET.");
-                fecha = opciones.Fecha ?? DateOnly.FromDateTime(DateTime.UtcNow.AddDays(-1));
+                fecha = opciones.Fecha ?? DateOnly.FromDateTime(AhoraChile()).AddDays(-1);
 
                 using var http = new HttpClient();
                 var cliente = new MercadoPublicoClient(http, ticket);
@@ -59,7 +59,7 @@ public static class Program
                     try
                     {
                         var respuestaActivas = await cliente.ObtenerActivasAsync();
-                        GuardarRawActivas(repoRoot, DateOnly.FromDateTime(DateTime.UtcNow), respuestaActivas);
+                        GuardarRawActivas(repoRoot, DateOnly.FromDateTime(AhoraChile()), respuestaActivas);
 
                         var criteriosParaActivas = JsonStore.Cargar<Criterios>(
                             Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
@@ -97,7 +97,7 @@ public static class Program
                 ? new List<Candidata>()
                 : resultadoActivas.Candidatas
                     .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno) && !codigosDiario.Contains(c.Origen.CodigoExterno))
-                    .Select(c => CrearCandidata(c, DateOnly.FromDateTime(DateTime.UtcNow), OrigenCandidata.Activas))
+                    .Select(c => CrearCandidata(c, DateOnly.FromDateTime(AhoraChile()), OrigenCandidata.Activas))
                     .ToList();
 
             var todasLasCandidatas = existentes.Concat(nuevasDiario).Concat(nuevasActivas).ToList();
@@ -171,8 +171,9 @@ public static class Program
 
     // Se intenta si es la primera corrida real (aún no existe ningún
     // data/raw/activas-*.json, siembra inicial) o si hoy es lunes en
-    // huso horario de Chile (no UTC: el cron corre a las 09:00 UTC, que
-    // puede caer en domingo o lunes en Chile según la época del año).
+    // huso horario de Chile (no UTC: el cron corre de madrugada en Chile,
+    // pero sigue siendo hora de Chile la que decide qué día es, no la del
+    // runner — ver AhoraChile()).
     private static (bool Corresponde, string Motivo) DecidirBarridoActivas(string repoRoot)
     {
         var directorioRaw = Path.Combine(repoRoot, "data", "raw");
@@ -184,11 +185,23 @@ public static class Program
             return (true, "primera corrida, siembra inicial");
         }
 
-        var zonaChile = TimeZoneInfo.FindSystemTimeZoneById("America/Santiago");
-        var ahoraChile = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zonaChile);
+        var ahoraChile = AhoraChile();
         return ahoraChile.DayOfWeek == DayOfWeek.Monday
             ? (true, "lunes en Chile")
             : (false, $"hoy es {ahoraChile.DayOfWeek} en Chile, no lunes");
+    }
+
+    // Toda decisión de "qué día es" (ayer para el lote diario, hoy para el
+    // barrido activas, lunes o no para decidir si corre) se calcula en hora
+    // de Chile, nunca en la del runner de GitHub Actions ni en UTC crudo:
+    // Chile alterna entre UTC-3 y UTC-4 según la época del año, y usar UTC
+    // directamente puede pedirle a la API el día equivocado si la corrida
+    // cae cerca de la medianoche chilena (ver el comentario del cron en
+    // .github/workflows/diario.yml).
+    private static DateTime AhoraChile()
+    {
+        var zonaChile = TimeZoneInfo.FindSystemTimeZoneById("America/Santiago");
+        return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zonaChile);
     }
 
     private static Candidata CrearCandidata(CandidataDetectada detectada, DateOnly fechaLote, OrigenCandidata origen) =>
