@@ -23,6 +23,25 @@
       escaparHtml(candidata.codigo) + "</span>";
   }
 
+  // Calculado en el navegador, SIEMPRE contra la fecha de hoy del cliente —
+  // nunca leído de data.json. dias_para_cierre solía congelarse al generar
+  // el JSON (Math.ceil de una resta en milisegundos desde el momento de esa
+  // corrida) y envejecía sin aviso si el pipeline no corría un día o el
+  // navegador cacheaba el archivo: un 08-09 generado el 05-09 daba "3 días"
+  // en vez de los "2 días" reales al mirarlo el 06-09. Por eso se trunca
+  // tanto el cierre como "hoy" a medianoche antes de restar: la cuenta debe
+  // coincidir con cómo cuenta un humano ("el 8 menos el 6 son 2"), no con
+  // cuántas horas exactas faltan.
+  function diasParaCierre(fechaCierreIso) {
+    if (!fechaCierreIso) return null;
+    var cierre = new Date(fechaCierreIso);
+    var hoy = new Date();
+    var cierreSoloFecha = new Date(cierre.getFullYear(), cierre.getMonth(), cierre.getDate());
+    var hoySoloFecha = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
+    var msPorDia = 24 * 60 * 60 * 1000;
+    return Math.round((cierreSoloFecha - hoySoloFecha) / msPorDia);
+  }
+
   function renderDiasParaCierre(dias) {
     if (dias == null) return '<span class="vacio">sin fecha</span>';
     var clase = dias <= 3 ? "badge-urgente" : "badge-normal";
@@ -56,8 +75,10 @@
         "<td>" + escaparHtml(c.rubro_match) + " · " + escaparHtml(c.termino_match) + "</td>" +
         "<td>" + renderMonto(c) + "</td>" +
         "<td>" + formatearFecha(c.fecha_cierre) + "</td>" +
-        "<td>" + renderDiasParaCierre(c.dias_para_cierre) + "</td>" +
+        "<td>" + renderDiasParaCierre(diasParaCierre(c.fecha_cierre)) + "</td>" +
         "<td>" + escaparHtml(c.estado_flujo) + "</td>" +
+        "<td>" + escaparHtml(c.origen) + "</td>" +
+        "<td>" + formatearFecha(c.fecha_lote) + "</td>" +
         "</tr>";
     }).join("");
 
@@ -65,7 +86,7 @@
       "<table>" +
       "<thead><tr>" +
       "<th>Código</th><th>Nombre</th><th>Tipo</th><th>Rubro</th><th>Monto</th>" +
-      "<th>Cierre</th><th>Plazo</th><th>Estado</th>" +
+      "<th>Cierre</th><th>Plazo</th><th>Estado</th><th>Origen</th><th>Lote</th>" +
       "</tr></thead>" +
       "<tbody>" + filas + "</tbody>" +
       "</table>";
@@ -101,10 +122,15 @@
     var columnas = [
       "codigo", "nombre", "tipo", "rubro_match", "termino_match",
       "moneda", "monto", "fecha_cierre", "dias_para_cierre", "estado_flujo",
+      "origen", "fecha_lote",
     ];
     var filas = [columnas.join(",")];
     candidatas.forEach(function (c) {
-      filas.push(columnas.map(function (col) { return csvEscapar(c[col]); }).join(","));
+      // dias_para_cierre no viene en data.json (ver diasParaCierre): se
+      // recalcula aquí, en el momento exacto del click, para que el CSV
+      // nunca traiga un plazo desactualizado.
+      var fila = Object.assign({}, c, { dias_para_cierre: diasParaCierre(c.fecha_cierre) });
+      filas.push(columnas.map(function (col) { return csvEscapar(fila[col]); }).join(","));
     });
     return filas.join("\r\n");
   }
