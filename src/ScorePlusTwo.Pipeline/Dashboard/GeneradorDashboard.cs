@@ -7,7 +7,6 @@ public sealed record DashboardCandidata(
     string Nombre,
     string Tipo,
     DateTime? FechaCierre,
-    int? DiasParaCierre,
     string RubroMatch,
     string TerminoMatch,
     string? Region,
@@ -15,6 +14,8 @@ public sealed record DashboardCandidata(
     string? Moneda,
     decimal? Monto,
     EstadoFlujo EstadoFlujo,
+    OrigenCandidata Origen,
+    DateOnly FechaLote,
     string? UrlFicha);
 
 public sealed record DashboardSerieItem(DateOnly Fecha, int Total, int Candidatas, double Tasa);
@@ -45,9 +46,6 @@ public static class GeneradorDashboard
                 Nombre: c.Nombre,
                 Tipo: c.Tipo,
                 FechaCierre: c.FechaCierre,
-                DiasParaCierre: c.FechaCierre is { } fechaCierre
-                    ? (int)Math.Ceiling((fechaCierre - ahora).TotalDays)
-                    : null,
                 RubroMatch: c.RubroMatch,
                 TerminoMatch: c.TerminoMatch,
                 Region: c.Region,
@@ -55,6 +53,8 @@ public static class GeneradorDashboard
                 Moneda: c.Moneda,
                 Monto: c.Monto,
                 EstadoFlujo: c.EstadoFlujo,
+                Origen: c.Origen,
+                FechaLote: c.FechaLote,
                 UrlFicha: null))
             .ToList();
 
