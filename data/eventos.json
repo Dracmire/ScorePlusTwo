@@ -12,5 +12,12 @@
     "accion": "corrida_pipeline",
     "codigo": null,
     "detalle": "total=1217 candidatas=3 nuevas=0"
+  },
+  {
+    "timestamp": "2026-09-06T06:32:21.5383329Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=14 candidatas=0 nuevas=0"
   }
 ]

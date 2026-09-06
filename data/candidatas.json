@@ -9,10 +9,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "diario"
+    "origen": "diario",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "726931-1-LE26",
@@ -24,10 +27,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "diario"
+    "origen": "diario",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "5413-71-LE26",
@@ -39,10 +45,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "diario"
+    "origen": "diario",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1007793-15-LE26",
@@ -54,10 +63,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1020-38-LP26",
@@ -69,10 +81,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1057501-488-LE26",
@@ -84,10 +99,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1057548-21-LE26",
@@ -99,10 +117,13 @@
     "termino_match": "digitalizaci\u00F3n",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1259850-4-LP26",
@@ -114,10 +135,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1422824-1-LR26",
@@ -129,10 +153,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1562-49-LR26",
@@ -144,10 +171,13 @@
     "termino_match": "ciberseguridad",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1562-52-LE26",
@@ -159,10 +189,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1562-55-LE26",
@@ -174,10 +207,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1588-28-LE26",
@@ -189,10 +225,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1593-24-LP26",
@@ -204,10 +243,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1607-10-LR26",
@@ -219,10 +261,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1725-196-LE26",
@@ -234,10 +279,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1725-197-LP26",
@@ -249,10 +297,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "1978-44-LE26",
@@ -264,10 +315,13 @@
     "termino_match": "ciberseguridad",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "2408-160-LP26",
@@ -279,10 +333,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "2413-20-LE26",
@@ -294,10 +351,13 @@
     "termino_match": "sistema de gesti\u00F3n",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "2434-20-LP26",
@@ -309,10 +369,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "2446-251-LE26",
@@ -324,10 +387,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "2563-34-LR26",
@@ -339,10 +405,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "2770-120-LR26",
@@ -354,10 +423,13 @@
     "termino_match": "sistema de gesti\u00F3n",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "2981-256-LE26",
@@ -369,10 +441,13 @@
     "termino_match": "auditor",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "3000-30-LE26",
@@ -384,10 +459,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "3084-31-LE26",
@@ -399,10 +477,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "3378-51-LP26",
@@ -414,10 +495,13 @@
     "termino_match": "base de datos",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "3671-58-LE26",
@@ -429,10 +513,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "4956-74-LE26",
@@ -444,10 +531,13 @@
     "termino_match": "compliance",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "5240-93-LP26",
@@ -459,10 +549,13 @@
     "termino_match": "auditor",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "548874-72-LR26",
@@ -474,10 +567,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "548874-74-LR26",
@@ -489,10 +585,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "548874-77-LR26",
@@ -504,10 +603,13 @@
     "termino_match": "ciberseguridad",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "5586-128-LE26",
@@ -519,10 +621,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "598-16-LE26",
@@ -534,10 +639,13 @@
     "termino_match": "cumplimiento normativ",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "633-50-LE26",
@@ -549,10 +657,13 @@
     "termino_match": "auditor",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "730566-21-LP26",
@@ -564,10 +675,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "732434-20-LP26",
@@ -579,10 +693,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "734-50-LE26",
@@ -594,10 +711,13 @@
     "termino_match": "sysadmin",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "742475-4-LE26",
@@ -609,10 +729,13 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "85-34-LP26",
@@ -624,10 +747,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "85-41-LE26",
@@ -639,10 +765,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "885-81-LP26",
@@ -654,10 +783,13 @@
     "termino_match": "plataforma",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   },
   {
     "codigo": "906973-8-LP26",
@@ -669,9 +801,12 @@
     "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
+    "moneda": null,
+    "monto": null,
     "estado_flujo": "pendiente",
     "notas": null,
     "cliente_asignado": null,
-    "origen": "activas"
+    "origen": "activas",
+    "cantidad_reclamos": null
   }
 ]

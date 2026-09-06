@@ -17,5 +17,17 @@
       }
     ],
     "barrido_activas": null
+  },
+  {
+    "fecha": "2026-09-05",
+    "total": 14,
+    "tras_estado": 10,
+    "tras_tipo": 4,
+    "tras_region": 0,
+    "excluidas": 2,
+    "candidatas": 0,
+    "nuevas": 0,
+    "observaciones": [],
+    "barrido_activas": null
   }
 ]
