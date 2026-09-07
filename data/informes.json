@@ -29,5 +29,25 @@
     "nuevas": 0,
     "observaciones": [],
     "barrido_activas": null
+  },
+  {
+    "fecha": "2026-09-06",
+    "total": 9,
+    "tras_estado": 7,
+    "tras_tipo": 4,
+    "tras_region": 0,
+    "excluidas": 0,
+    "candidatas": 0,
+    "nuevas": 0,
+    "observaciones": [],
+    "barrido_activas": {
+      "total": 4768,
+      "tras_estado": 4768,
+      "tras_tipo": 4038,
+      "tras_region": 45,
+      "excluidas": 1035,
+      "candidatas": 45,
+      "nuevas": 0
+    }
   }
 ]

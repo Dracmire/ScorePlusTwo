@@ -1,12 +1,11 @@
 {
-  "generado_en": "2026-09-06T06:32:21.5389291Z",
+  "generado_en": "2026-09-07T05:48:23.565532Z",
   "candidatas": [
     {
       "codigo": "2446-251-LE26",
       "nombre": "IMPLEMENTACION PLATAFORMA E-LEARNING",
       "tipo": "LE",
       "fecha_cierre": "2026-09-07T15:09:00",
-      "dias_para_cierre": 2,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -14,6 +13,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -21,7 +22,6 @@
       "nombre": "SOLUCI\u00D3N INFORM\u00C1TICA INSTITUCIONAL PARA EL CFT",
       "tipo": "LE",
       "fecha_cierre": "2026-09-07T15:30:00",
-      "dias_para_cierre": 2,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -29,6 +29,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -36,7 +38,6 @@
       "nombre": "ADQUISICI\u00D3N DE SOLUCI\u00D3N XDR PARA CIBERSEGURIDAD AVANZADA SERVICIO DE SALUD MAULE",
       "tipo": "LE",
       "fecha_cierre": "2026-09-07T15:30:00",
-      "dias_para_cierre": 2,
       "rubro_match": "ti",
       "termino_match": "ciberseguridad",
       "region": null,
@@ -44,6 +45,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -51,7 +54,6 @@
       "nombre": "RENOVACI\u00D3N DE PLATAFORMA WIFI",
       "tipo": "LP",
       "fecha_cierre": "2026-09-07T15:30:00",
-      "dias_para_cierre": 2,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -59,6 +61,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -66,7 +70,6 @@
       "nombre": "SERVICIO DE SOPORTE Y MANTENCI\u00D3N DE SISTEMA Y BASE DE DATOS SAP-HANA BUSINESS ONE PARA EL HMS POR 36 MESES",
       "tipo": "LP",
       "fecha_cierre": "2026-09-07T16:00:00",
-      "dias_para_cierre": 2,
       "rubro_match": "ti",
       "termino_match": "base de datos",
       "region": null,
@@ -74,6 +77,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -81,7 +86,6 @@
       "nombre": "SERVICIO DE CAPACITACI\u00D3N EN PROTECCI\u00D3N DE DATOS PERSONALES GOBERNANZA DE DATOS Y CUMPLIMIENTO NORMATIVO",
       "tipo": "LE",
       "fecha_cierre": "2026-09-08T09:00:00",
-      "dias_para_cierre": 3,
       "rubro_match": "compliance",
       "termino_match": "cumplimiento normativ",
       "region": null,
@@ -89,6 +93,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -96,7 +102,6 @@
       "nombre": "Renovaci\u00F3n Plataforma Jira Service SAAS y Soporte",
       "tipo": "LE",
       "fecha_cierre": "2026-09-08T15:30:00",
-      "dias_para_cierre": 3,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -104,6 +109,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -111,7 +118,6 @@
       "nombre": "Adquisici\u00F3n de equipos inform\u00E1ticos para el programa Oficina Local de la Ni\u00F1ez",
       "tipo": "LE",
       "fecha_cierre": "2026-09-09T12:00:00",
-      "dias_para_cierre": 4,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -119,6 +125,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -126,7 +134,6 @@
       "nombre": "ADQUISICI\u00D3N RENOVACI\u00D3N PLATAFORMA ROCSCIENCE",
       "tipo": "LE",
       "fecha_cierre": "2026-09-09T15:00:00",
-      "dias_para_cierre": 4,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -134,6 +141,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -141,7 +150,6 @@
       "nombre": "ARRIENDO MODULOS BODEGA PARA INFORM\u00C1TICA HSR",
       "tipo": "LE",
       "fecha_cierre": "2026-09-10T12:00:00",
-      "dias_para_cierre": 5,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -149,6 +157,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -156,7 +166,6 @@
       "nombre": "SISTEMA DE GESTI\u00D3N INTEGRADO SMAPA",
       "tipo": "LR",
       "fecha_cierre": "2026-09-10T14:00:00",
-      "dias_para_cierre": 5,
       "rubro_match": "ti",
       "termino_match": "sistema de gesti\u00F3n",
       "region": null,
@@ -164,6 +173,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -171,7 +182,6 @@
       "nombre": "BR CONTRATACI\u00D3N DE PLATAFORMA TECNOL\u00D3GICA TIPO SAAS DE GESTI\u00D3N DIGITAL",
       "tipo": "LE",
       "fecha_cierre": "2026-09-11T10:00:00",
-      "dias_para_cierre": 6,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -179,6 +189,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -186,7 +198,6 @@
       "nombre": "Toner y Tintas INFORM\u00C1TICA",
       "tipo": "LE",
       "fecha_cierre": "2026-09-11T15:00:00",
-      "dias_para_cierre": 6,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -194,6 +205,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -201,7 +214,6 @@
       "nombre": "\u201CHABILITACI\u00D3N DE NUEVAS DEPENDENCIAS DE SEGURIDAD MUNICIPAL E INFORM\u00C1TICA DE LA MUNICIPALIDAD DE CHILL\u00C1N VIEJO\u201D ",
       "tipo": "LE",
       "fecha_cierre": "2026-09-11T15:00:00",
-      "dias_para_cierre": 6,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -209,6 +221,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -216,7 +230,6 @@
       "nombre": "AUDITOR\u00CDA A LOS ESTADOS FINANCIEROS DE LA CORPORACI\u00D3N NACIONAL FORESTAL",
       "tipo": "LE",
       "fecha_cierre": "2026-09-11T16:00:00",
-      "dias_para_cierre": 6,
       "rubro_match": "compliance",
       "termino_match": "auditor",
       "region": null,
@@ -224,6 +237,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -231,7 +246,6 @@
       "nombre": "servicio hospedaje soporte mantenci\u00F3n plataforma",
       "tipo": "LR",
       "fecha_cierre": "2026-09-14T15:00:00",
-      "dias_para_cierre": 9,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -239,6 +253,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -246,7 +262,6 @@
       "nombre": "SISTEMA DE GESTI\u00D3N DOCUMENTAL",
       "tipo": "LE",
       "fecha_cierre": "2026-09-14T15:00:00",
-      "dias_para_cierre": 9,
       "rubro_match": "ti",
       "termino_match": "sistema de gesti\u00F3n",
       "region": null,
@@ -254,6 +269,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -261,7 +278,6 @@
       "nombre": "JENACOP- CONTRATACI\u00D3N DE SERVICIOS PROFESIONALES DE AUDITORIA EXTERNA PARA LA PDI",
       "tipo": "LE",
       "fecha_cierre": "2026-09-14T15:00:00",
-      "dias_para_cierre": 9,
       "rubro_match": "compliance",
       "termino_match": "auditor",
       "region": null,
@@ -269,6 +285,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -276,7 +294,6 @@
       "nombre": "ADQUISICI\u00D3N DE ADMINISTRADOR DE SISTEMAS SYSADMIN",
       "tipo": "LE",
       "fecha_cierre": "2026-09-14T15:00:00",
-      "dias_para_cierre": 9,
       "rubro_match": "ti",
       "termino_match": "sysadmin",
       "region": null,
@@ -284,6 +301,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -291,7 +310,6 @@
       "nombre": "SISTEMAS INFORM\u00C1TICOS DE GESTI\u00D3N MUNICIPAL",
       "tipo": "LP",
       "fecha_cierre": "2026-09-14T15:00:00",
-      "dias_para_cierre": 9,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -299,6 +317,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -306,7 +326,6 @@
       "nombre": "Convenio Suministro de Servicio de Fotocopiado Impresion y Digitalizacion con Entrega de Equipos",
       "tipo": "LE",
       "fecha_cierre": "2026-09-14T15:01:00",
-      "dias_para_cierre": 9,
       "rubro_match": "ti",
       "termino_match": "digitalizaci\u00F3n",
       "region": null,
@@ -314,6 +333,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -321,7 +342,6 @@
       "nombre": "ELABORACI\u00D3N PROGRAMA DE CUMPLIMIENTO COMPLIANCE",
       "tipo": "LE",
       "fecha_cierre": "2026-09-14T15:01:00",
-      "dias_para_cierre": 9,
       "rubro_match": "compliance",
       "termino_match": "compliance",
       "region": null,
@@ -329,6 +349,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -336,7 +358,6 @@
       "nombre": "SERVICIO DE AUDITOR\u00CDA EXTERNA",
       "tipo": "LP",
       "fecha_cierre": "2026-09-14T15:30:00",
-      "dias_para_cierre": 9,
       "rubro_match": "compliance",
       "termino_match": "auditor",
       "region": null,
@@ -344,6 +365,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -351,7 +374,6 @@
       "nombre": "RESTAURACI\u00D3N MANTENCI\u00D3N Y SOPORTE DE PLATAFORMAS",
       "tipo": "LE",
       "fecha_cierre": "2026-09-15T15:00:00",
-      "dias_para_cierre": 10,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -359,6 +381,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -366,7 +390,6 @@
       "nombre": "SERV. PLATAFORMA INTEGRAL PARA GESTION MUNICIPAL",
       "tipo": "LP",
       "fecha_cierre": "2026-09-16T14:00:00",
-      "dias_para_cierre": 11,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -374,6 +397,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -381,7 +406,6 @@
       "nombre": "CONTRATO DE SUMINISTRO DE REACTIVOS PARA EX\u00C1MENES BIOQU\u00CDMICOS INMUNOENDOCRINOL\u00D3GICOS Y SEROLOGICOS CON EQUIPAMIENTO Y SISTEMA INFORM\u00C1TICO DE LABORATORIO EN COMODATO PARA EL HOSPITAL CARLOS VAN BUREN",
       "tipo": "LR",
       "fecha_cierre": "2026-09-16T16:00:00",
-      "dias_para_cierre": 11,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -389,6 +413,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -396,7 +422,6 @@
       "nombre": "EQUIPOS INFORM\u00C1TICOS PARA DEPENDENCIAS MUNICIPALES",
       "tipo": "LP",
       "fecha_cierre": "2026-09-17T09:00:00",
-      "dias_para_cierre": 12,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -404,6 +429,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -411,7 +438,6 @@
       "nombre": "DIFUSI\u00D3N PLATAFORMA WEB APLICACI\u00D3N M\u00D3VIL CHILE CUL",
       "tipo": "LE",
       "fecha_cierre": "2026-09-17T11:59:00",
-      "dias_para_cierre": 12,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -419,6 +445,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -426,7 +454,6 @@
       "nombre": "ADQUISICI\u00D3N DE CAMI\u00D3N CON CARROCERIA Y PLATAFORMA DE ELEVACI\u00D3N",
       "tipo": "LE",
       "fecha_cierre": "2026-09-21T15:01:00",
-      "dias_para_cierre": 16,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -434,6 +461,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-04",
       "url_ficha": null
     },
     {
@@ -441,7 +470,6 @@
       "nombre": "Adquisici\u00F3n instalaci\u00F3n plataforma almacenamiento",
       "tipo": "LP",
       "fecha_cierre": "2026-09-21T15:01:00",
-      "dias_para_cierre": 16,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -449,6 +477,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -456,7 +486,6 @@
       "nombre": "EQUIPOS PARA REDES INFORM\u00C1TICAS Y LICENCIAS",
       "tipo": "LR",
       "fecha_cierre": "2026-09-21T15:01:00",
-      "dias_para_cierre": 16,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -464,6 +493,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -471,7 +502,6 @@
       "nombre": "PLATAFORMA INTEGRAL SOPORTE TI CON CONTROL REMOTO",
       "tipo": "LE",
       "fecha_cierre": "2026-09-21T15:01:00",
-      "dias_para_cierre": 16,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -479,6 +509,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -486,7 +518,6 @@
       "nombre": "GORE COMPRA DE EQUIPOS INFORMATICOS",
       "tipo": "LP",
       "fecha_cierre": "2026-09-21T15:30:00",
-      "dias_para_cierre": 16,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -494,6 +525,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -501,7 +534,6 @@
       "nombre": "Renovaci\u00F3n de suscripciones para la plataforma de parchado virtual vRx Vicarius",
       "tipo": "LP",
       "fecha_cierre": "2026-09-21T16:00:00",
-      "dias_para_cierre": 16,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -509,6 +541,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -516,7 +550,6 @@
       "nombre": "Adquisici\u00F3n de Plataforma Next Generation Firewall",
       "tipo": "LP",
       "fecha_cierre": "2026-09-22T15:00:00",
-      "dias_para_cierre": 17,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -524,6 +557,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -531,7 +566,6 @@
       "nombre": "Sistema de monitoreo integral de ciberseguridad",
       "tipo": "LR",
       "fecha_cierre": "2026-09-22T15:00:00",
-      "dias_para_cierre": 17,
       "rubro_match": "ti",
       "termino_match": "ciberseguridad",
       "region": null,
@@ -539,6 +573,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -546,7 +582,6 @@
       "nombre": "SERVICIO REPARACI\u00D3N DE OFICINAS PARA LA DIRECCI\u00D3N DE TELECOMUNICACIONES E INFORM\u00C1TICA DE LA ARMADA.",
       "tipo": "LE",
       "fecha_cierre": "2026-09-22T15:01:00",
-      "dias_para_cierre": 17,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -554,6 +589,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -561,7 +598,6 @@
       "nombre": "SERVICIO DE PLATAFORMA DE LIBROS CONTABLES Y AUXILIARES ELECTR\u00D3NICOS Y DOCUMENTOS TRIBUTARIOS ELECTR\u00D3NICOS DTE PARA LA UNIVERSIDAD DE LOS LAGOS",
       "tipo": "LE",
       "fecha_cierre": "2026-09-22T15:30:00",
-      "dias_para_cierre": 17,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -569,6 +605,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-04",
       "url_ficha": null
     },
     {
@@ -576,7 +614,6 @@
       "nombre": "INFRAESTRUC.TECNOL\u00D3GICA PLATAFORMA FONDOS CONCURSA",
       "tipo": "LP",
       "fecha_cierre": "2026-09-23T12:00:00",
-      "dias_para_cierre": 18,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -584,6 +621,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -591,7 +630,6 @@
       "nombre": "PLATAFORMA GESTI\u00D3N Y CONTROL SEGURIDAD INFORMACI\u00D3N",
       "tipo": "LP",
       "fecha_cierre": "2026-09-24T15:00:00",
-      "dias_para_cierre": 19,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -599,6 +637,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -606,7 +646,6 @@
       "nombre": "SERVICIO INFORM\u00C1TICO PARA EL CENTRO DE SANGRE CONC",
       "tipo": "LP",
       "fecha_cierre": "2026-09-24T17:00:00",
-      "dias_para_cierre": 19,
       "rubro_match": "ti",
       "termino_match": "inform\u00E1tic",
       "region": null,
@@ -614,6 +653,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -621,7 +662,6 @@
       "nombre": "PLATAFORMA INTEGRAL ALUMNI Y EMPLEABILIDAD UTA",
       "tipo": "LE",
       "fecha_cierre": "2026-09-28T16:00:00",
-      "dias_para_cierre": 23,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -629,6 +669,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-04",
       "url_ficha": null
     },
     {
@@ -636,7 +678,6 @@
       "nombre": "SERV. DE ADMINISTRACION PLATAFORMAS TECNOLOGICAS",
       "tipo": "LR",
       "fecha_cierre": "2026-09-30T15:00:00",
-      "dias_para_cierre": 25,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -644,6 +685,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -651,7 +694,6 @@
       "nombre": "SERV DE PLATAFORMA SIEM NUEVA GENERACI\u00D3N SAAS IPS",
       "tipo": "LR",
       "fecha_cierre": "2026-10-02T15:00:00",
-      "dias_para_cierre": 27,
       "rubro_match": "ti",
       "termino_match": "plataforma",
       "region": null,
@@ -659,6 +701,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     },
     {
@@ -666,7 +710,6 @@
       "nombre": "MANTENCI\u00D3N Y MEJORA SISTEMA CIBERSEGURIDAD NCH ISO",
       "tipo": "LR",
       "fecha_cierre": "2026-10-06T15:00:00",
-      "dias_para_cierre": 31,
       "rubro_match": "ti",
       "termino_match": "ciberseguridad",
       "region": null,
@@ -674,6 +717,8 @@
       "moneda": null,
       "monto": null,
       "estado_flujo": "pendiente",
+      "origen": "activas",
+      "fecha_lote": "2026-09-05",
       "url_ficha": null
     }
   ],
@@ -687,6 +732,12 @@
     {
       "fecha": "2026-09-05",
       "total": 14,
+      "candidatas": 0,
+      "tasa": 0
+    },
+    {
+      "fecha": "2026-09-06",
+      "total": 9,
       "candidatas": 0,
       "tasa": 0
     }
