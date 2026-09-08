@@ -103,6 +103,14 @@ public static class Program
             var todasLasCandidatas = existentes.Concat(nuevasDiario).Concat(nuevasActivas).ToList();
             JsonStore.Guardar(Path.Combine(repoRoot, "data", "candidatas.json"), todasLasCandidatas, JsonOpciones.Persistencia);
 
+            // NOTA (sin arreglar todavía): barridoActivasFunnel queda indexado
+            // bajo `fecha` — que es el día del LOTE DIARIO (ayer), no el día
+            // en que corrió el barrido `activas` (hoy). Ej.: el barrido del
+            // lunes 07-09 quedó registrado en el informe del 06-09. Mientras
+            // nadie necesite correlacionar el barrido con el día de la
+            // semana real en que corrió, no afecta nada — pero el día está
+            // corrido en uno y hay que corregirlo antes de usar esta fecha
+            // para ese análisis.
             var barridoActivasFunnel = resultadoActivas is null
                 ? null
                 : new InformeFunnel(
@@ -222,14 +230,40 @@ public static class Program
             Origen = origen,
         };
 
-    // Idempotente por fecha: si ya existía una entrada para hoy (re-corrida
-    // manual vía workflow_dispatch), la reemplaza en vez de duplicarla.
+    // Idempotente por fecha: si ya existía una entrada para esa fecha
+    // (re-corrida manual vía workflow_dispatch, o un reproceso real como el
+    // del 2026-09-05, cuando el cron disparó con retraso y reprocesó el
+    // 04-09), la reemplaza en vez de duplicarla.
+    //
+    // `Nuevas` (y `BarridoActivas.Nuevas`) son la ÚNICA excepción: si ya
+    // existe un registro para la fecha, se conserva el valor original en vez
+    // de recalcularlo. Es un hecho histórico — cuántas candidatas aparecieron
+    // por primera vez ese día — no algo derivable del estado actual de
+    // candidatas.json. Reprocesar una fecha encuentra esas candidatas ya
+    // conocidas (el dedupe las descarta) y recalcularía `nuevas` a 0 siempre,
+    // sin importar cuántas hubo en realidad: exactamente el bug que borró el
+    // "3" real del 2026-09-04 el 2026-09-05. El resto de los conteos del
+    // embudo (total, tras_estado, tras_tipo, excluidas, candidatas,
+    // observaciones) SÍ describen el estado actual del lote, no un hecho del
+    // pasado, así que es correcto que se actualicen en cada reproceso.
     private static List<InformeDiario> ActualizarSerieInformes(string repoRoot, InformeDiario informeHoy)
     {
         var ruta = Path.Combine(repoRoot, "data", "informes.json");
         var informes = JsonStore.CargarOPredeterminado(ruta, JsonOpciones.Persistencia, new List<InformeDiario>());
+
+        var existente = informes.FirstOrDefault(i => i.Fecha == informeHoy.Fecha);
+        var informeAGuardar = existente is null
+            ? informeHoy
+            : informeHoy with
+            {
+                Nuevas = existente.Nuevas,
+                BarridoActivas = informeHoy.BarridoActivas is null || existente.BarridoActivas is null
+                    ? informeHoy.BarridoActivas
+                    : informeHoy.BarridoActivas with { Nuevas = existente.BarridoActivas.Nuevas },
+            };
+
         informes.RemoveAll(i => i.Fecha == informeHoy.Fecha);
-        informes.Add(informeHoy);
+        informes.Add(informeAGuardar);
         return informes.OrderBy(i => i.Fecha).ToList();
     }
 
