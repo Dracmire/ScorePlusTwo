@@ -1,3 +1,4 @@
+using System.Text;
 using ScorePlusTwo.Pipeline.Api;
 using ScorePlusTwo.Pipeline.Cli;
 using ScorePlusTwo.Pipeline.Dashboard;
@@ -5,6 +6,7 @@ using ScorePlusTwo.Pipeline.Filtro;
 using ScorePlusTwo.Pipeline.Infraestructura;
 using ScorePlusTwo.Pipeline.Modelos;
 using ScorePlusTwo.Pipeline.Persistencia;
+using ScorePlusTwo.Pipeline.Refiltrado;
 
 namespace ScorePlusTwo.Pipeline;
 
@@ -16,6 +18,18 @@ public static class Program
         {
             var opciones = OpcionesCli.Parse(args);
             var repoRoot = RutaRepo.Resolver();
+
+            // Rama completamente aparte del flujo automático: --refiltrar
+            // corre el filtro sobre TODO data/raw/ acumulado con un
+            // criterios.json alternativo y escribe un CSV. La separación es
+            // estructural (return antes de tocar cualquier otra variable del
+            // flujo normal) para que sea imposible que este modo termine
+            // escribiendo candidatas.json/informes.json/eventos.json/
+            // docs/data.json por accidente.
+            if (opciones.Refiltrar)
+            {
+                return EjecutarRefiltrado(repoRoot, opciones);
+            }
 
             List<LicitacionRaw> loteDiario;
             DateOnly fecha;
@@ -317,5 +331,45 @@ public static class Program
               $"nuevas={nuevasActivas}");
 
         Console.WriteLine($"Nuevas candidatas totales: {nuevasDiario + nuevasActivas}");
+    }
+
+    // Solo lectura sobre el estado de producción: lee config/criterios.json
+    // (o el que se le pase) y data/raw/, y escribe únicamente el CSV de
+    // salida. No llama a ninguna función de las que escriben
+    // candidatas.json/informes.json/eventos.json/docs/data.json.
+    private static int EjecutarRefiltrado(string repoRoot, OpcionesCli opciones)
+    {
+        if (opciones.RutaCriteriosAlternativos is null)
+        {
+            Console.Error.WriteLine("[FATAL] --refiltrar requiere --criterios <ruta>.");
+            return 1;
+        }
+
+        var rutaCriterios = Path.IsPathRooted(opciones.RutaCriteriosAlternativos)
+            ? opciones.RutaCriteriosAlternativos
+            : Path.Combine(Directory.GetCurrentDirectory(), opciones.RutaCriteriosAlternativos);
+        var criterios = JsonStore.Cargar<Criterios>(rutaCriterios, JsonOpciones.Config);
+
+        var directorioRaw = Path.Combine(repoRoot, "data", "raw");
+        var resultado = RefiltradoService.Ejecutar(directorioRaw, criterios, opciones.Desde);
+
+        var rutaSalida = opciones.RutaSalidaRefiltrado
+            ?? $"refiltrado-{DateTime.UtcNow:yyyyMMdd-HHmmss}.csv";
+        if (!Path.IsPathRooted(rutaSalida))
+        {
+            rutaSalida = Path.Combine(Directory.GetCurrentDirectory(), rutaSalida);
+        }
+
+        File.WriteAllText(rutaSalida, RefiltradoService.GenerarCsv(resultado.Candidatas), new UTF8Encoding(true));
+
+        Console.WriteLine("== Resumen del refiltrado ==");
+        Console.WriteLine($"Criterios: {rutaCriterios}");
+        Console.WriteLine($"Archivos procesados en data/raw/: {resultado.ArchivosProcesados}");
+        Console.WriteLine($"Registros crudos totales: {resultado.RegistrosTotales}");
+        Console.WriteLine($"Candidatas encontradas (con duplicados entre archivos): {resultado.CandidatasConDuplicados}");
+        Console.WriteLine($"Candidatas únicas tras dedupe: {resultado.Candidatas.Count}");
+        Console.WriteLine($"CSV escrito en: {rutaSalida}");
+
+        return 0;
     }
 }
