@@ -6,14 +6,38 @@ on:
     # pedirle que use hora de Chile directamente. Chile alterna entre
     # UTC-4 (hora de invierno) y UTC-3 (hora de verano) según la época del
     # año, así que un solo valor de cron cae en horas locales distintas
-    # dependiendo de la temporada. '0 5 * * *' UTC da 01:00 CLT en invierno
-    # y 02:00 CLT en verano — ambas dentro de la ventana 22:00–07:00 que
-    # ChileCompra recomienda para consultas pesadas (SPEC §2). NO usar
-    # '0 4 * * *': en invierno cae exactamente a medianoche en Chile, y el
-    # programa calcula "ayer" a partir de la fecha local (America/Santiago,
-    # ver Program.cs) — una corrida que dispare unos segundos antes o
-    # después de esa medianoche pediría el día equivocado a la API.
-    - cron: '0 5 * * *'
+    # dependiendo de la temporada.
+    #
+    # Se cambió de '0 5 * * *' a '23 3 * * *' por evidencia real de retraso,
+    # no preventivamente: las tres corridas 'schedule' que existieron hasta
+    # ahora dispararon con 3-5 horas de atraso, con DOS valores de cron
+    # distintos (ambos en punto):
+    #   - '0 9 * * *'  -> disparó a las 12:25 UTC (3h25 tarde)
+    #   - '0 5 * * *'  -> disparó a las 09:58 UTC (4h58 tarde)
+    #   - '0 5 * * *'  -> disparó a las 09:23 UTC (4h23 tarde)
+    # La variable común entre los tres es el minuto en punto (":00"), que
+    # GitHub documenta como la hora de mayor congestión de encolamiento de
+    # Actions. Con retrasos de hasta ~5h la corrida se salía de la ventana
+    # 22:00–07:00 que recomienda ChileCompra (una de las tres llegó a las
+    # 06:23 CLT, dentro por muy poco). '23 3 * * *' saca el disparo de la
+    # marca en punto para reducir ese encolamiento.
+    #
+    # Verificado con el mismo tzdata que usa TimeZoneInfo en Linux
+    # (America/Santiago): a las 03:23 UTC,
+    #   - en horario de VERANO (UTC-3) son las 00:23 CLT del MISMO día UTC
+    #     -> deja ~7h de margen antes de las 07:00, dentro de la ventana.
+    #   - en horario de INVIERNO (UTC-4) son las 23:23 CLT del día ANTERIOR
+    #     -> dentro de la ventana por el otro extremo.
+    # Esto último tiene una consecuencia en el cálculo de "ayer": en verano,
+    # "hoy" en Chile coincide con el día UTC del disparo y "ayer" es el día
+    # UTC anterior (el caso normal); en invierno, "hoy" en Chile es un día
+    # ANTES del día UTC del disparo, así que "ayer" termina siendo el
+    # ANTEPENÚLTIMO día UTC, no el previo. Program.cs ya cubre esto
+    # correctamente porque AhoraChile() convierte a la hora real de Chile
+    # ANTES de restar un día — nunca asume que el día UTC y el día CLT
+    # coinciden — así que ningún cambio de código fue necesario, solo esta
+    # constancia explícita para que quede documentado por qué es seguro.
+    - cron: '23 3 * * *'
   workflow_dispatch:
     inputs:
       fecha:
