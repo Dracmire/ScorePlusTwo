@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-09-07T09:58:45.105986Z",
+  "generado_en": "2026-09-08T09:24:22.3568585Z",
   "candidatas": [
     {
       "codigo": "2446-251-LE26",
@@ -514,6 +514,22 @@
       "url_ficha": null
     },
     {
+      "codigo": "1057545-104-LE26",
+      "nombre": "COMPRA DE SERVICIOS DE AUDITORIAS ODONTOLOGICAS",
+      "tipo": "LE",
+      "fecha_cierre": "2026-09-21T15:01:00",
+      "rubro_match": "compliance",
+      "termino_match": "auditor",
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-07",
+      "url_ficha": null
+    },
+    {
       "codigo": "1259850-4-LP26",
       "nombre": "GORE COMPRA DE EQUIPOS INFORMATICOS",
       "tipo": "LP",
@@ -527,6 +543,22 @@
       "estado_flujo": "pendiente",
       "origen": "activas",
       "fecha_lote": "2026-09-05",
+      "url_ficha": null
+    },
+    {
+      "codigo": "1016-9-LE26",
+      "nombre": "Equipamiento Inform\u00E1tico 11 Notebook Workstation",
+      "tipo": "LE",
+      "fecha_cierre": "2026-09-21T15:30:00",
+      "rubro_match": "ti",
+      "termino_match": "inform\u00E1tic",
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-07",
       "url_ficha": null
     },
     {
@@ -610,6 +642,22 @@
       "url_ficha": null
     },
     {
+      "codigo": "885-83-LE26",
+      "nombre": "Servicios de soporte y mantenimiento de la plataforma de seguridad F5 de la Contralor\u00EDa General de la Rep\u00FAblica",
+      "tipo": "LE",
+      "fecha_cierre": "2026-09-22T16:00:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-07",
+      "url_ficha": null
+    },
+    {
       "codigo": "1725-197-LP26",
       "nombre": "INFRAESTRUC.TECNOL\u00D3GICA PLATAFORMA FONDOS CONCURSA",
       "tipo": "LP",
@@ -690,6 +738,22 @@
       "url_ficha": null
     },
     {
+      "codigo": "2741-60-LE26",
+      "nombre": "SERVICIO AUDITORIA EXTERNA ESTADOS FINANCIEROS",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-01T12:00:00",
+      "rubro_match": "compliance",
+      "termino_match": "auditor",
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-07",
+      "url_ficha": null
+    },
+    {
       "codigo": "548874-74-LR26",
       "nombre": "SERV DE PLATAFORMA SIEM NUEVA GENERACI\u00D3N SAAS IPS",
       "tipo": "LR",
@@ -703,6 +767,22 @@
       "estado_flujo": "pendiente",
       "origen": "activas",
       "fecha_lote": "2026-09-05",
+      "url_ficha": null
+    },
+    {
+      "codigo": "188-83-LP26",
+      "nombre": "Plataforma de Control de Proyectos COMUDEF",
+      "tipo": "LP",
+      "fecha_cierre": "2026-10-02T15:01:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-07",
       "url_ficha": null
     },
     {
@@ -740,6 +820,12 @@
       "total": 9,
       "candidatas": 0,
       "tasa": 0
+    },
+    {
+      "fecha": "2026-09-07",
+      "total": 1620,
+      "candidatas": 5,
+      "tasa": 0.0031
     }
   ]
 }

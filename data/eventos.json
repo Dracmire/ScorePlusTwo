@@ -35,6 +35,13 @@
     "detalle": "total=9 candidatas=0 nuevas=0 activas_total=4768 activas_candidatas=45"
   },
   {
+    "timestamp": "2026-09-08T09:24:22.3558492Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=1620 candidatas=5 nuevas=5"
+  },
+  {
     "timestamp": "2026-09-08T17:05:05.0000000Z",
     "actor": "manual",
     "accion": "restauracion_informe",

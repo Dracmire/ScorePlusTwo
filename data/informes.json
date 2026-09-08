@@ -57,5 +57,17 @@
       "candidatas": 45,
       "nuevas": 0
     }
+  },
+  {
+    "fecha": "2026-09-07",
+    "total": 1620,
+    "tras_estado": 452,
+    "tras_tipo": 370,
+    "tras_region": 5,
+    "excluidas": 99,
+    "candidatas": 5,
+    "nuevas": 5,
+    "observaciones": [],
+    "barrido_activas": null
   }
 ]
