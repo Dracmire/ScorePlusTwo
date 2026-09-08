@@ -40,5 +40,12 @@
     "accion": "corrida_pipeline",
     "codigo": null,
     "detalle": "total=1620 candidatas=5 nuevas=5"
+  },
+  {
+    "timestamp": "2026-09-08T17:05:05.0000000Z",
+    "actor": "manual",
+    "accion": "restauracion_informe",
+    "codigo": null,
+    "detalle": "Restaurados nuevas=3 y barrido_activas={total=4751, tras_estado=4751, tras_tipo=4030, tras_region=45, excluidas=1033, candidatas=45, nuevas=42} del informe 2026-09-04, perdidos por el bug de idempotencia corregido en el PR #5. Valores confirmados contra el commit 2a6e787 (corrida original del 2026-09-05T04:10:20Z)."
   }
 ]

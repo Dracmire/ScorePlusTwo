@@ -246,6 +246,16 @@ public static class Program
     // embudo (total, tras_estado, tras_tipo, excluidas, candidatas,
     // observaciones) SÍ describen el estado actual del lote, no un hecho del
     // pasado, así que es correcto que se actualicen en cada reproceso.
+    //
+    // `BarridoActivas` completo tiene la misma trampa: si el reproceso NO
+    // vuelve a correr `activas` ese día (lo normal — `activas` solo corre el
+    // primer día o los lunes, ver DecidirBarridoActivas), `informeHoy.
+    // BarridoActivas` es null en esa corrida. Escribirlo tal cual borraría un
+    // barrido real ya registrado — exactamente como se perdió el bloque con
+    // 4.751 registros y 42 nuevas del 2026-09-04 la primera vez. Por eso:
+    // sin barrido nuevo, se conserva el bloque existente completo; con
+    // barrido nuevo pero sin uno previo, se usa el nuevo tal cual; con ambos,
+    // se actualiza el funnel pero se conserva `Nuevas` del existente.
     private static List<InformeDiario> ActualizarSerieInformes(string repoRoot, InformeDiario informeHoy)
     {
         var ruta = Path.Combine(repoRoot, "data", "informes.json");
@@ -257,9 +267,11 @@ public static class Program
             : informeHoy with
             {
                 Nuevas = existente.Nuevas,
-                BarridoActivas = informeHoy.BarridoActivas is null || existente.BarridoActivas is null
-                    ? informeHoy.BarridoActivas
-                    : informeHoy.BarridoActivas with { Nuevas = existente.BarridoActivas.Nuevas },
+                BarridoActivas = informeHoy.BarridoActivas is null
+                    ? existente.BarridoActivas
+                    : existente.BarridoActivas is null
+                        ? informeHoy.BarridoActivas
+                        : informeHoy.BarridoActivas with { Nuevas = existente.BarridoActivas.Nuevas },
             };
 
         informes.RemoveAll(i => i.Fecha == informeHoy.Fecha);
