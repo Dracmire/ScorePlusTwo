@@ -7,8 +7,8 @@ public sealed record DashboardCandidata(
     string Nombre,
     string Tipo,
     DateTime? FechaCierre,
-    string RubroMatch,
-    string TerminoMatch,
+    string? RubroMatch,
+    string? TerminoMatch,
     string? Region,
     string? Organismo,
     string? Moneda,
@@ -16,13 +16,16 @@ public sealed record DashboardCandidata(
     EstadoFlujo EstadoFlujo,
     OrigenCandidata Origen,
     DateOnly FechaLote,
+    string? Tramo,
     string? UrlFicha);
 
-public sealed record DashboardSerieItem(DateOnly Fecha, int Total, int Candidatas, double Tasa);
+public sealed record DashboardSerieItem(DateOnly Fecha, int Total, int Prioritarias, double Tasa);
 
 public sealed record DashboardData(
     DateTime GeneradoEn,
-    IReadOnlyList<DashboardCandidata> Candidatas,
+    IReadOnlyList<DashboardCandidata> Prioritarias,
+    IReadOnlyList<DashboardCandidata> Secundarias,
+    IReadOnlyList<DashboardCandidata> TramoBajo,
     IReadOnlyList<DashboardSerieItem> SerieTasaRubro);
 
 public static class GeneradorDashboard
@@ -37,9 +40,14 @@ public static class GeneradorDashboard
     // link — así que el tablero muestra el código como texto plano copiable
     // (ver docs/app.js). No reintentar este patrón sin una forma de probarlo
     // contra dos códigos distintos en la misma sesión del navegador.
-    public static DashboardData Construir(IEnumerable<Candidata> candidatas, IEnumerable<InformeDiario> informes, DateTime ahora)
+    public static DashboardData Construir(
+        IEnumerable<Candidata> prioritarias,
+        IEnumerable<Candidata> secundarias,
+        IEnumerable<Candidata> tramoBajo,
+        IEnumerable<InformeDiario> informes,
+        DateTime ahora)
     {
-        var candidatasOrdenadas = candidatas
+        static IReadOnlyList<DashboardCandidata> Mapear(IEnumerable<Candidata> candidatas) => candidatas
             .OrderBy(c => c.FechaCierre ?? DateTime.MaxValue)
             .Select(c => new DashboardCandidata(
                 Codigo: c.Codigo,
@@ -55,6 +63,7 @@ public static class GeneradorDashboard
                 EstadoFlujo: c.EstadoFlujo,
                 Origen: c.Origen,
                 FechaLote: c.FechaLote,
+                Tramo: c.Tramo,
                 UrlFicha: null))
             .ToList();
 
@@ -63,10 +72,10 @@ public static class GeneradorDashboard
             .Select(i => new DashboardSerieItem(
                 Fecha: i.Fecha,
                 Total: i.Total,
-                Candidatas: i.Candidatas,
-                Tasa: i.Total == 0 ? 0 : Math.Round((double)i.Candidatas / i.Total, 4)))
+                Prioritarias: i.Prioritarias,
+                Tasa: i.Total == 0 ? 0 : Math.Round((double)i.Prioritarias / i.Total, 4)))
             .ToList();
 
-        return new DashboardData(ahora, candidatasOrdenadas, serie);
+        return new DashboardData(ahora, Mapear(prioritarias), Mapear(secundarias), Mapear(tramoBajo), serie);
     }
 }

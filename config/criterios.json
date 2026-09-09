@@ -1,12 +1,12 @@
 {
-  "version": "2026-09-04",
-  "tipos": ["LE", "LP", "LR", "LS"],
+  "version": "2026-09-09",
+  "tipos": ["LE", "LP", "LR", "LS", "L1"],
   "estados": [5],
   "regiones": ["Metropolitana", "Valparaíso", "Coquimbo"],
   "rubros": [
     {
       "id": "compliance",
-      "activo": true,
+      "prioridad": "alta",
       "terminos": [
         "auditor",
         "cumplimiento normativ",
@@ -28,7 +28,7 @@
     },
     {
       "id": "ti",
-      "activo": true,
+      "prioridad": "alta",
       "terminos": [
         "informátic",
         "plataforma",
@@ -47,7 +47,7 @@
     },
     {
       "id": "ia",
-      "activo": false,
+      "prioridad": "secundaria",
       "terminos": [
         "inteligencia artificial",
         "machine learning",
@@ -56,7 +56,7 @@
       ]
     }
   ],
-  "exclusiones": [
+  "descarte_duro": [
     "insumo",
     "medicamento",
     "fármaco",
@@ -83,7 +83,9 @@
     "pavimento",
     "luminaria",
     "extintor",
-    "neumático",
+    "neumático"
+  ],
+  "exclusiones_rubro": [
     "software",
     "servidor"
   ]

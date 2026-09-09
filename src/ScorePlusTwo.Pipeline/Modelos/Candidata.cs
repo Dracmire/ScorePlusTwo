@@ -9,10 +9,17 @@ public sealed class Candidata
     public required string Tipo { get; set; }
     public DateTime? FechaCierre { get; set; }
     public DateOnly FechaLote { get; set; }
-    public required string RubroMatch { get; set; }
-    public required string TerminoMatch { get; set; }
+    // Null para tramo bajo (L1 no pasa por clasificación de rubro) y para
+    // secundarias sin ningún rubro match (inventario crudo de prospección).
+    public string? RubroMatch { get; set; }
+    public string? TerminoMatch { get; set; }
     public string? Region { get; set; }
     public string? Organismo { get; set; }
+
+    // "bajo" para tipo L1 (ver ResultadoFiltro.TramoBajo); null para el
+    // resto. No se mezcla con Lista A/B — separa candidatas.json/
+    // secundarias.json de tramo_bajo.json.
+    public string? Tramo { get; set; }
 
     // Moneda y Monto se guardan por separado y SIN CONVERTIR: el listado
     // diario no trae ninguno de los dos (F2 los resuelve vía detalle de

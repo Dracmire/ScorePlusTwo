@@ -1,4 +1,6 @@
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 using ScorePlusTwo.Pipeline.Api;
 using ScorePlusTwo.Pipeline.Cli;
 using ScorePlusTwo.Pipeline.Dashboard;
@@ -96,26 +98,27 @@ public static class Program
                 Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
 
             var resultadoDiario = FiltroLicitaciones.Filtrar(loteDiario, criterios);
+            var fechaActivas = DateOnly.FromDateTime(AhoraChile());
 
-            var existentes = JsonStore.CargarOPredeterminado(
-                Path.Combine(repoRoot, "data", "candidatas.json"), JsonOpciones.Persistencia, new List<Candidata>());
-            var codigosExistentes = existentes.Select(c => c.Codigo).ToHashSet();
-            var codigosDiario = resultadoDiario.Candidatas.Select(c => c.Origen.CodigoExterno).ToHashSet();
+            // Tres listas, tres archivos — mismo patrón de merge/dedupe para
+            // cada una (ver FusionarLista): Prioritarias sigue siendo
+            // candidatas.json; Secundarias y TramoBajo son nuevos, con la
+            // misma lógica de "activas rescata lo que el diario no habría
+            // detectado" aplicada a las tres por igual.
+            var (todasPrioritarias, nuevasPrioritariasDiario, nuevasPrioritariasActivas) = FusionarLista(
+                Path.Combine(repoRoot, "data", "candidatas.json"),
+                resultadoDiario.Prioritarias, resultadoActivas?.Prioritarias,
+                fecha, fechaActivas, tramo: null);
 
-            var nuevasDiario = resultadoDiario.Candidatas
-                .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno))
-                .Select(c => CrearCandidata(c, fecha, OrigenCandidata.Diario))
-                .ToList();
+            var (todasSecundarias, nuevasSecundariasDiario, nuevasSecundariasActivas) = FusionarLista(
+                Path.Combine(repoRoot, "data", "secundarias.json"),
+                resultadoDiario.Secundarias, resultadoActivas?.Secundarias,
+                fecha, fechaActivas, tramo: null);
 
-            var nuevasActivas = resultadoActivas is null
-                ? new List<Candidata>()
-                : resultadoActivas.Candidatas
-                    .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno) && !codigosDiario.Contains(c.Origen.CodigoExterno))
-                    .Select(c => CrearCandidata(c, DateOnly.FromDateTime(AhoraChile()), OrigenCandidata.Activas))
-                    .ToList();
-
-            var todasLasCandidatas = existentes.Concat(nuevasDiario).Concat(nuevasActivas).ToList();
-            JsonStore.Guardar(Path.Combine(repoRoot, "data", "candidatas.json"), todasLasCandidatas, JsonOpciones.Persistencia);
+            var (todasTramoBajo, nuevasTramoBajoDiario, nuevasTramoBajoActivas) = FusionarLista(
+                Path.Combine(repoRoot, "data", "tramo_bajo.json"),
+                resultadoDiario.TramoBajo, resultadoActivas?.TramoBajo,
+                fecha, fechaActivas, tramo: "bajo");
 
             // NOTA (sin arreglar todavía): barridoActivasFunnel queda indexado
             // bajo `fecha` — que es el día del LOTE DIARIO (ayer), no el día
@@ -129,8 +132,9 @@ public static class Program
                 ? null
                 : new InformeFunnel(
                     resultadoActivas.Total, resultadoActivas.TrasEstado, resultadoActivas.TrasTipo,
-                    resultadoActivas.TrasRegion, resultadoActivas.Excluidas, resultadoActivas.Candidatas.Count,
-                    nuevasActivas.Count);
+                    resultadoActivas.TrasRegion, resultadoActivas.DescarteDuro,
+                    resultadoActivas.Prioritarias.Count, resultadoActivas.Secundarias.Count, resultadoActivas.TramoBajo.Count,
+                    nuevasPrioritariasActivas.Count, nuevasSecundariasActivas.Count, nuevasTramoBajoActivas.Count);
 
             var informeHoy = new InformeDiario(
                 fecha,
@@ -138,21 +142,27 @@ public static class Program
                 resultadoDiario.TrasEstado,
                 resultadoDiario.TrasTipo,
                 resultadoDiario.TrasRegion,
-                resultadoDiario.Excluidas,
-                resultadoDiario.Candidatas.Count,
-                nuevasDiario.Count,
-                resultadoDiario.Observaciones,
+                resultadoDiario.DescarteDuro,
+                resultadoDiario.Prioritarias.Count,
+                resultadoDiario.Secundarias.Count,
+                resultadoDiario.TramoBajo.Count,
+                nuevasPrioritariasDiario.Count,
+                nuevasSecundariasDiario.Count,
+                nuevasTramoBajoDiario.Count,
                 barridoActivasFunnel);
 
             var informes = ActualizarSerieInformes(repoRoot, informeHoy);
             JsonStore.Guardar(Path.Combine(repoRoot, "data", "informes.json"), informes, JsonOpciones.Persistencia);
 
-            RegistrarEvento(repoRoot, informeHoy, nuevasDiario.Count + nuevasActivas.Count);
+            var totalNuevasHoy = nuevasPrioritariasDiario.Count + nuevasPrioritariasActivas.Count
+                + nuevasSecundariasDiario.Count + nuevasSecundariasActivas.Count
+                + nuevasTramoBajoDiario.Count + nuevasTramoBajoActivas.Count;
+            RegistrarEvento(repoRoot, informeHoy, totalNuevasHoy);
 
-            var dashboard = GeneradorDashboard.Construir(todasLasCandidatas, informes, DateTime.UtcNow);
+            var dashboard = GeneradorDashboard.Construir(todasPrioritarias, todasSecundarias, todasTramoBajo, informes, DateTime.UtcNow);
             JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
 
-            ImprimirResumen(resultadoDiario, nuevasDiario.Count, estadoActivas, resultadoActivas, nuevasActivas.Count);
+            ImprimirResumen(resultadoDiario, nuevasPrioritariasDiario.Count, nuevasSecundariasDiario.Count, nuevasTramoBajoDiario.Count, estadoActivas, resultadoActivas);
 
             return 0;
         }
@@ -226,7 +236,7 @@ public static class Program
         return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zonaChile);
     }
 
-    private static Candidata CrearCandidata(CandidataDetectada detectada, DateOnly fechaLote, OrigenCandidata origen) =>
+    private static Candidata CrearCandidata(CandidataDetectada detectada, DateOnly fechaLote, OrigenCandidata origen, string? tramo) =>
         new()
         {
             Codigo = detectada.Origen.CodigoExterno,
@@ -242,24 +252,64 @@ public static class Program
             Notas = null,
             ClienteAsignado = null,
             Origen = origen,
+            Tramo = tramo,
         };
+
+    // Mismo merge/dedupe para las tres listas (Prioritarias -> candidatas.json,
+    // Secundarias -> secundarias.json, TramoBajo -> tramo_bajo.json): lo
+    // detectado en el barrido `activas` que ya esté en el archivo existente o
+    // ya haya salido del lote diario de hoy no se duplica — es lo que permite
+    // medir después cuántas se habrían perdido sin el barrido, generalizado a
+    // las tres listas por igual.
+    private static (List<Candidata> Todas, List<Candidata> NuevasDiario, List<Candidata> NuevasActivas) FusionarLista(
+        string rutaArchivo,
+        IReadOnlyList<CandidataDetectada> detectadasDiario,
+        IReadOnlyList<CandidataDetectada>? detectadasActivas,
+        DateOnly fechaDiario,
+        DateOnly fechaActivas,
+        string? tramo)
+    {
+        var existentes = JsonStore.CargarOPredeterminado(rutaArchivo, JsonOpciones.Persistencia, new List<Candidata>());
+        var codigosExistentes = existentes.Select(c => c.Codigo).ToHashSet();
+        var codigosDiario = detectadasDiario.Select(c => c.Origen.CodigoExterno).ToHashSet();
+
+        var nuevasDiario = detectadasDiario
+            .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno))
+            .Select(c => CrearCandidata(c, fechaDiario, OrigenCandidata.Diario, tramo))
+            .ToList();
+
+        var nuevasActivas = detectadasActivas is null
+            ? new List<Candidata>()
+            : detectadasActivas
+                .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno) && !codigosDiario.Contains(c.Origen.CodigoExterno))
+                .Select(c => CrearCandidata(c, fechaActivas, OrigenCandidata.Activas, tramo))
+                .ToList();
+
+        var todas = existentes.Concat(nuevasDiario).Concat(nuevasActivas).ToList();
+        JsonStore.Guardar(rutaArchivo, todas, JsonOpciones.Persistencia);
+
+        return (todas, nuevasDiario, nuevasActivas);
+    }
 
     // Idempotente por fecha: si ya existía una entrada para esa fecha
     // (re-corrida manual vía workflow_dispatch, o un reproceso real como el
     // del 2026-09-05, cuando el cron disparó con retraso y reprocesó el
     // 04-09), la reemplaza en vez de duplicarla.
     //
-    // `Nuevas` (y `BarridoActivas.Nuevas`) son la ÚNICA excepción: si ya
-    // existe un registro para la fecha, se conserva el valor original en vez
-    // de recalcularlo. Es un hecho histórico — cuántas candidatas aparecieron
+    // `NuevasPrioritarias`/`NuevasSecundarias`/`NuevasTramoBajo` (y sus
+    // equivalentes dentro de `BarridoActivas`) son la ÚNICA excepción: si ya
+    // existe un registro para la fecha, se conservan los valores originales
+    // en vez de recalcularlos. Son un hecho histórico — cuántas aparecieron
     // por primera vez ese día — no algo derivable del estado actual de
-    // candidatas.json. Reprocesar una fecha encuentra esas candidatas ya
-    // conocidas (el dedupe las descarta) y recalcularía `nuevas` a 0 siempre,
-    // sin importar cuántas hubo en realidad: exactamente el bug que borró el
-    // "3" real del 2026-09-04 el 2026-09-05. El resto de los conteos del
-    // embudo (total, tras_estado, tras_tipo, excluidas, candidatas,
-    // observaciones) SÍ describen el estado actual del lote, no un hecho del
-    // pasado, así que es correcto que se actualicen en cada reproceso.
+    // candidatas.json/secundarias.json/tramo_bajo.json. Reprocesar una fecha
+    // encuentra esos registros ya conocidos (el dedupe los descarta) y
+    // recalcularía cualquier "nuevas" a 0 siempre, sin importar cuántas hubo
+    // en realidad: exactamente el bug que borró el "3" real del 2026-09-04 el
+    // 2026-09-05, ahora generalizado a las tres listas. El resto de los
+    // conteos del embudo (total, tras_estado, tras_tipo, descarte_duro,
+    // prioritarias, secundarias, tramo_bajo) SÍ describen el estado actual
+    // del lote, no un hecho del pasado, así que es correcto que se actualicen
+    // en cada reproceso.
     //
     // `BarridoActivas` completo tiene la misma trampa: si el reproceso NO
     // vuelve a correr `activas` ese día (lo normal — `activas` solo corre el
@@ -269,23 +319,30 @@ public static class Program
     // 4.751 registros y 42 nuevas del 2026-09-04 la primera vez. Por eso:
     // sin barrido nuevo, se conserva el bloque existente completo; con
     // barrido nuevo pero sin uno previo, se usa el nuevo tal cual; con ambos,
-    // se actualiza el funnel pero se conserva `Nuevas` del existente.
+    // se actualiza el funnel pero se conservan las "nuevas" del existente.
     private static List<InformeDiario> ActualizarSerieInformes(string repoRoot, InformeDiario informeHoy)
     {
         var ruta = Path.Combine(repoRoot, "data", "informes.json");
-        var informes = JsonStore.CargarOPredeterminado(ruta, JsonOpciones.Persistencia, new List<InformeDiario>());
+        var informes = CargarInformesConMigracion(ruta);
 
         var existente = informes.FirstOrDefault(i => i.Fecha == informeHoy.Fecha);
         var informeAGuardar = existente is null
             ? informeHoy
             : informeHoy with
             {
-                Nuevas = existente.Nuevas,
+                NuevasPrioritarias = existente.NuevasPrioritarias,
+                NuevasSecundarias = existente.NuevasSecundarias,
+                NuevasTramoBajo = existente.NuevasTramoBajo,
                 BarridoActivas = informeHoy.BarridoActivas is null
                     ? existente.BarridoActivas
                     : existente.BarridoActivas is null
                         ? informeHoy.BarridoActivas
-                        : informeHoy.BarridoActivas with { Nuevas = existente.BarridoActivas.Nuevas },
+                        : informeHoy.BarridoActivas with
+                        {
+                            NuevasPrioritarias = existente.BarridoActivas.NuevasPrioritarias,
+                            NuevasSecundarias = existente.BarridoActivas.NuevasSecundarias,
+                            NuevasTramoBajo = existente.BarridoActivas.NuevasTramoBajo,
+                        },
             };
 
         informes.RemoveAll(i => i.Fecha == informeHoy.Fecha);
@@ -293,13 +350,84 @@ public static class Program
         return informes.OrderBy(i => i.Fecha).ToList();
     }
 
+    // Upgrade de una sola vez para informes.json escrito antes del rediseño
+    // de listas (Lista A única -> Prioritarias/Secundarias/TramoBajo).
+    // Deserializar una entrada vieja directamente contra el InformeDiario
+    // nuevo dejaría prioritarias/descarte_duro/nuevas_prioritarias en 0 (los
+    // nombres de campo no calzan: la entrada vieja trae "candidatas"/
+    // "excluidas"/"nuevas") y la siguiente escritura los borraría en
+    // silencio — exactamente el tipo de pérdida de historia de calibración
+    // que ya costó una restauración manual una vez (ver PR #6, informe del
+    // 2026-09-04). Por eso se renombran los campos antes de deserializar, en
+    // vez de confiar en que System.Text.Json rellene con el default. Una
+    // entrada que ya tiene "prioritarias" no se toca. "observaciones" se
+    // descarta: es una lista, no un conteo, y su reemplazo (secundarias con
+    // rubro_match) ya existe hacia adelante — no hay una forma correcta de
+    // reconstruir retroactivamente en qué secundaria se habría convertido
+    // cada observación vieja.
+    private static List<InformeDiario> CargarInformesConMigracion(string ruta)
+    {
+        if (!File.Exists(ruta))
+        {
+            return new List<InformeDiario>();
+        }
+
+        var nodo = JsonNode.Parse(File.ReadAllText(ruta))?.AsArray()
+            ?? throw new InvalidOperationException($"'{ruta}' no deserializó a un arreglo JSON.");
+
+        foreach (var item in nodo)
+        {
+            if (item is JsonObject informe)
+            {
+                MigrarFormaDeInforme(informe);
+            }
+        }
+
+        return JsonSerializer.Deserialize<List<InformeDiario>>(nodo.ToJsonString(), JsonOpciones.Persistencia)
+            ?? new List<InformeDiario>();
+    }
+
+    private static void MigrarFormaDeInforme(JsonObject informe)
+    {
+        if (informe.ContainsKey("prioritarias"))
+        {
+            return; // ya está en la forma nueva, nada que migrar
+        }
+
+        RenombrarCampo(informe, "candidatas", "prioritarias");
+        RenombrarCampo(informe, "excluidas", "descarte_duro");
+        RenombrarCampo(informe, "nuevas", "nuevas_prioritarias");
+        informe["secundarias"] = 0;
+        informe["tramo_bajo"] = 0;
+        informe["nuevas_secundarias"] = 0;
+        informe["nuevas_tramo_bajo"] = 0;
+        informe.Remove("observaciones");
+
+        if (informe["barrido_activas"] is JsonObject barrido)
+        {
+            MigrarFormaDeInforme(barrido);
+        }
+    }
+
+    private static void RenombrarCampo(JsonObject obj, string desde, string hacia)
+    {
+        if (obj.TryGetPropertyValue(desde, out var valor))
+        {
+            obj.Remove(desde);
+            obj[hacia] = valor;
+        }
+    }
+
     private static void RegistrarEvento(string repoRoot, InformeDiario informe, int totalNuevas)
     {
         var ruta = Path.Combine(repoRoot, "data", "eventos.json");
         var eventos = JsonStore.CargarOPredeterminado(ruta, JsonOpciones.Persistencia, new List<EventoAuditoria>());
 
-        var detalle = $"total={informe.Total} candidatas={informe.Candidatas} nuevas={totalNuevas}"
-            + (informe.BarridoActivas is { } b ? $" activas_total={b.Total} activas_candidatas={b.Candidatas}" : string.Empty);
+        var detalle = $"total={informe.Total} prioritarias={informe.Prioritarias} " +
+            $"secundarias={informe.Secundarias} tramo_bajo={informe.TramoBajo} nuevas={totalNuevas}"
+            + (informe.BarridoActivas is { } b
+                ? $" activas_total={b.Total} activas_prioritarias={b.Prioritarias} activas_secundarias={b.Secundarias}"
+                : string.Empty);
 
         eventos.Add(new EventoAuditoria(DateTime.UtcNow, "sistema", "corrida_pipeline", null, detalle));
         JsonStore.Guardar(ruta, eventos, JsonOpciones.Persistencia);
@@ -313,24 +441,23 @@ public static class Program
     // consola (visible en el log del job de GitHub Actions) es lo único que
     // alguien va a mirar para saber si la corrida tuvo sentido.
     private static void ImprimirResumen(
-        ResultadoFiltro resultadoDiario, int nuevasDiario, string estadoActivas,
-        ResultadoFiltro? resultadoActivas, int nuevasActivas)
+        ResultadoFiltro resultadoDiario, int nuevasPrioritariasDiario, int nuevasSecundariasDiario, int nuevasTramoBajoDiario,
+        string estadoActivas, ResultadoFiltro? resultadoActivas)
     {
         Console.WriteLine("== Resumen de la corrida ==");
         Console.WriteLine(
             $"Lote diario: total={resultadoDiario.Total} tras_estado={resultadoDiario.TrasEstado} " +
-            $"tras_tipo={resultadoDiario.TrasTipo} excluidas={resultadoDiario.Excluidas} " +
-            $"candidatas={resultadoDiario.Candidatas.Count} nuevas={nuevasDiario} " +
-            $"observaciones={resultadoDiario.Observaciones.Count}");
+            $"tras_tipo={resultadoDiario.TrasTipo} descarte_duro={resultadoDiario.DescarteDuro} " +
+            $"prioritarias={resultadoDiario.Prioritarias.Count} (nuevas={nuevasPrioritariasDiario}) " +
+            $"secundarias={resultadoDiario.Secundarias.Count} (nuevas={nuevasSecundariasDiario}) " +
+            $"tramo_bajo={resultadoDiario.TramoBajo.Count} (nuevas={nuevasTramoBajoDiario})");
 
         Console.WriteLine(resultadoActivas is null
             ? $"Barrido 'activas': {estadoActivas}"
             : $"Barrido 'activas': {estadoActivas} -> total={resultadoActivas.Total} " +
               $"tras_estado={resultadoActivas.TrasEstado} tras_tipo={resultadoActivas.TrasTipo} " +
-              $"excluidas={resultadoActivas.Excluidas} candidatas={resultadoActivas.Candidatas.Count} " +
-              $"nuevas={nuevasActivas}");
-
-        Console.WriteLine($"Nuevas candidatas totales: {nuevasDiario + nuevasActivas}");
+              $"descarte_duro={resultadoActivas.DescarteDuro} prioritarias={resultadoActivas.Prioritarias.Count} " +
+              $"secundarias={resultadoActivas.Secundarias.Count} tramo_bajo={resultadoActivas.TramoBajo.Count}");
     }
 
     // Solo lectura sobre el estado de producción: lee config/criterios.json

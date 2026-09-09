@@ -70,6 +70,32 @@ header p {
   margin: 0 0 1rem;
 }
 
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tab {
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.4rem 0.2rem;
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tab-activa {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
 .boton-secundario {
   font: inherit;
   font-size: 0.82rem;

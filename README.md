@@ -6,8 +6,21 @@ A Business intelligence monitoring and filtering for B2G
 Corre automáticamente todos los días vía GitHub Actions
 (`.github/workflows/diario.yml`): descarga el lote diario de licitaciones de
 Mercado Público, lo filtra contra `config/criterios.json` y actualiza
-`data/candidatas.json`, `data/informes.json`, `data/eventos.json` y el
-tablero en `docs/`.
+`data/informes.json`, `data/eventos.json` y el tablero en `docs/`.
+
+El filtro clasifica cada registro en una de tres listas — nunca en una sola,
+y solo obras públicas/suministros (`descarte_duro`) desaparecen sin rastro:
+
+- **Prioritarias** (`data/candidatas.json`): matchean un rubro de
+  `prioridad: "alta"` en `config/criterios.json`. Es lo que va al tablero.
+- **Secundarias** (`data/secundarias.json`): sobreviven estado+tipo+
+  descarte_duro pero no entran a Prioritarias (rubro de prioridad
+  `"secundaria"`, sin ningún rubro, o bloqueadas por `exclusiones_rubro` —
+  ej. "software"/"servidor", que distinguen compra de bien de servicio).
+  Es el inventario para prospectar rubros que todavía no se atienden.
+- **Tramo bajo** (`data/tramo_bajo.json`): tipo `L1`, aceptado pero fuera de
+  la clasificación de rubro — no se mezcla con el resto, es opción solo si
+  aparece un cliente que la tome.
 
 Para correrlo manualmente sobre un fixture local, sin red ni `MP_TICKET`:
 
@@ -27,8 +40,10 @@ histórico antes de aplicarlo a producción.
 
 Este modo es de **solo lectura** sobre el estado de producción: lee
 `data/raw/` y escribe únicamente el CSV de salida. Nunca toca
-`data/candidatas.json`, `data/informes.json`, `data/eventos.json` ni
-`docs/data.json`.
+`data/candidatas.json`, `data/secundarias.json`, `data/tramo_bajo.json`,
+`data/informes.json`, `data/eventos.json` ni `docs/data.json`. El CSV solo
+recoge lo que habría entrado a **Prioritarias** con el criterios alternativo
+— es la lista relevante para "qué le mostraría a un cliente de este rubro".
 
 ```bash
 dotnet run --project src/ScorePlusTwo.Pipeline -- \
@@ -50,28 +65,27 @@ aparece en más de un lote) con las columnas `codigo, nombre, tipo,
 rubro_match, termino_match, fecha_cierre, archivo_origen, fecha_lote` — las
 dos últimas indican de qué archivo de `data/raw/` salió cada resultado.
 
-### Medir falsos negativos del rubro: `config/criterios-descartes.json`
+### `config/criterios-descartes.json`: medir el efecto de un rubro nuevo sobre el histórico
 
-Un registro que sobrevive estado/tipo/exclusiones pero no matchea ningún
-término de rubro se descarta en silencio — no queda registrado en
-`candidatas.json` ni en `observaciones` (eso es solo para rubros `activo:
-false`, como `ia`). No hay forma de ver ese conjunto con la configuración de
-producción.
+Antes de que el filtro clasificara en tres listas, un registro sin rubro
+match se descartaba en silencio y no había forma de verlo — por eso se creó
+este archivo, con un rubro comodín que matchea todo (cualquier nombre en
+español contiene alguna vocal), para exponer ese conjunto vía `--refiltrar`.
 
-`config/criterios-descartes.json` es un criterios alternativo pensado para
-eso: es una copia de `config/criterios.json` con `tipos`, `estados`,
-`regiones` y `exclusiones` idénticos, pero con un único rubro comodín que
-matchea todo (como cualquier nombre en español contiene alguna vocal):
+Hoy ese conjunto ya es visible en producción sin ningún paso extra: es
+exactamente **`data/secundarias.json`** (Lista B). `criterios-descartes.json`
+sigue siendo útil para un caso más específico — medir, sobre el histórico ya
+acumulado, cuántas licitaciones habría capturado un rubro **hipotético
+nuevo** que aún no existe en `config/criterios.json` (ver ejemplo de
+`--refiltrar` más arriba, con un archivo de criterios que sí define ese
+rubro). Es una copia de `config/criterios.json` con `tipos`, `estados`,
+`descarte_duro` y `exclusiones_rubro` idénticos — solo cambia `rubros`:
 
 ```json
 "rubros": [
-  { "id": "todo", "activo": true, "terminos": ["a", "e", "i", "o", "u"] }
+  { "id": "todo", "prioridad": "alta", "terminos": ["a", "e", "i", "o", "u"] }
 ]
 ```
-
-Corriendo `--refiltrar` con este archivo, el CSV resultante es exactamente
-"todo lo que sobrevivió estado+tipo+exclusiones" — el conjunto completo de lo
-que la etapa de rubro real está descartando sin dejar rastro:
 
 ```bash
 dotnet run --project src/ScorePlusTwo.Pipeline -- \
@@ -81,4 +95,5 @@ dotnet run --project src/ScorePlusTwo.Pipeline -- \
 ```
 
 El CSV de salida es un artefacto de análisis puntual — no se commitea al
-repo, a diferencia de `config/criterios-descartes.json` en sí.
+repo (`descartes*.csv` está en `.gitignore`), a diferencia de
+`config/criterios-descartes.json` en sí.

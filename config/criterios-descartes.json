@@ -1,12 +1,12 @@
 {
   "version": "2026-09-09-descartes",
-  "tipos": ["LE", "LP", "LR", "LS"],
+  "tipos": ["LE", "LP", "LR", "LS", "L1"],
   "estados": [5],
   "regiones": ["Metropolitana", "Valparaíso", "Coquimbo"],
   "rubros": [
-    { "id": "todo", "activo": true, "terminos": ["a", "e", "i", "o", "u"] }
+    { "id": "todo", "prioridad": "alta", "terminos": ["a", "e", "i", "o", "u"] }
   ],
-  "exclusiones": [
+  "descarte_duro": [
     "insumo",
     "medicamento",
     "fármaco",
@@ -33,7 +33,9 @@
     "pavimento",
     "luminaria",
     "extintor",
-    "neumático",
+    "neumático"
+  ],
+  "exclusiones_rubro": [
     "software",
     "servidor"
   ]
