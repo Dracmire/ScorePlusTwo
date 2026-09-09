@@ -83,7 +83,20 @@
     "pavimento",
     "luminaria",
     "extintor",
-    "neumático"
+    "neumático",
+    "equipos",
+    "equipamiento",
+    "material",
+    "coffee break",
+    "colación",
+    "banquetería",
+    "alimento",
+    "farmacia",
+    "nutricional",
+    "obras menores",
+    "alumbrado",
+    "contenedores",
+    "elementos de protección"
   ],
   "exclusiones_rubro": [
     "software",
