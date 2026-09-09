@@ -1,0 +1,40 @@
+{
+  "version": "2026-09-09-descartes",
+  "tipos": ["LE", "LP", "LR", "LS"],
+  "estados": [5],
+  "regiones": ["Metropolitana", "Valparaíso", "Coquimbo"],
+  "rubros": [
+    { "id": "todo", "activo": true, "terminos": ["a", "e", "i", "o", "u"] }
+  ],
+  "exclusiones": [
+    "insumo",
+    "medicamento",
+    "fármaco",
+    "alimentación",
+    "aseo",
+    "construcción",
+    "conservación",
+    "vehículo",
+    "ambulancia",
+    "mobiliario",
+    "ferretería",
+    "uniforme",
+    "vestuario",
+    "quirúrgic",
+    "clínic",
+    "dental",
+    "catéter",
+    "jeringa",
+    "fiestas patrias",
+    "producción de evento",
+    "baños químicos",
+    "carpa",
+    "árido",
+    "pavimento",
+    "luminaria",
+    "extintor",
+    "neumático",
+    "software",
+    "servidor"
+  ]
+}

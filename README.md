@@ -49,3 +49,36 @@ El CSV resultante trae una fila por candidata (deduplicada por
 aparece en más de un lote) con las columnas `codigo, nombre, tipo,
 rubro_match, termino_match, fecha_cierre, archivo_origen, fecha_lote` — las
 dos últimas indican de qué archivo de `data/raw/` salió cada resultado.
+
+### Medir falsos negativos del rubro: `config/criterios-descartes.json`
+
+Un registro que sobrevive estado/tipo/exclusiones pero no matchea ningún
+término de rubro se descarta en silencio — no queda registrado en
+`candidatas.json` ni en `observaciones` (eso es solo para rubros `activo:
+false`, como `ia`). No hay forma de ver ese conjunto con la configuración de
+producción.
+
+`config/criterios-descartes.json` es un criterios alternativo pensado para
+eso: es una copia de `config/criterios.json` con `tipos`, `estados`,
+`regiones` y `exclusiones` idénticos, pero con un único rubro comodín que
+matchea todo (como cualquier nombre en español contiene alguna vocal):
+
+```json
+"rubros": [
+  { "id": "todo", "activo": true, "terminos": ["a", "e", "i", "o", "u"] }
+]
+```
+
+Corriendo `--refiltrar` con este archivo, el CSV resultante es exactamente
+"todo lo que sobrevivió estado+tipo+exclusiones" — el conjunto completo de lo
+que la etapa de rubro real está descartando sin dejar rastro:
+
+```bash
+dotnet run --project src/ScorePlusTwo.Pipeline -- \
+  --refiltrar \
+  --criterios config/criterios-descartes.json \
+  --salida descartes.csv
+```
+
+El CSV de salida es un artefacto de análisis puntual — no se commitea al
+repo, a diferencia de `config/criterios-descartes.json` en sí.
