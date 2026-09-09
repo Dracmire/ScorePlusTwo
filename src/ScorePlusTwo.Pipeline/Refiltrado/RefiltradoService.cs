@@ -14,8 +14,8 @@ public sealed record FilaRefiltrado(
     string Codigo,
     string Nombre,
     string Tipo,
-    string RubroMatch,
-    string TerminoMatch,
+    string? RubroMatch,
+    string? TerminoMatch,
     DateTime? FechaCierre,
     string ArchivoOrigen,
     DateOnly FechaLote);
@@ -76,10 +76,10 @@ public static class RefiltradoService
             registrosTotales += respuesta.Listado.Count;
 
             var resultado = FiltroLicitaciones.Filtrar(respuesta.Listado, criterios);
-            candidatasConDuplicados += resultado.Candidatas.Count;
+            candidatasConDuplicados += resultado.Prioritarias.Count;
 
             var nombreArchivo = Path.GetFileName(ruta);
-            foreach (var candidata in resultado.Candidatas)
+            foreach (var candidata in resultado.Prioritarias)
             {
                 candidatasPorCodigo[candidata.Origen.CodigoExterno] = new FilaRefiltrado(
                     candidata.Origen.CodigoExterno,
@@ -111,8 +111,8 @@ public static class RefiltradoService
                 Escapar(f.Codigo),
                 Escapar(f.Nombre),
                 Escapar(f.Tipo),
-                Escapar(f.RubroMatch),
-                Escapar(f.TerminoMatch),
+                Escapar(f.RubroMatch ?? string.Empty),
+                Escapar(f.TerminoMatch ?? string.Empty),
                 Escapar(f.FechaCierre?.ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture) ?? string.Empty),
                 Escapar(f.ArchivoOrigen),
                 Escapar(f.FechaLote.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture))));

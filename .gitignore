@@ -4,6 +4,6 @@ obj/
 .vs/
 
 # Artefactos de análisis puntual del modo --refiltrar (ver README, sección
-# "Medir falsos negativos del rubro") — no son estado del pipeline, no se
+# de config/criterios-descartes.json) — no son estado del pipeline, no se
 # commitean, pero quedan accesibles en el working directory del repo.
 descartes*.csv

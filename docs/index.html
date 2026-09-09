@@ -15,20 +15,25 @@
 
     <section class="panel">
       <div class="panel-header">
-        <h2>Candidatas vigentes</h2>
+        <div class="tabs" id="tabs" role="tablist">
+          <button class="tab tab-activa" data-tab="prioritarias" role="tab" aria-selected="true">Prioritarias</button>
+          <button class="tab" data-tab="secundarias" role="tab" aria-selected="false">Secundarias</button>
+          <button class="tab" data-tab="tramo_bajo" role="tab" aria-selected="false">Tramo bajo</button>
+        </div>
         <button id="btn-descargar-csv" class="boton-secundario" hidden>Descargar CSV</button>
       </div>
       <div id="tabla-candidatas"></div>
     </section>
 
-    <section class="panel">
-      <h2>Tasa de rubro por día</h2>
+    <section class="panel" id="panel-grafico">
+      <h2>Tasa de rubro prioritario por día</h2>
       <div id="grafico-serie"></div>
     </section>
 
     <footer>
       Tablero de solo lectura — F1 (MVP). El triage se hace editando
-      <code>data/candidatas.json</code> en el repo.
+      <code>data/candidatas.json</code> (Prioritarias) o
+      <code>data/secundarias.json</code> (Secundarias) en el repo.
     </footer>
   </div>
 
