@@ -120,6 +120,30 @@ public static class Program
                 resultadoDiario.TramoBajo, resultadoActivas?.TramoBajo,
                 fecha, fechaActivas, tramo: "bajo");
 
+            // El filtro de estado solo se aplica al capturar — de ahí en
+            // adelante las listas nunca vuelven a consultar el estado y
+            // acumularían licitaciones cerradas para siempre. El lote diario
+            // crudo (antes de filtrar por estado) ya trae esas transiciones
+            // gratis: si un código de una lista aparece hoy con estado
+            // distinto de Publicada, se mueve a data/historico/ — salvo que
+            // ya tenga triage humano encima, que se respeta tal cual.
+            var (prioritariasActivas, prioritariasMovidas) = RevalidarEstado(
+                Path.Combine(repoRoot, "data", "candidatas.json"),
+                Path.Combine(repoRoot, "data", "historico", "candidatas.json"),
+                todasPrioritarias, loteDiario);
+
+            var (secundariasActivas, secundariasMovidas) = RevalidarEstado(
+                Path.Combine(repoRoot, "data", "secundarias.json"),
+                Path.Combine(repoRoot, "data", "historico", "secundarias.json"),
+                todasSecundarias, loteDiario);
+
+            var (tramoBajoActivas, tramoBajoMovidas) = RevalidarEstado(
+                Path.Combine(repoRoot, "data", "tramo_bajo.json"),
+                Path.Combine(repoRoot, "data", "historico", "tramo_bajo.json"),
+                todasTramoBajo, loteDiario);
+
+            var totalMovidasHistorico = prioritariasMovidas + secundariasMovidas + tramoBajoMovidas;
+
             // NOTA (sin arreglar todavía): barridoActivasFunnel queda indexado
             // bajo `fecha` — que es el día del LOTE DIARIO (ayer), no el día
             // en que corrió el barrido `activas` (hoy). Ej.: el barrido del
@@ -157,9 +181,9 @@ public static class Program
             var totalNuevasHoy = nuevasPrioritariasDiario.Count + nuevasPrioritariasActivas.Count
                 + nuevasSecundariasDiario.Count + nuevasSecundariasActivas.Count
                 + nuevasTramoBajoDiario.Count + nuevasTramoBajoActivas.Count;
-            RegistrarEvento(repoRoot, informeHoy, totalNuevasHoy);
+            RegistrarEvento(repoRoot, informeHoy, totalNuevasHoy, totalMovidasHistorico);
 
-            var dashboard = GeneradorDashboard.Construir(todasPrioritarias, todasSecundarias, todasTramoBajo, informes, DateTime.UtcNow);
+            var dashboard = GeneradorDashboard.Construir(prioritariasActivas, secundariasActivas, tramoBajoActivas, informes, DateTime.UtcNow);
             JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
 
             ImprimirResumen(resultadoDiario, nuevasPrioritariasDiario.Count, nuevasSecundariasDiario.Count, nuevasTramoBajoDiario.Count, estadoActivas, resultadoActivas);
@@ -350,6 +374,61 @@ public static class Program
         return informes.OrderBy(i => i.Fecha).ToList();
     }
 
+    // Cruza una lista activa contra el lote diario CRUDO (antes del filtro de
+    // estado, que es justamente lo que nunca se vuelve a mirar una vez que
+    // una licitación ya está en candidatas.json/secundarias.json/
+    // tramo_bajo.json). Si un código aparece hoy con un estado de cierre
+    // (6/7/8) y todavía no tiene triage humano encima (EstadoFlujo ==
+    // Pendiente), se marca con el estado correspondiente y se mueve a
+    // data/historico/ — no se recalcula ni se pierde, solo deja de estar en
+    // la lista activa. Si ya tiene triage humano (Candidata, Enviada,
+    // Tomada, etc.), se respeta tal cual y se queda en la lista activa,
+    // aunque Mercado Público ya la muestre cerrada: ese trabajo manual no se
+    // pisa. No reescribe el archivo activo si no hubo movimientos.
+    private static (List<Candidata> Activas, int Movidas) RevalidarEstado(
+        string rutaActiva, string rutaHistorico, List<Candidata> listaActual, List<LicitacionRaw> loteDiarioCrudo)
+    {
+        var estadoPorCodigo = loteDiarioCrudo
+            .GroupBy(l => l.CodigoExterno)
+            .ToDictionary(g => g.Key, g => g.Last().CodigoEstado);
+
+        var activas = new List<Candidata>();
+        var movidas = new List<Candidata>();
+
+        foreach (var candidata in listaActual)
+        {
+            if (candidata.EstadoFlujo == EstadoFlujo.Pendiente
+                && estadoPorCodigo.TryGetValue(candidata.Codigo, out var codigoEstado)
+                && MapearEstadoDeCierre(codigoEstado) is { } estadoCierre)
+            {
+                candidata.EstadoFlujo = estadoCierre;
+                movidas.Add(candidata);
+            }
+            else
+            {
+                activas.Add(candidata);
+            }
+        }
+
+        if (movidas.Count > 0)
+        {
+            var historico = JsonStore.CargarOPredeterminado(rutaHistorico, JsonOpciones.Persistencia, new List<Candidata>());
+            historico.AddRange(movidas);
+            JsonStore.Guardar(rutaHistorico, historico, JsonOpciones.Persistencia);
+            JsonStore.Guardar(rutaActiva, activas, JsonOpciones.Persistencia);
+        }
+
+        return (activas, movidas.Count);
+    }
+
+    private static EstadoFlujo? MapearEstadoDeCierre(int codigoEstado) => codigoEstado switch
+    {
+        6 => EstadoFlujo.Cerrada,
+        7 => EstadoFlujo.Desierta,
+        8 => EstadoFlujo.Adjudicada,
+        _ => null,
+    };
+
     // Upgrade de una sola vez para informes.json escrito antes del rediseño
     // de listas (Lista A única -> Prioritarias/Secundarias/TramoBajo).
     // Deserializar una entrada vieja directamente contra el InformeDiario
@@ -418,13 +497,14 @@ public static class Program
         }
     }
 
-    private static void RegistrarEvento(string repoRoot, InformeDiario informe, int totalNuevas)
+    private static void RegistrarEvento(string repoRoot, InformeDiario informe, int totalNuevas, int totalMovidasHistorico)
     {
         var ruta = Path.Combine(repoRoot, "data", "eventos.json");
         var eventos = JsonStore.CargarOPredeterminado(ruta, JsonOpciones.Persistencia, new List<EventoAuditoria>());
 
         var detalle = $"total={informe.Total} prioritarias={informe.Prioritarias} " +
-            $"secundarias={informe.Secundarias} tramo_bajo={informe.TramoBajo} nuevas={totalNuevas}"
+            $"secundarias={informe.Secundarias} tramo_bajo={informe.TramoBajo} nuevas={totalNuevas} " +
+            $"movidas_historico={totalMovidasHistorico}"
             + (informe.BarridoActivas is { } b
                 ? $" activas_total={b.Total} activas_prioritarias={b.Prioritarias} activas_secundarias={b.Secundarias}"
                 : string.Empty);
