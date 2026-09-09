@@ -5,25 +5,25 @@
     "tras_estado": 448,
     "tras_tipo": 372,
     "tras_region": 3,
-    "excluidas": 87,
-    "candidatas": 3,
-    "nuevas": 3,
-    "observaciones": [
-      {
-        "codigo": "757-73-LE26",
-        "nombre": "[DGP] Curso de Inteligencia Artificial Generativa",
-        "rubro": "ia",
-        "termino_match": "inteligencia artificial"
-      }
-    ],
+    "descarte_duro": 87,
+    "prioritarias": 3,
+    "secundarias": 0,
+    "tramo_bajo": 0,
+    "nuevas_prioritarias": 3,
+    "nuevas_secundarias": 0,
+    "nuevas_tramo_bajo": 0,
     "barrido_activas": {
       "total": 4751,
       "tras_estado": 4751,
       "tras_tipo": 4030,
       "tras_region": 45,
-      "excluidas": 1033,
-      "candidatas": 45,
-      "nuevas": 42
+      "descarte_duro": 1033,
+      "prioritarias": 45,
+      "secundarias": 0,
+      "tramo_bajo": 0,
+      "nuevas_prioritarias": 42,
+      "nuevas_secundarias": 0,
+      "nuevas_tramo_bajo": 0
     }
   },
   {
@@ -32,10 +32,13 @@
     "tras_estado": 10,
     "tras_tipo": 4,
     "tras_region": 0,
-    "excluidas": 2,
-    "candidatas": 0,
-    "nuevas": 0,
-    "observaciones": [],
+    "descarte_duro": 2,
+    "prioritarias": 0,
+    "secundarias": 0,
+    "tramo_bajo": 0,
+    "nuevas_prioritarias": 0,
+    "nuevas_secundarias": 0,
+    "nuevas_tramo_bajo": 0,
     "barrido_activas": null
   },
   {
@@ -44,18 +47,25 @@
     "tras_estado": 7,
     "tras_tipo": 4,
     "tras_region": 0,
-    "excluidas": 0,
-    "candidatas": 0,
-    "nuevas": 0,
-    "observaciones": [],
+    "descarte_duro": 0,
+    "prioritarias": 0,
+    "secundarias": 0,
+    "tramo_bajo": 0,
+    "nuevas_prioritarias": 0,
+    "nuevas_secundarias": 0,
+    "nuevas_tramo_bajo": 0,
     "barrido_activas": {
       "total": 4768,
       "tras_estado": 4768,
       "tras_tipo": 4038,
       "tras_region": 45,
-      "excluidas": 1035,
-      "candidatas": 45,
-      "nuevas": 0
+      "descarte_duro": 1035,
+      "prioritarias": 45,
+      "secundarias": 0,
+      "tramo_bajo": 0,
+      "nuevas_prioritarias": 0,
+      "nuevas_secundarias": 0,
+      "nuevas_tramo_bajo": 0
     }
   },
   {
@@ -64,10 +74,28 @@
     "tras_estado": 452,
     "tras_tipo": 370,
     "tras_region": 5,
-    "excluidas": 99,
-    "candidatas": 5,
-    "nuevas": 5,
-    "observaciones": [],
+    "descarte_duro": 99,
+    "prioritarias": 5,
+    "secundarias": 0,
+    "tramo_bajo": 0,
+    "nuevas_prioritarias": 5,
+    "nuevas_secundarias": 0,
+    "nuevas_tramo_bajo": 0,
+    "barrido_activas": null
+  },
+  {
+    "fecha": "2026-09-08",
+    "total": 1251,
+    "tras_estado": 468,
+    "tras_tipo": 447,
+    "tras_region": 4,
+    "descarte_duro": 124,
+    "prioritarias": 4,
+    "secundarias": 280,
+    "tramo_bajo": 39,
+    "nuevas_prioritarias": 4,
+    "nuevas_secundarias": 280,
+    "nuevas_tramo_bajo": 39,
     "barrido_activas": null
   }
 ]
