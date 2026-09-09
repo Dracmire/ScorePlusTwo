@@ -13,6 +13,7 @@
     "alimentación",
     "aseo",
     "construcción",
+    "conservación",
     "vehículo",
     "ambulancia",
     "mobiliario",
@@ -32,6 +33,8 @@
     "pavimento",
     "luminaria",
     "extintor",
-    "neumático"
+    "neumático",
+    "software",
+    "servidor"
   ]
 }
