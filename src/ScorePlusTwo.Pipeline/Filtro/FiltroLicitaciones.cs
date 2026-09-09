@@ -18,6 +18,28 @@ namespace ScorePlusTwo.Pipeline.Filtro;
 // Orden: estado -> tipo -> descarte_duro -> (L1: tramo bajo | resto: rubro).
 public static class FiltroLicitaciones
 {
+    // Excepciones puntuales al descarte duro, documentadas caso a caso: un
+    // término de descarte_duro coincide por una mención incidental, no
+    // porque el registro sea efectivamente una compra de obra/bien. Vive en
+    // código (no en config/criterios.json) porque no es un criterio de
+    // negocio editable — es la corrección de un falso positivo específico
+    // encontrado al ampliar descarte_duro, y solo tiene sentido documentado
+    // junto al análisis que lo originó.
+    private static readonly HashSet<string> ExcepcionesDescarteDuro = new()
+    {
+        // "Convenio Suministro de Servicio de Fotocopiado Impresión y
+        // Digitalización con Entrega de Equipos" — matchea "equipos" por la
+        // frase "Entrega de Equipos", pero el objeto del contrato es un
+        // SERVICIO de fotocopiado/impresión/digitalización, no una compra de
+        // equipamiento. Sin esta excepción, "equipos" en descarte_duro lo
+        // destruiría sin rastro en vez de dejarlo en Prioritarias (matchea
+        // "informátic" del rubro ti). Verificado en la simulación de
+        // descarte_duro ampliado (2026-09-09): de 54 prioritarias vigentes,
+        // fue el único de 8 casos perdidos que no era una compra real de
+        // bien — los otros 7 (ej. "COMPRA DE EQUIPOS INFORMATICOS") sí lo son.
+        "1057548-21-LE26",
+    };
+
     public static ResultadoFiltro Filtrar(IEnumerable<LicitacionRaw> licitaciones, Criterios criterios)
     {
         var lista = licitaciones as IReadOnlyList<LicitacionRaw> ?? licitaciones.ToList();
@@ -60,6 +82,11 @@ public static class FiltroLicitaciones
 
         bool EsDescarteDuro(LicitacionRaw l)
         {
+            if (ExcepcionesDescarteDuro.Contains(l.CodigoExterno))
+            {
+                return false;
+            }
+
             var nombreNormalizado = TextoNormalizador.Normalizar(l.Nombre);
             return descarteDuroNormalizado.Any(termino => nombreNormalizado.Contains(termino, StringComparison.Ordinal));
         }

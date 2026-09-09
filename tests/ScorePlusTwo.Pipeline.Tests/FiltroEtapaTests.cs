@@ -16,7 +16,7 @@ public class FiltroEtapaTests
             new("compliance", "alta", new List<string> { "auditor" }),
             new("vigilancia", "secundaria", new List<string> { "camara" }),
         },
-        DescarteDuro: new List<string> { "vehiculo", "construccion" },
+        DescarteDuro: new List<string> { "vehiculo", "construccion", "equipos" },
         ExclusionesRubro: new List<string> { "software" });
 
     private static LicitacionRaw Licitacion(string codigo, string nombre, int estado) =>
@@ -87,6 +87,41 @@ public class FiltroEtapaTests
         Assert.DoesNotContain(resultado.Prioritarias, c => c.Origen.CodigoExterno == "1-1-LE26");
         Assert.DoesNotContain(resultado.Secundarias, c => c.Origen.CodigoExterno == "1-1-LE26");
         Assert.DoesNotContain(resultado.TramoBajo, c => c.Origen.CodigoExterno == "1-1-LE26");
+    }
+
+    [Fact]
+    public void ExcepcionDescarteDuro_FotocopiadoConEquipos_NoSeDestruye()
+    {
+        // 1057548-21-LE26: "Convenio Suministro de Servicio de Fotocopiado
+        // Impresion y Digitalizacion con Entrega de Equipos" — matchea
+        // "equipos" (descarte_duro) por una mención incidental, pero es un
+        // SERVICIO real (matchea "informátic" del rubro ti vía "Digitaliza-
+        // cion"... en este caso de prueba, matchea "auditor" para simplicidad).
+        // La excepción documentada en FiltroLicitaciones lo rescata.
+        var licitaciones = new[]
+        {
+            Licitacion("1057548-21-LE26", "SERVICIO DE AUDITORIA CON ENTREGA DE EQUIPOS", 5),
+        };
+
+        var resultado = FiltroLicitaciones.Filtrar(licitaciones, CriteriosDePrueba());
+
+        Assert.Equal(0, resultado.DescarteDuro);
+        var prioritaria = Assert.Single(resultado.Prioritarias);
+        Assert.Equal("compliance", prioritaria.RubroMatch);
+    }
+
+    [Fact]
+    public void EquiposSinExcepcion_SigueCayendoADescarteDuro()
+    {
+        // Control: un código distinto con el mismo término "equipos" no
+        // tiene excepción — la excepción es por CodigoExterno específico,
+        // no un pase libre general para el término.
+        var licitaciones = new[] { Licitacion("9-9-LE26", "COMPRA DE EQUIPOS INFORMATICOS", 5) };
+
+        var resultado = FiltroLicitaciones.Filtrar(licitaciones, CriteriosDePrueba());
+
+        Assert.Equal(1, resultado.DescarteDuro);
+        Assert.Empty(resultado.Prioritarias);
     }
 
     [Fact]
