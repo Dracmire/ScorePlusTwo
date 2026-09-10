@@ -23,6 +23,15 @@
       escaparHtml(candidata.codigo) + "</span>";
   }
 
+  // Los tipos privados (CO/B2/E2/I2, ver Criterios.TiposPrivados) siempre
+  // caen en Secundarias sin pasar por clasificación de rubro — el badge es
+  // lo que permite encontrarlos ahí para la revisión de dos semanas.
+  function renderTipo(candidata) {
+    var tipo = escaparHtml(candidata.tipo);
+    if (!candidata.tipo_privado) return tipo;
+    return tipo + ' <span class="badge badge-normal" title="Tipo privado: siempre va a Secundarias, en revisión">privado</span>';
+  }
+
   function renderRubro(candidata) {
     // Secundarias sin ningún rubro match (inventario crudo de prospección) y
     // tramo bajo (L1, nunca pasa por clasificación de rubro) no tienen nada
@@ -79,7 +88,7 @@
       return "<tr>" +
         "<td>" + renderCodigo(c) + "</td>" +
         "<td>" + escaparHtml(c.nombre) + "</td>" +
-        "<td>" + escaparHtml(c.tipo) + "</td>" +
+        "<td>" + renderTipo(c) + "</td>" +
         "<td>" + renderRubro(c) + "</td>" +
         "<td>" + renderMonto(c) + "</td>" +
         "<td>" + formatearFecha(c.fecha_cierre) + "</td>" +
@@ -128,7 +137,7 @@
 
   function candidatasACsv(candidatas) {
     var columnas = [
-      "codigo", "nombre", "tipo", "rubro_match", "termino_match",
+      "codigo", "nombre", "tipo", "tipo_privado", "rubro_match", "termino_match",
       "moneda", "monto", "fecha_cierre", "dias_para_cierre", "estado_flujo",
       "origen", "fecha_lote",
     ];

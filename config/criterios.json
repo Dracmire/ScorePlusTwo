@@ -1,6 +1,6 @@
 {
   "version": "2026-09-09",
-  "tipos": ["LE", "LP", "LR", "LS", "L1"],
+  "tipos": ["LE", "LP", "LR", "LS", "L1", "CO", "B2", "E2", "I2"],
   "estados": [5],
   "regiones": ["Metropolitana", "Valparaíso", "Coquimbo"],
   "rubros": [
@@ -101,5 +101,6 @@
   "exclusiones_rubro": [
     "software",
     "servidor"
-  ]
+  ],
+  "tipos_privados": ["CO", "B2", "E2", "I2"]
 }
