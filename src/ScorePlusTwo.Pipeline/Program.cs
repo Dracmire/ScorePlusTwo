@@ -99,6 +99,7 @@ public static class Program
 
             var resultadoDiario = FiltroLicitaciones.Filtrar(loteDiario, criterios);
             var fechaActivas = DateOnly.FromDateTime(AhoraChile());
+            var tiposPrivados = criterios.TiposPrivados.ToHashSet();
 
             // Tres listas, tres archivos — mismo patrón de merge/dedupe para
             // cada una (ver FusionarLista): Prioritarias sigue siendo
@@ -108,17 +109,17 @@ public static class Program
             var (todasPrioritarias, nuevasPrioritariasDiario, nuevasPrioritariasActivas) = FusionarLista(
                 Path.Combine(repoRoot, "data", "candidatas.json"),
                 resultadoDiario.Prioritarias, resultadoActivas?.Prioritarias,
-                fecha, fechaActivas, tramo: null);
+                fecha, fechaActivas, tramo: null, tiposPrivados);
 
             var (todasSecundarias, nuevasSecundariasDiario, nuevasSecundariasActivas) = FusionarLista(
                 Path.Combine(repoRoot, "data", "secundarias.json"),
                 resultadoDiario.Secundarias, resultadoActivas?.Secundarias,
-                fecha, fechaActivas, tramo: null);
+                fecha, fechaActivas, tramo: null, tiposPrivados);
 
             var (todasTramoBajo, nuevasTramoBajoDiario, nuevasTramoBajoActivas) = FusionarLista(
                 Path.Combine(repoRoot, "data", "tramo_bajo.json"),
                 resultadoDiario.TramoBajo, resultadoActivas?.TramoBajo,
-                fecha, fechaActivas, tramo: "bajo");
+                fecha, fechaActivas, tramo: "bajo", tiposPrivados);
 
             // El filtro de estado solo se aplica al capturar — de ahí en
             // adelante las listas nunca vuelven a consultar el estado y
@@ -260,7 +261,8 @@ public static class Program
         return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zonaChile);
     }
 
-    private static Candidata CrearCandidata(CandidataDetectada detectada, DateOnly fechaLote, OrigenCandidata origen, string? tramo) =>
+    private static Candidata CrearCandidata(
+        CandidataDetectada detectada, DateOnly fechaLote, OrigenCandidata origen, string? tramo, HashSet<string> tiposPrivados) =>
         new()
         {
             Codigo = detectada.Origen.CodigoExterno,
@@ -277,6 +279,7 @@ public static class Program
             ClienteAsignado = null,
             Origen = origen,
             Tramo = tramo,
+            TipoPrivado = tiposPrivados.Contains(detectada.Tipo),
         };
 
     // Mismo merge/dedupe para las tres listas (Prioritarias -> candidatas.json,
@@ -291,7 +294,8 @@ public static class Program
         IReadOnlyList<CandidataDetectada>? detectadasActivas,
         DateOnly fechaDiario,
         DateOnly fechaActivas,
-        string? tramo)
+        string? tramo,
+        HashSet<string> tiposPrivados)
     {
         var existentes = JsonStore.CargarOPredeterminado(rutaArchivo, JsonOpciones.Persistencia, new List<Candidata>());
         var codigosExistentes = existentes.Select(c => c.Codigo).ToHashSet();
@@ -299,14 +303,14 @@ public static class Program
 
         var nuevasDiario = detectadasDiario
             .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno))
-            .Select(c => CrearCandidata(c, fechaDiario, OrigenCandidata.Diario, tramo))
+            .Select(c => CrearCandidata(c, fechaDiario, OrigenCandidata.Diario, tramo, tiposPrivados))
             .ToList();
 
         var nuevasActivas = detectadasActivas is null
             ? new List<Candidata>()
             : detectadasActivas
                 .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno) && !codigosDiario.Contains(c.Origen.CodigoExterno))
-                .Select(c => CrearCandidata(c, fechaActivas, OrigenCandidata.Activas, tramo))
+                .Select(c => CrearCandidata(c, fechaActivas, OrigenCandidata.Activas, tramo, tiposPrivados))
                 .ToList();
 
         var todas = existentes.Concat(nuevasDiario).Concat(nuevasActivas).ToList();

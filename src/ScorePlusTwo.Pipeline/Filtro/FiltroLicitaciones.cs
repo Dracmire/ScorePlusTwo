@@ -11,11 +11,13 @@ namespace ScorePlusTwo.Pipeline.Filtro;
 //   - Prioritarias (Lista A): rubro de prioridad "alta", sin bloqueo de
 //     exclusiones_rubro. Es lo que hoy va al tablero.
 //   - Secundarias (Lista B): sobrevive estado+tipo+descarte_duro pero no
-//     entra a Prioritarias (rubro secundario, sin rubro, o bloqueada por
-//     exclusiones_rubro). Inventario para prospectar rubros no atendidos.
+//     entra a Prioritarias (rubro secundario, sin rubro, bloqueada por
+//     exclusiones_rubro, o de un tipo privado). Inventario para prospectar
+//     rubros no atendidos.
 //   - TramoBajo: tipo L1, aceptado pero fuera de la clasificación de rubro
 //     — no se mezcla con el resto, es opción solo si aparece un cliente.
-// Orden: estado -> tipo -> descarte_duro -> (L1: tramo bajo | resto: rubro).
+// Orden: estado -> tipo -> descarte_duro -> (L1: tramo bajo | tipo privado:
+// secundarias sin pasar por rubro | resto: rubro).
 public static class FiltroLicitaciones
 {
     // Excepciones puntuales al descarte duro, documentadas caso a caso: un
@@ -25,6 +27,13 @@ public static class FiltroLicitaciones
     // negocio editable — es la corrección de un falso positivo específico
     // encontrado al ampliar descarte_duro, y solo tiene sentido documentado
     // junto al análisis que lo originó.
+    //
+    // DEUDA TÉCNICA: este mecanismo escala mal. Si llega a 5 entradas, dejó
+    // de ser viable mantener excepciones por código uno por uno — la señal
+    // sería que descarte_duro necesita una forma real de "rescatar" a
+    // Secundarias en vez de destruir sin rastro (hoy no la tiene: es un veto
+    // duro por diseño, ver comentario de clase). Rediseñar en ese punto,
+    // no seguir agregando entradas.
     private static readonly HashSet<string> ExcepcionesDescarteDuro = new()
     {
         // "Convenio Suministro de Servicio de Fotocopiado Impresión y
@@ -49,8 +58,10 @@ public static class FiltroLicitaciones
         var trasEstado = lista.Where(l => criterios.Estados.Contains(l.CodigoEstado)).ToList();
 
         // 2. Tipo (derivado de CodigoExterno; un código malformado simplemente no matchea).
-        // L1 se separa aquí: sigue un camino propio que nunca pasa por rubro.
+        // L1 y los tipos privados (CO/B2/E2/I2) se separan aquí: ninguno pasa
+        // por clasificación de rubro.
         var tramoBajoCandidatos = new List<(LicitacionRaw Licitacion, string Tipo)>();
+        var tipoPrivadoCandidatos = new List<(LicitacionRaw Licitacion, string Tipo)>();
         var tipoRegularCandidatos = new List<(LicitacionRaw Licitacion, string Tipo)>();
         foreach (var licitacion in trasEstado)
         {
@@ -64,18 +75,22 @@ public static class FiltroLicitaciones
             {
                 tramoBajoCandidatos.Add((licitacion, tipo));
             }
+            else if (criterios.TiposPrivados.Contains(tipo))
+            {
+                tipoPrivadoCandidatos.Add((licitacion, tipo));
+            }
             else
             {
                 tipoRegularCandidatos.Add((licitacion, tipo));
             }
         }
 
-        var trasTipo = tramoBajoCandidatos.Count + tipoRegularCandidatos.Count;
+        var trasTipo = tramoBajoCandidatos.Count + tipoPrivadoCandidatos.Count + tipoRegularCandidatos.Count;
 
         // 3. Descarte duro — obras públicas y suministros, gana siempre y se
-        // evalúa antes de cualquier rubro. Aplica por igual a tipos normales
-        // y a L1: es una regla de negocio (no hay cliente posible), no algo
-        // específico de la clasificación por rubro.
+        // evalúa antes de cualquier rubro. Aplica por igual a tipos normales,
+        // L1 y tipos privados: es una regla de negocio (no hay cliente
+        // posible), no algo específico de la clasificación por rubro.
         var descarteDuroNormalizado = criterios.DescarteDuro
             .Select(TextoNormalizador.Normalizar)
             .ToList();
@@ -92,9 +107,11 @@ public static class FiltroLicitaciones
         }
 
         var tramoBajoSobreviviente = tramoBajoCandidatos.Where(item => !EsDescarteDuro(item.Licitacion)).ToList();
+        var tipoPrivadoSobreviviente = tipoPrivadoCandidatos.Where(item => !EsDescarteDuro(item.Licitacion)).ToList();
         var regularSobreviviente = tipoRegularCandidatos.Where(item => !EsDescarteDuro(item.Licitacion)).ToList();
 
         var descarteDuroCount = (tramoBajoCandidatos.Count - tramoBajoSobreviviente.Count)
+            + (tipoPrivadoCandidatos.Count - tipoPrivadoSobreviviente.Count)
             + (tipoRegularCandidatos.Count - regularSobreviviente.Count);
 
         // Tramo bajo: no pasa por clasificación de rubro, va directo a su lista.
@@ -113,6 +130,15 @@ public static class FiltroLicitaciones
 
         var prioritarias = new List<CandidataDetectada>();
         var secundarias = new List<CandidataDetectada>();
+
+        // Tipos privados (CO/B2/E2/I2): van siempre a Secundarias, sin
+        // pasar por clasificación de rubro — tienen ciclo de vida real
+        // (ventana de postulación) pero algunos cierran el mismo día en que
+        // aparecen, así que no compiten por Prioritarias todavía (revisión
+        // pendiente para promoverlos). Candidata.TipoPrivado (derivado de
+        // Tipo en Program.cs) es lo que permite encontrarlos en la lista.
+        secundarias.AddRange(tipoPrivadoSobreviviente
+            .Select(item => new CandidataDetectada(item.Licitacion, item.Tipo, RubroMatch: null, TerminoMatch: null)));
 
         foreach (var (licitacion, tipo) in regularSobreviviente)
         {

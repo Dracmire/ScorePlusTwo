@@ -8,7 +8,7 @@ public class FiltroEtapaTests
 {
     private static Criterios CriteriosDePrueba() => new(
         Version: "test",
-        Tipos: new List<string> { "LE", "L1" },
+        Tipos: new List<string> { "LE", "L1", "CO" },
         Estados: new List<int> { 5 },
         Regiones: new List<string>(),
         Rubros: new List<RubroCriterio>
@@ -17,7 +17,8 @@ public class FiltroEtapaTests
             new("vigilancia", "secundaria", new List<string> { "camara" }),
         },
         DescarteDuro: new List<string> { "vehiculo", "construccion", "equipos" },
-        ExclusionesRubro: new List<string> { "software" });
+        ExclusionesRubro: new List<string> { "software" },
+        TiposPrivados: new List<string> { "CO" });
 
     private static LicitacionRaw Licitacion(string codigo, string nombre, int estado) =>
         new(codigo, nombre, estado, new DateTime(2026, 9, 10));
@@ -39,7 +40,7 @@ public class FiltroEtapaTests
         var licitaciones = new[]
         {
             Licitacion("1-1-L226", "AUDITORIA GENERAL", 5),
-            Licitacion("1-1-CO26", "AUDITORIA GENERAL", 5),
+            Licitacion("1-1-B226", "AUDITORIA GENERAL", 5),
             Licitacion("1-1-O126", "AUDITORIA GENERAL", 5),
         };
 
@@ -201,5 +202,33 @@ public class FiltroEtapaTests
 
         Assert.Equal(1, resultado.DescarteDuro);
         Assert.Empty(resultado.TramoBajo);
+    }
+
+    [Fact]
+    public void TipoPrivado_VaASecundarias_AunqueMatcheeRubroPrioritario()
+    {
+        // "CO" está en TiposPrivados: aunque el nombre matchea "auditor"
+        // (rubro alta compliance), nunca debe entrar a Prioritarias — el
+        // tipo privado bypasea la clasificación de rubro por completo.
+        var licitaciones = new[] { Licitacion("1-1-CO26", "AUDITORIA GENERAL", 5) };
+
+        var resultado = FiltroLicitaciones.Filtrar(licitaciones, CriteriosDePrueba());
+
+        Assert.Empty(resultado.Prioritarias);
+        var secundaria = Assert.Single(resultado.Secundarias);
+        Assert.Null(secundaria.RubroMatch);
+        Assert.Null(secundaria.TerminoMatch);
+        Assert.Equal("CO", secundaria.Tipo);
+    }
+
+    [Fact]
+    public void TipoPrivado_TambienSujetoADescarteDuro()
+    {
+        var licitaciones = new[] { Licitacion("1-1-CO26", "CONSTRUCCION DE VEREDAS", 5) };
+
+        var resultado = FiltroLicitaciones.Filtrar(licitaciones, CriteriosDePrueba());
+
+        Assert.Equal(1, resultado.DescarteDuro);
+        Assert.Empty(resultado.Secundarias);
     }
 }

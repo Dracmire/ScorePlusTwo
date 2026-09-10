@@ -17,6 +17,7 @@ public sealed record DashboardCandidata(
     OrigenCandidata Origen,
     DateOnly FechaLote,
     string? Tramo,
+    bool TipoPrivado,
     string? UrlFicha);
 
 public sealed record DashboardSerieItem(DateOnly Fecha, int Total, int Prioritarias, double Tasa);
@@ -64,6 +65,7 @@ public static class GeneradorDashboard
                 Origen: c.Origen,
                 FechaLote: c.FechaLote,
                 Tramo: c.Tramo,
+                TipoPrivado: c.TipoPrivado,
                 UrlFicha: null))
             .ToList();
 

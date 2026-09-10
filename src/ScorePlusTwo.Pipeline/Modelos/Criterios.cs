@@ -22,4 +22,14 @@ public sealed record Criterios(
     // Distingue compra de bien vs. servicio (ej. "software", "servidor"):
     // ya no mata el registro, solo le impide entrar a Lista A cuando matchea
     // un rubro de prioridad alta — cae a Lista B en vez de desaparecer.
-    [property: JsonPropertyName("exclusiones_rubro")] List<string> ExclusionesRubro);
+    [property: JsonPropertyName("exclusiones_rubro")] List<string> ExclusionesRubro,
+    // Tipos de licitación privada (CO/B2/E2/I2, 2026-09-09): tienen ciclo de
+    // vida real (ventana de postulación, no solo aviso de transparencia),
+    // pero algunos cierran el mismo día en que aparecen — todavía no hay
+    // suficiente comprensión del patrón para dejarlos competir por Lista A.
+    // Van siempre a Secundarias, sin pasar por clasificación de rubro (ver
+    // FiltroLicitaciones), marcados con Candidata.TipoPrivado para poder
+    // encontrarlos y revisar si promoverlos. Deben estar también en Tipos
+    // para ser aceptados en la etapa 2 — TiposPrivados solo decide su
+    // destino, no reemplaza esa validación.
+    [property: JsonPropertyName("tipos_privados")] List<string> TiposPrivados);

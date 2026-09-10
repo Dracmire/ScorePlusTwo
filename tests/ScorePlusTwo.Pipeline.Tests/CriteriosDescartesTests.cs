@@ -56,4 +56,12 @@ public class CriteriosDescartesTests
             CriteriosReales.Estados.OrderBy(e => e),
             CriteriosDescartes.Estados.OrderBy(e => e));
     }
+
+    [Fact]
+    public void TiposPrivadosSonIdenticosAProduccion()
+    {
+        Assert.Equal(
+            CriteriosReales.TiposPrivados.OrderBy(t => t, StringComparer.Ordinal),
+            CriteriosDescartes.TiposPrivados.OrderBy(t => t, StringComparer.Ordinal));
+    }
 }

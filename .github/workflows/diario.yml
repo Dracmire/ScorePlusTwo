@@ -37,6 +37,18 @@ on:
     # ANTES de restar un día — nunca asume que el día UTC y el día CLT
     # coinciden — así que ningún cambio de código fue necesario, solo esta
     # constancia explícita para que quede documentado por qué es seguro.
+    #
+    # Retraso del scheduler, medido empíricamente (2026-09-09): un workflow
+    # de un solo job trivial (imprimir la hora, sin checkout ni build) se
+    # programó para las 11:20 UTC y corrió a las 12:07 UTC — 47 minutos
+    # tarde, sin ninguna dependencia propia que lo explique. Sumado a los
+    # retrasos de 3-5h ya documentados arriba (con cron en punto), el rango
+    # observado de atraso del scheduler de GitHub Actions es de ~45 minutos
+    # a ~5 horas. Es retraso de la plataforma, no de este pipeline ni de su
+    # minuto de disparo — no hace falta seguir persiguiéndolo. El cron
+    # actual ('23 3 * * *') queda tal cual: incluso con el peor atraso
+    # observado (~5h) la corrida sigue cayendo dentro de la ventana
+    # 22:00–07:00 que recomienda ChileCompra.
     - cron: '23 3 * * *'
   workflow_dispatch:
     inputs:
