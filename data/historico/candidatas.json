@@ -1,0 +1,22 @@
+[
+  {
+    "codigo": "742475-4-LE26",
+    "nombre": "Adquisici\u00F3n de equipos inform\u00E1ticos para el programa Oficina Local de la Ni\u00F1ez",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-09T12:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "inform\u00E1tic",
+    "region": null,
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null
+  }
+]
