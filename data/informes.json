@@ -112,5 +112,20 @@
     "nuevas_secundarias": 260,
     "nuevas_tramo_bajo": 33,
     "barrido_activas": null
+  },
+  {
+    "fecha": "2026-09-10",
+    "total": 1240,
+    "tras_estado": 447,
+    "tras_tipo": 444,
+    "tras_region": 9,
+    "descarte_duro": 128,
+    "prioritarias": 9,
+    "secundarias": 255,
+    "tramo_bajo": 52,
+    "nuevas_prioritarias": 9,
+    "nuevas_secundarias": 255,
+    "nuevas_tramo_bajo": 52,
+    "barrido_activas": null
   }
 ]

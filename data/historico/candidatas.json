@@ -18,5 +18,25 @@
     "cliente_asignado": null,
     "origen": "activas",
     "cantidad_reclamos": null
+  },
+  {
+    "codigo": "1057501-488-LE26",
+    "nombre": "ARRIENDO MODULOS BODEGA PARA INFORM\u00C1TICA HSR",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-10T12:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "inform\u00E1tic",
+    "region": null,
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null
   }
 ]
