@@ -23,7 +23,7 @@ public sealed record Criterios(
     // ya no mata el registro, solo le impide entrar a Lista A cuando matchea
     // un rubro de prioridad alta — cae a Lista B en vez de desaparecer.
     [property: JsonPropertyName("exclusiones_rubro")] List<string> ExclusionesRubro,
-    // Tipos de licitación privada (CO/B2/E2/I2, 2026-09-09): tienen ciclo de
+    // Tipos de licitación privada (CO/B2/E2/H2/I2, 2026-09-09): tienen ciclo de
     // vida real (ventana de postulación, no solo aviso de transparencia),
     // pero algunos cierran el mismo día en que aparecen — todavía no hay
     // suficiente comprensión del patrón para dejarlos competir por Lista A.

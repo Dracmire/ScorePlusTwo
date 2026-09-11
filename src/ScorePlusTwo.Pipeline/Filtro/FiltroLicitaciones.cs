@@ -58,7 +58,7 @@ public static class FiltroLicitaciones
         var trasEstado = lista.Where(l => criterios.Estados.Contains(l.CodigoEstado)).ToList();
 
         // 2. Tipo (derivado de CodigoExterno; un código malformado simplemente no matchea).
-        // L1 y los tipos privados (CO/B2/E2/I2) se separan aquí: ninguno pasa
+        // L1 y los tipos privados (CO/B2/E2/H2/I2) se separan aquí: ninguno pasa
         // por clasificación de rubro.
         var tramoBajoCandidatos = new List<(LicitacionRaw Licitacion, string Tipo)>();
         var tipoPrivadoCandidatos = new List<(LicitacionRaw Licitacion, string Tipo)>();
@@ -131,7 +131,7 @@ public static class FiltroLicitaciones
         var prioritarias = new List<CandidataDetectada>();
         var secundarias = new List<CandidataDetectada>();
 
-        // Tipos privados (CO/B2/E2/I2): van siempre a Secundarias, sin
+        // Tipos privados (CO/B2/E2/H2/I2): van siempre a Secundarias, sin
         // pasar por clasificación de rubro — tienen ciclo de vida real
         // (ventana de postulación) pero algunos cierran el mismo día en que
         // aparecen, así que no compiten por Prioritarias todavía (revisión
