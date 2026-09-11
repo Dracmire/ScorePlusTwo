@@ -8,102 +8,61 @@ on:
     # año, así que un solo valor de cron cae en horas locales distintas
     # dependiendo de la temporada.
     #
-    # Se cambió de '0 5 * * *' a '23 3 * * *' por evidencia real de retraso,
-    # no preventivamente: las tres corridas 'schedule' que existieron hasta
-    # ahora dispararon con 3-5 horas de atraso, con DOS valores de cron
-    # distintos (ambos en punto):
-    #   - '0 9 * * *'  -> disparó a las 12:25 UTC (3h25 tarde)
-    #   - '0 5 * * *'  -> disparó a las 09:58 UTC (4h58 tarde)
-    #   - '0 5 * * *'  -> disparó a las 09:23 UTC (4h23 tarde)
-    # La variable común entre los tres es el minuto en punto (":00"), que
-    # GitHub documenta como la hora de mayor congestión de encolamiento de
-    # Actions. Con retrasos de hasta ~5h la corrida se salía de la ventana
-    # 22:00–07:00 que recomienda ChileCompra (una de las tres llegó a las
-    # 06:23 CLT, dentro por muy poco). '23 3 * * *' saca el disparo de la
-    # marca en punto para reducir ese encolamiento.
-    #
-    # Verificado con el mismo tzdata que usa TimeZoneInfo en Linux
-    # (America/Santiago): a las 03:23 UTC,
-    #   - en horario de VERANO (UTC-3) son las 00:23 CLT del MISMO día UTC
-    #     -> deja ~7h de margen antes de las 07:00, dentro de la ventana.
-    #   - en horario de INVIERNO (UTC-4) son las 23:23 CLT del día ANTERIOR
-    #     -> dentro de la ventana por el otro extremo.
-    # Esto último tiene una consecuencia en el cálculo de "ayer": en verano,
-    # "hoy" en Chile coincide con el día UTC del disparo y "ayer" es el día
-    # UTC anterior (el caso normal); en invierno, "hoy" en Chile es un día
-    # ANTES del día UTC del disparo, así que "ayer" termina siendo el
-    # ANTEPENÚLTIMO día UTC, no el previo. Program.cs ya cubre esto
-    # correctamente porque AhoraChile() convierte a la hora real de Chile
-    # ANTES de restar un día — nunca asume que el día UTC y el día CLT
-    # coinciden — así que ningún cambio de código fue necesario, solo esta
-    # constancia explícita para que quede documentado por qué es seguro.
-    #
-    # Retraso del scheduler, medido empíricamente en CINCO corridas
-    # independientes (rango 2026-09-05 a 2026-09-10): 3h25, 4h58, 4h23,
-    # 3h47 (experimento con job trivial, sin checkout ni build ni
-    # dependencia propia — descarta que el atraso sea nuestro) y **1h52**
-    # (corrida real del pipeline con el cron anterior '0 21 * * *': disparó
-    # a las 18:00 CLT y el propio historial de Actions, en esta ocasión sin
-    # ambigüedad de huso porque muestra sufijo explícito, la registra como
-    # "Sep 10, 19:52 GMT-3"). El rango de atraso del scheduler de GitHub
-    # Actions es **1h52 a 4h58** — más ancho de lo que se pensaba antes de
-    # este quinto dato, y con el piso mucho más bajo que el techo.
-    #
-    # Ese piso bajo (1h52) invalida el diseño anterior: '0 21 * * *' se
-    # eligió CALCULANDO el disparo para que la LLEGADA aterrizara cerca de
-    # las 22:00 asumiendo ~4h de atraso. Con un atraso real de solo 1h52,
-    # la llegada fue a las 19:52 CLT — más de dos horas ANTES de que abra
-    # la ventana 22:00–07:00 de ChileCompra. Apuntar a un punto de llegada
-    # no funciona cuando el atraso varía en un rango de más de 3 horas. La
-    # corrección: el disparo mismo debe caer DENTRO de la ventana, no antes
-    # calculando que el atraso lo empuje adentro.
+    # Retraso del scheduler de GitHub Actions, medido en SIETE mediciones
+    # independientes (2026-09-05 a 2026-09-10: seis corridas reales del
+    # pipeline con distintos crons, más un experimento con un job trivial
+    # sin checkout/build/dependencia propia, que descarta que el atraso sea
+    # nuestro):
+    #   3h25, 4h58, 4h23, 4h52, 4h51, 3h47 (experimento), 1h52
+    # Rango: **1h52 a 4h58**. Sin relación con el minuto de disparo elegido
+    # (crons distintos, atrasos comparables) ni con si es en punto o no —
+    # es atraso de la plataforma. Es intencionalmente ancho (piso muy por
+    # debajo del techo) y hay que diseñar el horario asumiendo cualquier
+    # valor dentro de ese rango, no un promedio.
     #
     # Cron: campos en orden minuto-hora-día-mes-día_semana (este valor se
     # leyó mal una vez — '23 3 * * *' — precisamente por no tenerlo claro).
     #
-    # Con el disparo dentro de la ventana, apuntar al borde temprano (cerca
-    # de las 22:00 en hora de Chile) tiene un riesgo propio que no es sobre
-    # la ventana sino sobre qué día calendario se procesa: si el disparo
-    # cae cerca de medianoche en Chile, cruzar o no cruzar la medianoche
-    # pasa a depender del atraso del día — y el atraso varía en más de 3
-    # horas (1h52 a 4h58) alrededor de exactamente ese umbral. Ejemplo
-    # concreto con disparo hipotético a las 21:00 CLT: un día con atraso
-    # 1h52 aterriza a las 22:52 (mismo día calendario chileno del disparo,
-    # "ayer" = día anterior al disparo); el día siguiente, con atraso 4h58,
-    # aterriza a la 01:58 (día calendario SIGUIENTE al disparo, "ayer" =
-    # el día del disparo mismo). Entre esos dos "ayer" hay un día completo
-    # que ninguna de las dos corridas llegó a pedir — un hueco silencioso
-    # en el histórico, justo lo que SPEC.md pide evitar a toda costa. No es
-    # un bug de AhoraChile() (que siempre calcula "ayer" correctamente para
-    # el día calendario chileno que sea al momento de ejecutar) sino de
-    # diseño: el disparo queda demasiado cerca del umbral de medianoche
-    # para un atraso tan variable.
+    # Diseño del horario — por qué la medianoche NO es el problema que
+    # parecía: versiones anteriores de este comentario intentaban, primero,
+    # que la LLEGADA aterrizara justo en el borde de la ventana 22:00–07:00
+    # de ChileCompra (falló: con atraso real de 1h52 la llegada quedó horas
+    # antes de que abriera la ventana), y después, que el DISPARO evitara
+    # cruzar la medianoche chilena de forma inconsistente entre días (para
+    # no arriesgar que "ayer" saltara un día calendario completo). Esa
+    # segunda preocupación resultó estar mal aplicada a este dominio: el
+    # día hábil de los organismos públicos cierra entre las 18 y 19 horas,
+    # y desde ahí hasta que reabren al día siguiente NO se publican
+    # licitaciones nuevas. Todo ese bloque nocturno corresponde al MISMO
+    # día de licitaciones sin importar si la muestra se toma a las 22:00,
+    # la 01:00 o las 06:00 — la medianoche del reloj no es un corte real de
+    # datos en este dominio, a diferencia de qué día calendario le pone
+    # AhoraChile() a la corrida. El contenido que devuelve la API es
+    # idéntico tome la muestra cuando la tome dentro de ese bloque, así que
+    # no hay corrida que pueda "perderse" un día por cruzar o no cruzar
+    # medianoche.
     #
-    # Por eso el disparo elegido NO es exactamente el borde temprano de la
-    # ventana (22:00), sino el primer valor, por temporada, en el que el
-    # atraso MÍNIMO observado (1h52) ya alcanza para cruzar la medianoche
-    # chilena de forma garantizada — así el cruce (o no-cruce) deja de
-    # depender del atraso del día y "ayer" avanza un día exacto en cada
-    # corrida, siempre. '0 3 * * *' (hora 3 UTC) es ese valor:
-    #   - Invierno (UTC-4): dispara a las 23:00 CLT del día D-1. Con el
-    #     rango de atraso 1h52–4h58 llega entre las 00:52 y las 03:58 del
-    #     día D — el atraso mínimo (23:00+1h52=00:52) ya cruza medianoche
-    #     con 52 min de margen, así que TODA corrida de invierno aterriza
-    #     en D sin importar el atraso exacto de ese día.
-    #   - Verano (UTC-3): dispara justo a las 00:00 CLT del día D (la
-    #     medianoche misma) — no hay margen que ganar porque el disparo ya
-    #     está del otro lado; cualquier atraso positivo lo deja en D. Llega
-    #     entre las 01:52 y las 04:58 del día D.
-    # En ambas temporadas la llegada cae dentro de 22:00–07:00, y en ambas
-    # el día calendario chileno de la llegada es el MISMO día UTC D en que
-    # dispara el cron (verificado con TimeZoneInfo/America/Santiago) — así
-    # que "ayer" = D-1 en cada corrida, consistente y sin saltos, para
-    # cualquier atraso dentro del rango observado. AhoraChile() no necesita
-    # ningún cambio: sigue calculando "ayer" convirtiendo a la hora real de
-    # Chile antes de restar un día; lo que cambió acá es elegir un disparo
-    # donde esa conversión da el mismo resultado todos los días, en vez de
-    # uno donde el resultado podía alternar según el atraso.
-    - cron: '0 3 * * *'
+    # Con eso resuelto, el objetivo vuelve a ser simple: disparar cerca de
+    # las 21:00 hora de Chile, para que con el atraso típico (mayoría del
+    # rango entre 3h y 5h) la corrida aterrice después de las 22:00. Un
+    # atraso mínimo (1h52) la deja un poco antes de las 22:00, pero sigue
+    # muy adentro del bloque nocturno sin publicaciones nuevas, así que no
+    # es un problema real.
+    #
+    # '0 0 * * *' (medianoche UTC) da un solo valor de cron para las dos
+    # temporadas:
+    #   - Verano (Chile UTC-3): dispara a las 21:00 CLT. Con el rango de
+    #     atraso 1h52–4h58 llega entre las 22:52 y la 01:58 del día
+    #     siguiente.
+    #   - Invierno (Chile UTC-4): dispara a las 20:00 CLT. Llega entre las
+    #     21:52 y las 00:58.
+    # AhoraChile() no necesita ningún cambio: sigue calculando "ayer"
+    # convirtiendo a la hora real de Chile antes de restar un día, y sigue
+    # siendo correcto por construcción para cualquier hora de disparo. Cuál
+    # de los dos días calendario adyacentes le toque a una corrida puntual
+    # ya no importa para la integridad del histórico, porque ambos días
+    # calendario caen dentro del mismo bloque sin licitaciones nuevas.
+    - cron: '0 0 * * *'
   workflow_dispatch:
     inputs:
       fecha:
