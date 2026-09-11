@@ -23,7 +23,7 @@
       escaparHtml(candidata.codigo) + "</span>";
   }
 
-  // Los tipos privados (CO/B2/E2/I2, ver Criterios.TiposPrivados) siempre
+  // Los tipos privados (CO/B2/E2/H2/I2, ver Criterios.TiposPrivados) siempre
   // caen en Secundarias sin pasar por clasificación de rubro — el badge es
   // lo que permite encontrarlos ahí para la revisión de dos semanas.
   function renderTipo(candidata) {

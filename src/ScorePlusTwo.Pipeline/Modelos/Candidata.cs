@@ -21,7 +21,7 @@ public sealed class Candidata
     // secundarias.json de tramo_bajo.json.
     public string? Tramo { get; set; }
 
-    // true para tipos privados (CO/B2/E2/I2, ver Criterios.TiposPrivados):
+    // true para tipos privados (CO/B2/E2/H2/I2, ver Criterios.TiposPrivados):
     // siempre van a Secundarias sin pasar por clasificación de rubro, aunque
     // tienen ciclo de vida real (2026-09-09). Es lo que permite encontrarlos
     // dentro de secundarias.json para revisar si promoverlos a Prioritarias.
