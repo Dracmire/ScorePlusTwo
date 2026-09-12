@@ -75,5 +75,12 @@
     "accion": "corrida_pipeline",
     "codigo": null,
     "detalle": "total=1240 prioritarias=9 secundarias=255 tramo_bajo=52 nuevas=316 movidas_historico=1"
+  },
+  {
+    "timestamp": "2026-09-12T03:12:03.713888Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=1240 prioritarias=8 secundarias=226 tramo_bajo=39 nuevas=273 movidas_historico=6"
   }
 ]
