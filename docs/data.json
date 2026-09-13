@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-09-12T03:12:03.7148904Z",
+  "generado_en": "2026-09-13T03:15:03.3228808Z",
   "prioritarias": [
     {
       "codigo": "2446-251-LE26",
@@ -9724,6 +9724,24 @@
       "url_ficha": null
     },
     {
+      "codigo": "2730-117-LE26",
+      "nombre": "Servicio producci\u00F3n XXIII Feria del Libro y Festival de Jazz",
+      "tipo": "LE",
+      "fecha_cierre": "2026-09-22T15:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-12",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null
+    },
+    {
       "codigo": "938-31-LE26",
       "nombre": "Adquisici\u00F3n mediante importaci\u00F3n directa m\u00F3dulos para mantenimiento de sistemas de comunicaciones para equipos VHF AM",
       "tipo": "LE",
@@ -9881,6 +9899,24 @@
       "estado_flujo": "pendiente",
       "origen": "diario",
       "fecha_lote": "2026-09-10",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null
+    },
+    {
+      "codigo": "2730-116-LE26",
+      "nombre": "Adquisici\u00F3n instrumentos musicales y otros Lingue",
+      "tipo": "LE",
+      "fecha_cierre": "2026-09-22T15:02:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-12",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null
@@ -10840,6 +10876,24 @@
       "url_ficha": null
     },
     {
+      "codigo": "624-27-LE26",
+      "nombre": "ADQUISICI\u00D3N DE SERVIDOR PARA GOBIERNO REGIONAL",
+      "tipo": "LE",
+      "fecha_cierre": "2026-09-23T12:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-12",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null
+    },
+    {
       "codigo": "528208-42-LE26",
       "nombre": "SERVICIO DE PRODUCCI\u00D3N INTEGRAL FERIA DEL LIBRO Y EL C\u00D3MIC FLIC 2026",
       "tipo": "LE",
@@ -11537,6 +11591,24 @@
       "estado_flujo": "pendiente",
       "origen": "diario",
       "fecha_lote": "2026-09-09",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null
+    },
+    {
+      "codigo": "1350803-5-LP26",
+      "nombre": "Puntos m\u00F3viles para divulgaci\u00F3n Desierto Florido",
+      "tipo": "LP",
+      "fecha_cierre": "2026-09-23T19:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-12",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null
@@ -13949,6 +14021,24 @@
       "estado_flujo": "pendiente",
       "origen": "diario",
       "fecha_lote": "2026-09-11",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null
+    },
+    {
+      "codigo": "2719-45-LE26",
+      "nombre": "Recuperacion y Puesta en valor Espacios Publicos",
+      "tipo": "LE",
+      "fecha_cierre": "2026-09-28T15:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-12",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null
@@ -21858,6 +21948,24 @@
       "url_ficha": null
     },
     {
+      "codigo": "3890-195-L126",
+      "nombre": "ADQ. JUEGOS DIDACTICOS Y DE MESA 4 A 7",
+      "tipo": "L1",
+      "fecha_cierre": "2026-09-22T15:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-12",
+      "tramo": "bajo",
+      "tipo_privado": false,
+      "url_ficha": null
+    },
+    {
       "codigo": "3416-67-L126",
       "nombre": "SERVICIO DE RESTAURACI\u00D3N CUADROS RECORDS",
       "tipo": "L1",
@@ -22626,6 +22734,12 @@
       "total": 1240,
       "prioritarias": 8,
       "tasa": 0.0065
+    },
+    {
+      "fecha": "2026-09-12",
+      "total": 18,
+      "prioritarias": 0,
+      "tasa": 0
     }
   ]
 }

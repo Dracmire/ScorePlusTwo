@@ -3258,5 +3258,25 @@
     "cliente_asignado": null,
     "origen": "diario",
     "cantidad_reclamos": null
+  },
+  {
+    "codigo": "3890-195-L126",
+    "nombre": "ADQ. JUEGOS DIDACTICOS Y DE MESA 4 A 7",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-22T15:00:00",
+    "fecha_lote": "2026-09-12",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null
   }
 ]
