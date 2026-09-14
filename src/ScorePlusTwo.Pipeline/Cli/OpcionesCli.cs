@@ -10,20 +10,13 @@ namespace ScorePlusTwo.Pipeline.Cli;
 // el flujo automático ni sus archivos de estado. --desde usa formato ISO
 // (YYYY-MM-DD), distinto de --fecha (DD-MM-YYYY) — son flags separados que
 // nunca se combinan, así que no hay ambigüedad de formato entre ellos.
-//
-// --experimento-unspsc es un modo temporal (ver plan de sesión): pide el
-// detalle real de una lista fija de códigos, mide latencia y compara la
-// categoría UNSPSC resuelta contra la clasificación actual del filtro de
-// palabras. Se elimina junto con .github/workflows/experimento-unspsc.yml
-// una vez leído el resultado — mismo ciclo de vida que experimento-cron.yml.
 public sealed record OpcionesCli(
     string? RutaFixture,
     DateOnly? Fecha,
     bool Refiltrar,
     string? RutaCriteriosAlternativos,
     DateOnly? Desde,
-    string? RutaSalidaRefiltrado,
-    bool ExperimentoUnspsc)
+    string? RutaSalidaRefiltrado)
 {
     public static OpcionesCli Parse(string[] args)
     {
@@ -33,7 +26,6 @@ public sealed record OpcionesCli(
         string? rutaCriteriosAlternativos = null;
         DateOnly? desde = null;
         string? rutaSalidaRefiltrado = null;
-        var experimentoUnspsc = false;
 
         for (var i = 0; i < args.Length; i++)
         {
@@ -57,13 +49,9 @@ public sealed record OpcionesCli(
                 case "--salida" when i + 1 < args.Length:
                     rutaSalidaRefiltrado = args[++i];
                     break;
-                case "--experimento-unspsc":
-                    experimentoUnspsc = true;
-                    break;
             }
         }
 
-        return new OpcionesCli(
-            rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado, experimentoUnspsc);
+        return new OpcionesCli(rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado);
     }
 }
