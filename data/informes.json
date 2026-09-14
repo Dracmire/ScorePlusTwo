@@ -157,5 +157,32 @@
     "nuevas_secundarias": 5,
     "nuevas_tramo_bajo": 1,
     "barrido_activas": null
+  },
+  {
+    "fecha": "2026-09-13",
+    "total": 2,
+    "tras_estado": 2,
+    "tras_tipo": 2,
+    "tras_region": 0,
+    "descarte_duro": 2,
+    "prioritarias": 0,
+    "secundarias": 0,
+    "tramo_bajo": 0,
+    "nuevas_prioritarias": 0,
+    "nuevas_secundarias": 0,
+    "nuevas_tramo_bajo": 0,
+    "barrido_activas": {
+      "total": 4826,
+      "tras_estado": 4826,
+      "tras_tipo": 4648,
+      "tras_region": 58,
+      "descarte_duro": 1493,
+      "prioritarias": 58,
+      "secundarias": 2840,
+      "tramo_bajo": 257,
+      "nuevas_prioritarias": 0,
+      "nuevas_secundarias": 1846,
+      "nuevas_tramo_bajo": 104
+    }
   }
 ]
