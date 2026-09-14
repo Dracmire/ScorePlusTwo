@@ -1,0 +1,34 @@
+name: Experimento — clasificación UNSPSC
+
+# Temporal (ver plan de sesión, "Investigación — rediseño de la etapa 3 con
+# UNSPSC"): pide el detalle real de 22 códigos (2 de control + 10
+# Prioritarias + 10 Secundarias ya seleccionados a mano) contra
+# api.mercadopublico.cl, imprime una tabla comparando el primer nivel de
+# `Categoria` contra la clasificación actual del filtro de palabras, y mide
+# cuánto demora cada llamada de detalle. Solo lee candidatas.json/
+# secundarias.json/tramo_bajo.json — nunca los escribe, no hay paso de
+# commit. Borrar este archivo una vez leído el resultado en el log del job,
+# mismo ciclo de vida que experimento-cron.yml.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  experimento:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Compilar
+        run: dotnet build ScorePlusTwo.sln --configuration Release
+
+      - name: Correr experimento UNSPSC
+        env:
+          MP_TICKET: ${{ secrets.MP_TICKET }}
+        run: dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --experimento-unspsc

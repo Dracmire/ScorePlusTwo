@@ -33,6 +33,15 @@ public static class Program
                 return EjecutarRefiltrado(repoRoot, opciones);
             }
 
+            // Mismo aislamiento estructural que --refiltrar: modo de
+            // investigación puntual (ver plan de sesión), solo lee
+            // candidatas.json/secundarias.json/tramo_bajo.json existentes y
+            // llama al detalle real de la API — nunca escribe estado.
+            if (opciones.ExperimentoUnspsc)
+            {
+                return await EjecutarExperimentoUnspsc(repoRoot);
+            }
+
             List<LicitacionRaw> loteDiario;
             DateOnly fecha;
             ResultadoFiltro? resultadoActivas = null;
@@ -582,5 +591,126 @@ public static class Program
         Console.WriteLine($"CSV escrito en: {rutaSalida}");
 
         return 0;
+    }
+
+    // Experimento temporal (ver plan de sesión, "Investigación — rediseño de
+    // la etapa 3 con UNSPSC"): pide el detalle real de 22 códigos fijos
+    // (los 2 de control + 10 prioritarias + 10 secundarias ya seleccionados
+    // a mano contra data/candidatas.json/secundarias.json reales) y compara
+    // el primer nivel de Categoria contra la clasificación actual del
+    // filtro de palabras. Solo lee candidatas.json/secundarias.json/
+    // tramo_bajo.json (nunca los escribe) y llama a la API real vía
+    // MercadoPublicoClient.ObtenerDetalleAsync, reusando sus reintentos.
+    // Descartar junto con .github/workflows/experimento-unspsc.yml una vez
+    // leído el resultado.
+    private static readonly string[] CodigosExperimentoUnspsc =
+    {
+        // Control (paso 1)
+        "598-16-LE26", "85-34-LP26",
+        // 10 Prioritarias: 5 son el patrón "equipos informáticos" que
+        // matcheó rubro ti (incluye el fotocopiado con excepción)
+        "1057548-21-LE26", "1259850-4-LP26", "2408-160-LP26", "2563-34-LR26", "3047-54-LE26",
+        "2345-148-LE26", "726931-1-LE26", "5413-71-LE26", "1007793-15-LE26", "1020-38-LP26",
+        // 10 Secundarias: bienes médicos sin rubro, cursos ia, tipo privado
+        // (mantención de equipos), servicios genéricos sin rubro
+        "1057049-338-LE26", "1057539-133-LR26", "1057822-49-LE26", "2460-105-LE26", "4879-28-LE26",
+        "1274285-48-CO26", "1057544-304-B226", "1305532-10-LE26", "1126920-32-LE26", "1271178-41-LE26",
+    };
+
+    private static async Task<int> EjecutarExperimentoUnspsc(string repoRoot)
+    {
+        var ticket = Environment.GetEnvironmentVariable("MP_TICKET")
+            ?? throw new MercadoPublicoApiException("Falta la variable de entorno MP_TICKET.");
+
+        var prioritarias = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "candidatas.json"), JsonOpciones.Persistencia, new List<Candidata>());
+        var secundarias = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "secundarias.json"), JsonOpciones.Persistencia, new List<Candidata>());
+        var tramoBajo = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "tramo_bajo.json"), JsonOpciones.Persistencia, new List<Candidata>());
+
+        using var http = new HttpClient();
+        var cliente = new MercadoPublicoClient(http, ticket);
+
+        var tiempos = new List<TimeSpan>();
+
+        Console.WriteLine("codigo | CodigoProducto | primer_nivel_de_Categoria | clasificacion_actual_del_filtro | coinciden");
+
+        foreach (var codigo in CodigosExperimentoUnspsc)
+        {
+            var cronometro = System.Diagnostics.Stopwatch.StartNew();
+            DetalleLicitacionResponse detalle;
+            try
+            {
+                detalle = await cliente.ObtenerDetalleAsync(codigo);
+            }
+            catch (MercadoPublicoApiException ex)
+            {
+                cronometro.Stop();
+                Console.WriteLine($"{codigo} | ERROR: {ex.Message} | — | — | —");
+                continue;
+            }
+
+            cronometro.Stop();
+            tiempos.Add(cronometro.Elapsed);
+
+            var primerItem = detalle.Listado.FirstOrDefault()?.Items?.Listado?.FirstOrDefault();
+            var codigoProducto = primerItem?.CodigoProducto;
+            var primerNivel = primerItem?.Categoria?.Split('/').FirstOrDefault()?.Trim();
+
+            var (clasificacion, esPrioritaria) = ClasificacionActual(codigo, prioritarias, secundarias, tramoBajo);
+            var esServicioUnspsc = primerNivel is null
+                ? (bool?)null
+                : primerNivel.StartsWith("Servicios", StringComparison.OrdinalIgnoreCase);
+            var coinciden = esServicioUnspsc is null ? "sin dato" : (esServicioUnspsc == esPrioritaria).ToString();
+
+            Console.WriteLine(
+                $"{codigo} | {codigoProducto?.ToString() ?? "—"} | {primerNivel ?? "—"} | {clasificacion} | {coinciden}");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("== Timing (paso 2) ==");
+        Console.WriteLine($"Llamadas exitosas: {tiempos.Count}/{CodigosExperimentoUnspsc.Length}");
+        if (tiempos.Count > 0)
+        {
+            var promedioSeg = tiempos.Average(t => t.TotalSeconds);
+            Console.WriteLine($"Promedio: {tiempos.Average(t => t.TotalMilliseconds):F0} ms");
+            Console.WriteLine($"Min: {tiempos.Min().TotalMilliseconds:F0} ms — Max: {tiempos.Max().TotalMilliseconds:F0} ms");
+            Console.WriteLine($"Proyección secuencial, 372 llamadas/día: {promedioSeg * 372 / 60:F1} min");
+            Console.WriteLine($"Proyección secuencial, 4.038 llamadas (lunes/activas): {promedioSeg * 4038 / 60:F1} min");
+        }
+
+        return 0;
+    }
+
+    // esPrioritaria es lo que decide "coinciden": Prioritarias es la única
+    // lista donde el filtro actual afirma activamente "esto es un servicio
+    // de la línea de negocio" — Secundarias/TramoBajo no hacen esa afirmación
+    // (rubro secundario, sin rubro, tipo privado o L1 no implican bien ni
+    // servicio). Comparar contra esa afirmación puntual es lo que expone
+    // tanto bienes colados en Prioritarias como servicios legítimos
+    // atascados en Secundarias sin rubro.
+    private static (string Clasificacion, bool EsPrioritaria) ClasificacionActual(
+        string codigo, List<Candidata> prioritarias, List<Candidata> secundarias, List<Candidata> tramoBajo)
+    {
+        var p = prioritarias.FirstOrDefault(c => c.Codigo == codigo);
+        if (p is not null)
+        {
+            return ($"Prioritarias/{p.RubroMatch ?? "ninguno"}", true);
+        }
+
+        var s = secundarias.FirstOrDefault(c => c.Codigo == codigo);
+        if (s is not null)
+        {
+            return ($"Secundarias/{s.RubroMatch ?? "ninguno"}", false);
+        }
+
+        var t = tramoBajo.FirstOrDefault(c => c.Codigo == codigo);
+        if (t is not null)
+        {
+            return ("TramoBajo", false);
+        }
+
+        return ("no encontrado", false);
     }
 }
