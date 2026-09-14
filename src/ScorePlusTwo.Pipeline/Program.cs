@@ -617,6 +617,14 @@ public static class Program
         "1274285-48-CO26", "1057544-304-B226", "1305532-10-LE26", "1126920-32-LE26", "1271178-41-LE26",
     };
 
+    // Confirmados contra el catálogo (ver primera corrida del experimento):
+    // ambos resuelven a raíz J (Servicios) por Parent key y hoy están en
+    // Secundarias sin rubro — candidatos reales a promover, no sospechas.
+    private static readonly string[] CodigosDetalleCompleto =
+    {
+        "4879-28-LE26", "1305532-10-LE26",
+    };
+
     private static async Task<int> EjecutarExperimentoUnspsc(string repoRoot)
     {
         var ticket = Environment.GetEnvironmentVariable("MP_TICKET")
@@ -629,12 +637,14 @@ public static class Program
         var tramoBajo = JsonStore.CargarOPredeterminado(
             Path.Combine(repoRoot, "data", "tramo_bajo.json"), JsonOpciones.Persistencia, new List<Candidata>());
 
+        var catalogo = CatalogoUnspsc.Cargar(Path.Combine(repoRoot, "data", "unspsc-catalogo-temporal.csv"));
+
         using var http = new HttpClient();
         var cliente = new MercadoPublicoClient(http, ticket);
 
         var tiempos = new List<TimeSpan>();
 
-        Console.WriteLine("codigo | CodigoProducto | primer_nivel_de_Categoria | clasificacion_actual_del_filtro | coinciden");
+        Console.WriteLine("codigo | CodigoProducto | raiz_unspsc | titulo_raiz | clasificacion_actual_del_filtro | coinciden");
 
         foreach (var codigo in CodigosExperimentoUnspsc)
         {
@@ -647,7 +657,7 @@ public static class Program
             catch (MercadoPublicoApiException ex)
             {
                 cronometro.Stop();
-                Console.WriteLine($"{codigo} | ERROR: {ex.Message} | — | — | —");
+                Console.WriteLine($"{codigo} | ERROR: {ex.Message} | — | — | — | —");
                 continue;
             }
 
@@ -656,16 +666,23 @@ public static class Program
 
             var primerItem = detalle.Listado.FirstOrDefault()?.Items?.Listado?.FirstOrDefault();
             var codigoProducto = primerItem?.CodigoProducto;
-            var primerNivel = primerItem?.Categoria?.Split('/').FirstOrDefault()?.Trim();
+
+            // Resolución real: caminar Parent key hasta la raíz, NO inspeccionar
+            // el texto de Categoria (ver hallazgo del usuario: la categoría 43
+            // nunca empieza con "Servicios" en el string aunque a veces sea
+            // bien y otras servicio de telecomunicaciones — comparar contra el
+            // string reproduce el mismo error de resolución superficial que
+            // motivó cargar el catálogo con Parent key en primer lugar).
+            var (raiz, tituloRaiz) = codigoProducto is null
+                ? (null, "sin CodigoProducto")
+                : catalogo.ResolverRaiz(codigoProducto.Value);
 
             var (clasificacion, esPrioritaria) = ClasificacionActual(codigo, prioritarias, secundarias, tramoBajo);
-            var esServicioUnspsc = primerNivel is null
-                ? (bool?)null
-                : primerNivel.StartsWith("Servicios", StringComparison.OrdinalIgnoreCase);
+            var esServicioUnspsc = raiz is null ? (bool?)null : raiz == "J";
             var coinciden = esServicioUnspsc is null ? "sin dato" : (esServicioUnspsc == esPrioritaria).ToString();
 
             Console.WriteLine(
-                $"{codigo} | {codigoProducto?.ToString() ?? "—"} | {primerNivel ?? "—"} | {clasificacion} | {coinciden}");
+                $"{codigo} | {codigoProducto?.ToString() ?? "—"} | {raiz ?? "???"} | {tituloRaiz} | {clasificacion} | {coinciden}");
         }
 
         Console.WriteLine();
@@ -678,6 +695,24 @@ public static class Program
             Console.WriteLine($"Min: {tiempos.Min().TotalMilliseconds:F0} ms — Max: {tiempos.Max().TotalMilliseconds:F0} ms");
             Console.WriteLine($"Proyección secuencial, 372 llamadas/día: {promedioSeg * 372 / 60:F1} min");
             Console.WriteLine($"Proyección secuencial, 4.038 llamadas (lunes/activas): {promedioSeg * 4038 / 60:F1} min");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("== Detalle completo de candidatos confirmados (raíz J, hoy en Secundarias) ==");
+        foreach (var codigo in CodigosDetalleCompleto)
+        {
+            Console.WriteLine($"--- {codigo} ---");
+            try
+            {
+                var crudo = await cliente.ObtenerDetalleCrudoAsync(codigo);
+                using var doc = JsonDocument.Parse(crudo);
+                var indentado = JsonSerializer.Serialize(doc.RootElement, new JsonSerializerOptions { WriteIndented = true });
+                Console.WriteLine(indentado);
+            }
+            catch (MercadoPublicoApiException ex)
+            {
+                Console.WriteLine($"ERROR: {ex.Message}");
+            }
         }
 
         return 0;
