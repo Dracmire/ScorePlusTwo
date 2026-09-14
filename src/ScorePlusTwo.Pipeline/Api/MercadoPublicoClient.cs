@@ -38,22 +38,6 @@ public sealed class MercadoPublicoClient
     public Task<ListadoLicitacionesResponse> ObtenerAdjudicadasAsync(DateOnly fecha, CancellationToken ct = default) =>
         ObtenerAsync<ListadoLicitacionesResponse>($"{BaseUrl}?fecha={FormatearFecha(fecha)}&estado=adjudicada&ticket={_ticket}", ct);
 
-    // Detalle de una licitación puntual por código — mismo envelope
-    // {Cantidad, FechaCreacion, Version, Listado}, pero cada item trae
-    // muchos más campos que el lote diario (Items, Fechas, CantidadReclamos,
-    // etc.). DetalleLicitacionResponse solo modela lo que necesita el
-    // experimento de clasificación UNSPSC (ver plan de sesión); F2 deberá
-    // rediseñar el shape completo cuando implemente el detalle de
-    // sobrevivientes en serio.
-    public Task<DetalleLicitacionResponse> ObtenerDetalleAsync(string codigoExterno, CancellationToken ct = default) =>
-        ObtenerAsync<DetalleLicitacionResponse>($"{BaseUrl}?codigo={Uri.EscapeDataString(codigoExterno)}&ticket={_ticket}", ct);
-
-    // Variante que devuelve el JSON crudo sin deserializar — para inspección
-    // manual puntual (ver plan de sesión, experimento UNSPSC) cuando el
-    // shape tipado no alcanza. Comparte los mismos reintentos que el resto.
-    public Task<string> ObtenerDetalleCrudoAsync(string codigoExterno, CancellationToken ct = default) =>
-        ObtenerTextoAsync($"{BaseUrl}?codigo={Uri.EscapeDataString(codigoExterno)}&ticket={_ticket}", ct);
-
     private static string FormatearFecha(DateOnly fecha) => fecha.ToString("ddMMyyyy", CultureInfo.InvariantCulture);
 
     // Barrido semanal: corte transversal del mercado, sin parámetro de fecha.
