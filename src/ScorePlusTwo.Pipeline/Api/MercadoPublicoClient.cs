@@ -33,10 +33,20 @@ public sealed class MercadoPublicoClient
     }
 
     public Task<ListadoLicitacionesResponse> ObtenerListadoDiarioAsync(DateOnly fecha, CancellationToken ct = default) =>
-        ObtenerAsync($"{BaseUrl}?fecha={FormatearFecha(fecha)}&ticket={_ticket}", ct);
+        ObtenerAsync<ListadoLicitacionesResponse>($"{BaseUrl}?fecha={FormatearFecha(fecha)}&ticket={_ticket}", ct);
 
     public Task<ListadoLicitacionesResponse> ObtenerAdjudicadasAsync(DateOnly fecha, CancellationToken ct = default) =>
-        ObtenerAsync($"{BaseUrl}?fecha={FormatearFecha(fecha)}&estado=adjudicada&ticket={_ticket}", ct);
+        ObtenerAsync<ListadoLicitacionesResponse>($"{BaseUrl}?fecha={FormatearFecha(fecha)}&estado=adjudicada&ticket={_ticket}", ct);
+
+    // Detalle de una licitación puntual por código — mismo envelope
+    // {Cantidad, FechaCreacion, Version, Listado}, pero cada item trae
+    // muchos más campos que el lote diario (Items, Fechas, CantidadReclamos,
+    // etc.). DetalleLicitacionResponse solo modela lo que necesita el
+    // experimento de clasificación UNSPSC (ver plan de sesión); F2 deberá
+    // rediseñar el shape completo cuando implemente el detalle de
+    // sobrevivientes en serio.
+    public Task<DetalleLicitacionResponse> ObtenerDetalleAsync(string codigoExterno, CancellationToken ct = default) =>
+        ObtenerAsync<DetalleLicitacionResponse>($"{BaseUrl}?codigo={Uri.EscapeDataString(codigoExterno)}&ticket={_ticket}", ct);
 
     private static string FormatearFecha(DateOnly fecha) => fecha.ToString("ddMMyyyy", CultureInfo.InvariantCulture);
 
@@ -47,7 +57,7 @@ public sealed class MercadoPublicoClient
     // corriéndola de nuevo cualquier día, el lote diario no.
     public async Task<ListadoLicitacionesResponse> ObtenerActivasAsync(CancellationToken ct = default)
     {
-        var respuesta = await ObtenerAsync($"{BaseUrl}?estado=activas&ticket={_ticket}", ct);
+        var respuesta = await ObtenerAsync<ListadoLicitacionesResponse>($"{BaseUrl}?estado=activas&ticket={_ticket}", ct);
 
         if (respuesta.Cantidad != respuesta.Listado.Count)
         {
@@ -67,7 +77,12 @@ public sealed class MercadoPublicoClient
         return respuesta;
     }
 
-    private async Task<ListadoLicitacionesResponse> ObtenerAsync(string url, CancellationToken ct)
+    // Genérico sobre el tipo de respuesta: el envelope {Cantidad,
+    // FechaCreacion, Version, Listado} es el mismo para el lote diario,
+    // adjudicadas, activas y el detalle por código — solo cambia la forma
+    // de cada item dentro de Listado. Reintentos/backoff/manejo de errores
+    // se comparten para las cuatro, sin duplicar la lógica.
+    private async Task<T> ObtenerAsync<T>(string url, CancellationToken ct)
     {
         Exception? ultimaExcepcion = null;
 
@@ -79,7 +94,7 @@ public sealed class MercadoPublicoClient
                 if (respuesta.IsSuccessStatusCode)
                 {
                     var json = await respuesta.Content.ReadAsStringAsync(ct);
-                    return JsonSerializer.Deserialize<ListadoLicitacionesResponse>(json, JsonOpciones.ApiLectura)
+                    return JsonSerializer.Deserialize<T>(json, JsonOpciones.ApiLectura)
                         ?? throw new MercadoPublicoApiException(
                             $"La API devolvió un cuerpo vacío o no parseable para {OcultarTicket(url)}.");
                 }
