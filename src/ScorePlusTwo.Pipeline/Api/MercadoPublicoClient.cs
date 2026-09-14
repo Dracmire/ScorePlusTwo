@@ -48,6 +48,12 @@ public sealed class MercadoPublicoClient
     public Task<DetalleLicitacionResponse> ObtenerDetalleAsync(string codigoExterno, CancellationToken ct = default) =>
         ObtenerAsync<DetalleLicitacionResponse>($"{BaseUrl}?codigo={Uri.EscapeDataString(codigoExterno)}&ticket={_ticket}", ct);
 
+    // Variante que devuelve el JSON crudo sin deserializar — para inspección
+    // manual puntual (ver plan de sesión, experimento UNSPSC) cuando el
+    // shape tipado no alcanza. Comparte los mismos reintentos que el resto.
+    public Task<string> ObtenerDetalleCrudoAsync(string codigoExterno, CancellationToken ct = default) =>
+        ObtenerTextoAsync($"{BaseUrl}?codigo={Uri.EscapeDataString(codigoExterno)}&ticket={_ticket}", ct);
+
     private static string FormatearFecha(DateOnly fecha) => fecha.ToString("ddMMyyyy", CultureInfo.InvariantCulture);
 
     // Barrido semanal: corte transversal del mercado, sin parámetro de fecha.
@@ -80,9 +86,17 @@ public sealed class MercadoPublicoClient
     // Genérico sobre el tipo de respuesta: el envelope {Cantidad,
     // FechaCreacion, Version, Listado} es el mismo para el lote diario,
     // adjudicadas, activas y el detalle por código — solo cambia la forma
-    // de cada item dentro de Listado. Reintentos/backoff/manejo de errores
-    // se comparten para las cuatro, sin duplicar la lógica.
+    // de cada item dentro de Listado. Deserializa sobre ObtenerTextoAsync,
+    // que es quien realmente tiene los reintentos/backoff.
     private async Task<T> ObtenerAsync<T>(string url, CancellationToken ct)
+    {
+        var json = await ObtenerTextoAsync(url, ct);
+        return JsonSerializer.Deserialize<T>(json, JsonOpciones.ApiLectura)
+            ?? throw new MercadoPublicoApiException(
+                $"La API devolvió un cuerpo vacío o no parseable para {OcultarTicket(url)}.");
+    }
+
+    private async Task<string> ObtenerTextoAsync(string url, CancellationToken ct)
     {
         Exception? ultimaExcepcion = null;
 
@@ -93,10 +107,7 @@ public sealed class MercadoPublicoClient
                 using var respuesta = await _http.GetAsync(url, ct);
                 if (respuesta.IsSuccessStatusCode)
                 {
-                    var json = await respuesta.Content.ReadAsStringAsync(ct);
-                    return JsonSerializer.Deserialize<T>(json, JsonOpciones.ApiLectura)
-                        ?? throw new MercadoPublicoApiException(
-                            $"La API devolvió un cuerpo vacío o no parseable para {OcultarTicket(url)}.");
+                    return await respuesta.Content.ReadAsStringAsync(ct);
                 }
 
                 if (!EsReintentable(respuesta.StatusCode))
