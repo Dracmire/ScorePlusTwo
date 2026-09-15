@@ -1,0 +1,170 @@
+name: Experimento — datos abiertos OCDS
+
+# Temporal (ver plan de sesión, "Investigación — rediseño de la etapa 3 con
+# UNSPSC"): evalúa si el archivo mensual de datos abiertos de ChileCompra
+# (datos-abiertos.chilecompra.cl, estándar OCDS, sin ticket) sirve para
+# sembrar el cache UNSPSC con una descarga en vez de miles de llamadas de
+# detalle. Público, sin secrets — no necesita MP_TICKET. No toca el código
+# del pipeline ni sus datos. Borrar este archivo una vez leído el
+# resultado, mismo ciclo de vida que experimento-cron.yml/
+# experimento-unspsc.yml.
+#
+# La URL de descarga real no está confirmada desde este entorno (el sandbox
+# de desarrollo tiene bloqueado el dominio) — el primer paso autodescubre
+# el link real desde la página de descargas en vez de asumir un nombre de
+# archivo fijo, y vuelca lo que encuentra al log para diagnóstico si el
+# patrón de extracción falla.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  experimento:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descubrir y descargar el archivo del mes en curso
+        run: |
+          set -x
+          MES=$(date -u +%Y-%m)
+          ANIO=$(date -u +%Y)
+          MESN=$(date -u +%-m)
+
+          echo "=== Página de descargas OCDS ==="
+          curl -sSL "https://datos-abiertos.chilecompra.cl/descargas/procesos-ocds" -o pagina.html || echo "curl página falló con código $?"
+          echo "Tamaño de la página HTML:"
+          wc -c pagina.html || true
+          echo "=== Links .zip/.json encontrados en la página ==="
+          grep -oE 'https?://[^"'"'"' ]+\.(zip|json)[^"'"'"' ]*' pagina.html | sort -u | tee links.txt || echo "sin matches directos"
+          echo "=== Buscando referencias a blob storage o APIs de descarga ==="
+          grep -oiE '(blob\.core\.windows\.net|api\.mercadopublico\.cl)[^"'"'"' <>]*' pagina.html | sort -u || echo "sin matches"
+
+          echo "=== Intentando también el endpoint de descarga histórica ==="
+          curl -sSL "https://datosabiertos.chilecompra.cl/Home/DescargaProcesos" -o pagina2.html || echo "curl página2 falló con código $?"
+          wc -c pagina2.html || true
+          grep -oE 'https?://[^"'"'"' ]+\.(zip|json)[^"'"'"' ]*' pagina2.html | sort -u | tee -a links.txt || echo "sin matches en página2"
+
+          echo "=== Candidatos de URL de descarga recolectados ==="
+          cat links.txt || echo "(vacío)"
+
+      - name: Descargar el primer candidato válido y descomprimir
+        run: |
+          set -x
+          DESCARGADO=""
+          if [ -s links.txt ]; then
+            while read -r url; do
+              echo "Probando: $url"
+              if curl -sSL -f -o candidato "$url"; then
+                echo "Descarga OK desde: $url"
+                DESCARGADO="1"
+                break
+              else
+                echo "Falló: $url"
+              fi
+            done < links.txt
+          fi
+
+          if [ -z "$DESCARGADO" ]; then
+            echo "NO SE PUDO AUTODESCUBRIR NI DESCARGAR NINGÚN ARCHIVO — revisar pagina.html/pagina2.html manualmente."
+            exit 0
+          fi
+
+          echo "=== Tipo de archivo descargado ==="
+          file candidato
+          ls -la candidato
+
+          mkdir -p datos
+          if file candidato | grep -qi zip; then
+            unzip -o candidato -d datos
+          else
+            cp candidato datos/archivo.json
+          fi
+          echo "=== Contenido descomprimido ==="
+          ls -la datos
+          du -sh datos/* || true
+
+      - name: Inspeccionar estructura del JSON
+        run: |
+          python3 - <<'EOF'
+          import json, glob, os
+
+          archivos = glob.glob('datos/*.json') + glob.glob('datos/**/*.json', recursive=True)
+          if not archivos:
+              print("No se encontró ningún .json descomprimido — revisar pasos anteriores.")
+              raise SystemExit(0)
+
+          archivo = archivos[0]
+          print(f"Archivo inspeccionado: {archivo}")
+          print(f"Tamaño: {os.path.getsize(archivo) / 1024 / 1024:.2f} MB")
+
+          with open(archivo, encoding='utf-8') as f:
+              primera_linea = f.readline()
+
+          # Puede ser JSON Lines (un release por línea) o un JSON único con "releases": [...]
+          try:
+              data = json.loads(primera_linea)
+              es_jsonl = True
+          except json.JSONDecodeError:
+              es_jsonl = False
+
+          if es_jsonl:
+              print("Formato: JSON Lines (un release por línea)")
+              releases = [data]
+              with open(archivo, encoding='utf-8') as f:
+                  for i, linea in enumerate(f):
+                      if i == 0:
+                          continue
+                      if i > 2000:
+                          break
+                      releases.append(json.loads(linea))
+          else:
+              with open(archivo, encoding='utf-8') as f:
+                  data = json.load(f)
+              if isinstance(data, dict) and 'releases' in data:
+                  releases = data['releases']
+                  print(f"Formato: JSON único con clave 'releases', {len(releases)} releases totales en el archivo")
+              elif isinstance(data, list):
+                  releases = data
+                  print(f"Formato: lista JSON de {len(releases)} elementos")
+              else:
+                  print("Formato inesperado, claves de nivel superior:", list(data.keys()) if isinstance(data, dict) else type(data))
+                  releases = []
+
+          print(f"\nProcesos inspeccionados (muestra): {len(releases)}")
+
+          if releases:
+              primero = releases[0]
+              print("\n=== Claves de nivel superior del primer release ===")
+              print(list(primero.keys()))
+
+              tender = primero.get('tender', {})
+              print("\n=== Claves de 'tender' ===")
+              print(list(tender.keys()))
+
+              items = tender.get('items', [])
+              print(f"\n=== 'tender.items' — cantidad: {len(items)} ===")
+              if items:
+                  print("Primer item completo:")
+                  print(json.dumps(items[0], indent=2, ensure_ascii=False))
+              else:
+                  print("tender.items está vacío o no existe en este release.")
+
+              print("\n=== tender.status del primer release ===")
+              print(tender.get('status'))
+
+              from collections import Counter
+              estados = Counter()
+              con_items = 0
+              for r in releases:
+                  t = r.get('tender', {})
+                  estados[t.get('status')] += 1
+                  if t.get('items'):
+                      con_items += 1
+
+              print(f"\n=== Distribución de tender.status en la muestra ({len(releases)} releases) ===")
+              for estado, cnt in estados.most_common():
+                  print(f"  {estado}: {cnt}")
+
+              print(f"\n=== Releases con items no vacíos: {con_items}/{len(releases)} ===")
+          EOF
