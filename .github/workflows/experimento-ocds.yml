@@ -9,11 +9,15 @@ name: Experimento — datos abiertos OCDS
 # resultado, mismo ciclo de vida que experimento-cron.yml/
 # experimento-unspsc.yml.
 #
-# La URL de descarga real no está confirmada desde este entorno (el sandbox
-# de desarrollo tiene bloqueado el dominio) — el primer paso autodescubre
-# el link real desde la página de descargas en vez de asumir un nombre de
-# archivo fijo, y vuelca lo que encuentra al log para diagnóstico si el
-# patrón de extracción falla.
+# La corrida #1 de este experimento confirmó que la página de descargas
+# (datos-abiertos.chilecompra.cl/descargas/procesos-ocds) es una SPA de
+# 1051 bytes sin links estáticos, y que datosabiertos.chilecompra.cl (sin
+# guion) ni siquiera resuelve — el auto-descubrimiento por HTML no sirve.
+# Investigación posterior encontró el patrón real de descarga masiva:
+# https://ocds.blob.core.windows.net/ocds/{yyyymm}.zip (dominio de blob
+# storage confirmado por búsqueda, distinto del que se probó antes). Este
+# paso prueba ese patrón directo para el mes en curso y, si falla (el mes
+# recién empezado podría no tener archivo aún), cae al mes anterior.
 on:
   workflow_dispatch: {}
 
@@ -24,49 +28,42 @@ jobs:
   experimento:
     runs-on: ubuntu-latest
     steps:
-      - name: Descubrir y descargar el archivo del mes en curso
+      - name: Descargar el archivo mensual OCDS (mes en curso, con fallback al anterior)
         run: |
           set -x
-          MES=$(date -u +%Y-%m)
-          ANIO=$(date -u +%Y)
-          MESN=$(date -u +%-m)
+          MES_ACTUAL=$(date -u +%Y%m)
+          MES_ANTERIOR=$(date -u -d "$(date -u +%Y-%m-01) -1 day" +%Y%m)
 
-          echo "=== Página de descargas OCDS ==="
-          curl -sSL "https://datos-abiertos.chilecompra.cl/descargas/procesos-ocds" -o pagina.html || echo "curl página falló con código $?"
-          echo "Tamaño de la página HTML:"
-          wc -c pagina.html || true
-          echo "=== Links .zip/.json encontrados en la página ==="
-          grep -oE 'https?://[^"'"'"' ]+\.(zip|json)[^"'"'"' ]*' pagina.html | sort -u | tee links.txt || echo "sin matches directos"
-          echo "=== Buscando referencias a blob storage o APIs de descarga ==="
-          grep -oiE '(blob\.core\.windows\.net|api\.mercadopublico\.cl)[^"'"'"' <>]*' pagina.html | sort -u || echo "sin matches"
-
-          echo "=== Intentando también el endpoint de descarga histórica ==="
-          curl -sSL "https://datosabiertos.chilecompra.cl/Home/DescargaProcesos" -o pagina2.html || echo "curl página2 falló con código $?"
-          wc -c pagina2.html || true
-          grep -oE 'https?://[^"'"'"' ]+\.(zip|json)[^"'"'"' ]*' pagina2.html | sort -u | tee -a links.txt || echo "sin matches en página2"
-
-          echo "=== Candidatos de URL de descarga recolectados ==="
-          cat links.txt || echo "(vacío)"
-
-      - name: Descargar el primer candidato válido y descomprimir
-        run: |
-          set -x
-          DESCARGADO=""
-          if [ -s links.txt ]; then
-            while read -r url; do
-              echo "Probando: $url"
-              if curl -sSL -f -o candidato "$url"; then
-                echo "Descarga OK desde: $url"
-                DESCARGADO="1"
-                break
-              else
-                echo "Falló: $url"
-              fi
-            done < links.txt
+          echo "=== Intentando mes en curso: $MES_ACTUAL ==="
+          URL="https://ocds.blob.core.windows.net/ocds/${MES_ACTUAL}.zip"
+          echo "$URL" > url_intentada.txt
+          if curl -sSL -f -o candidato "$URL"; then
+            echo "Descarga OK: $URL"
+          else
+            echo "Falló mes en curso ($MES_ACTUAL), probando mes anterior: $MES_ANTERIOR"
+            URL="https://ocds.blob.core.windows.net/ocds/${MES_ANTERIOR}.zip"
+            echo "$URL" > url_intentada.txt
+            if curl -sSL -f -o candidato "$URL"; then
+              echo "Descarga OK: $URL"
+            else
+              echo "También falló mes anterior. Volcando página SPA para diagnóstico manual:"
+              curl -sSL "https://datos-abiertos.chilecompra.cl/descargas/procesos-ocds" -o pagina.html || true
+              echo "--- contenido de pagina.html ---"
+              cat pagina.html || true
+              rm -f candidato
+            fi
           fi
 
-          if [ -z "$DESCARGADO" ]; then
-            echo "NO SE PUDO AUTODESCUBRIR NI DESCARGAR NINGÚN ARCHIVO — revisar pagina.html/pagina2.html manualmente."
+          echo "$URL" > links.txt
+          if [ -f candidato ]; then
+            echo "1" > descarga_ok.txt
+          fi
+
+      - name: Descomprimir el archivo descargado
+        run: |
+          set -x
+          if [ ! -f descarga_ok.txt ]; then
+            echo "NO SE PUDO DESCARGAR NINGÚN ARCHIVO — revisar pagina.html volcada en el paso anterior."
             exit 0
           fi
 
@@ -89,47 +86,66 @@ jobs:
           python3 - <<'EOF'
           import json, glob, os
 
-          archivos = glob.glob('datos/*.json') + glob.glob('datos/**/*.json', recursive=True)
+          archivos = sorted(glob.glob('datos/**/*.json', recursive=True))
           if not archivos:
               print("No se encontró ningún .json descomprimido — revisar pasos anteriores.")
               raise SystemExit(0)
 
-          archivo = archivos[0]
-          print(f"Archivo inspeccionado: {archivo}")
-          print(f"Tamaño: {os.path.getsize(archivo) / 1024 / 1024:.2f} MB")
+          total_bytes = sum(os.path.getsize(a) for a in archivos)
+          print(f"Cantidad de archivos .json en el ZIP: {len(archivos)}")
+          print(f"Tamaño total descomprimido: {total_bytes / 1024 / 1024:.2f} MB")
 
-          with open(archivo, encoding='utf-8') as f:
-              primera_linea = f.readline()
+          releases = []
 
-          # Puede ser JSON Lines (un release por línea) o un JSON único con "releases": [...]
-          try:
-              data = json.loads(primera_linea)
-              es_jsonl = True
-          except json.JSONDecodeError:
-              es_jsonl = False
-
-          if es_jsonl:
-              print("Formato: JSON Lines (un release por línea)")
-              releases = [data]
-              with open(archivo, encoding='utf-8') as f:
-                  for i, linea in enumerate(f):
-                      if i == 0:
-                          continue
-                      if i > 2000:
-                          break
-                      releases.append(json.loads(linea))
+          if len(archivos) > 5:
+              # Caso "un archivo por proceso" (así lo describe la documentación
+              # de ChileCompra) — cada archivo puede venir como {"releases":[...]},
+              # {"compiledRelease": {...}}, un release suelto, o una lista.
+              print("Formato: múltiples archivos, uno por proceso — muestreando hasta 2000")
+              for a in archivos[:2000]:
+                  with open(a, encoding='utf-8') as f:
+                      d = json.load(f)
+                  if isinstance(d, dict) and 'releases' in d:
+                      releases.extend(d['releases'])
+                  elif isinstance(d, dict) and 'compiledRelease' in d:
+                      releases.append(d['compiledRelease'])
+                  elif isinstance(d, dict) and 'tender' in d:
+                      releases.append(d)
+                  elif isinstance(d, list):
+                      releases.extend(d)
           else:
+              # Caso archivo único: JSON Lines o un JSON con "releases": [...]
+              archivo = archivos[0]
+              print(f"Formato: archivo único — {archivo}")
               with open(archivo, encoding='utf-8') as f:
-                  data = json.load(f)
-              if isinstance(data, dict) and 'releases' in data:
-                  releases = data['releases']
-                  print(f"Formato: JSON único con clave 'releases', {len(releases)} releases totales en el archivo")
-              elif isinstance(data, list):
-                  releases = data
-                  print(f"Formato: lista JSON de {len(releases)} elementos")
+                  primera_linea = f.readline()
+              try:
+                  data = json.loads(primera_linea)
+                  es_jsonl = True
+              except json.JSONDecodeError:
+                  es_jsonl = False
+
+              if es_jsonl:
+                  print("Sub-formato: JSON Lines (un release por línea)")
+                  releases = [data]
+                  with open(archivo, encoding='utf-8') as f:
+                      for i, linea in enumerate(f):
+                          if i == 0:
+                              continue
+                          if i > 2000:
+                              break
+                          releases.append(json.loads(linea))
               else:
-                  print("Formato inesperado, claves de nivel superior:", list(data.keys()) if isinstance(data, dict) else type(data))
-                  releases = []
+                  with open(archivo, encoding='utf-8') as f:
+                      data = json.load(f)
+                  if isinstance(data, dict) and 'releases' in data:
+                      releases = data['releases']
+                      print(f"Sub-formato: JSON único con clave 'releases', {len(releases)} releases totales")
+                  elif isinstance(data, list):
+                      releases = data
+                      print(f"Sub-formato: lista JSON de {len(releases)} elementos")
+                  else:
+                      print("Formato inesperado, claves de nivel superior:", list(data.keys()) if isinstance(data, dict) else type(data))
 
           print(f"\nProcesos inspeccionados (muestra): {len(releases)}")
 
