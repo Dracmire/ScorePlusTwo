@@ -9,15 +9,18 @@ name: Experimento — datos abiertos OCDS
 # resultado, mismo ciclo de vida que experimento-cron.yml/
 # experimento-unspsc.yml.
 #
-# La corrida #1 de este experimento confirmó que la página de descargas
-# (datos-abiertos.chilecompra.cl/descargas/procesos-ocds) es una SPA de
-# 1051 bytes sin links estáticos, y que datosabiertos.chilecompra.cl (sin
-# guion) ni siquiera resuelve — el auto-descubrimiento por HTML no sirve.
-# Investigación posterior encontró el patrón real de descarga masiva:
-# https://ocds.blob.core.windows.net/ocds/{yyyymm}.zip (dominio de blob
-# storage confirmado por búsqueda, distinto del que se probó antes). Este
-# paso prueba ese patrón directo para el mes en curso y, si falla (el mes
-# recién empezado podría no tener archivo aún), cae al mes anterior.
+# La corrida #1 confirmó que la página de descargas es una SPA de React
+# sin links estáticos en el HTML. La corrida #2 probó
+# https://ocds.blob.core.windows.net/ocds/{yyyymm}.zip (patrón encontrado
+# por búsqueda) para el mes en curso y el anterior — ambos 404. Las
+# búsquedas posteriores dieron respuestas contradictorias sobre el
+# contenedor/dominio/formato de fecha exactos (posible eco de la propia
+# consulta, no un hecho verificado), así que en vez de seguir adivinando
+# por búsqueda, este paso extrae la URL real del bundle JS de la SPA
+# (grep directo sobre el código que efectivamente construye los links de
+# descarga) y, en paralelo, prueba una lista de candidatos ya vistos en
+# distintas fuentes como respaldo si el grep del bundle no encuentra nada
+# útil.
 on:
   workflow_dispatch: {}
 
@@ -28,35 +31,88 @@ jobs:
   experimento:
     runs-on: ubuntu-latest
     steps:
-      - name: Descargar el archivo mensual OCDS (mes en curso, con fallback al anterior)
+      - name: Extraer URLs candidatas del bundle JS de la SPA
         run: |
           set -x
-          MES_ACTUAL=$(date -u +%Y%m)
-          MES_ANTERIOR=$(date -u -d "$(date -u +%Y-%m-01) -1 day" +%Y%m)
+          curl -sSL "https://datos-abiertos.chilecompra.cl/descargas/procesos-ocds" -o pagina.html
+          echo "--- pagina.html ---"
+          cat pagina.html
 
-          echo "=== Intentando mes en curso: $MES_ACTUAL ==="
-          URL="https://ocds.blob.core.windows.net/ocds/${MES_ACTUAL}.zip"
-          echo "$URL" > url_intentada.txt
-          if curl -sSL -f -o candidato "$URL"; then
-            echo "Descarga OK: $URL"
+          JS_PATH=$(grep -oE '/static/js/main\.[a-f0-9]+\.js' pagina.html | head -1)
+          echo "JS_PATH detectado: $JS_PATH"
+
+          > candidatos.txt
+          if [ -n "$JS_PATH" ]; then
+            curl -sSL "https://datos-abiertos.chilecompra.cl${JS_PATH}" -o bundle.js
+            echo "Tamaño del bundle:"
+            wc -c bundle.js
+
+            echo "=== Referencias a blob storage en el bundle ==="
+            grep -oE '[a-zA-Z0-9.-]*blob\.core\.windows\.net/[a-zA-Z0-9._/-]*' bundle.js | sort -u | tee -a candidatos_base.txt || echo "sin matches de blob"
+
+            echo "=== Referencias a .zip en el bundle ==="
+            grep -oE '[a-zA-Z0-9:/._-]*\.zip[a-zA-Z0-9._-]*' bundle.js | sort -u | head -50 || echo "sin matches de .zip"
+
+            echo "=== Contexto alrededor de 'blob' en el bundle (primeras 5 ocurrencias) ==="
+            grep -oE '.{80}blob\.core\.windows\.net.{80}' bundle.js | head -5 || echo "sin contexto"
           else
-            echo "Falló mes en curso ($MES_ACTUAL), probando mes anterior: $MES_ANTERIOR"
-            URL="https://ocds.blob.core.windows.net/ocds/${MES_ANTERIOR}.zip"
-            echo "$URL" > url_intentada.txt
-            if curl -sSL -f -o candidato "$URL"; then
-              echo "Descarga OK: $URL"
-            else
-              echo "También falló mes anterior. Volcando página SPA para diagnóstico manual:"
-              curl -sSL "https://datos-abiertos.chilecompra.cl/descargas/procesos-ocds" -o pagina.html || true
-              echo "--- contenido de pagina.html ---"
-              cat pagina.html || true
-              rm -f candidato
-            fi
+            echo "No se detectó ruta de bundle JS en el HTML — revisar pagina.html arriba."
           fi
 
-          echo "$URL" > links.txt
-          if [ -f candidato ]; then
+          # Candidatos manuales ya vistos en distintas fuentes (container/
+          # dominio/formato de fecha no confirmados de forma independiente,
+          # se prueban todos por descarte):
+          MES_PAD=$(date -u +%Y%m)
+          MES_ANTERIOR_PAD=$(date -u -d "$(date -u +%Y-%m-01) -1 day" +%Y%m)
+          ANIO=$(date -u +%Y)
+          MES_NUM=$(date -u +%-m)
+          MES_ANTERIOR_ANIO=$(date -u -d "$(date -u +%Y-%m-01) -1 day" +%Y)
+          MES_ANTERIOR_NUM=$(date -u -d "$(date -u +%Y-%m-01) -1 day" +%-m)
+
+          cat >> candidatos.txt <<CANDIDATOS
+          https://ocds.blob.core.windows.net/ocds/${MES_PAD}.zip
+          https://ocds.blob.core.windows.net/ocds/${MES_ANTERIOR_PAD}.zip
+          https://ocds.blob.core.windows.net/ocds/${ANIO}-${MES_NUM}.zip
+          https://ocds.blob.core.windows.net/ocds/${MES_ANTERIOR_ANIO}-${MES_ANTERIOR_NUM}.zip
+          https://transparenciachc.blob.core.windows.net/ocds/${ANIO}-${MES_NUM}.zip
+          https://transparenciachc.blob.core.windows.net/ocds/${MES_ANTERIOR_ANIO}-${MES_ANTERIOR_NUM}.zip
+          CANDIDATOS
+
+          if [ -f candidatos_base.txt ]; then
+            cat candidatos_base.txt >> candidatos.txt
+          fi
+
+          echo "=== Candidatos finales a probar ==="
+          cat candidatos.txt
+
+      - name: Probar cada candidato hasta lograr una descarga real
+        run: |
+          set -x
+          DESCARGADO=""
+          while read -r url; do
+            [ -z "$url" ] && continue
+            echo "Probando: $url"
+            if curl -sSL -f -o candidato "$url"; then
+              TAM=$(stat -c%s candidato 2>/dev/null || echo 0)
+              echo "Respondió 200 desde: $url (tamaño: $TAM bytes)"
+              # Un 200 con cuerpo HTML de error genérico no cuenta como éxito real.
+              if [ "$TAM" -gt 1000 ] && ! head -c 200 candidato | grep -qi "<!doctype\|<html"; then
+                echo "Descarga real confirmada: $url"
+                echo "$url" > url_exitosa.txt
+                DESCARGADO="1"
+                break
+              else
+                echo "Descartado (parece HTML de error o archivo vacío), sigo probando."
+              fi
+            else
+              echo "Falló: $url"
+            fi
+          done < candidatos.txt
+
+          if [ -n "$DESCARGADO" ]; then
             echo "1" > descarga_ok.txt
+          else
+            echo "NINGÚN CANDIDATO FUNCIONÓ — revisar el log del paso anterior (bundle.js/pagina.html) manualmente."
           fi
 
       - name: Descomprimir el archivo descargado
