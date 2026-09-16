@@ -17,12 +17,12 @@ public sealed record Criterios(
     // Descarte real: obras públicas y suministros, donde no hay negocio
     // posible. Es el único veto que hace desaparecer un registro por
     // completo — se evalúa antes que cualquier rubro, sobre tipos normales
-    // y L1 por igual.
+    // y L1 por igual. Núcleo mínimo desde 2026-09-16 (F2): antes tenía
+    // 40 términos y decidía bien-vs-servicio con varios ambiguos
+    // ("equipos", "software"); ahora solo ahorra llamadas de enriquecimiento
+    // sobre lo evidentemente fuera de negocio — bien-vs-servicio lo decide
+    // UnspscEstado (ver ClasificadorUnspsc), no una palabra.
     [property: JsonPropertyName("descarte_duro")] List<string> DescarteDuro,
-    // Distingue compra de bien vs. servicio (ej. "software", "servidor"):
-    // ya no mata el registro, solo le impide entrar a Lista A cuando matchea
-    // un rubro de prioridad alta — cae a Lista B en vez de desaparecer.
-    [property: JsonPropertyName("exclusiones_rubro")] List<string> ExclusionesRubro,
     // Tipos de licitación privada (CO/B2/E2/H2/I2, 2026-09-09): tienen ciclo de
     // vida real (ventana de postulación, no solo aviso de transparencia),
     // pero algunos cierran el mismo día en que aparecen — todavía no hay

@@ -15,9 +15,8 @@ y solo obras públicas/suministros (`descarte_duro`) desaparecen sin rastro:
   `prioridad: "alta"` en `config/criterios.json`. Es lo que va al tablero.
 - **Secundarias** (`data/secundarias.json`): sobreviven estado+tipo+
   descarte_duro pero no entran a Prioritarias (rubro de prioridad
-  `"secundaria"`, sin ningún rubro, o bloqueadas por `exclusiones_rubro` —
-  ej. "software"/"servidor", que distinguen compra de bien de servicio).
-  Es el inventario para prospectar rubros que todavía no se atienden.
+  `"secundaria"`, sin ningún rubro, o tipo de licitación privada). Es el
+  inventario para prospectar rubros que todavía no se atienden.
 - **Tramo bajo** (`data/tramo_bajo.json`): tipo `L1`, aceptado pero fuera de
   la clasificación de rubro — no se mezcla con el resto, es opción solo si
   aparece un cliente que la tome.
@@ -78,8 +77,8 @@ sigue siendo útil para un caso más específico — medir, sobre el histórico 
 acumulado, cuántas licitaciones habría capturado un rubro **hipotético
 nuevo** que aún no existe en `config/criterios.json` (ver ejemplo de
 `--refiltrar` más arriba, con un archivo de criterios que sí define ese
-rubro). Es una copia de `config/criterios.json` con `tipos`, `estados`,
-`descarte_duro` y `exclusiones_rubro` idénticos — solo cambia `rubros`:
+rubro). Es una copia de `config/criterios.json` con `tipos`, `estados` y
+`descarte_duro` idénticos — solo cambia `rubros`:
 
 ```json
 "rubros": [
