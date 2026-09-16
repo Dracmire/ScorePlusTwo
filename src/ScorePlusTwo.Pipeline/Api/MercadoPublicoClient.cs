@@ -38,6 +38,14 @@ public sealed class MercadoPublicoClient
     public Task<ListadoLicitacionesResponse> ObtenerAdjudicadasAsync(DateOnly fecha, CancellationToken ct = default) =>
         ObtenerAsync<ListadoLicitacionesResponse>($"{BaseUrl}?fecha={FormatearFecha(fecha)}&estado=adjudicada&ticket={_ticket}", ct);
 
+    // Detalle por código externo — único endpoint que trae CodigoProducto/
+    // CodigoCategoria (ver EnriquecimientoUnspscService). Un fallo aquí lo
+    // maneja el llamador por código individual, nunca aborta el resto del
+    // enriquecimiento (ver asimetría documentada en Program.cs, igual
+    // principio que el barrido `activas`).
+    public Task<DetalleLicitacionResponse> ObtenerDetalleAsync(string codigoExterno, CancellationToken ct = default) =>
+        ObtenerAsync<DetalleLicitacionResponse>($"{BaseUrl}?codigo={codigoExterno}&ticket={_ticket}", ct);
+
     private static string FormatearFecha(DateOnly fecha) => fecha.ToString("ddMMyyyy", CultureInfo.InvariantCulture);
 
     // Barrido semanal: corte transversal del mercado, sin parámetro de fecha.

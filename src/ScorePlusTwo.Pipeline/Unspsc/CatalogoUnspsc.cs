@@ -41,16 +41,22 @@ public sealed class CatalogoUnspsc
         _porKey = porKey;
     }
 
-    public static CatalogoUnspsc CargarDesdeArchivo(string ruta)
+    public static CatalogoUnspsc CargarDesdeArchivo(string ruta) => CargarDesdeLineas(File.ReadLines(ruta));
+
+    // Para tests: un catálogo minúsculo en memoria, mismo formato TSV
+    // (encabezado + filas), sin tocar disco. No requiere datos reales —
+    // sirve para probar la mecánica de caminar Parent key, no para
+    // verificar contra la realidad (eso lo hace CatalogoUnspscTests contra
+    // el archivo de producción).
+    public static CatalogoUnspsc CargarDesdeTexto(string contenidoTsv) =>
+        CargarDesdeLineas(contenidoTsv.Split('\n'));
+
+    private static CatalogoUnspsc CargarDesdeLineas(IEnumerable<string> lineas)
     {
         var porCodigo = new Dictionary<string, FilaCatalogo>();
         var porKey = new Dictionary<long, FilaCatalogo>();
 
-        using var lector = new StreamReader(ruta);
-        _ = lector.ReadLine(); // encabezado: Key\tParentKey\tCode\tTitulo
-
-        string? linea;
-        while ((linea = lector.ReadLine()) is not null)
+        foreach (var linea in lineas.Skip(1)) // encabezado: Key\tParentKey\tCode\tTitulo
         {
             if (linea.Length == 0)
             {

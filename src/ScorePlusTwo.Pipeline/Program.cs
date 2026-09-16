@@ -4,11 +4,13 @@ using System.Text.Json.Nodes;
 using ScorePlusTwo.Pipeline.Api;
 using ScorePlusTwo.Pipeline.Cli;
 using ScorePlusTwo.Pipeline.Dashboard;
+using ScorePlusTwo.Pipeline.Enriquecimiento;
 using ScorePlusTwo.Pipeline.Filtro;
 using ScorePlusTwo.Pipeline.Infraestructura;
 using ScorePlusTwo.Pipeline.Modelos;
 using ScorePlusTwo.Pipeline.Persistencia;
 using ScorePlusTwo.Pipeline.Refiltrado;
+using ScorePlusTwo.Pipeline.Unspsc;
 
 namespace ScorePlusTwo.Pipeline;
 
@@ -33,14 +35,37 @@ public static class Program
                 return EjecutarRefiltrado(repoRoot, opciones);
             }
 
+            var criterios = JsonStore.Cargar<Criterios>(
+                Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
+            var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
+                Path.Combine(repoRoot, "config", "catalogo-unspsc.tsv"));
+
+            // Cache de enriquecimiento UNSPSC (ver EntradaCacheUnspsc): un
+            // hecho de negocio permanente, nunca se invalida. Se carga una
+            // sola vez y se comparte entre el lote diario y el barrido
+            // `activas` — si un mismo CodigoExterno aparece en ambos, la
+            // segunda pasada ya lo encuentra cacheado y no repite la llamada.
+            var rutaCacheUnspsc = Path.Combine(repoRoot, "data", "cache-unspsc.json");
+            var cacheUnspscInicial = JsonStore.CargarOPredeterminado(
+                rutaCacheUnspsc, JsonOpciones.Persistencia, new List<EntradaCacheUnspsc>());
+            var cacheUnspsc = cacheUnspscInicial.ToDictionary(e => e.CodigoExterno);
+            var cacheUnspscCountInicial = cacheUnspsc.Count;
+
             List<LicitacionRaw> loteDiario;
             DateOnly fecha;
+            ResultadoFiltro resultadoDiario;
+            int enriquecidosDiarioHoy;
+            int enriquecimientosFallidosDiarioHoy;
             ResultadoFiltro? resultadoActivas = null;
+            int enriquecidosActivasHoy = 0;
+            int enriquecimientosFallidosActivasHoy = 0;
             string estadoActivas;
 
             if (opciones.RutaFixture is not null)
             {
-                // Modo local: sin red, sin MP_TICKET, sin barrido activas.
+                // Modo local: sin red, sin MP_TICKET, sin barrido activas, sin
+                // enriquecimiento nuevo — clasifica con lo que ya haya en el
+                // cache de disco (típicamente nada, en una copia fresca).
                 fecha = opciones.Fecha ?? DateOnly.FromDateTime(AhoraChile()).AddDays(-1);
                 estadoActivas = "omitido (modo --fixture, sin red)";
                 var rutaFixture = Path.IsPathRooted(opciones.RutaFixture)
@@ -50,6 +75,9 @@ public static class Program
                 var respuestaFixture = JsonStore.Cargar<ListadoLicitacionesResponse>(rutaFixture, JsonOpciones.ApiLectura);
                 loteDiario = respuestaFixture.Listado;
                 GuardarRawDelDia(repoRoot, fecha, respuestaFixture);
+
+                (resultadoDiario, enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy) =
+                    await FiltrarConEnriquecimientoAsync(loteDiario, criterios, cacheUnspsc, catalogoUnspsc, cliente: null);
             }
             else
             {
@@ -68,6 +96,9 @@ public static class Program
                 AcumularAdjudicadas(repoRoot, fecha, respuestaAdjudicada.Listado);
                 loteDiario = respuestaDiaria.Listado;
 
+                (resultadoDiario, enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy) =
+                    await FiltrarConEnriquecimientoAsync(loteDiario, criterios, cacheUnspsc, catalogoUnspsc, cliente);
+
                 var (corresponde, motivoActivas) = DecidirBarridoActivas(repoRoot);
                 if (corresponde)
                 {
@@ -77,9 +108,8 @@ public static class Program
                         var respuestaActivas = await cliente.ObtenerActivasAsync();
                         GuardarRawActivas(repoRoot, DateOnly.FromDateTime(AhoraChile()), respuestaActivas);
 
-                        var criteriosParaActivas = JsonStore.Cargar<Criterios>(
-                            Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
-                        resultadoActivas = FiltroLicitaciones.Filtrar(respuestaActivas.Listado, criteriosParaActivas);
+                        (resultadoActivas, enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy) =
+                            await FiltrarConEnriquecimientoAsync(respuestaActivas.Listado, criterios, cacheUnspsc, catalogoUnspsc, cliente);
                         estadoActivas = $"corrió ({motivoActivas})";
                     }
                     catch (MercadoPublicoApiException ex)
@@ -94,10 +124,18 @@ public static class Program
                 }
             }
 
-            var criterios = JsonStore.Cargar<Criterios>(
-                Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
+            // El cache solo crece (nunca se invalida, ver EntradaCacheUnspsc):
+            // se reescribe solo si el enriquecimiento de hoy agregó algo,
+            // mismo criterio que RevalidarEstado usa para no ensuciar el
+            // historial de git sin cambios reales.
+            if (cacheUnspsc.Count != cacheUnspscCountInicial)
+            {
+                var cacheOrdenado = cacheUnspsc.Values
+                    .OrderBy(e => e.CodigoExterno, StringComparer.Ordinal)
+                    .ToList();
+                JsonStore.Guardar(rutaCacheUnspsc, cacheOrdenado, JsonOpciones.Persistencia);
+            }
 
-            var resultadoDiario = FiltroLicitaciones.Filtrar(loteDiario, criterios);
             var fechaActivas = DateOnly.FromDateTime(AhoraChile());
             var tiposPrivados = criterios.TiposPrivados.ToHashSet();
 
@@ -159,7 +197,9 @@ public static class Program
                     resultadoActivas.Total, resultadoActivas.TrasEstado, resultadoActivas.TrasTipo,
                     resultadoActivas.TrasRegion, resultadoActivas.DescarteDuro,
                     resultadoActivas.Prioritarias.Count, resultadoActivas.Secundarias.Count, resultadoActivas.TramoBajo.Count,
-                    nuevasPrioritariasActivas.Count, nuevasSecundariasActivas.Count, nuevasTramoBajoActivas.Count);
+                    nuevasPrioritariasActivas.Count, nuevasSecundariasActivas.Count, nuevasTramoBajoActivas.Count,
+                    enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy,
+                    resultadoActivas.Bienes, resultadoActivas.SinResolverUnspsc);
 
             var informeHoy = new InformeDiario(
                 fecha,
@@ -174,7 +214,11 @@ public static class Program
                 nuevasPrioritariasDiario.Count,
                 nuevasSecundariasDiario.Count,
                 nuevasTramoBajoDiario.Count,
-                barridoActivasFunnel);
+                barridoActivasFunnel,
+                enriquecidosDiarioHoy,
+                enriquecimientosFallidosDiarioHoy,
+                resultadoDiario.Bienes,
+                resultadoDiario.SinResolverUnspsc);
 
             var informes = ActualizarSerieInformes(repoRoot, informeHoy);
             JsonStore.Guardar(Path.Combine(repoRoot, "data", "informes.json"), informes, JsonOpciones.Persistencia);
@@ -187,7 +231,10 @@ public static class Program
             var dashboard = GeneradorDashboard.Construir(prioritariasActivas, secundariasActivas, tramoBajoActivas, informes, DateTime.UtcNow);
             JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
 
-            ImprimirResumen(resultadoDiario, nuevasPrioritariasDiario.Count, nuevasSecundariasDiario.Count, nuevasTramoBajoDiario.Count, estadoActivas, resultadoActivas);
+            ImprimirResumen(
+                resultadoDiario, nuevasPrioritariasDiario.Count, nuevasSecundariasDiario.Count, nuevasTramoBajoDiario.Count,
+                enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy,
+                estadoActivas, resultadoActivas, enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy);
 
             return 0;
         }
@@ -261,6 +308,52 @@ public static class Program
         return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zonaChile);
     }
 
+    // Corre las dos etapas puras de FiltroLicitaciones con el enriquecimiento
+    // UNSPSC en el medio: descarte_duro primero (pura), enriquecimiento de
+    // los sobrevivientes "Regular" que todavía no estén en cacheUnspsc
+    // (impuro, solo si cliente no es null — en modo --fixture no hay ticket
+    // ni red, así que se clasifica con lo que ya haya en el cache de disco),
+    // y clasificación de rubro al final (pura, sobre el cache ya
+    // actualizado). cacheUnspsc se muta in-place: el llamador decide cuándo
+    // persistirlo a disco.
+    private static async Task<(ResultadoFiltro Resultado, int Enriquecidos, int Fallidos)> FiltrarConEnriquecimientoAsync(
+        List<LicitacionRaw> lote,
+        Criterios criterios,
+        Dictionary<string, EntradaCacheUnspsc> cacheUnspsc,
+        CatalogoUnspsc catalogoUnspsc,
+        MercadoPublicoClient? cliente,
+        CancellationToken ct = default)
+    {
+        var sobrevivientes = FiltroLicitaciones.FiltrarHastaDescarteDuro(lote, criterios);
+
+        var enriquecidos = 0;
+        var fallidos = 0;
+
+        if (cliente is not null)
+        {
+            var faltantes = sobrevivientes.Regular
+                .Select(c => c.Licitacion.CodigoExterno)
+                .Where(codigo => !cacheUnspsc.ContainsKey(codigo))
+                .Distinct()
+                .ToList();
+
+            if (faltantes.Count > 0)
+            {
+                var nuevas = await EnriquecimientoUnspscService.EnriquecerAsync(cliente, faltantes, ct);
+                foreach (var entrada in nuevas)
+                {
+                    cacheUnspsc[entrada.CodigoExterno] = entrada;
+                }
+
+                enriquecidos = nuevas.Count;
+                fallidos = faltantes.Count - nuevas.Count;
+            }
+        }
+
+        var resultado = FiltroLicitaciones.ClasificarYFiltrarRubro(sobrevivientes, criterios, cacheUnspsc, catalogoUnspsc);
+        return (resultado, enriquecidos, fallidos);
+    }
+
     private static Candidata CrearCandidata(
         CandidataDetectada detectada, DateOnly fechaLote, OrigenCandidata origen, string? tramo, HashSet<string> tiposPrivados) =>
         new()
@@ -280,6 +373,8 @@ public static class Program
             Origen = origen,
             Tramo = tramo,
             TipoPrivado = tiposPrivados.Contains(detectada.Tipo),
+            UnspscEstado = detectada.UnspscEstado,
+            CodigosProductoUnspsc = detectada.CodigosProductoUnspsc?.ToList() ?? new List<int>(),
         };
 
     // Mismo merge/dedupe para las tres listas (Prioritarias -> candidatas.json,
@@ -463,6 +558,7 @@ public static class Program
             if (item is JsonObject informe)
             {
                 MigrarFormaDeInforme(informe);
+                MigrarCamposUnspsc(informe);
             }
         }
 
@@ -489,6 +585,28 @@ public static class Program
         if (informe["barrido_activas"] is JsonObject barrido)
         {
             MigrarFormaDeInforme(barrido);
+        }
+    }
+
+    // Upgrade de una sola vez para informes.json escrito antes de F2
+    // (enriquecimiento UNSPSC). Guard independiente de MigrarFormaDeInforme
+    // ("prioritarias"): una entrada puede ya estar en la forma de tres
+    // listas pero seguir sin estos campos, así que no se puede reusar el
+    // mismo guard. Se aplica al informe principal Y a barrido_activas si
+    // existe — ambos comparten la forma InformeFunnel.
+    private static void MigrarCamposUnspsc(JsonObject informe)
+    {
+        if (!informe.ContainsKey("enriquecidos_hoy"))
+        {
+            informe["enriquecidos_hoy"] = 0;
+            informe["enriquecimientos_fallidos"] = 0;
+            informe["bienes"] = 0;
+            informe["sin_resolver_unspsc"] = 0;
+        }
+
+        if (informe["barrido_activas"] is JsonObject barrido)
+        {
+            MigrarCamposUnspsc(barrido);
         }
     }
 
@@ -526,7 +644,8 @@ public static class Program
     // alguien va a mirar para saber si la corrida tuvo sentido.
     private static void ImprimirResumen(
         ResultadoFiltro resultadoDiario, int nuevasPrioritariasDiario, int nuevasSecundariasDiario, int nuevasTramoBajoDiario,
-        string estadoActivas, ResultadoFiltro? resultadoActivas)
+        int enriquecidosDiario, int enriquecimientosFallidosDiario,
+        string estadoActivas, ResultadoFiltro? resultadoActivas, int enriquecidosActivas, int enriquecimientosFallidosActivas)
     {
         Console.WriteLine("== Resumen de la corrida ==");
         Console.WriteLine(
@@ -534,14 +653,18 @@ public static class Program
             $"tras_tipo={resultadoDiario.TrasTipo} descarte_duro={resultadoDiario.DescarteDuro} " +
             $"prioritarias={resultadoDiario.Prioritarias.Count} (nuevas={nuevasPrioritariasDiario}) " +
             $"secundarias={resultadoDiario.Secundarias.Count} (nuevas={nuevasSecundariasDiario}) " +
-            $"tramo_bajo={resultadoDiario.TramoBajo.Count} (nuevas={nuevasTramoBajoDiario})");
+            $"tramo_bajo={resultadoDiario.TramoBajo.Count} (nuevas={nuevasTramoBajoDiario}) " +
+            $"unspsc: bienes={resultadoDiario.Bienes} sin_resolver={resultadoDiario.SinResolverUnspsc} " +
+            $"enriquecidos_hoy={enriquecidosDiario} enriquecimientos_fallidos={enriquecimientosFallidosDiario}");
 
         Console.WriteLine(resultadoActivas is null
             ? $"Barrido 'activas': {estadoActivas}"
             : $"Barrido 'activas': {estadoActivas} -> total={resultadoActivas.Total} " +
               $"tras_estado={resultadoActivas.TrasEstado} tras_tipo={resultadoActivas.TrasTipo} " +
               $"descarte_duro={resultadoActivas.DescarteDuro} prioritarias={resultadoActivas.Prioritarias.Count} " +
-              $"secundarias={resultadoActivas.Secundarias.Count} tramo_bajo={resultadoActivas.TramoBajo.Count}");
+              $"secundarias={resultadoActivas.Secundarias.Count} tramo_bajo={resultadoActivas.TramoBajo.Count} " +
+              $"unspsc: bienes={resultadoActivas.Bienes} sin_resolver={resultadoActivas.SinResolverUnspsc} " +
+              $"enriquecidos_hoy={enriquecidosActivas} enriquecimientos_fallidos={enriquecimientosFallidosActivas}");
     }
 
     // Solo lectura sobre el estado de producción: lee config/criterios.json
@@ -561,8 +684,17 @@ public static class Program
             : Path.Combine(Directory.GetCurrentDirectory(), opciones.RutaCriteriosAlternativos);
         var criterios = JsonStore.Cargar<Criterios>(rutaCriterios, JsonOpciones.Config);
 
+        // Cache/catálogo de producción, de solo lectura — --refiltrar nunca
+        // llama a la API (ver RefiltradoService.Ejecutar); un código sin
+        // entrada de cache sale PendienteEnriquecimiento en el CSV.
+        var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
+            Path.Combine(repoRoot, "config", "catalogo-unspsc.tsv"));
+        var cacheUnspscLista = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "cache-unspsc.json"), JsonOpciones.Persistencia, new List<EntradaCacheUnspsc>());
+        var cacheUnspsc = cacheUnspscLista.ToDictionary(e => e.CodigoExterno);
+
         var directorioRaw = Path.Combine(repoRoot, "data", "raw");
-        var resultado = RefiltradoService.Ejecutar(directorioRaw, criterios, opciones.Desde);
+        var resultado = RefiltradoService.Ejecutar(directorioRaw, criterios, opciones.Desde, cacheUnspsc, catalogoUnspsc);
 
         var rutaSalida = opciones.RutaSalidaRefiltrado
             ?? $"refiltrado-{DateTime.UtcNow:yyyyMMdd-HHmmss}.csv";

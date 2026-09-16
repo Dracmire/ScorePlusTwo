@@ -1,3 +1,4 @@
+using ScorePlusTwo.Pipeline.Modelos;
 using ScorePlusTwo.Pipeline.Refiltrado;
 using Xunit;
 
@@ -37,7 +38,8 @@ public class RefiltradoServiceTests
                 TerminoMatch: "auditor",
                 FechaCierre: new DateTime(2026, 9, 10, 15, 0, 0),
                 ArchivoOrigen: "2026-09-05.json",
-                FechaLote: new DateOnly(2026, 9, 5)),
+                FechaLote: new DateOnly(2026, 9, 5),
+                UnspscEstado: UnspscEstado.Servicio),
         };
 
         var csv = RefiltradoService.GenerarCsv(filas);
@@ -45,7 +47,9 @@ public class RefiltradoServiceTests
         Assert.Contains("\"SERVICIO, CON COMA Y \"\"COMILLAS\"\"\"", csv);
         Assert.Contains("2026-09-05.json", csv);
         Assert.Contains("2026-09-05", csv);
-        Assert.StartsWith("codigo,nombre,tipo,rubro_match,termino_match,fecha_cierre,archivo_origen,fecha_lote\r\n", csv);
+        Assert.Contains("Servicio", csv);
+        Assert.StartsWith(
+            "codigo,nombre,tipo,rubro_match,termino_match,fecha_cierre,archivo_origen,fecha_lote,unspsc_estado\r\n", csv);
     }
 
     [Fact]
@@ -53,6 +57,7 @@ public class RefiltradoServiceTests
     {
         var csv = RefiltradoService.GenerarCsv(Array.Empty<FilaRefiltrado>());
 
-        Assert.Equal("codigo,nombre,tipo,rubro_match,termino_match,fecha_cierre,archivo_origen,fecha_lote\r\n", csv);
+        Assert.Equal(
+            "codigo,nombre,tipo,rubro_match,termino_match,fecha_cierre,archivo_origen,fecha_lote,unspsc_estado\r\n", csv);
     }
 }

@@ -22,7 +22,19 @@ public sealed record InformeFunnel(
     int TramoBajo,
     int NuevasPrioritarias,
     int NuevasSecundarias,
-    int NuevasTramoBajo);
+    int NuevasTramoBajo,
+    // F2 (2026-09-16): visibilidad de la etapa de enriquecimiento UNSPSC.
+    // EnriquecidosHoy/EnriquecimientosFallidos son hechos de ESTA corrida
+    // (cuántos cache-miss se resolvieron/fallaron al llamar a la API) — a
+    // diferencia de NuevasPrioritarias, no se preservan al reprocesar una
+    // fecha: si se reprocesa, ya no hay cache-miss que enriquecer (o los que
+    // quedan son otros), así que 0 en un reproceso es el valor correcto, no
+    // un bug. Bienes/SinResolverUnspsc SÍ describen el estado actual del
+    // lote (igual que Prioritarias/Secundarias) y se recalculan siempre.
+    int EnriquecidosHoy = 0,
+    int EnriquecimientosFallidos = 0,
+    int Bienes = 0,
+    int SinResolverUnspsc = 0);
 
 public sealed record InformeDiario(
     DateOnly Fecha,
@@ -37,4 +49,8 @@ public sealed record InformeDiario(
     int NuevasPrioritarias,
     int NuevasSecundarias,
     int NuevasTramoBajo,
-    InformeFunnel? BarridoActivas);
+    InformeFunnel? BarridoActivas,
+    int EnriquecidosHoy = 0,
+    int EnriquecimientosFallidos = 0,
+    int Bienes = 0,
+    int SinResolverUnspsc = 0);

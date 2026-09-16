@@ -47,4 +47,15 @@ public sealed class Candidata
     // orden en el modelo de negocio. Campo reservado para cuando F2
     // implemente el detalle de sobrevivientes; no se captura todavía.
     public int? CantidadReclamos { get; set; }
+
+    // Bien-vs-servicio decidido por UNSPSC (ver ClasificadorUnspsc), no por
+    // palabra. Default PendienteEnriquecimiento para TramoBajo/tipos
+    // privados, que nunca se enriquecen (ver FiltroLicitaciones) — es un
+    // valor honesto: nunca se intentó clasificarlos, no un error.
+    public UnspscEstado UnspscEstado { get; set; } = UnspscEstado.PendienteEnriquecimiento;
+
+    // CodigoProducto crudo de cada ítem del detalle (ver EntradaCacheUnspsc)
+    // — para auditoría/depuración manual, no para volver a resolver la raíz
+    // (eso ya lo hizo ClasificadorUnspsc antes de persistir la candidata).
+    public List<int> CodigosProductoUnspsc { get; set; } = new();
 }

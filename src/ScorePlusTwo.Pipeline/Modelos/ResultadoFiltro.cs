@@ -3,9 +3,38 @@ namespace ScorePlusTwo.Pipeline.Modelos;
 // Tipo intermedio que produce el filtro puro — no se persiste tal cual.
 // RubroMatch/TerminoMatch son null para tramo bajo (L1 no pasa por
 // clasificación de rubro) y para secundarias que no matchearon ningún rubro
-// (inventario crudo de prospección).
+// (inventario crudo de prospección). UnspscEstado/CodigosProductoUnspsc
+// quedan en su default (PendienteEnriquecimiento/vacío) para TramoBajo y
+// tipos privados — nunca se enriquecen, por la misma razón que nunca pasan
+// por rubro (ver FiltroLicitaciones).
 public sealed record CandidataDetectada(
-    LicitacionRaw Origen, string Tipo, string? RubroMatch, string? TerminoMatch);
+    LicitacionRaw Origen,
+    string Tipo,
+    string? RubroMatch,
+    string? TerminoMatch,
+    UnspscEstado UnspscEstado = UnspscEstado.PendienteEnriquecimiento,
+    IReadOnlyList<int>? CodigosProductoUnspsc = null);
+
+// Una licitación que sobrevivió estado+tipo+descarte_duro, todavía sin
+// clasificar por rubro. Tipo ya viene resuelto (derivado de CodigoExterno
+// en la etapa 2) para no volver a parsearlo.
+public sealed record CandidataParcial(LicitacionRaw Licitacion, string Tipo);
+
+// Salida de FiltroLicitaciones.FiltrarHastaDescarteDuro (pura, sin cache ni
+// catálogo): separa los tres destinos de tipo (tramo bajo / privado /
+// regular) ANTES de decidir rubro, porque solo los "Regular" necesitan
+// enriquecimiento UNSPSC — TramoBajo y TipoPrivado nunca pasan por rubro,
+// así que tampoco tiene sentido gastar una llamada de detalle en ellos.
+// El llamador (Program.cs) usa Regular para calcular qué CodigoExterno le
+// faltan al cache antes de llamar a ClasificarYFiltrarRubro.
+public sealed record SobrevivientesDescarteDuro(
+    int Total,
+    int TrasEstado,
+    int TrasTipo,
+    int DescarteDuro,
+    IReadOnlyList<CandidataParcial> TramoBajo,
+    IReadOnlyList<CandidataParcial> TipoPrivado,
+    IReadOnlyList<CandidataParcial> Regular);
 
 public sealed record ResultadoFiltro(
     int Total,
@@ -29,4 +58,13 @@ public sealed record ResultadoFiltro(
     // Tipo L1: aceptado pero no se mezcla con el resto — no pasa por
     // clasificación de rubro, solo por descarte_duro. Opción solo si aparece
     // un cliente que la tome.
-    IReadOnlyList<CandidataDetectada> TramoBajo);
+    IReadOnlyList<CandidataDetectada> TramoBajo,
+    // Cuántos de los sobrevivientes "Regular" (ver SobrevivientesDescarteDuro)
+    // resolvieron a UnspscEstado.Bien — nunca llegaron a evaluarse contra
+    // rubro. Calculado en el mismo recorrido que clasifica, sin una segunda
+    // pasada — ver ClasificarYFiltrarRubro.
+    int Bienes,
+    // SinResolver + PendienteEnriquecimiento juntos: lo que UNSPSC no pudo
+    // confirmar como servicio, por catálogo o por falta de dato — visible
+    // para informes.json, nunca mezclado en silencio con Bienes.
+    int SinResolverUnspsc);

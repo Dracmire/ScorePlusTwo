@@ -4,12 +4,16 @@ using System.Text.RegularExpressions;
 using ScorePlusTwo.Pipeline.Filtro;
 using ScorePlusTwo.Pipeline.Modelos;
 using ScorePlusTwo.Pipeline.Persistencia;
+using ScorePlusTwo.Pipeline.Unspsc;
 
 namespace ScorePlusTwo.Pipeline.Refiltrado;
 
 // Una fila del CSV de salida. archivo_origen/fecha_lote son lo que permite
 // distinguir de qué lote (diario o activas) salió cada candidata al
-// re-filtrar todo el histórico acumulado en data/raw/.
+// re-filtrar todo el histórico acumulado en data/raw/. UnspscEstado (F2,
+// 2026-09-16) refleja el cache de producción TAL CUAL está hoy — nunca hace
+// una llamada de red nueva (ver comentario de clase); un código sin entrada
+// sale PendienteEnriquecimiento, no un error.
 public sealed record FilaRefiltrado(
     string Codigo,
     string Nombre,
@@ -18,7 +22,8 @@ public sealed record FilaRefiltrado(
     string? TerminoMatch,
     DateTime? FechaCierre,
     string ArchivoOrigen,
-    DateOnly FechaLote);
+    DateOnly FechaLote,
+    UnspscEstado UnspscEstado);
 
 public sealed record ResultadoRefiltrado(
     int ArchivosProcesados,
@@ -54,7 +59,17 @@ public static class RefiltradoService
         return DateOnly.ParseExact(match.Groups["fecha"].Value, "yyyy-MM-dd", CultureInfo.InvariantCulture);
     }
 
-    public static ResultadoRefiltrado Ejecutar(string directorioRaw, Criterios criterios, DateOnly? desde)
+    // cacheUnspsc/catalogoUnspsc: el cache de producción, de solo lectura —
+    // este método NUNCA llama a la API (es el valor central de --refiltrar:
+    // análisis rápido sin MP_TICKET). Un CodigoExterno sin entrada en el
+    // cache clasifica como PendienteEnriquecimiento, visible en el CSV, no
+    // un fallback silencioso.
+    public static ResultadoRefiltrado Ejecutar(
+        string directorioRaw,
+        Criterios criterios,
+        DateOnly? desde,
+        IReadOnlyDictionary<string, EntradaCacheUnspsc> cacheUnspsc,
+        CatalogoUnspsc catalogoUnspsc)
     {
         var archivos = Directory.EnumerateFiles(directorioRaw, "*.json")
             .Select(ruta => (Ruta: ruta, Fecha: ExtraerFechaDeArchivo(Path.GetFileName(ruta))))
@@ -75,7 +90,8 @@ public static class RefiltradoService
             var respuesta = JsonStore.Cargar<ListadoLicitacionesResponse>(ruta, JsonOpciones.ApiLectura);
             registrosTotales += respuesta.Listado.Count;
 
-            var resultado = FiltroLicitaciones.Filtrar(respuesta.Listado, criterios);
+            var sobrevivientes = FiltroLicitaciones.FiltrarHastaDescarteDuro(respuesta.Listado, criterios);
+            var resultado = FiltroLicitaciones.ClasificarYFiltrarRubro(sobrevivientes, criterios, cacheUnspsc, catalogoUnspsc);
             candidatasConDuplicados += resultado.Prioritarias.Count;
 
             var nombreArchivo = Path.GetFileName(ruta);
@@ -89,7 +105,8 @@ public static class RefiltradoService
                     candidata.TerminoMatch,
                     candidata.Origen.FechaCierre,
                     nombreArchivo,
-                    fecha!.Value);
+                    fecha!.Value,
+                    candidata.UnspscEstado);
             }
         }
 
@@ -103,7 +120,7 @@ public static class RefiltradoService
     public static string GenerarCsv(IReadOnlyList<FilaRefiltrado> filas)
     {
         var sb = new StringBuilder();
-        sb.Append("codigo,nombre,tipo,rubro_match,termino_match,fecha_cierre,archivo_origen,fecha_lote\r\n");
+        sb.Append("codigo,nombre,tipo,rubro_match,termino_match,fecha_cierre,archivo_origen,fecha_lote,unspsc_estado\r\n");
 
         foreach (var f in filas)
         {
@@ -115,7 +132,8 @@ public static class RefiltradoService
                 Escapar(f.TerminoMatch ?? string.Empty),
                 Escapar(f.FechaCierre?.ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture) ?? string.Empty),
                 Escapar(f.ArchivoOrigen),
-                Escapar(f.FechaLote.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture))));
+                Escapar(f.FechaLote.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)),
+                Escapar(f.UnspscEstado.ToString())));
             sb.Append("\r\n");
         }
 
