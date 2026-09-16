@@ -19,12 +19,12 @@ public sealed record ResultadoFiltro(
     // aplicado solo sobre Prioritarias — mismo hook que dejaba el diseño
     // original para que F2 la reemplace sin reestructurar el resto.
     int TrasRegion,
-    // Lista A: matchean un rubro de prioridad "alta" y no están bloqueadas
-    // por exclusiones_rubro (bien vs. servicio). Es lo que hoy va al tablero.
+    // Lista A: matchean un rubro de prioridad "alta". Es lo que hoy va al
+    // tablero.
     IReadOnlyList<CandidataDetectada> Prioritarias,
     // Lista B: sobreviven estado+tipo+descarte_duro pero no entran a
-    // Prioritarias (rubro secundario, sin rubro, o bloqueadas por
-    // exclusiones_rubro). Inventario para prospectar rubros no atendidos.
+    // Prioritarias (rubro secundario, sin rubro, o tipo privado).
+    // Inventario para prospectar rubros no atendidos.
     IReadOnlyList<CandidataDetectada> Secundarias,
     // Tipo L1: aceptado pero no se mezcla con el resto — no pasa por
     // clasificación de rubro, solo por descarte_duro. Opción solo si aparece

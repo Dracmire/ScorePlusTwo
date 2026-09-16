@@ -8,47 +8,27 @@ namespace ScorePlusTwo.Pipeline.Filtro;
 // hoy solo obras públicas y suministros (descarte_duro) deben desaparecer
 // sin rastro — no hay negocio posible ahí. Todo lo demás se CLASIFICA en
 // una de tres listas, nunca se destruye:
-//   - Prioritarias (Lista A): rubro de prioridad "alta", sin bloqueo de
-//     exclusiones_rubro. Es lo que hoy va al tablero.
+//   - Prioritarias (Lista A): rubro de prioridad "alta". Es lo que hoy va
+//     al tablero.
 //   - Secundarias (Lista B): sobrevive estado+tipo+descarte_duro pero no
-//     entra a Prioritarias (rubro secundario, sin rubro, bloqueada por
-//     exclusiones_rubro, o de un tipo privado). Inventario para prospectar
-//     rubros no atendidos.
+//     entra a Prioritarias (rubro secundario, sin rubro, o de un tipo
+//     privado). Inventario para prospectar rubros no atendidos.
 //   - TramoBajo: tipo L1, aceptado pero fuera de la clasificación de rubro
 //     — no se mezcla con el resto, es opción solo si aparece un cliente.
 // Orden: estado -> tipo -> descarte_duro -> (L1: tramo bajo | tipo privado:
 // secundarias sin pasar por rubro | resto: rubro).
+//
+// NOTA (F2, 2026-09-16): descarte_duro se redujo a un núcleo mínimo de
+// bienes/obras inequívocos y exclusiones_rubro ("software"/"servidor") se
+// eliminó por completo — bien-vs-servicio ya no lo decide una palabra, lo
+// decide UnspscEstado (ver ClasificadorUnspsc, Unspsc/), insertado como
+// etapa de enriquecimiento entre tipo y rubro. Esta clase todavía no
+// conecta con esa etapa (F1 vigente); se actualizará cuando F2 conecte el
+// cliente/orquestación. La excepción por código para el caso fotocopiado
+// (1057548-21-LE26) se eliminó junto con "equipos"/"equipamiento" de
+// descarte_duro — ya no hace falta.
 public static class FiltroLicitaciones
 {
-    // Excepciones puntuales al descarte duro, documentadas caso a caso: un
-    // término de descarte_duro coincide por una mención incidental, no
-    // porque el registro sea efectivamente una compra de obra/bien. Vive en
-    // código (no en config/criterios.json) porque no es un criterio de
-    // negocio editable — es la corrección de un falso positivo específico
-    // encontrado al ampliar descarte_duro, y solo tiene sentido documentado
-    // junto al análisis que lo originó.
-    //
-    // DEUDA TÉCNICA: este mecanismo escala mal. Si llega a 5 entradas, dejó
-    // de ser viable mantener excepciones por código uno por uno — la señal
-    // sería que descarte_duro necesita una forma real de "rescatar" a
-    // Secundarias en vez de destruir sin rastro (hoy no la tiene: es un veto
-    // duro por diseño, ver comentario de clase). Rediseñar en ese punto,
-    // no seguir agregando entradas.
-    private static readonly HashSet<string> ExcepcionesDescarteDuro = new()
-    {
-        // "Convenio Suministro de Servicio de Fotocopiado Impresión y
-        // Digitalización con Entrega de Equipos" — matchea "equipos" por la
-        // frase "Entrega de Equipos", pero el objeto del contrato es un
-        // SERVICIO de fotocopiado/impresión/digitalización, no una compra de
-        // equipamiento. Sin esta excepción, "equipos" en descarte_duro lo
-        // destruiría sin rastro en vez de dejarlo en Prioritarias (matchea
-        // "informátic" del rubro ti). Verificado en la simulación de
-        // descarte_duro ampliado (2026-09-09): de 54 prioritarias vigentes,
-        // fue el único de 8 casos perdidos que no era una compra real de
-        // bien — los otros 7 (ej. "COMPRA DE EQUIPOS INFORMATICOS") sí lo son.
-        "1057548-21-LE26",
-    };
-
     public static ResultadoFiltro Filtrar(IEnumerable<LicitacionRaw> licitaciones, Criterios criterios)
     {
         var lista = licitaciones as IReadOnlyList<LicitacionRaw> ?? licitaciones.ToList();
@@ -97,11 +77,6 @@ public static class FiltroLicitaciones
 
         bool EsDescarteDuro(LicitacionRaw l)
         {
-            if (ExcepcionesDescarteDuro.Contains(l.CodigoExterno))
-            {
-                return false;
-            }
-
             var nombreNormalizado = TextoNormalizador.Normalizar(l.Nombre);
             return descarteDuroNormalizado.Any(termino => nombreNormalizado.Contains(termino, StringComparison.Ordinal));
         }
@@ -120,14 +95,7 @@ public static class FiltroLicitaciones
             .ToList();
 
         // 4. Rubro — sobre TODOS los rubros, en el orden del archivo. El
-        // primer match decide. exclusiones_rubro (software/servidor) ya no
-        // mata el registro: solo le impide entrar a Prioritarias cuando el
-        // rubro que matcheó es de prioridad alta, y lo manda a Secundarias
-        // en su lugar, conservando el rubro_match/termino_match encontrado.
-        var exclusionesRubroNormalizadas = criterios.ExclusionesRubro
-            .Select(TextoNormalizador.Normalizar)
-            .ToList();
-
+        // primer match decide.
         var prioritarias = new List<CandidataDetectada>();
         var secundarias = new List<CandidataDetectada>();
 
@@ -167,22 +135,13 @@ public static class FiltroLicitaciones
 
             var candidata = new CandidataDetectada(licitacion, tipo, rubroEncontrado.Id, terminoMatch);
 
-            if (rubroEncontrado.Prioridad != "alta")
+            if (rubroEncontrado.Prioridad == "alta")
             {
-                secundarias.Add(candidata);
-                continue;
-            }
-
-            var bloqueadaPorExclusionRubro = exclusionesRubroNormalizadas
-                .Any(termino => nombreNormalizado.Contains(termino, StringComparison.Ordinal));
-
-            if (bloqueadaPorExclusionRubro)
-            {
-                secundarias.Add(candidata);
+                prioritarias.Add(candidata);
             }
             else
             {
-                prioritarias.Add(candidata);
+                secundarias.Add(candidata);
             }
         }
 
