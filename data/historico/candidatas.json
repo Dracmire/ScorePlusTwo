@@ -318,5 +318,25 @@
     "cliente_asignado": null,
     "origen": "activas",
     "cantidad_reclamos": null
+  },
+  {
+    "codigo": "1562-55-LE26",
+    "nombre": "RESTAURACI\u00D3N MANTENCI\u00D3N Y SOPORTE DE PLATAFORMAS",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-15T15:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": null,
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null
   }
 ]
