@@ -53,6 +53,12 @@ public sealed class MercadoPublicoClient
     // tanto el fallo de red como el chequeo de integridad de este método como
     // NO fatales — ver Orquestación en el plan: `activas` es recuperable
     // corriéndola de nuevo cualquier día, el lote diario no.
+    //
+    // `?estado=activas` ya devuelve solo licitaciones Publicadas — la etapa
+    // de Estado en FiltroLicitaciones.FiltrarHastaDescarteDuro es un no-op
+    // sobre este listado (verificado con datos reales: 4.768 entran, 4.768
+    // salen). Ese filtro existe para el lote diario, que sí trae estados
+    // mixtos; aquí no hace nada, y está bien que así sea.
     public async Task<ListadoLicitacionesResponse> ObtenerActivasAsync(CancellationToken ct = default)
     {
         var respuesta = await ObtenerAsync<ListadoLicitacionesResponse>($"{BaseUrl}?estado=activas&ticket={_ticket}", ct);
