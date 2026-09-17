@@ -28,7 +28,7 @@ public static class EnriquecimientoUnspscService
                     .Select(i => new ItemUnspscCache(i.CodigoProducto, i.CodigoCategoria))
                     .ToList();
 
-                nuevas.Add(new EntradaCacheUnspsc(codigo, items, DateTime.UtcNow));
+                nuevas.Add(new EntradaCacheUnspsc(codigo, items, DateTime.UtcNow, licitacion?.Comprador?.RegionUnidad));
             }
             catch (MercadoPublicoApiException ex)
             {

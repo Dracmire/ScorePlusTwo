@@ -15,5 +15,8 @@ public sealed record ItemUnspscCache(int? CodigoProducto, string? CodigoCategori
 // bien/servicio se recalcula en cada corrida caminando el catálogo sobre
 // estos CodigoProducto (ver ClasificadorUnspsc): si el catálogo se corrige
 // más adelante, lo que hoy cae en SinResolver se reclasifica solo la
-// próxima corrida, sin gastar una llamada de API de nuevo.
-public sealed record EntradaCacheUnspsc(string CodigoExterno, List<ItemUnspscCache> Items, DateTime ObtenidoEn);
+// próxima corrida, sin gastar una llamada de API de nuevo. RegionUnidad
+// (F2, 2026-09-17) viene gratis en el mismo detalle (Comprador.RegionUnidad)
+// — mismo principio de permanencia, la región del comprador no cambia.
+public sealed record EntradaCacheUnspsc(
+    string CodigoExterno, List<ItemUnspscCache> Items, DateTime ObtenidoEn, string? RegionUnidad = null);

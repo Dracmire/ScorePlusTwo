@@ -132,24 +132,55 @@ public static class FiltroLicitaciones
         secundarias.AddRange(sobrevivientes.TipoPrivado
             .Select(item => new CandidataDetectada(item.Licitacion, item.Tipo, RubroMatch: null, TerminoMatch: null)));
 
-        // 4. UNSPSC decide bien-vs-servicio; rubro (compliance/ti/ia) solo
-        // se evalúa sobre lo que UNSPSC ya confirmó como servicio — deja de
-        // ser el filtro de entrada. Bien/SinResolver/PendienteEnriquecimiento
-        // nunca se destruyen ni se promueven a Prioritarias sin esa
-        // confirmación: van a Secundarias con UnspscEstado visible.
+        // 4. UNSPSC decide bien-vs-servicio; rubro (compliance/ti/ia) se
+        // evalúa sobre Servicio (siempre) y RevisionManual (para dar
+        // contexto al humano que revisa, aunque nunca llegue a
+        // Prioritarias). Bien/SinResolver/PendienteEnriquecimiento nunca
+        // se destruyen ni se promueven a Prioritarias sin que UNSPSC haya
+        // confirmado servicio: van a Secundarias con UnspscEstado visible.
         var bienes = 0;
         var sinResolverUnspsc = 0;
+        var revisionManualUnspsc = 0;
+        var trasRegion = 0;
+        var familiasRevisionManual = criterios.FamiliasUnspscRevisionManual.ToHashSet();
+
+        (RubroCriterio? Rubro, string? Termino) EvaluarRubro(string nombreNormalizado)
+        {
+            foreach (var rubro in criterios.Rubros)
+            {
+                var match = rubro.Terminos.FirstOrDefault(
+                    termino => nombreNormalizado.Contains(TextoNormalizador.Normalizar(termino), StringComparison.Ordinal));
+                if (match is not null)
+                {
+                    return (rubro, match);
+                }
+            }
+
+            return (null, null);
+        }
+
+        bool EsRegionElegible(string? regionUnidad)
+        {
+            if (regionUnidad is null)
+            {
+                return false;
+            }
+
+            var regionNormalizada = TextoNormalizador.Normalizar(regionUnidad);
+            return criterios.Regiones.Any(r => regionNormalizada.Contains(TextoNormalizador.Normalizar(r), StringComparison.Ordinal));
+        }
 
         foreach (var (licitacion, tipo) in sobrevivientes.Regular)
         {
             cacheUnspsc.TryGetValue(licitacion.CodigoExterno, out var entrada);
-            var estadoUnspsc = ClasificadorUnspsc.Clasificar(entrada, catalogoUnspsc);
+            var estadoUnspsc = ClasificadorUnspsc.Clasificar(entrada, catalogoUnspsc, familiasRevisionManual);
             var codigosProducto = entrada?.Items
                 .Where(i => i.CodigoProducto is not null)
                 .Select(i => i.CodigoProducto!.Value)
                 .ToList() ?? new List<int>();
+            var region = entrada?.RegionUnidad;
 
-            if (estadoUnspsc != UnspscEstado.Servicio)
+            if (estadoUnspsc is UnspscEstado.Bien or UnspscEstado.SinResolver or UnspscEstado.PendienteEnriquecimiento)
             {
                 if (estadoUnspsc == UnspscEstado.Bien)
                 {
@@ -161,39 +192,39 @@ public static class FiltroLicitaciones
                 }
 
                 secundarias.Add(new CandidataDetectada(
-                    licitacion, tipo, RubroMatch: null, TerminoMatch: null, estadoUnspsc, codigosProducto));
+                    licitacion, tipo, RubroMatch: null, TerminoMatch: null, estadoUnspsc, codigosProducto, region));
                 continue;
             }
 
-            var nombreNormalizado = TextoNormalizador.Normalizar(licitacion.Nombre);
-
-            RubroCriterio? rubroEncontrado = null;
-            string? terminoMatch = null;
-            foreach (var rubro in criterios.Rubros)
+            if (estadoUnspsc == UnspscEstado.RevisionManual)
             {
-                var match = rubro.Terminos.FirstOrDefault(
-                    termino => nombreNormalizado.Contains(TextoNormalizador.Normalizar(termino), StringComparison.Ordinal));
-                if (match is not null)
-                {
-                    rubroEncontrado = rubro;
-                    terminoMatch = match;
-                    break;
-                }
-            }
+                revisionManualUnspsc++;
 
-            if (rubroEncontrado is null)
-            {
-                // Servicio confirmado, pero sin rubro conocido: inventario
-                // crudo de prospección.
+                var (rubroRevision, terminoRevision) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
                 secundarias.Add(new CandidataDetectada(
-                    licitacion, tipo, RubroMatch: null, TerminoMatch: null, estadoUnspsc, codigosProducto));
+                    licitacion, tipo, rubroRevision?.Id, terminoRevision, estadoUnspsc, codigosProducto, region));
                 continue;
             }
+
+            // estadoUnspsc == Servicio: rubro se evalúa SIEMPRE, sin
+            // importar la región — el costo es despreciable (matching de
+            // strings ya en memoria) y el valor es real: un servicio con
+            // rubro alta descartado solo por región queda visible con su
+            // RubroMatch poblado en vez de indistinguible de cualquier
+            // servicio irrelevante (2026-09-17, corrección explícita del
+            // usuario sobre un diseño anterior que cortaba antes de rubro).
+            var regionElegible = EsRegionElegible(region);
+            if (regionElegible)
+            {
+                trasRegion++;
+            }
+
+            var (rubroEncontrado, terminoMatch) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
 
             var candidata = new CandidataDetectada(
-                licitacion, tipo, rubroEncontrado.Id, terminoMatch, estadoUnspsc, codigosProducto);
+                licitacion, tipo, rubroEncontrado?.Id, terminoMatch, estadoUnspsc, codigosProducto, region);
 
-            if (rubroEncontrado.Prioridad == "alta")
+            if (rubroEncontrado is not null && rubroEncontrado.Prioridad == "alta" && regionElegible)
             {
                 prioritarias.Add(candidata);
             }
@@ -202,11 +233,6 @@ public static class FiltroLicitaciones
                 secundarias.Add(candidata);
             }
         }
-
-        // 5. Región — no-op en F1 (todas las prioritarias pasan). Etapa
-        // identidad a propósito, para que F2 la reemplace sin reestructurar
-        // el resto del pipeline. No se aplica sobre Secundarias ni TramoBajo.
-        var trasRegion = prioritarias.Count;
 
         return new ResultadoFiltro(
             Total: sobrevivientes.Total,
@@ -218,6 +244,7 @@ public static class FiltroLicitaciones
             Secundarias: secundarias,
             TramoBajo: tramoBajo,
             Bienes: bienes,
-            SinResolverUnspsc: sinResolverUnspsc);
+            SinResolverUnspsc: sinResolverUnspsc,
+            RevisionManualUnspsc: revisionManualUnspsc);
     }
 }

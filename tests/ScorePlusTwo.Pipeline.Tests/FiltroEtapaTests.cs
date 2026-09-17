@@ -11,34 +11,42 @@ public class FiltroEtapaTests
         Version: "test",
         Tipos: new List<string> { "LE", "L1", "CO" },
         Estados: new List<int> { 5 },
-        Regiones: new List<string>(),
+        Regiones: new List<string> { "Metropolitana" },
         Rubros: new List<RubroCriterio>
         {
             new("compliance", "alta", new List<string> { "auditor" }),
             new("vigilancia", "secundaria", new List<string> { "camara" }),
         },
         DescarteDuro: new List<string> { "vehiculo", "construccion" },
-        TiposPrivados: new List<string> { "CO" });
+        TiposPrivados: new List<string> { "CO" },
+        FamiliasUnspscRevisionManual: new List<string> { "9001" });
 
     // Catálogo sintético mínimo, solo para probar la mecánica de la
     // compuerta UNSPSC (no verifica contra la realidad — eso lo hace
     // CatalogoUnspscTests/ClasificadorUnspscTests contra el catálogo real):
-    // 900001 -> raíz G (bien), 900002 -> raíz J (servicio).
+    // 900001 -> raíz G (bien), 900002 -> raíz J (servicio), 90010001 ->
+    // raíz G pero en la familia sintética "9001" (revisión manual).
     private static readonly CatalogoUnspsc CatalogoDePrueba = CatalogoUnspsc.CargarDesdeTexto(
         "Key\tParentKey\tCode\tTitulo\n" +
         "1\t\tG\tBienes\n" +
         "2\t\tJ\tServicios\n" +
         "3\t1\t900001\tBien de prueba\n" +
-        "4\t2\t900002\tServicio de prueba\n");
+        "4\t2\t900002\tServicio de prueba\n" +
+        "5\t1\t90010001\tBien de familia ambigua de prueba\n");
 
     private const int CodigoProductoBien = 900001;
     private const int CodigoProductoServicio = 900002;
     private const int CodigoProductoSinCatalogo = 999999;
+    private const int CodigoProductoFamiliaAmbigua = 90010001;
+
+    private const string RegionElegible = "Región Metropolitana de Santiago";
+    private const string RegionNoElegible = "Región de Aysén del General Carlos Ibáñez del Campo";
 
     private static Dictionary<string, EntradaCacheUnspsc> CacheVacio() => new();
 
-    private static Dictionary<string, EntradaCacheUnspsc> CacheConCodigoProducto(string codigo, int codigoProducto) =>
-        new() { [codigo] = new EntradaCacheUnspsc(codigo, new List<ItemUnspscCache> { new(codigoProducto, null) }, DateTime.UtcNow) };
+    private static Dictionary<string, EntradaCacheUnspsc> CacheConCodigoProducto(
+        string codigo, int codigoProducto, string? regionUnidad = null) =>
+        new() { [codigo] = new EntradaCacheUnspsc(codigo, new List<ItemUnspscCache> { new(codigoProducto, null) }, DateTime.UtcNow, regionUnidad) };
 
     private static ResultadoFiltro EjecutarFiltro(
         IEnumerable<LicitacionRaw> licitaciones, Criterios criterios, Dictionary<string, EntradaCacheUnspsc>? cache = null)
@@ -172,7 +180,7 @@ public class FiltroEtapaTests
     public void MatchPorSubstring_NoPalabraCompleta()
     {
         var licitaciones = new[] { Licitacion("1-1-LE26", "SERVICIO DE AUDITORIAS EXTERNAS", 5) };
-        var cache = CacheConCodigoProducto("1-1-LE26", CodigoProductoServicio);
+        var cache = CacheConCodigoProducto("1-1-LE26", CodigoProductoServicio, RegionElegible);
 
         var resultado = EjecutarFiltro(licitaciones, CriteriosDePrueba(), cache);
 
@@ -180,6 +188,44 @@ public class FiltroEtapaTests
         Assert.Equal("compliance", candidata.RubroMatch);
         Assert.Equal("auditor", candidata.TerminoMatch);
         Assert.Equal(UnspscEstado.Servicio, candidata.UnspscEstado);
+        Assert.Equal(1, resultado.TrasRegion);
+    }
+
+    [Fact]
+    public void ServicioConRubroAlta_RegionNoElegible_VaASecundariasConRubroMatchPoblado()
+    {
+        // Corrección explícita del usuario (2026-09-17): región nunca corta
+        // antes de rubro. Un servicio real con rubro alta pero fuera de
+        // cobertura geográfica queda en Secundarias con su RubroMatch
+        // visible — no indistinguible de cualquier servicio irrelevante.
+        var licitaciones = new[] { Licitacion("1-1-LE26", "SERVICIO DE AUDITORIAS EXTERNAS", 5) };
+        var cache = CacheConCodigoProducto("1-1-LE26", CodigoProductoServicio, RegionNoElegible);
+
+        var resultado = EjecutarFiltro(licitaciones, CriteriosDePrueba(), cache);
+
+        Assert.Empty(resultado.Prioritarias);
+        var secundaria = Assert.Single(resultado.Secundarias);
+        Assert.Equal("compliance", secundaria.RubroMatch);
+        Assert.Equal("auditor", secundaria.TerminoMatch);
+        Assert.Equal(UnspscEstado.Servicio, secundaria.UnspscEstado);
+        Assert.Equal(0, resultado.TrasRegion);
+    }
+
+    [Fact]
+    public void FamiliaUnspscAmbigua_VaASecundarias_ConRubroEvaluado()
+    {
+        // RevisionManual recibe el mismo tratamiento que Servicio en
+        // cuanto a evaluar rubro (contexto útil para quien revise), pero
+        // nunca llega a Prioritarias sin importar el resultado.
+        var licitaciones = new[] { Licitacion("1-1-LE26", "ARRIENDO DE AUDITOR DE PRUEBA", 5) };
+        var cache = CacheConCodigoProducto("1-1-LE26", CodigoProductoFamiliaAmbigua, RegionElegible);
+
+        var resultado = EjecutarFiltro(licitaciones, CriteriosDePrueba(), cache);
+
+        Assert.Empty(resultado.Prioritarias);
+        var secundaria = Assert.Single(resultado.Secundarias);
+        Assert.Equal("compliance", secundaria.RubroMatch);
+        Assert.Equal(UnspscEstado.RevisionManual, secundaria.UnspscEstado);
     }
 
     [Fact]

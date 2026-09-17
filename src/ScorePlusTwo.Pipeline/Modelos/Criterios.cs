@@ -32,4 +32,14 @@ public sealed record Criterios(
     // encontrarlos y revisar si promoverlos. Deben estar también en Tipos
     // para ser aceptados en la etapa 2 — TiposPrivados solo decide su
     // destino, no reemplaza esa validación.
-    [property: JsonPropertyName("tipos_privados")] List<string> TiposPrivados);
+    [property: JsonPropertyName("tipos_privados")] List<string> TiposPrivados,
+    // Familias UNSPSC donde la clase de 8 dígitos no alcanza para decidir
+    // bien-vs-servicio (F2, 2026-09-17): verificado con datos reales que
+    // la familia 4323 (Software) mezcla arriendo de plataforma con
+    // soporte (prospecto real) y compra pura de licencias (nunca un
+    // prospecto) bajo la misma clase — UNSPSC.ResolverRaiz no puede
+    // distinguirlos. Prefijos de CodigoProducto, no necesariamente de 4
+    // dígitos: si aparece evidencia de que la ambigüedad es más angosta
+    // (una clase de 6 dígitos específica), se puede acotar sin tocar
+    // código. Ver ClasificadorUnspsc y UnspscEstado.RevisionManual.
+    [property: JsonPropertyName("familias_unspsc_revision_manual")] List<string> FamiliasUnspscRevisionManual);

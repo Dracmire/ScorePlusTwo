@@ -11,12 +11,16 @@ Mercado Público, lo filtra contra `config/criterios.json` y actualiza
 El filtro clasifica cada registro en una de tres listas — nunca en una sola,
 y solo obras públicas/suministros (`descarte_duro`) desaparecen sin rastro:
 
-- **Prioritarias** (`data/candidatas.json`): matchean un rubro de
-  `prioridad: "alta"` en `config/criterios.json`. Es lo que va al tablero.
+- **Prioritarias** (`data/candidatas.json`): UNSPSC confirma que es un
+  servicio real (no un bien ni una familia UNSPSC ambigua en modalidad),
+  el comprador está en una región de `config/criterios.json`, y matchea un
+  rubro de `prioridad: "alta"`. Es lo que va al tablero.
 - **Secundarias** (`data/secundarias.json`): sobreviven estado+tipo+
-  descarte_duro pero no entran a Prioritarias (rubro de prioridad
-  `"secundaria"`, sin ningún rubro, o tipo de licitación privada). Es el
-  inventario para prospectar rubros que todavía no se atienden.
+  descarte_duro pero no entran a Prioritarias — bien confirmado, familia
+  UNSPSC ambigua en modalidad, servicio real pero fuera de cobertura
+  geográfica, sin enriquecer todavía, rubro de prioridad `"secundaria"`,
+  sin ningún rubro, o tipo de licitación privada. Es el inventario para
+  prospectar rubros que todavía no se atienden.
 - **Tramo bajo** (`data/tramo_bajo.json`): tipo `L1`, aceptado pero fuera de
   la clasificación de rubro — no se mezcla con el resto, es opción solo si
   aparece un cliente que la tome.
