@@ -22,6 +22,14 @@ public sealed record Criterios(
     // ("equipos", "software"); ahora solo ahorra llamadas de enriquecimiento
     // sobre lo evidentemente fuera de negocio — bien-vs-servicio lo decide
     // UnspscEstado (ver ClasificadorUnspsc), no una palabra.
+    //
+    // Riesgo aceptado a propósito, no un detalle neutro: es la única etapa
+    // donde un servicio legítimo puede morir por una sola palabra en el
+    // nombre, sin dejar rastro en ninguna de las tres listas — UNSPSC nunca
+    // llega a opinar sobre lo que descarta_duro ya mató. El objetivo
+    // declarado es seguir achicando esta lista a medida que el presupuesto
+    // de enriquecimiento lo permita (ver el filtro de acumulados en
+    // Program.cs y sus ahorros medidos contra datos reales de producción).
     [property: JsonPropertyName("descarte_duro")] List<string> DescarteDuro,
     // Tipos de licitación privada (CO/B2/E2/H2/I2, 2026-09-09): tienen ciclo de
     // vida real (ventana de postulación, no solo aviso de transparencia),

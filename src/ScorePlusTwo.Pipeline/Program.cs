@@ -295,6 +295,16 @@ public static class Program
         JsonStore.Guardar(ruta, combinadas, JsonOpciones.ApiLectura);
     }
 
+    // Por qué existe este barrido (no es para detectar cambios de estado —
+    // eso ya lo hace RevalidarEstado con el lote diario crudo): el lote
+    // diario solo trae licitaciones con movimiento ESE día. Una publicada
+    // el 24 de agosto que cierra el 4 de septiembre no vuelve a aparecer en
+    // ningún lote diario posterior a su publicación — el sistema nunca la
+    // ve de nuevo. `activas` es el corte transversal que sí la captura,
+    // sin importar cuándo se publicó ni si tuvo movimiento reciente. Es lo
+    // que motivó agregarlo: sin él, el pipeline es ciego a la mayoría del
+    // mercado vigente en cualquier momento dado.
+    //
     // Se intenta si es la primera corrida real (aún no existe ningún
     // data/raw/activas-*.json, siembra inicial) o si hoy es lunes en
     // huso horario de Chile (no UTC: el cron corre de madrugada en Chile,
