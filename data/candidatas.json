@@ -17,7 +17,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "726931-1-LE26",
@@ -37,7 +39,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5413-71-LE26",
@@ -57,7 +61,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1007793-15-LE26",
@@ -77,7 +83,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1020-38-LP26",
@@ -97,7 +105,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1259850-4-LP26",
@@ -117,27 +127,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
-  },
-  {
-    "codigo": "1422824-1-LR26",
-    "nombre": "CONTRATO DE SUMINISTRO DE REACTIVOS PARA EX\u00C1MENES BIOQU\u00CDMICOS INMUNOENDOCRINOL\u00D3GICOS Y SEROLOGICOS CON EQUIPAMIENTO Y SISTEMA INFORM\u00C1TICO DE LABORATORIO EN COMODATO PARA EL HOSPITAL CARLOS VAN BUREN",
-    "tipo": "LR",
-    "fecha_cierre": "2026-09-16T16:00:00",
-    "fecha_lote": "2026-09-05",
-    "rubro_match": "ti",
-    "termino_match": "inform\u00E1tic",
-    "region": null,
-    "organismo": null,
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": null,
-    "monto": null,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1562-49-LR26",
@@ -157,7 +149,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1593-24-LP26",
@@ -177,7 +171,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1725-196-LE26",
@@ -197,7 +193,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1725-197-LP26",
@@ -217,7 +215,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1978-44-LE26",
@@ -237,7 +237,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2408-160-LP26",
@@ -257,27 +259,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
-  },
-  {
-    "codigo": "2434-20-LP26",
-    "nombre": "SERV. PLATAFORMA INTEGRAL PARA GESTION MUNICIPAL",
-    "tipo": "LP",
-    "fecha_cierre": "2026-09-16T14:00:00",
-    "fecha_lote": "2026-09-05",
-    "rubro_match": "ti",
-    "termino_match": "plataforma",
-    "region": null,
-    "organismo": null,
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": null,
-    "monto": null,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2446-251-LE26",
@@ -297,7 +281,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2563-34-LR26",
@@ -317,7 +303,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2770-120-LR26",
@@ -337,7 +325,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3084-31-LE26",
@@ -357,7 +347,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3378-51-LP26",
@@ -377,7 +369,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "548874-72-LR26",
@@ -397,7 +391,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "548874-74-LR26",
@@ -417,7 +413,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "548874-77-LR26",
@@ -437,7 +435,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "598-16-LE26",
@@ -457,7 +457,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "730566-21-LP26",
@@ -477,7 +479,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "732434-20-LP26",
@@ -497,7 +501,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "85-34-LP26",
@@ -517,7 +523,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "85-41-LE26",
@@ -537,7 +545,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "885-81-LP26",
@@ -557,7 +567,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "188-83-LP26",
@@ -577,7 +589,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2741-60-LE26",
@@ -597,7 +611,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "885-83-LE26",
@@ -617,7 +633,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1016-9-LE26",
@@ -637,7 +655,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057545-104-LE26",
@@ -657,7 +677,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2020-21-LE26",
@@ -677,7 +699,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "875-7-LE26",
@@ -697,7 +721,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3047-54-LE26",
@@ -717,7 +743,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "612-19-LE26",
@@ -737,7 +765,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1431841-61-LE26",
@@ -757,7 +787,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1447930-11-LP26",
@@ -777,7 +809,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "721703-40-LP26",
@@ -797,7 +831,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "759-32-LP26",
@@ -817,7 +853,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2133-82-LE26",
@@ -837,7 +875,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5418-13-LE26",
@@ -857,7 +897,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5394-22-LE26",
@@ -877,7 +919,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057539-138-LP26",
@@ -897,7 +941,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2429-8-LP26",
@@ -917,7 +963,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5482-103-LP26",
@@ -937,7 +985,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3269-10-LP26",
@@ -957,7 +1007,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "858-69-LP26",
@@ -977,7 +1029,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5482-100-LP26",
@@ -997,7 +1051,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5482-101-LR26",
@@ -1017,7 +1073,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3666-12-LE26",
@@ -1037,7 +1095,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "591-26-LP26",
@@ -1057,7 +1117,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1533460-6-LP26",
@@ -1077,7 +1139,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2663-63-LP26",
@@ -1097,7 +1161,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3447-145-LR26",
@@ -1117,7 +1183,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1208103-6-LE26",
@@ -1137,7 +1205,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5586-139-LE26",
@@ -1157,7 +1227,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2098-142-LE26",
@@ -1177,7 +1249,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "29-81-LP26",
@@ -1197,7 +1271,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "584105-31-LE26",
@@ -1217,7 +1293,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057509-292-LE26",
@@ -1237,7 +1315,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2409-68-LE26",
@@ -1257,7 +1337,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2760-118-LR26",
@@ -1277,7 +1359,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "608-197-LR26",
@@ -1297,7 +1381,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "608897-57-LE26",
@@ -1317,7 +1403,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "4511-53-LE26",
@@ -1337,7 +1425,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2852-56-LE26",
@@ -1357,7 +1447,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "418-63-LE26",
@@ -1377,7 +1469,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1606-30-LE26",
@@ -1397,7 +1491,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1978-81-LE26",
@@ -1417,7 +1513,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "761391-138-LE26",
@@ -1437,7 +1535,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1562-61-LP26",
@@ -1457,7 +1557,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "587-49-LE26",
@@ -1477,7 +1579,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5890-11-LP26",
@@ -1497,7 +1601,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "598-22-LE26",
@@ -1517,7 +1623,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "598-21-LE26",
@@ -1537,7 +1645,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "869591-12-LP26",
@@ -1557,7 +1667,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "885-84-LE26",
@@ -1577,7 +1689,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "948354-138-LE26",
@@ -1597,7 +1711,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "4475-22-LE26",
@@ -1617,6 +1733,32 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "514862-125-LR26",
+    "nombre": "10032938 PLATAFORMA DE AGENDAMIENTO TELECONSULTAS",
+    "tipo": "LR",
+    "fecha_cierre": "2026-10-19T15:00:00",
+    "fecha_lote": "2026-09-16",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": null,
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      81112010
+    ]
   }
 ]

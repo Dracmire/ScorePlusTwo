@@ -17,7 +17,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057501-488-LE26",
@@ -37,7 +39,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1562-52-LE26",
@@ -57,7 +61,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1588-28-LE26",
@@ -77,7 +83,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3000-30-LE26",
@@ -97,7 +105,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3671-58-LE26",
@@ -117,7 +127,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5586-128-LE26",
@@ -137,7 +149,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "633-50-LE26",
@@ -157,7 +171,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057548-21-LE26",
@@ -177,7 +193,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1607-10-LR26",
@@ -197,7 +215,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2413-20-LE26",
@@ -217,7 +237,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2981-256-LE26",
@@ -237,7 +259,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "4956-74-LE26",
@@ -257,7 +281,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5240-93-LP26",
@@ -277,7 +303,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "734-50-LE26",
@@ -297,7 +325,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "906973-8-LP26",
@@ -317,7 +347,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1562-55-LE26",
@@ -337,6 +369,52 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1422824-1-LR26",
+    "nombre": "CONTRATO DE SUMINISTRO DE REACTIVOS PARA EX\u00C1MENES BIOQU\u00CDMICOS INMUNOENDOCRINOL\u00D3GICOS Y SEROLOGICOS CON EQUIPAMIENTO Y SISTEMA INFORM\u00C1TICO DE LABORATORIO EN COMODATO PARA EL HOSPITAL CARLOS VAN BUREN",
+    "tipo": "LR",
+    "fecha_cierre": "2026-09-16T16:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "inform\u00E1tic",
+    "region": null,
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2434-20-LP26",
+    "nombre": "SERV. PLATAFORMA INTEGRAL PARA GESTION MUNICIPAL",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-16T14:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": null,
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   }
 ]

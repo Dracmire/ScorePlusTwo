@@ -17,7 +17,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2292-57-L126",
@@ -37,7 +39,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2961-66-L126",
@@ -57,7 +61,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3977-17-L126",
@@ -77,7 +83,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057384-138-L126",
@@ -97,7 +105,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1469-207-L126",
@@ -117,7 +127,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057419-27-L126",
@@ -137,7 +149,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1077908-8-L126",
@@ -157,7 +171,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1110404-185-L126",
@@ -177,7 +193,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1110404-186-L126",
@@ -197,7 +215,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1110404-187-L126",
@@ -217,7 +237,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1664-21-L126",
@@ -237,7 +259,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1665-11-L126",
@@ -257,7 +281,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1754-38-L126",
@@ -277,7 +303,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1757-7-L126",
@@ -297,7 +325,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1757-8-L126",
@@ -317,7 +347,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1978-112-L126",
@@ -337,7 +369,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1978-115-L126",
@@ -357,7 +391,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1978-116-L126",
@@ -377,7 +413,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2099-48-L126",
@@ -397,7 +435,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2200-26-L126",
@@ -417,7 +457,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2274-43-L126",
@@ -437,7 +479,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2409-95-L126",
@@ -457,7 +501,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2422-152-L126",
@@ -477,7 +523,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2424-80-L126",
@@ -497,7 +545,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2658-305-L126",
@@ -517,7 +567,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2658-307-L126",
@@ -537,7 +589,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2658-308-L126",
@@ -557,7 +611,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3143-40-L126",
@@ -577,7 +633,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3280-17-L126",
@@ -597,7 +655,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3280-18-L126",
@@ -617,7 +677,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3385-12-L126",
@@ -637,7 +699,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3730-92-L126",
@@ -657,7 +721,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3737-10-L126",
@@ -677,7 +743,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3908-42-L126",
@@ -697,7 +765,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3992-26-L126",
@@ -717,7 +787,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "4055-67-L126",
@@ -737,7 +809,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "4885-23-L126",
@@ -757,7 +831,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "4886-30-L126",
@@ -777,7 +853,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5018-6-L126",
@@ -797,7 +875,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "507428-113-L126",
@@ -817,7 +897,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "594965-24-L126",
@@ -837,7 +919,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "636811-15-L126",
@@ -857,7 +941,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "643553-18-L126",
@@ -877,7 +963,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "848-25-L126",
@@ -897,7 +985,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1218393-42-L126",
@@ -917,7 +1007,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057552-18-L126",
@@ -937,7 +1029,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3540-62-L126",
@@ -957,7 +1051,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2332-106-L126",
@@ -977,7 +1073,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2292-61-L126",
@@ -997,7 +1095,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1233822-22-L126",
@@ -1017,7 +1117,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "4906-35-L126",
@@ -1037,7 +1139,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "522-32-L126",
@@ -1057,7 +1161,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "923000-18-L126",
@@ -1077,7 +1183,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3210-10-L126",
@@ -1097,7 +1205,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2467-99-L126",
@@ -1117,7 +1227,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1480067-21-L126",
@@ -1137,7 +1249,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3950-45-L126",
@@ -1157,7 +1271,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2974-72-L126",
@@ -1177,7 +1293,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1057550-37-L126",
@@ -1197,7 +1315,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1072229-40-L126",
@@ -1217,7 +1337,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1209-5-L126",
@@ -1237,7 +1359,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1233600-50-L126",
@@ -1257,7 +1381,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1469-201-L126",
@@ -1277,7 +1403,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1660-132-L126",
@@ -1297,7 +1425,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "1660-135-L126",
@@ -1317,7 +1447,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2402-78-L126",
@@ -1337,7 +1469,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "2663-73-L126",
@@ -1357,7 +1491,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3122-5-L126",
@@ -1377,7 +1513,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3890-192-L126",
@@ -1397,7 +1535,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3890-193-L126",
@@ -1417,7 +1557,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "3958-54-L126",
@@ -1437,7 +1579,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5349-97-L126",
@@ -1457,7 +1601,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "5539-23-L126",
@@ -1477,7 +1623,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "633-55-L126",
@@ -1497,7 +1645,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "680529-1-L126",
@@ -1517,7 +1667,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "707415-31-L126",
@@ -1537,7 +1689,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "707415-32-L126",
@@ -1557,7 +1711,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "707415-33-L126",
@@ -1577,7 +1733,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "707418-44-L126",
@@ -1597,7 +1755,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "761391-135-L126",
@@ -1617,7 +1777,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "900-41-L126",
@@ -1637,7 +1799,9 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   },
   {
     "codigo": "900-42-L126",
@@ -1657,6 +1821,888 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": null
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1057428-39-L126",
+    "nombre": "RADIOGRAF\u00CDAS DE T\u00D3RAX POR 24 MESES O HASTA AGOTAR PRESUPUESTO (LO QUE OCURRA PRIMERO), PROGRAMA DE IM\u00C1GENES DIAGNOSTICAS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:28:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1469-203-L126",
+    "nombre": "\u201CMATERIAL DE ENSE\u00D1ANZA PARA LABORATORIO, UNIVERSIDAD DE TALCA\u201D",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T12:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2402-80-L126",
+    "nombre": "CAPACITACION DE OFICIO EXCEL NIVEL MEDIO",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "desierta",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "3561-40-L126",
+    "nombre": "LATANOPROST 0005% Y LATANOPROST CON TIMOLOL PARA UAPO LA CALERA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T10:43:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1469-204-L126",
+    "nombre": "\u201CDifusi\u00F3n en v\u00EDa p\u00FAblica de campa\u00F1a admisi\u00F3n en la ciudad de Linares\u201D",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T12:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "660-12-L126",
+    "nombre": "Taller Intensivo de Productividad Digital con Inteligencia Artificial",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T17:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "879-17-L126",
+    "nombre": "Adquisici\u00F3n de licencias ATLAS.ti",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T17:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "desierta",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1057428-38-L126",
+    "nombre": "CURSO DE SALUD INTERCULTURAL Y PERTINENCIA CULTURAL 2026",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T16:30:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "desierta",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1665-12-L126",
+    "nombre": "Servicio de Radio Difusion ",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T12:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2101-147-L126",
+    "nombre": "HORAS DE MATR\u00D3N (A) PARA LA EJECUCI\u00D3N DEL PROGRAMA IM\u00C1GENES DIAGNOSTICAS A\u00D1O 2026, COMPONENTES MAMOGRAF\u00CDAS Y ECOGRAFIAS MAMARIAS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T11:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2402-81-L126",
+    "nombre": "CAPACITACI\u00D3N DE OFICIO \u201CMANIPULADORA DE ALIMENTOS\u201D",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T12:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "desierta",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "3540-63-L126",
+    "nombre": "Materiales para obra (P.2291)",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T16:00:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "4308-21-L126",
+    "nombre": "Agl Cesfam 2026",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T12:01:00",
+    "fecha_lote": "2026-09-08",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2395-49-L126",
+    "nombre": "Intervenci\u00F3n Inicial en Violencia de G\u00E9nero",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T17:00:00",
+    "fecha_lote": "2026-09-09",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "867990-85-L126",
+    "nombre": "cc 102 sol. 92417- Mantenci\u00F3n y reparaci\u00F3n de sala con visita a terreno",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:00:00",
+    "fecha_lote": "2026-09-09",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "633-56-L126",
+    "nombre": "CURSO DE CAPACITACI\u00D3N EN IA PARA FUNCIONARIOS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T16:00:00",
+    "fecha_lote": "2026-09-09",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2408-208-L126",
+    "nombre": "ADQUISICI\u00D3N E INSTALACI\u00D3N DE SE\u00D1ALES VIALES EN DIVERSOS SECTORES RURALES DE LA COMUNA DE LOS ANGELES.",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:00:00",
+    "fecha_lote": "2026-09-09",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1057536-123-L126",
+    "nombre": "ADQUISICION SILLAS ERGONOMICAS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T17:00:00",
+    "fecha_lote": "2026-09-09",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2766-135-L126",
+    "nombre": "ADQ. DE IMPRESOS PARA LOS PROGRAMAS DE SALUD",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:32:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2852-55-L126",
+    "nombre": "CAPACITACI\u00D3N PARA TRABAJADORES DEL RUBRO TUR\u00CDSTICO DE PUERTO VARAS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T18:12:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1211-17-L126",
+    "nombre": "Servicio de catering para el certamen de Cueca Escolar Regional  (SC 48 EDUC)",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:00:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1067476-36-L126",
+    "nombre": "Servicio de Producci\u00F3n integral para actividades de Plan de Salvaguardia de Canto a lo Poeta en la Regi\u00F3n del Maule",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T23:59:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "732515-1-L126",
+    "nombre": "CONVENIO DE SUMINISTRO EN ADQUISICION DE PRODUCTOS DE DIFUSION Y PUBLICIDAD PARA GOBIERNO EN TERRENO",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T16:55:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1621-22-L126",
+    "nombre": "PRESTACIONES DE TENS PARA CAMPA\u00D1A DE INMUNIZACION ",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:05:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "desierta",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "3996-37-L126",
+    "nombre": "Capacitaci\u00F3n L\u00EDderes Comunitarios Programa MAS AMA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T09:01:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "3206-29-L126",
+    "nombre": "MONITOR PARA TALLER JOYERIA EN RESINA EPOXICA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T18:27:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "4455-48-L126",
+    "nombre": "Convenio Limpieza Fosas C\u00E1maras Desgrasadoras Alc",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:05:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "3938-37-L126",
+    "nombre": "TALLER ALFARERIA MAPUCHE NIVEL INICIAL ",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T12:11:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2332-112-L126",
+    "nombre": "ADQUISICI\u00D3N DE HERRAMIENTAS PARA UNIDAD DE OPERACIONES DEL DEPARTAMENTO DE SALUD MUNICIPAL",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T10:00:00",
+    "fecha_lote": "2026-09-11",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "938-32-L126",
+    "nombre": "repuestos para aeronave beechcraft B200",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:00:00",
+    "fecha_lote": "2026-09-11",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1057384-136-L126",
+    "nombre": "COFFE BREAK HOSPITAL TOCOPILLA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T18:27:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "desierta",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "1230848-62-L126",
+    "nombre": "CALIBRACI\u00D3N DE TERMOHIGR\u00D3METROS Y DATALOGGER",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:00:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "3316-12-L126",
+    "nombre": "TALA DE \u00C1RBOLES ESCUELA DE SUBOFICIALES DE CARABINEROS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-14T15:00:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "3890-191-L126",
+    "nombre": "CONTRATACION SERVICIO DE CAPACITACION EN BARBERIA PARA USUARIOS DE LA OFICINA MUNICIPAL DE INFORMACION LABORAL OMIL 2026",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T17:00:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "3958-53-L126",
+    "nombre": "TALLERES DE SOCIOEMOCIONALES PARA  ESCUELA CONFEDERACION HELVETICA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:00:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "4457-73-L126",
+    "nombre": "IMPLEMENTOS PROGRAMA MAIS CESFAM, CECOSF",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T09:06:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "4559-29-L126",
+    "nombre": "CAPACITACIONES USO ANTIMICROBIANOS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T15:30:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "4885-20-L126",
+    "nombre": "BASES DE LICITACI\u00D3N P\u00DABLICA PARA LA CONTRATACI\u00D3JN DEL SERVICIO DE ACTUALIZACI\u00D3N PLAN DE GESTI\u00D3N DE RED DE ESPACIOS CULTURALES DEL MAULE",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-16T12:01:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "4887-26-L126",
+    "nombre": "Actualizaci\u00F3n del Plan Municipal de Cultura de Cunco y Elaboraci\u00F3n del Plan de Gesti\u00F3n del Museo Antropol\u00F3gico de Cunco ",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-14T20:13:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "680504-2-L126",
+    "nombre": "Mantenci\u00F3n Anual Tableros El\u00E9ctricos del Edificio RPP Curic\u00F3",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-14T16:00:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": []
   }
 ]

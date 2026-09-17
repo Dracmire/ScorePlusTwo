@@ -23,8 +23,16 @@
       "tramo_bajo": 0,
       "nuevas_prioritarias": 42,
       "nuevas_secundarias": 0,
-      "nuevas_tramo_bajo": 0
-    }
+      "nuevas_tramo_bajo": 0,
+      "enriquecidos_hoy": 0,
+      "enriquecimientos_fallidos": 0,
+      "bienes": 0,
+      "sin_resolver_unspsc": 0
+    },
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-05",
@@ -39,7 +47,11 @@
     "nuevas_prioritarias": 0,
     "nuevas_secundarias": 0,
     "nuevas_tramo_bajo": 0,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-06",
@@ -65,8 +77,16 @@
       "tramo_bajo": 0,
       "nuevas_prioritarias": 0,
       "nuevas_secundarias": 0,
-      "nuevas_tramo_bajo": 0
-    }
+      "nuevas_tramo_bajo": 0,
+      "enriquecidos_hoy": 0,
+      "enriquecimientos_fallidos": 0,
+      "bienes": 0,
+      "sin_resolver_unspsc": 0
+    },
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-07",
@@ -81,7 +101,11 @@
     "nuevas_prioritarias": 5,
     "nuevas_secundarias": 0,
     "nuevas_tramo_bajo": 0,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-08",
@@ -96,7 +120,11 @@
     "nuevas_prioritarias": 4,
     "nuevas_secundarias": 280,
     "nuevas_tramo_bajo": 39,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-09",
@@ -111,7 +139,11 @@
     "nuevas_prioritarias": 7,
     "nuevas_secundarias": 260,
     "nuevas_tramo_bajo": 33,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-10",
@@ -126,7 +158,11 @@
     "nuevas_prioritarias": 9,
     "nuevas_secundarias": 255,
     "nuevas_tramo_bajo": 52,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-11",
@@ -141,7 +177,11 @@
     "nuevas_prioritarias": 8,
     "nuevas_secundarias": 226,
     "nuevas_tramo_bajo": 39,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-12",
@@ -156,7 +196,11 @@
     "nuevas_prioritarias": 0,
     "nuevas_secundarias": 5,
     "nuevas_tramo_bajo": 1,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-13",
@@ -182,8 +226,16 @@
       "tramo_bajo": 257,
       "nuevas_prioritarias": 0,
       "nuevas_secundarias": 1846,
-      "nuevas_tramo_bajo": 104
-    }
+      "nuevas_tramo_bajo": 104,
+      "enriquecidos_hoy": 0,
+      "enriquecimientos_fallidos": 0,
+      "bienes": 0,
+      "sin_resolver_unspsc": 0
+    },
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-14",
@@ -198,7 +250,11 @@
     "nuevas_prioritarias": 10,
     "nuevas_secundarias": 261,
     "nuevas_tramo_bajo": 45,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
   },
   {
     "fecha": "2026-09-15",
@@ -213,6 +269,29 @@
     "nuevas_prioritarias": 10,
     "nuevas_secundarias": 244,
     "nuevas_tramo_bajo": 45,
-    "barrido_activas": null
+    "barrido_activas": null,
+    "enriquecidos_hoy": 0,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 0,
+    "sin_resolver_unspsc": 0
+  },
+  {
+    "fecha": "2026-09-16",
+    "total": 1068,
+    "tras_estado": 332,
+    "tras_tipo": 330,
+    "tras_region": 1,
+    "descarte_duro": 43,
+    "prioritarias": 1,
+    "secundarias": 241,
+    "tramo_bajo": 45,
+    "nuevas_prioritarias": 1,
+    "nuevas_secundarias": 241,
+    "nuevas_tramo_bajo": 45,
+    "barrido_activas": null,
+    "enriquecidos_hoy": 234,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 54,
+    "sin_resolver_unspsc": 86
   }
 ]
