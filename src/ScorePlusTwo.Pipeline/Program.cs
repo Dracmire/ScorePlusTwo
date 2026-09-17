@@ -51,14 +51,32 @@ public static class Program
             var cacheUnspsc = cacheUnspscInicial.ToDictionary(e => e.CodigoExterno);
             var cacheUnspscCountInicial = cacheUnspsc.Count;
 
+            // Filtro de acumulados (F2, 2026-09-17): un CodigoExterno que ya
+            // es una Prioritaria confirmada no se enriquece ni se reclasifica
+            // de nuevo cada corrida — ya sabemos la respuesta. Excepción: si
+            // se marca manualmente como falso positivo (EstadoFlujo.
+            // Descartada), vuelve a entrar al flujo normal. Distinto del
+            // cache: el cache evita la llamada de red, esto evita gastar el
+            // presupuesto de enriquecimiento/clasificación en algo cuyo
+            // destino ya está decidido — el propósito real es liberar ese
+            // presupuesto para poder achicar descarte_duro más adelante.
+            var candidatasExistentes = JsonStore.CargarOPredeterminado(
+                Path.Combine(repoRoot, "data", "candidatas.json"), JsonOpciones.Persistencia, new List<Candidata>());
+            var codigosConfirmados = candidatasExistentes
+                .Where(c => c.EstadoFlujo != EstadoFlujo.Descartada)
+                .Select(c => c.Codigo)
+                .ToHashSet();
+
             List<LicitacionRaw> loteDiario;
             DateOnly fecha;
             ResultadoFiltro resultadoDiario;
             int enriquecidosDiarioHoy;
             int enriquecimientosFallidosDiarioHoy;
+            int ahorradosPorAcumuladosDiario;
             ResultadoFiltro? resultadoActivas = null;
             int enriquecidosActivasHoy = 0;
             int enriquecimientosFallidosActivasHoy = 0;
+            int ahorradosPorAcumuladosActivas = 0;
             string estadoActivas;
 
             if (opciones.RutaFixture is not null)
@@ -76,8 +94,8 @@ public static class Program
                 loteDiario = respuestaFixture.Listado;
                 GuardarRawDelDia(repoRoot, fecha, respuestaFixture);
 
-                (resultadoDiario, enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy) =
-                    await FiltrarConEnriquecimientoAsync(loteDiario, criterios, cacheUnspsc, catalogoUnspsc, cliente: null);
+                (resultadoDiario, enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy, ahorradosPorAcumuladosDiario) =
+                    await FiltrarConEnriquecimientoAsync(loteDiario, criterios, cacheUnspsc, catalogoUnspsc, codigosConfirmados, cliente: null);
             }
             else
             {
@@ -96,8 +114,8 @@ public static class Program
                 AcumularAdjudicadas(repoRoot, fecha, respuestaAdjudicada.Listado);
                 loteDiario = respuestaDiaria.Listado;
 
-                (resultadoDiario, enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy) =
-                    await FiltrarConEnriquecimientoAsync(loteDiario, criterios, cacheUnspsc, catalogoUnspsc, cliente);
+                (resultadoDiario, enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy, ahorradosPorAcumuladosDiario) =
+                    await FiltrarConEnriquecimientoAsync(loteDiario, criterios, cacheUnspsc, catalogoUnspsc, codigosConfirmados, cliente);
 
                 var (corresponde, motivoActivas) = DecidirBarridoActivas(repoRoot);
                 if (corresponde)
@@ -108,8 +126,8 @@ public static class Program
                         var respuestaActivas = await cliente.ObtenerActivasAsync();
                         GuardarRawActivas(repoRoot, DateOnly.FromDateTime(AhoraChile()), respuestaActivas);
 
-                        (resultadoActivas, enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy) =
-                            await FiltrarConEnriquecimientoAsync(respuestaActivas.Listado, criterios, cacheUnspsc, catalogoUnspsc, cliente);
+                        (resultadoActivas, enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy, ahorradosPorAcumuladosActivas) =
+                            await FiltrarConEnriquecimientoAsync(respuestaActivas.Listado, criterios, cacheUnspsc, catalogoUnspsc, codigosConfirmados, cliente);
                         estadoActivas = $"corrió ({motivoActivas})";
                     }
                     catch (MercadoPublicoApiException ex)
@@ -199,7 +217,8 @@ public static class Program
                     resultadoActivas.Prioritarias.Count, resultadoActivas.Secundarias.Count, resultadoActivas.TramoBajo.Count,
                     nuevasPrioritariasActivas.Count, nuevasSecundariasActivas.Count, nuevasTramoBajoActivas.Count,
                     enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy,
-                    resultadoActivas.Bienes, resultadoActivas.SinResolverUnspsc);
+                    resultadoActivas.Bienes, resultadoActivas.SinResolverUnspsc,
+                    resultadoActivas.RevisionManualUnspsc, ahorradosPorAcumuladosActivas);
 
             var informeHoy = new InformeDiario(
                 fecha,
@@ -218,7 +237,9 @@ public static class Program
                 enriquecidosDiarioHoy,
                 enriquecimientosFallidosDiarioHoy,
                 resultadoDiario.Bienes,
-                resultadoDiario.SinResolverUnspsc);
+                resultadoDiario.SinResolverUnspsc,
+                resultadoDiario.RevisionManualUnspsc,
+                ahorradosPorAcumuladosDiario);
 
             var informes = ActualizarSerieInformes(repoRoot, informeHoy);
             JsonStore.Guardar(Path.Combine(repoRoot, "data", "informes.json"), informes, JsonOpciones.Persistencia);
@@ -233,8 +254,9 @@ public static class Program
 
             ImprimirResumen(
                 resultadoDiario, nuevasPrioritariasDiario.Count, nuevasSecundariasDiario.Count, nuevasTramoBajoDiario.Count,
-                enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy,
-                estadoActivas, resultadoActivas, enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy);
+                enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy, ahorradosPorAcumuladosDiario,
+                estadoActivas, resultadoActivas, enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy,
+                ahorradosPorAcumuladosActivas);
 
             return 0;
         }
@@ -308,23 +330,31 @@ public static class Program
         return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zonaChile);
     }
 
-    // Corre las dos etapas puras de FiltroLicitaciones con el enriquecimiento
-    // UNSPSC en el medio: descarte_duro primero (pura), enriquecimiento de
-    // los sobrevivientes "Regular" que todavía no estén en cacheUnspsc
-    // (impuro, solo si cliente no es null — en modo --fixture no hay ticket
-    // ni red, así que se clasifica con lo que ya haya en el cache de disco),
-    // y clasificación de rubro al final (pura, sobre el cache ya
-    // actualizado). cacheUnspsc se muta in-place: el llamador decide cuándo
-    // persistirlo a disco.
-    private static async Task<(ResultadoFiltro Resultado, int Enriquecidos, int Fallidos)> FiltrarConEnriquecimientoAsync(
+    // Corre las dos etapas puras de FiltroLicitaciones con el filtro de
+    // acumulados y el enriquecimiento UNSPSC en el medio: descarte_duro
+    // primero (pura), filtro de acumulados (excluye de "Regular" los
+    // CodigoExterno ya confirmados como Prioritarias — no gastan ni
+    // enriquecimiento ni reclasificación, ver codigosConfirmados en Main),
+    // enriquecimiento de lo que sobrevive y todavía no esté en cacheUnspsc
+    // (impuro, solo si cliente no es null), y clasificación de rubro al
+    // final (pura, sobre el cache ya actualizado). cacheUnspsc se muta
+    // in-place: el llamador decide cuándo persistirlo a disco.
+    private static async Task<(ResultadoFiltro Resultado, int Enriquecidos, int Fallidos, int AhorradosPorAcumulados)> FiltrarConEnriquecimientoAsync(
         List<LicitacionRaw> lote,
         Criterios criterios,
         Dictionary<string, EntradaCacheUnspsc> cacheUnspsc,
         CatalogoUnspsc catalogoUnspsc,
+        IReadOnlySet<string> codigosConfirmados,
         MercadoPublicoClient? cliente,
         CancellationToken ct = default)
     {
         var sobrevivientes = FiltroLicitaciones.FiltrarHastaDescarteDuro(lote, criterios);
+
+        var regularParaProcesar = sobrevivientes.Regular
+            .Where(c => !codigosConfirmados.Contains(c.Licitacion.CodigoExterno))
+            .ToList();
+        var ahorradosPorAcumulados = sobrevivientes.Regular.Count - regularParaProcesar.Count;
+        sobrevivientes = sobrevivientes with { Regular = regularParaProcesar };
 
         var enriquecidos = 0;
         var fallidos = 0;
@@ -351,7 +381,7 @@ public static class Program
         }
 
         var resultado = FiltroLicitaciones.ClasificarYFiltrarRubro(sobrevivientes, criterios, cacheUnspsc, catalogoUnspsc);
-        return (resultado, enriquecidos, fallidos);
+        return (resultado, enriquecidos, fallidos, ahorradosPorAcumulados);
     }
 
     private static Candidata CrearCandidata(
@@ -365,7 +395,7 @@ public static class Program
             FechaLote = fechaLote,
             RubroMatch = detectada.RubroMatch,
             TerminoMatch = detectada.TerminoMatch,
-            Region = null,
+            Region = detectada.Region,
             Organismo = null,
             EstadoFlujo = EstadoFlujo.Pendiente,
             Notas = null,
@@ -559,6 +589,7 @@ public static class Program
             {
                 MigrarFormaDeInforme(informe);
                 MigrarCamposUnspsc(informe);
+                MigrarCamposRevisionManualYAcumulados(informe);
             }
         }
 
@@ -610,6 +641,26 @@ public static class Program
         }
     }
 
+    // Upgrade de una sola vez para informes.json escrito antes de F2
+    // (segmento 43/región, 2026-09-17). Guard independiente de
+    // MigrarCamposUnspsc ("enriquecidos_hoy"): una entrada ya puede tener
+    // ese campo (migrada en la tanda anterior) y seguir sin
+    // revision_manual_unspsc/ahorrados_por_acumulados, que se introducen
+    // juntos en esta tanda — no hace falta un guard por campo.
+    private static void MigrarCamposRevisionManualYAcumulados(JsonObject informe)
+    {
+        if (!informe.ContainsKey("revision_manual_unspsc"))
+        {
+            informe["revision_manual_unspsc"] = 0;
+            informe["ahorrados_por_acumulados"] = 0;
+        }
+
+        if (informe["barrido_activas"] is JsonObject barrido)
+        {
+            MigrarCamposRevisionManualYAcumulados(barrido);
+        }
+    }
+
     private static void RenombrarCampo(JsonObject obj, string desde, string hacia)
     {
         if (obj.TryGetPropertyValue(desde, out var valor))
@@ -644,8 +695,9 @@ public static class Program
     // alguien va a mirar para saber si la corrida tuvo sentido.
     private static void ImprimirResumen(
         ResultadoFiltro resultadoDiario, int nuevasPrioritariasDiario, int nuevasSecundariasDiario, int nuevasTramoBajoDiario,
-        int enriquecidosDiario, int enriquecimientosFallidosDiario,
-        string estadoActivas, ResultadoFiltro? resultadoActivas, int enriquecidosActivas, int enriquecimientosFallidosActivas)
+        int enriquecidosDiario, int enriquecimientosFallidosDiario, int ahorradosPorAcumuladosDiario,
+        string estadoActivas, ResultadoFiltro? resultadoActivas, int enriquecidosActivas, int enriquecimientosFallidosActivas,
+        int ahorradosPorAcumuladosActivas)
     {
         Console.WriteLine("== Resumen de la corrida ==");
         Console.WriteLine(
@@ -654,8 +706,10 @@ public static class Program
             $"prioritarias={resultadoDiario.Prioritarias.Count} (nuevas={nuevasPrioritariasDiario}) " +
             $"secundarias={resultadoDiario.Secundarias.Count} (nuevas={nuevasSecundariasDiario}) " +
             $"tramo_bajo={resultadoDiario.TramoBajo.Count} (nuevas={nuevasTramoBajoDiario}) " +
-            $"unspsc: bienes={resultadoDiario.Bienes} sin_resolver={resultadoDiario.SinResolverUnspsc} " +
-            $"enriquecidos_hoy={enriquecidosDiario} enriquecimientos_fallidos={enriquecimientosFallidosDiario}");
+            $"unspsc: bienes={resultadoDiario.Bienes} revision_manual={resultadoDiario.RevisionManualUnspsc} " +
+            $"sin_resolver={resultadoDiario.SinResolverUnspsc} tras_region={resultadoDiario.TrasRegion} " +
+            $"enriquecidos_hoy={enriquecidosDiario} enriquecimientos_fallidos={enriquecimientosFallidosDiario} " +
+            $"ahorrados_por_acumulados={ahorradosPorAcumuladosDiario}");
 
         Console.WriteLine(resultadoActivas is null
             ? $"Barrido 'activas': {estadoActivas}"
@@ -663,8 +717,10 @@ public static class Program
               $"tras_estado={resultadoActivas.TrasEstado} tras_tipo={resultadoActivas.TrasTipo} " +
               $"descarte_duro={resultadoActivas.DescarteDuro} prioritarias={resultadoActivas.Prioritarias.Count} " +
               $"secundarias={resultadoActivas.Secundarias.Count} tramo_bajo={resultadoActivas.TramoBajo.Count} " +
-              $"unspsc: bienes={resultadoActivas.Bienes} sin_resolver={resultadoActivas.SinResolverUnspsc} " +
-              $"enriquecidos_hoy={enriquecidosActivas} enriquecimientos_fallidos={enriquecimientosFallidosActivas}");
+              $"unspsc: bienes={resultadoActivas.Bienes} revision_manual={resultadoActivas.RevisionManualUnspsc} " +
+              $"sin_resolver={resultadoActivas.SinResolverUnspsc} tras_region={resultadoActivas.TrasRegion} " +
+              $"enriquecidos_hoy={enriquecidosActivas} enriquecimientos_fallidos={enriquecimientosFallidosActivas} " +
+              $"ahorrados_por_acumulados={ahorradosPorAcumuladosActivas}");
     }
 
     // Solo lectura sobre el estado de producción: lee config/criterios.json

@@ -6,14 +6,17 @@ namespace ScorePlusTwo.Pipeline.Modelos;
 // (inventario crudo de prospección). UnspscEstado/CodigosProductoUnspsc
 // quedan en su default (PendienteEnriquecimiento/vacío) para TramoBajo y
 // tipos privados — nunca se enriquecen, por la misma razón que nunca pasan
-// por rubro (ver FiltroLicitaciones).
+// por rubro (ver FiltroLicitaciones). Region viene de EntradaCacheUnspsc.
+// RegionUnidad (F2, 2026-09-17) cuando hubo enriquecimiento — null si nunca
+// se enriqueció.
 public sealed record CandidataDetectada(
     LicitacionRaw Origen,
     string Tipo,
     string? RubroMatch,
     string? TerminoMatch,
     UnspscEstado UnspscEstado = UnspscEstado.PendienteEnriquecimiento,
-    IReadOnlyList<int>? CodigosProductoUnspsc = null);
+    IReadOnlyList<int>? CodigosProductoUnspsc = null,
+    string? Region = null);
 
 // Una licitación que sobrevivió estado+tipo+descarte_duro, todavía sin
 // clasificar por rubro. Tipo ya viene resuelto (derivado de CodigoExterno
@@ -44,9 +47,11 @@ public sealed record ResultadoFiltro(
     // Es el único conteo de algo que desaparece sin dejar rastro en ninguna
     // de las tres listas — todo lo demás se clasifica, no se destruye.
     int DescarteDuro,
-    // No-op en F1 (etapa identidad, ver comentario en FiltroLicitaciones),
-    // aplicado solo sobre Prioritarias — mismo hook que dejaba el diseño
-    // original para que F2 la reemplace sin reestructurar el resto.
+    // Cuenta los UnspscEstado.Servicio con región elegible (F2,
+    // 2026-09-17) — no condiciona si rubro corre (rubro se evalúa SIEMPRE
+    // para Servicio, la región solo decide si el resultado llega a
+    // Prioritarias o se queda en Secundarias, ver ClasificarYFiltrarRubro).
+    // Superconjunto de Prioritarias.Count, nunca menor.
     int TrasRegion,
     // Lista A: matchean un rubro de prioridad "alta". Es lo que hoy va al
     // tablero.
@@ -67,4 +72,10 @@ public sealed record ResultadoFiltro(
     // SinResolver + PendienteEnriquecimiento juntos: lo que UNSPSC no pudo
     // confirmar como servicio, por catálogo o por falta de dato — visible
     // para informes.json, nunca mezclado en silencio con Bienes.
-    int SinResolverUnspsc);
+    int SinResolverUnspsc,
+    // Cuántos de los sobrevivientes "Regular" resolvieron a
+    // UnspscEstado.RevisionManual (F2, 2026-09-17) — familia UNSPSC donde
+    // la clase de 8 dígitos no alcanza para decidir bien-vs-servicio (ver
+    // UnspscEstado.RevisionManual). Nunca se mezcla con Bienes: es un
+    // "no sabemos" de modalidad, no un "es un bien" con confianza.
+    int RevisionManualUnspsc);

@@ -13,6 +13,13 @@ public sealed class Candidata
     // secundarias sin ningún rubro match (inventario crudo de prospección).
     public string? RubroMatch { get; set; }
     public string? TerminoMatch { get; set; }
+    // Region se puebla desde EntradaCacheUnspsc.RegionUnidad (F2,
+    // 2026-09-17) para toda candidata que se haya enriquecido — viene
+    // gratis en el mismo detalle que ya se pide para UNSPSC, sin cache de
+    // organismos. Null para lo que nunca se enriquece (TramoBajo, tipos
+    // privados) o para candidatas de antes de este cambio. Organismo sigue
+    // sin resolver — no forma parte de este dato, queda para cuando haga
+    // falta.
     public string? Region { get; set; }
     public string? Organismo { get; set; }
 

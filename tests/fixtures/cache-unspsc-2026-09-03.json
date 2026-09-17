@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "codigo_externo": "598-20-LE26",
+    "items": [
+      { "codigo_producto": 43231512, "codigo_categoria": "43231500" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": null
+  },
+  {
+    "codigo_externo": "3797-48-LE26",
+    "items": [
+      { "codigo_producto": 43211501, "codigo_categoria": "43211500" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": null
+  },
+  {
+    "codigo_externo": "434-104-LE26",
+    "items": [
+      { "codigo_producto": 43211501, "codigo_categoria": "43211500" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": null
+  },
+  {
+    "codigo_externo": "1305541-3-LE26",
+    "items": [
+      { "codigo_producto": 43231508, "codigo_categoria": "43231500" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": null
+  },
+  {
+    "codigo_externo": "1596-45-LE26",
+    "items": [
+      { "codigo_producto": 86111604, "codigo_categoria": "86111600" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": null
+  },
+  {
+    "codigo_externo": "2981-256-LE26",
+    "items": [
+      { "codigo_producto": 93151607, "codigo_categoria": "93151600" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": "Región Metropolitana de Santiago"
+  },
+  {
+    "codigo_externo": "732434-20-LP26",
+    "items": [
+      { "codigo_producto": 81111501, "codigo_categoria": "81111500" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": "Región del Biobío "
+  },
+  {
+    "codigo_externo": "85-41-LE26",
+    "items": [
+      { "codigo_producto": 43232408, "codigo_categoria": "43232400" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": null
+  },
+  {
+    "codigo_externo": "734-50-LE26",
+    "items": [
+      { "codigo_producto": 80111715, "codigo_categoria": "80111700" }
+    ],
+    "obtenido_en": "2026-09-17T00:00:00Z",
+    "region_unidad": "Región Aysén del General Carlos Ibáñez del Campo"
+  }
+]

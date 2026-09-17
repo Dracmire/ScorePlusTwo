@@ -34,7 +34,17 @@ public sealed record InformeFunnel(
     int EnriquecidosHoy = 0,
     int EnriquecimientosFallidos = 0,
     int Bienes = 0,
-    int SinResolverUnspsc = 0);
+    int SinResolverUnspsc = 0,
+    // F2 (2026-09-17): RevisionManualUnspsc describe el estado actual del
+    // lote (se recalcula siempre, igual que Bienes/SinResolverUnspsc).
+    // AhorradosPorAcumulados es un hecho de ESTA corrida (cuántos
+    // CodigoExterno ya confirmados como Prioritarias se excluyeron de
+    // enriquecimiento/reclasificación, ver FiltrarConEnriquecimientoAsync)
+    // — mismo criterio que EnriquecidosHoy, no se preserva al reprocesar.
+    // Es el "presupuesto disponible" para poder seguir achicando
+    // descarte_duro sin quedar contra el límite de tiempo de Actions.
+    int RevisionManualUnspsc = 0,
+    int AhorradosPorAcumulados = 0);
 
 public sealed record InformeDiario(
     DateOnly Fecha,
@@ -53,4 +63,6 @@ public sealed record InformeDiario(
     int EnriquecidosHoy = 0,
     int EnriquecimientosFallidos = 0,
     int Bienes = 0,
-    int SinResolverUnspsc = 0);
+    int SinResolverUnspsc = 0,
+    int RevisionManualUnspsc = 0,
+    int AhorradosPorAcumulados = 0);

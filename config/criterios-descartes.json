@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-16-descartes",
+  "version": "2026-09-17-descartes",
   "tipos": ["LE", "LP", "LQ", "LR", "LS", "L1", "CO", "B2", "E2", "H2", "I2"],
   "estados": [5],
   "regiones": ["Metropolitana", "Valparaíso", "Coquimbo"],
@@ -35,5 +35,6 @@
     "contenedores",
     "elementos de protección"
   ],
-  "tipos_privados": ["CO", "B2", "E2", "H2", "I2"]
+  "tipos_privados": ["CO", "B2", "E2", "H2", "I2"],
+  "familias_unspsc_revision_manual": ["4323"]
 }

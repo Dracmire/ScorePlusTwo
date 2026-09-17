@@ -7,12 +7,13 @@ namespace ScorePlusTwo.Pipeline.Tests;
 
 // config/criterios-descartes.json existe para aislar el efecto de la etapa
 // de rubro (ver Refiltrado/RefiltradoService y el rubro comodín de vocales):
-// cualquier divergencia en tipos/estados/descarte_duro frente a
-// config/criterios.json contamina esa medición con descartes que en
-// producción ocurren en una etapa anterior a la que se quiere medir. Estos
-// tests son la red de seguridad contra que alguien edite un archivo sin
-// replicar el cambio en el otro. Rubros queda deliberadamente fuera de la
-// comparación — es la única dimensión que este archivo existe para variar.
+// cualquier divergencia en tipos/estados/descarte_duro/regiones/familias
+// UNSPSC de revisión manual frente a config/criterios.json contamina esa
+// medición con descartes que en producción ocurren en una etapa anterior a
+// la que se quiere medir. Estos tests son la red de seguridad contra que
+// alguien edite un archivo sin replicar el cambio en el otro. Rubros queda
+// deliberadamente fuera de la comparación — es la única dimensión que este
+// archivo existe para variar.
 // exclusiones_rubro se eliminó por completo en F2 (2026-09-16): ya no
 // existe como campo de Criterios, no hay nada que comparar aquí.
 public class CriteriosDescartesTests
@@ -57,5 +58,21 @@ public class CriteriosDescartesTests
         Assert.Equal(
             CriteriosReales.TiposPrivados.OrderBy(t => t, StringComparer.Ordinal),
             CriteriosDescartes.TiposPrivados.OrderBy(t => t, StringComparer.Ordinal));
+    }
+
+    [Fact]
+    public void RegionesSonIdenticasAProduccion()
+    {
+        Assert.Equal(
+            CriteriosReales.Regiones.OrderBy(r => r, StringComparer.Ordinal),
+            CriteriosDescartes.Regiones.OrderBy(r => r, StringComparer.Ordinal));
+    }
+
+    [Fact]
+    public void FamiliasUnspscRevisionManualSonIdenticasAProduccion()
+    {
+        Assert.Equal(
+            CriteriosReales.FamiliasUnspscRevisionManual.OrderBy(f => f, StringComparer.Ordinal),
+            CriteriosDescartes.FamiliasUnspscRevisionManual.OrderBy(f => f, StringComparer.Ordinal));
     }
 }
