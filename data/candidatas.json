@@ -176,28 +176,6 @@
     "codigos_producto_unspsc": []
   },
   {
-    "codigo": "1725-196-LE26",
-    "nombre": "DIFUSI\u00D3N PLATAFORMA WEB APLICACI\u00D3N M\u00D3VIL CHILE CUL",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-17T11:59:00",
-    "fecha_lote": "2026-09-05",
-    "rubro_match": "ti",
-    "termino_match": "plataforma",
-    "region": null,
-    "organismo": null,
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": null,
-    "monto": null,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": null,
-    "unspsc_estado": "pendiente_enriquecimiento",
-    "codigos_producto_unspsc": []
-  },
-  {
     "codigo": "1725-197-LP26",
     "nombre": "INFRAESTRUC.TECNOL\u00D3GICA PLATAFORMA FONDOS CONCURSA",
     "tipo": "LP",
@@ -227,28 +205,6 @@
     "fecha_lote": "2026-09-05",
     "rubro_match": "ti",
     "termino_match": "ciberseguridad",
-    "region": null,
-    "organismo": null,
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": null,
-    "monto": null,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": null,
-    "unspsc_estado": "pendiente_enriquecimiento",
-    "codigos_producto_unspsc": []
-  },
-  {
-    "codigo": "2408-160-LP26",
-    "nombre": "EQUIPOS INFORM\u00C1TICOS PARA DEPENDENCIAS MUNICIPALES",
-    "tipo": "LP",
-    "fecha_cierre": "2026-09-17T09:00:00",
-    "fecha_lote": "2026-09-05",
-    "rubro_match": "ti",
-    "termino_match": "inform\u00E1tic",
     "region": null,
     "organismo": null,
     "tramo": null,
@@ -1759,6 +1715,30 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       81112010
+    ]
+  },
+  {
+    "codigo": "1606-32-LE26",
+    "nombre": "CONTRATACI\u00D3N SERVICIO DE DIAGRAMACI\u00D3N DE PIEZAS GR\u00C1FICAS Y WEB DEL PROYECTO \u201CFORTALECIMIENTO DE LAS CAPACIDADES DE LATINOAM\u00C9RICA Y EL CARIBE EN MATERIA DE CIBERSEGURIDAD\u201D FINANCIADO POR LA UNI\u00D3N EUROPEA.",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-28T15:10:00",
+    "fecha_lote": "2026-09-17",
+    "rubro_match": "ti",
+    "termino_match": "ciberseguridad",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      82121501
     ]
   }
 ]

@@ -27,12 +27,16 @@
       "enriquecidos_hoy": 0,
       "enriquecimientos_fallidos": 0,
       "bienes": 0,
-      "sin_resolver_unspsc": 0
+      "sin_resolver_unspsc": 0,
+      "revision_manual_unspsc": 0,
+      "ahorrados_por_acumulados": 0
     },
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-05",
@@ -51,7 +55,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-06",
@@ -81,12 +87,16 @@
       "enriquecidos_hoy": 0,
       "enriquecimientos_fallidos": 0,
       "bienes": 0,
-      "sin_resolver_unspsc": 0
+      "sin_resolver_unspsc": 0,
+      "revision_manual_unspsc": 0,
+      "ahorrados_por_acumulados": 0
     },
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-07",
@@ -105,7 +115,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-08",
@@ -124,7 +136,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-09",
@@ -143,7 +157,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-10",
@@ -162,7 +178,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-11",
@@ -181,7 +199,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-12",
@@ -200,7 +220,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-13",
@@ -230,12 +252,16 @@
       "enriquecidos_hoy": 0,
       "enriquecimientos_fallidos": 0,
       "bienes": 0,
-      "sin_resolver_unspsc": 0
+      "sin_resolver_unspsc": 0,
+      "revision_manual_unspsc": 0,
+      "ahorrados_por_acumulados": 0
     },
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-14",
@@ -254,7 +280,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-15",
@@ -273,7 +301,9 @@
     "enriquecidos_hoy": 0,
     "enriquecimientos_fallidos": 0,
     "bienes": 0,
-    "sin_resolver_unspsc": 0
+    "sin_resolver_unspsc": 0,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
   },
   {
     "fecha": "2026-09-16",
@@ -292,6 +322,29 @@
     "enriquecidos_hoy": 234,
     "enriquecimientos_fallidos": 0,
     "bienes": 54,
-    "sin_resolver_unspsc": 86
+    "sin_resolver_unspsc": 86,
+    "revision_manual_unspsc": 0,
+    "ahorrados_por_acumulados": 0
+  },
+  {
+    "fecha": "2026-09-17",
+    "total": 605,
+    "tras_estado": 223,
+    "tras_tipo": 217,
+    "tras_region": 19,
+    "descarte_duro": 29,
+    "prioritarias": 1,
+    "secundarias": 167,
+    "tramo_bajo": 20,
+    "nuevas_prioritarias": 1,
+    "nuevas_secundarias": 167,
+    "nuevas_tramo_bajo": 20,
+    "barrido_activas": null,
+    "enriquecidos_hoy": 163,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 44,
+    "sin_resolver_unspsc": 52,
+    "revision_manual_unspsc": 3,
+    "ahorrados_por_acumulados": 0
   }
 ]
