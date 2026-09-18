@@ -28,7 +28,18 @@ public static class EnriquecimientoUnspscService
                     .Select(i => new ItemUnspscCache(i.CodigoProducto, i.CodigoCategoria))
                     .ToList();
 
-                nuevas.Add(new EntradaCacheUnspsc(codigo, items, DateTime.UtcNow, licitacion?.Comprador?.RegionUnidad));
+                // VisibilidadMonto==0 (o ausente) significa "el organismo no
+                // publicó el monto" — se normaliza a null en Moneda/Monto acá,
+                // en el punto de captura, para que el cache mismo ya refleje
+                // "no publicado" sin que cada consumidor tenga que repetir el
+                // chequeo de VisibilidadMonto (ver EntradaCacheUnspsc).
+                var montoVisible = (licitacion?.VisibilidadMonto ?? 0) != 0;
+                var moneda = montoVisible ? licitacion?.Moneda : null;
+                var monto = montoVisible ? licitacion?.MontoEstimado : null;
+
+                nuevas.Add(new EntradaCacheUnspsc(
+                    codigo, items, DateTime.UtcNow, licitacion?.Comprador?.RegionUnidad,
+                    moneda, monto, licitacion?.CantidadReclamos));
             }
             catch (MercadoPublicoApiException ex)
             {

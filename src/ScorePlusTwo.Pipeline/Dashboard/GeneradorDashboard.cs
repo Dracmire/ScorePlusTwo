@@ -18,7 +18,12 @@ public sealed record DashboardCandidata(
     DateOnly FechaLote,
     string? Tramo,
     bool TipoPrivado,
-    string? UrlFicha);
+    string? UrlFicha,
+    // Bien-vs-servicio decidido por UNSPSC (2026-09-18) — antes solo vivía
+    // en Candidata/data/candidatas.json, nunca llegaba al tablero. Serializa
+    // en snake_case vía el mismo JsonStringEnumConverter que ya usa
+    // EstadoFlujo (ver JsonOpciones.Persistencia).
+    UnspscEstado UnspscEstado);
 
 public sealed record DashboardSerieItem(DateOnly Fecha, int Total, int Prioritarias, double Tasa);
 
@@ -66,7 +71,8 @@ public static class GeneradorDashboard
                 FechaLote: c.FechaLote,
                 Tramo: c.Tramo,
                 TipoPrivado: c.TipoPrivado,
-                UrlFicha: null))
+                UrlFicha: null,
+                UnspscEstado: c.UnspscEstado))
             .ToList();
 
         var serie = informes

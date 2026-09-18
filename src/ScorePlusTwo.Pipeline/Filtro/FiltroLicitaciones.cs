@@ -159,17 +159,6 @@ public static class FiltroLicitaciones
             return (null, null);
         }
 
-        bool EsRegionElegible(string? regionUnidad)
-        {
-            if (regionUnidad is null)
-            {
-                return false;
-            }
-
-            var regionNormalizada = TextoNormalizador.Normalizar(regionUnidad);
-            return criterios.Regiones.Any(r => regionNormalizada.Contains(TextoNormalizador.Normalizar(r), StringComparison.Ordinal));
-        }
-
         foreach (var (licitacion, tipo) in sobrevivientes.Regular)
         {
             cacheUnspsc.TryGetValue(licitacion.CodigoExterno, out var entrada);
@@ -179,6 +168,9 @@ public static class FiltroLicitaciones
                 .Select(i => i.CodigoProducto!.Value)
                 .ToList() ?? new List<int>();
             var region = entrada?.RegionUnidad;
+            var moneda = entrada?.Moneda;
+            var monto = entrada?.Monto;
+            var cantidadReclamos = entrada?.CantidadReclamos;
 
             if (estadoUnspsc is UnspscEstado.Bien or UnspscEstado.SinResolver or UnspscEstado.PendienteEnriquecimiento)
             {
@@ -192,7 +184,8 @@ public static class FiltroLicitaciones
                 }
 
                 secundarias.Add(new CandidataDetectada(
-                    licitacion, tipo, RubroMatch: null, TerminoMatch: null, estadoUnspsc, codigosProducto, region));
+                    licitacion, tipo, RubroMatch: null, TerminoMatch: null, estadoUnspsc, codigosProducto, region,
+                    moneda, monto, cantidadReclamos));
                 continue;
             }
 
@@ -202,7 +195,8 @@ public static class FiltroLicitaciones
 
                 var (rubroRevision, terminoRevision) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
                 secundarias.Add(new CandidataDetectada(
-                    licitacion, tipo, rubroRevision?.Id, terminoRevision, estadoUnspsc, codigosProducto, region));
+                    licitacion, tipo, rubroRevision?.Id, terminoRevision, estadoUnspsc, codigosProducto, region,
+                    moneda, monto, cantidadReclamos));
                 continue;
             }
 
@@ -213,7 +207,7 @@ public static class FiltroLicitaciones
             // RubroMatch poblado en vez de indistinguible de cualquier
             // servicio irrelevante (2026-09-17, corrección explícita del
             // usuario sobre un diseño anterior que cortaba antes de rubro).
-            var regionElegible = EsRegionElegible(region);
+            var regionElegible = EsRegionElegible(criterios, region);
             if (regionElegible)
             {
                 trasRegion++;
@@ -222,7 +216,8 @@ public static class FiltroLicitaciones
             var (rubroEncontrado, terminoMatch) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
 
             var candidata = new CandidataDetectada(
-                licitacion, tipo, rubroEncontrado?.Id, terminoMatch, estadoUnspsc, codigosProducto, region);
+                licitacion, tipo, rubroEncontrado?.Id, terminoMatch, estadoUnspsc, codigosProducto, region,
+                moneda, monto, cantidadReclamos);
 
             if (rubroEncontrado is not null && rubroEncontrado.Prioridad == "alta" && regionElegible)
             {
@@ -246,5 +241,22 @@ public static class FiltroLicitaciones
             Bienes: bienes,
             SinResolverUnspsc: sinResolverUnspsc,
             RevisionManualUnspsc: revisionManualUnspsc);
+    }
+
+    // Promovido de función local privada dentro de ClasificarYFiltrarRubro
+    // (2026-09-18) para que --backfill-unspsc pueda reusar exactamente la
+    // misma regla de elegibilidad sin duplicarla. Una RegionUnidad nula (dato
+    // no disponible) nunca es elegible — conservador, nunca promueve a
+    // Prioritarias sobre un dato ausente, mismo principio que ya rige
+    // SinResolver/PendienteEnriquecimiento.
+    public static bool EsRegionElegible(Criterios criterios, string? regionUnidad)
+    {
+        if (regionUnidad is null)
+        {
+            return false;
+        }
+
+        var regionNormalizada = TextoNormalizador.Normalizar(regionUnidad);
+        return criterios.Regiones.Any(r => regionNormalizada.Contains(TextoNormalizador.Normalizar(r), StringComparison.Ordinal));
     }
 }

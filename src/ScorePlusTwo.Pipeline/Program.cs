@@ -35,6 +35,16 @@ public static class Program
                 return EjecutarRefiltrado(repoRoot, opciones);
             }
 
+            // Otra rama completamente aparte (mismo criterio estructural que
+            // --refiltrar): reclasifica de una sola vez las Prioritarias que
+            // el filtro de acumulados congeló antes de que existiera UNSPSC
+            // (F2, PR #28) — nunca vuelven a pasar por enriquecimiento
+            // mientras sigan confirmadas. Ver EjecutarBackfillUnspscAsync.
+            if (opciones.BackfillUnspsc)
+            {
+                return await EjecutarBackfillUnspscAsync(repoRoot);
+            }
+
             var criterios = JsonStore.Cargar<Criterios>(
                 Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
             var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
@@ -407,6 +417,9 @@ public static class Program
             TerminoMatch = detectada.TerminoMatch,
             Region = detectada.Region,
             Organismo = null,
+            Moneda = detectada.Moneda,
+            Monto = detectada.Monto,
+            CantidadReclamos = detectada.CantidadReclamos,
             EstadoFlujo = EstadoFlujo.Pendiente,
             Notas = null,
             ClienteAsignado = null,
@@ -782,4 +795,175 @@ public static class Program
         return 0;
     }
 
+    // Backfill único (2026-09-18): las Prioritarias que ya existían antes de
+    // F2 (UNSPSC) quedaron congeladas para siempre por el filtro de
+    // acumulados — nunca se reprocesan porque ya están "confirmadas", así
+    // que la limpieza que motivó el rediseño UNSPSC nunca les llega. Este
+    // modo corre el enriquecimiento y la reclasificación UNSPSC+región sobre
+    // el inventario actual de data/candidatas.json, una sola vez, ignorando
+    // el filtro de acumulados a propósito (es justamente lo que hay que
+    // saltarse). Después de correr, el filtro de acumulados sigue operando
+    // normal sobre lo que haya quedado confirmado.
+    //
+    // Requiere MP_TICKET real — no tiene equivalente a --fixture, no tendría
+    // sentido reclasificar el inventario de producción contra datos de
+    // prueba.
+    private static async Task<int> EjecutarBackfillUnspscAsync(string repoRoot)
+    {
+        var ticket = Environment.GetEnvironmentVariable("MP_TICKET")
+            ?? throw new MercadoPublicoApiException(
+                "Falta la variable de entorno MP_TICKET (--backfill-unspsc requiere red real, no tiene modo --fixture).");
+
+        var criterios = JsonStore.Cargar<Criterios>(
+            Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
+        var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
+            Path.Combine(repoRoot, "config", "catalogo-unspsc.tsv"));
+        var familiasRevisionManual = criterios.FamiliasUnspscRevisionManual.ToHashSet();
+
+        var rutaCacheUnspsc = Path.Combine(repoRoot, "data", "cache-unspsc.json");
+        var cacheUnspscInicial = JsonStore.CargarOPredeterminado(
+            rutaCacheUnspsc, JsonOpciones.Persistencia, new List<EntradaCacheUnspsc>());
+        var cacheUnspsc = cacheUnspscInicial.ToDictionary(e => e.CodigoExterno);
+        var cacheUnspscCountInicial = cacheUnspsc.Count;
+
+        var rutaPrioritarias = Path.Combine(repoRoot, "data", "candidatas.json");
+        var prioritarias = JsonStore.CargarOPredeterminado(
+            rutaPrioritarias, JsonOpciones.Persistencia, new List<Candidata>());
+
+        using var http = new HttpClient();
+        var cliente = new MercadoPublicoClient(http, ticket);
+
+        var faltantes = prioritarias
+            .Select(c => c.Codigo)
+            .Where(codigo => !cacheUnspsc.ContainsKey(codigo))
+            .Distinct()
+            .ToList();
+
+        if (faltantes.Count > 0)
+        {
+            var nuevas = await EnriquecimientoUnspscService.EnriquecerAsync(cliente, faltantes);
+            foreach (var entrada in nuevas)
+            {
+                cacheUnspsc[entrada.CodigoExterno] = entrada;
+            }
+        }
+
+        if (cacheUnspsc.Count != cacheUnspscCountInicial)
+        {
+            var cacheOrdenado = cacheUnspsc.Values
+                .OrderBy(e => e.CodigoExterno, StringComparer.Ordinal)
+                .ToList();
+            JsonStore.Guardar(rutaCacheUnspsc, cacheOrdenado, JsonOpciones.Persistencia);
+        }
+
+        var seQuedan = new List<Candidata>();
+        var seMueven = new List<Candidata>();
+        var conteos = new Dictionary<string, int>
+        {
+            ["confirmada"] = 0,
+            ["bien"] = 0,
+            ["revision_manual"] = 0,
+            ["fuera_de_region"] = 0,
+            ["sin_resolver"] = 0,
+        };
+
+        foreach (var candidata in prioritarias)
+        {
+            cacheUnspsc.TryGetValue(candidata.Codigo, out var entrada);
+            var estadoUnspsc = ClasificadorUnspsc.Clasificar(entrada, catalogoUnspsc, familiasRevisionManual);
+
+            candidata.UnspscEstado = estadoUnspsc;
+            candidata.Region = entrada?.RegionUnidad;
+            candidata.Moneda = entrada?.Moneda;
+            candidata.Monto = entrada?.Monto;
+            candidata.CantidadReclamos = entrada?.CantidadReclamos;
+            candidata.CodigosProductoUnspsc = entrada?.Items
+                .Where(i => i.CodigoProducto is not null)
+                .Select(i => i.CodigoProducto!.Value)
+                .ToList() ?? new List<int>();
+
+            // Bien/SinResolver/PendienteEnriquecimiento nunca evalúan rubro
+            // (mismo invariante que ClasificarYFiltrarRubro) — se limpia
+            // RubroMatch/TerminoMatch heredado del filtro de palabras
+            // anterior a F2, que no tiene ninguna validez bajo UNSPSC.
+            // RevisionManual y "servicio fuera de región" conservan su
+            // RubroMatch/TerminoMatch tal cual: siguen siendo información
+            // válida, fue justo lo que las promovió en su momento.
+            if (estadoUnspsc == UnspscEstado.Bien)
+            {
+                candidata.RubroMatch = null;
+                candidata.TerminoMatch = null;
+                seMueven.Add(candidata);
+                conteos["bien"]++;
+                continue;
+            }
+
+            if (estadoUnspsc is UnspscEstado.SinResolver or UnspscEstado.PendienteEnriquecimiento)
+            {
+                candidata.RubroMatch = null;
+                candidata.TerminoMatch = null;
+                seMueven.Add(candidata);
+                conteos["sin_resolver"]++;
+                continue;
+            }
+
+            if (estadoUnspsc == UnspscEstado.RevisionManual)
+            {
+                seMueven.Add(candidata);
+                conteos["revision_manual"]++;
+                continue;
+            }
+
+            // estadoUnspsc == Servicio
+            if (FiltroLicitaciones.EsRegionElegible(criterios, candidata.Region))
+            {
+                seQuedan.Add(candidata);
+                conteos["confirmada"]++;
+            }
+            else
+            {
+                seMueven.Add(candidata);
+                conteos["fuera_de_region"]++;
+            }
+        }
+
+        JsonStore.Guardar(rutaPrioritarias, seQuedan, JsonOpciones.Persistencia);
+
+        var rutaSecundarias = Path.Combine(repoRoot, "data", "secundarias.json");
+        var secundarias = JsonStore.CargarOPredeterminado(
+            rutaSecundarias, JsonOpciones.Persistencia, new List<Candidata>());
+        var codigosSecundariasExistentes = secundarias.Select(c => c.Codigo).ToHashSet();
+        foreach (var candidata in seMueven)
+        {
+            if (codigosSecundariasExistentes.Add(candidata.Codigo))
+            {
+                secundarias.Add(candidata);
+            }
+        }
+        JsonStore.Guardar(rutaSecundarias, secundarias, JsonOpciones.Persistencia);
+
+        var tramoBajo = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "tramo_bajo.json"), JsonOpciones.Persistencia, new List<Candidata>());
+        var informesExistentes = CargarInformesConMigracion(Path.Combine(repoRoot, "data", "informes.json"));
+        var dashboard = GeneradorDashboard.Construir(seQuedan, secundarias, tramoBajo, informesExistentes, DateTime.UtcNow);
+        JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
+
+        var detalleEvento = $"total={prioritarias.Count} confirmadas={conteos["confirmada"]} " +
+            $"bien={conteos["bien"]} revision_manual={conteos["revision_manual"]} " +
+            $"fuera_de_region={conteos["fuera_de_region"]} sin_resolver={conteos["sin_resolver"]}";
+        var eventos = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "eventos.json"), JsonOpciones.Persistencia, new List<EventoAuditoria>());
+        eventos.Add(new EventoAuditoria(DateTime.UtcNow, "sistema", "backfill_unspsc", null, detalleEvento));
+        JsonStore.Guardar(Path.Combine(repoRoot, "data", "eventos.json"), eventos, JsonOpciones.Persistencia);
+
+        Console.WriteLine("== Resumen del backfill UNSPSC ==");
+        Console.WriteLine($"Prioritarias procesadas: {prioritarias.Count}");
+        Console.WriteLine($"Confirmadas (siguen en Prioritarias): {conteos["confirmada"]}");
+        Console.WriteLine($"Movidas a Secundarias por 'bien': {conteos["bien"]}");
+        Console.WriteLine($"Movidas a Secundarias por 'revision_manual': {conteos["revision_manual"]}");
+        Console.WriteLine($"Movidas a Secundarias por 'fuera_de_region': {conteos["fuera_de_region"]}");
+        Console.WriteLine($"Movidas a Secundarias por 'sin_resolver': {conteos["sin_resolver"]}");
+
+        return 0;
+    }
 }
