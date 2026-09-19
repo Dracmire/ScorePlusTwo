@@ -40,6 +40,27 @@
     return escaparHtml(candidata.rubro_match) + " · " + escaparHtml(candidata.termino_match);
   }
 
+  // Etiquetas legibles para UnspscEstado (ver ClasificadorUnspsc.cs) — el
+  // valor crudo llega en snake_case (JsonOpciones.Persistencia).
+  var ETIQUETAS_UNSPSC = {
+    servicio: "Servicio",
+    revision_manual: "Revisión manual",
+    bien: "Bien",
+    sin_resolver: "Sin resolver",
+    pendiente_enriquecimiento: "Pendiente",
+  };
+
+  function renderUnspscEstado(candidata) {
+    var etiqueta = ETIQUETAS_UNSPSC[candidata.unspsc_estado];
+    if (!etiqueta) return '<span class="vacio">—</span>';
+    return escaparHtml(etiqueta);
+  }
+
+  function renderRegion(candidata) {
+    if (!candidata.region) return '<span class="vacio">—</span>';
+    return escaparHtml(candidata.region);
+  }
+
   // Calculado en el navegador, SIEMPRE contra la fecha de hoy del cliente —
   // nunca leído de data.json. dias_para_cierre solía congelarse al generar
   // el JSON (Math.ceil de una resta en milisegundos desde el momento de esa
@@ -90,6 +111,8 @@
         "<td>" + escaparHtml(c.nombre) + "</td>" +
         "<td>" + renderTipo(c) + "</td>" +
         "<td>" + renderRubro(c) + "</td>" +
+        "<td>" + renderUnspscEstado(c) + "</td>" +
+        "<td>" + renderRegion(c) + "</td>" +
         "<td>" + renderMonto(c) + "</td>" +
         "<td>" + formatearFecha(c.fecha_cierre) + "</td>" +
         "<td>" + renderDiasParaCierre(diasParaCierre(c.fecha_cierre)) + "</td>" +
@@ -102,7 +125,7 @@
     contenedor.innerHTML =
       "<table>" +
       "<thead><tr>" +
-      "<th>Código</th><th>Nombre</th><th>Tipo</th><th>Rubro</th><th>Monto</th>" +
+      "<th>Código</th><th>Nombre</th><th>Tipo</th><th>Rubro</th><th>UNSPSC</th><th>Región</th><th>Monto</th>" +
       "<th>Cierre</th><th>Plazo</th><th>Estado</th><th>Origen</th><th>Lote</th>" +
       "</tr></thead>" +
       "<tbody>" + filas + "</tbody>" +
@@ -138,8 +161,8 @@
   function candidatasACsv(candidatas) {
     var columnas = [
       "codigo", "nombre", "tipo", "tipo_privado", "rubro_match", "termino_match",
-      "moneda", "monto", "fecha_cierre", "dias_para_cierre", "estado_flujo",
-      "origen", "fecha_lote",
+      "unspsc_estado", "region", "moneda", "monto", "fecha_cierre", "dias_para_cierre",
+      "estado_flujo", "origen", "fecha_lote",
     ];
     var filas = [columnas.join(",")];
     candidatas.forEach(function (c) {

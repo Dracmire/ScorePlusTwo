@@ -35,12 +35,15 @@ public sealed class Candidata
     public bool TipoPrivado { get; set; }
 
     // Moneda y Monto se guardan por separado y SIN CONVERTIR: el listado
-    // diario no trae ninguno de los dos (F2 los resuelve vía detalle de
-    // sobrevivientes), pero ya se vio en producción que un mismo lote mezcla
-    // CLP, CLF (UF) y USD (ej. 548874-77-LR26 = 11.000 UF, 548874-74-LR26 =
-    // USD 565.250). Convertir a un solo número sin la moneda haría que UF y
-    // USD parezcan pesos y un filtro de banda descartaría licitaciones
-    // grandes por error. Quedan null hasta que F2 implemente el detalle.
+    // diario no trae ninguno de los dos, pero ya se vio en producción que un
+    // mismo lote mezcla CLP, CLF (UF) y USD (ej. 548874-77-LR26 = 11.000 UF,
+    // 548874-74-LR26 = USD 565.250). Convertir a un solo número sin la
+    // moneda haría que UF y USD parezcan pesos y un filtro de banda
+    // descartaría licitaciones grandes por error. Poblados desde el detalle
+    // de enriquecimiento UNSPSC (2026-09-18, ver EntradaCacheUnspsc) — null
+    // para lo que nunca se enriquece (TramoBajo, tipos privados) o cuando el
+    // organismo no publicó el monto (VisibilidadMonto: 0 en la API real, ya
+    // normalizado a null en el cache, nunca guardado como 0).
     public string? Moneda { get; set; }
     public decimal? Monto { get; set; }
 
@@ -49,10 +52,15 @@ public sealed class Candidata
     public string? ClienteAsignado { get; set; }
     public OrigenCandidata Origen { get; set; } = OrigenCandidata.Diario;
 
-    // Indicador de comportamiento de pago del comprador (ej. Renca: 16
-    // reclamos en 12 meses; JUNAEB: 6) — criterio de exclusión de primer
-    // orden en el modelo de negocio. Campo reservado para cuando F2
-    // implemente el detalle de sobrevivientes; no se captura todavía.
+    // Indicador de comportamiento del comprador — criterio de negocio de
+    // primer orden, pero NO usado como filtro todavía (2026-09-18): valores
+    // reales verificados van de 5 a 459 (PDI 459, Cauquenes 332, Aysén 244,
+    // Concepción 219, JUNAEB 156, DIPRECA 54, Renca 16) y no son comparables
+    // entre organismos de distinto tamaño sin normalizar antes por volumen
+    // de compras — castigaría sistemáticamente a los organismos grandes.
+    // Poblado desde el mismo detalle de enriquecimiento UNSPSC, sin llamada
+    // adicional (ver EntradaCacheUnspsc). Null para lo que nunca se
+    // enriquece.
     public int? CantidadReclamos { get; set; }
 
     // Bien-vs-servicio decidido por UNSPSC (ver ClasificadorUnspsc), no por

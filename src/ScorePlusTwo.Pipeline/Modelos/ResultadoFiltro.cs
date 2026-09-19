@@ -16,7 +16,10 @@ public sealed record CandidataDetectada(
     string? TerminoMatch,
     UnspscEstado UnspscEstado = UnspscEstado.PendienteEnriquecimiento,
     IReadOnlyList<int>? CodigosProductoUnspsc = null,
-    string? Region = null);
+    string? Region = null,
+    string? Moneda = null,
+    decimal? Monto = null,
+    int? CantidadReclamos = null);
 
 // Una licitación que sobrevivió estado+tipo+descarte_duro, todavía sin
 // clasificar por rubro. Tipo ya viene resuelto (derivado de CodigoExterno

@@ -69,6 +69,11 @@ on:
         description: 'Fecha a procesar (DD-MM-YYYY). Vacío = ayer en Chile (America/Santiago).'
         required: false
         type: string
+      backfill_unspsc:
+        description: 'true = correr --backfill-unspsc (reclasifica Prioritarias existentes vía UNSPSC) en vez del flujo normal. Ignora "fecha".'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -94,8 +99,11 @@ jobs:
         env:
           MP_TICKET: ${{ secrets.MP_TICKET }}
           FECHA_INPUT: ${{ github.event.inputs.fecha }}
+          BACKFILL_UNSPSC: ${{ github.event.inputs.backfill_unspsc }}
         run: |
-          if [ -n "$FECHA_INPUT" ]; then
+          if [ "$BACKFILL_UNSPSC" = "true" ]; then
+            dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --backfill-unspsc
+          elif [ -n "$FECHA_INPUT" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --fecha "$FECHA_INPUT"
           else
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build
@@ -105,7 +113,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/raw data/adjudicadas data/candidatas.json data/secundarias.json data/tramo_bajo.json data/historico data/informes.json data/eventos.json docs/data.json
+          # data/cache-unspsc.json faltaba acá desde que se implementó el
+          # enriquecimiento (PR #27, 2026-09-17): el runner es efímero, así
+          # que el cache que Program.cs escribe a disco durante la corrida
+          # nunca sobrevivía entre corridas — cada día se reenriquecían desde
+          # cero los mismos códigos ya enriquecidos el día anterior. Mismo
+          # modo de falla que ya pasó con secundarias.json/tramo_bajo.json
+          # cuando esas listas se crearon (2026-09-16).
+          git add data/raw data/adjudicadas data/candidatas.json data/secundarias.json data/tramo_bajo.json data/cache-unspsc.json data/historico data/informes.json data/eventos.json docs/data.json
           if git diff --cached --quiet; then
             echo "Sin cambios que commitear"
           else

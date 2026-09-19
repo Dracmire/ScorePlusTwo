@@ -10,13 +10,21 @@ namespace ScorePlusTwo.Pipeline.Cli;
 // el flujo automático ni sus archivos de estado. --desde usa formato ISO
 // (YYYY-MM-DD), distinto de --fecha (DD-MM-YYYY) — son flags separados que
 // nunca se combinan, así que no hay ambigüedad de formato entre ellos.
+//
+// --backfill-unspsc (2026-09-18) es otro modo aparte (ver Program.
+// EjecutarBackfillUnspscAsync): reclasifica de una sola vez las
+// Prioritarias existentes que el filtro de acumulados congeló antes de que
+// F2 (UNSPSC) existiera, moviendo a Secundarias las que no correspondan.
+// Requiere MP_TICKET (sin equivalente a --fixture) y no se combina con
+// ningún otro flag.
 public sealed record OpcionesCli(
     string? RutaFixture,
     DateOnly? Fecha,
     bool Refiltrar,
     string? RutaCriteriosAlternativos,
     DateOnly? Desde,
-    string? RutaSalidaRefiltrado)
+    string? RutaSalidaRefiltrado,
+    bool BackfillUnspsc)
 {
     public static OpcionesCli Parse(string[] args)
     {
@@ -26,6 +34,7 @@ public sealed record OpcionesCli(
         string? rutaCriteriosAlternativos = null;
         DateOnly? desde = null;
         string? rutaSalidaRefiltrado = null;
+        var backfillUnspsc = false;
 
         for (var i = 0; i < args.Length; i++)
         {
@@ -49,9 +58,13 @@ public sealed record OpcionesCli(
                 case "--salida" when i + 1 < args.Length:
                     rutaSalidaRefiltrado = args[++i];
                     break;
+                case "--backfill-unspsc":
+                    backfillUnspsc = true;
+                    break;
             }
         }
 
-        return new OpcionesCli(rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado);
+        return new OpcionesCli(
+            rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado, backfillUnspsc);
     }
 }
