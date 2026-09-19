@@ -1,0 +1,1468 @@
+[
+  {
+    "codigo_externo": "1007793-15-LE26",
+    "items": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      },
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      },
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:00.5495005Z",
+    "region_unidad": "Regi\u00F3n de los Lagos ",
+    "moneda": "CLP",
+    "monto": 11300000.0,
+    "cantidad_reclamos": 16
+  },
+  {
+    "codigo_externo": "1016-9-LE26",
+    "items": [
+      {
+        "codigo_producto": 43211503,
+        "codigo_categoria": "43211500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:46.2366049Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 35750000.0,
+    "cantidad_reclamos": 5
+  },
+  {
+    "codigo_externo": "1020-38-LP26",
+    "items": [
+      {
+        "codigo_producto": 43222501,
+        "codigo_categoria": "43222500"
+      },
+      {
+        "codigo_producto": 43232801,
+        "codigo_categoria": "43232800"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:01.8016224Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 240000000.0,
+    "cantidad_reclamos": 158
+  },
+  {
+    "codigo_externo": "1057509-292-LE26",
+    "items": [
+      {
+        "codigo_producto": 80111715,
+        "codigo_categoria": "80111700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:29.1758963Z",
+    "region_unidad": "Regi\u00F3n del \u00D1uble",
+    "moneda": "CLP",
+    "monto": 18490680.0,
+    "cantidad_reclamos": 1494
+  },
+  {
+    "codigo_externo": "1057539-138-LP26",
+    "items": [
+      {
+        "codigo_producto": 80111715,
+        "codigo_categoria": "80111700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:04.0393798Z",
+    "region_unidad": "Regi\u00F3n de los Lagos ",
+    "moneda": "CLP",
+    "monto": 184212000.0,
+    "cantidad_reclamos": 1204
+  },
+  {
+    "codigo_externo": "1057545-104-LE26",
+    "items": [
+      {
+        "codigo_producto": 84111602,
+        "codigo_categoria": "84111600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:48.7811475Z",
+    "region_unidad": "Regi\u00F3n de Los R\u00EDos",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 476
+  },
+  {
+    "codigo_externo": "1208103-6-LE26",
+    "items": [
+      {
+        "codigo_producto": 80111504,
+        "codigo_categoria": "80111500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:20.3933976Z",
+    "region_unidad": "Regi\u00F3n del \u00D1uble",
+    "moneda": "CLP",
+    "monto": 22000000.0,
+    "cantidad_reclamos": 128
+  },
+  {
+    "codigo_externo": "1259850-4-LP26",
+    "items": [
+      {
+        "codigo_producto": 43211507,
+        "codigo_categoria": "43211500"
+      },
+      {
+        "codigo_producto": 43212110,
+        "codigo_categoria": "43212100"
+      },
+      {
+        "codigo_producto": 43211711,
+        "codigo_categoria": "43211700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:05.8590622Z",
+    "region_unidad": "Regi\u00F3n de Arica y Parinacota",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 1140
+  },
+  {
+    "codigo_externo": "1431841-61-LE26",
+    "items": [
+      {
+        "codigo_producto": 80101506,
+        "codigo_categoria": "80101500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:54.6895695Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 10700000.0,
+    "cantidad_reclamos": 4182
+  },
+  {
+    "codigo_externo": "1447930-11-LP26",
+    "items": [
+      {
+        "codigo_producto": 43232915,
+        "codigo_categoria": "43232900"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:57.2445176Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 113050000.0,
+    "cantidad_reclamos": 2
+  },
+  {
+    "codigo_externo": "1533460-6-LP26",
+    "items": [
+      {
+        "codigo_producto": 43231602,
+        "codigo_categoria": "43231600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:16.1666534Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 118000000.0,
+    "cantidad_reclamos": 0
+  },
+  {
+    "codigo_externo": "1562-49-LR26",
+    "items": [
+      {
+        "codigo_producto": 43222503,
+        "codigo_categoria": "43222500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:06.737026Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 366678654.0,
+    "cantidad_reclamos": 110
+  },
+  {
+    "codigo_externo": "1562-61-LP26",
+    "items": [
+      {
+        "codigo_producto": 81111812,
+        "codigo_categoria": "81111800"
+      },
+      {
+        "codigo_producto": 43231512,
+        "codigo_categoria": "43231500"
+      },
+      {
+        "codigo_producto": 43232401,
+        "codigo_categoria": "43232400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:44.4976729Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 78172750.0,
+    "cantidad_reclamos": 110
+  },
+  {
+    "codigo_externo": "1593-24-LP26",
+    "items": [
+      {
+        "codigo_producto": 81111807,
+        "codigo_categoria": "81111800"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:09.3782143Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 177000000.0,
+    "cantidad_reclamos": 11
+  },
+  {
+    "codigo_externo": "1606-30-LE26",
+    "items": [
+      {
+        "codigo_producto": 82121501,
+        "codigo_categoria": "82121500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:38.832645Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 15000.0,
+    "cantidad_reclamos": 18
+  },
+  {
+    "codigo_externo": "1606-32-LE26",
+    "items": [
+      {
+        "codigo_producto": 82121501,
+        "codigo_categoria": "82121500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:32:01.4422117Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 18
+  },
+  {
+    "codigo_externo": "1725-197-LP26",
+    "items": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:10.295533Z",
+    "region_unidad": "Regi\u00F3n de Valpara\u00EDso ",
+    "moneda": "CLP",
+    "monto": 170000000.0,
+    "cantidad_reclamos": 198
+  },
+  {
+    "codigo_externo": "188-83-LP26",
+    "items": [
+      {
+        "codigo_producto": 43233415,
+        "codigo_categoria": "43233400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:41.0308313Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 1532
+  },
+  {
+    "codigo_externo": "1978-44-LE26",
+    "items": [
+      {
+        "codigo_producto": 81111801,
+        "codigo_categoria": "81111800"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:12.8563654Z",
+    "region_unidad": "Regi\u00F3n del Maule ",
+    "moneda": "CLP",
+    "monto": 21500000.0,
+    "cantidad_reclamos": 445
+  },
+  {
+    "codigo_externo": "1978-81-LE26",
+    "items": [
+      {
+        "codigo_producto": 43232701,
+        "codigo_categoria": "43232700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:41.4909038Z",
+    "region_unidad": "Regi\u00F3n del Maule ",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 445
+  },
+  {
+    "codigo_externo": "2020-21-LE26",
+    "items": [
+      {
+        "codigo_producto": 81112202,
+        "codigo_categoria": "81112200"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:49.1528217Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 30000000.0,
+    "cantidad_reclamos": 9
+  },
+  {
+    "codigo_externo": "2098-142-LE26",
+    "items": [
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 43211904,
+        "codigo_categoria": "43211900"
+      },
+      {
+        "codigo_producto": 43211904,
+        "codigo_categoria": "43211900"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 43211706,
+        "codigo_categoria": "43211700"
+      },
+      {
+        "codigo_producto": 31162506,
+        "codigo_categoria": "31162500"
+      },
+      {
+        "codigo_producto": 23153008,
+        "codigo_categoria": "23153000"
+      },
+      {
+        "codigo_producto": 32101602,
+        "codigo_categoria": "32101600"
+      },
+      {
+        "codigo_producto": 43232908,
+        "codigo_categoria": "43232900"
+      },
+      {
+        "codigo_producto": 43211708,
+        "codigo_categoria": "43211700"
+      },
+      {
+        "codigo_producto": 26121609,
+        "codigo_categoria": "26121600"
+      },
+      {
+        "codigo_producto": 52161512,
+        "codigo_categoria": "52161500"
+      },
+      {
+        "codigo_producto": 32101601,
+        "codigo_categoria": "32101600"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 26121609,
+        "codigo_categoria": "26121600"
+      },
+      {
+        "codigo_producto": 26121609,
+        "codigo_categoria": "26121600"
+      },
+      {
+        "codigo_producto": 26121609,
+        "codigo_categoria": "26121600"
+      },
+      {
+        "codigo_producto": 32101601,
+        "codigo_categoria": "32101600"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 39121011,
+        "codigo_categoria": "39121000"
+      },
+      {
+        "codigo_producto": 27112121,
+        "codigo_categoria": "27112100"
+      },
+      {
+        "codigo_producto": 31201503,
+        "codigo_categoria": "31201500"
+      },
+      {
+        "codigo_producto": 27111515,
+        "codigo_categoria": "27111500"
+      },
+      {
+        "codigo_producto": 26121609,
+        "codigo_categoria": "26121600"
+      },
+      {
+        "codigo_producto": 31162504,
+        "codigo_categoria": "31162500"
+      },
+      {
+        "codigo_producto": 26121609,
+        "codigo_categoria": "26121600"
+      },
+      {
+        "codigo_producto": 43201803,
+        "codigo_categoria": "43201800"
+      },
+      {
+        "codigo_producto": 43201803,
+        "codigo_categoria": "43201800"
+      },
+      {
+        "codigo_producto": 43201803,
+        "codigo_categoria": "43201800"
+      },
+      {
+        "codigo_producto": 31162504,
+        "codigo_categoria": "31162500"
+      },
+      {
+        "codigo_producto": 26121609,
+        "codigo_categoria": "26121600"
+      },
+      {
+        "codigo_producto": 26121609,
+        "codigo_categoria": "26121600"
+      },
+      {
+        "codigo_producto": 43232908,
+        "codigo_categoria": "43232900"
+      },
+      {
+        "codigo_producto": 44111905,
+        "codigo_categoria": "44111900"
+      },
+      {
+        "codigo_producto": 31201503,
+        "codigo_categoria": "31201500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:23.3824182Z",
+    "region_unidad": "Regi\u00F3n del Biob\u00EDo ",
+    "moneda": "CLP",
+    "monto": 23152000.0,
+    "cantidad_reclamos": 972
+  },
+  {
+    "codigo_externo": "2133-82-LE26",
+    "items": [
+      {
+        "codigo_producto": 80111715,
+        "codigo_categoria": "80111700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:00.9078149Z",
+    "region_unidad": "Regi\u00F3n de la Araucan\u00EDa ",
+    "moneda": "CLP",
+    "monto": 18135120.0,
+    "cantidad_reclamos": 1704
+  },
+  {
+    "codigo_externo": "2345-148-LE26",
+    "items": [
+      {
+        "codigo_producto": 24101510,
+        "codigo_categoria": "24101500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:29:56.0531273Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 146
+  },
+  {
+    "codigo_externo": "2409-68-LE26",
+    "items": [
+      {
+        "codigo_producto": 84111603,
+        "codigo_categoria": "84111600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:29.5624157Z",
+    "region_unidad": "Regi\u00F3n del Biob\u00EDo ",
+    "moneda": "CLP",
+    "monto": 60000000.0,
+    "cantidad_reclamos": 749
+  },
+  {
+    "codigo_externo": "2429-8-LP26",
+    "items": [
+      {
+        "codigo_producto": 81111702,
+        "codigo_categoria": "81111700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:04.4880534Z",
+    "region_unidad": "Regi\u00F3n de Antofagasta ",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 290
+  },
+  {
+    "codigo_externo": "2446-251-LE26",
+    "items": [
+      {
+        "codigo_producto": 86141703,
+        "codigo_categoria": "86141700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:15.5364917Z",
+    "region_unidad": "Regi\u00F3n de Coquimbo ",
+    "moneda": "CLP",
+    "monto": 14000000.0,
+    "cantidad_reclamos": 4061
+  },
+  {
+    "codigo_externo": "2563-34-LR26",
+    "items": [
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      },
+      {
+        "codigo_producto": 43211601,
+        "codigo_categoria": "43211600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:16.0448338Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 453590167.0,
+    "cantidad_reclamos": 204
+  },
+  {
+    "codigo_externo": "2663-63-LP26",
+    "items": [
+      {
+        "codigo_producto": 93151502,
+        "codigo_categoria": "93151500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:16.5853336Z",
+    "region_unidad": "Regi\u00F3n de Magallanes y de la Ant\u00E1rtica",
+    "moneda": "CLF",
+    "monto": 98590386.0,
+    "cantidad_reclamos": 225
+  },
+  {
+    "codigo_externo": "2741-60-LE26",
+    "items": [
+      {
+        "codigo_producto": 84111602,
+        "codigo_categoria": "84111600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:41.2335813Z",
+    "region_unidad": "Regi\u00F3n de Valpara\u00EDso ",
+    "moneda": "CLP",
+    "monto": 65000000.0,
+    "cantidad_reclamos": 477
+  },
+  {
+    "codigo_externo": "2760-118-LR26",
+    "items": [
+      {
+        "codigo_producto": 81111803,
+        "codigo_categoria": "81111800"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:31.9534599Z",
+    "region_unidad": "Regi\u00F3n del Biob\u00EDo ",
+    "moneda": "CLP",
+    "monto": 540000000.0,
+    "cantidad_reclamos": 556
+  },
+  {
+    "codigo_externo": "2770-120-LR26",
+    "items": [
+      {
+        "codigo_producto": 43233001,
+        "codigo_categoria": "43233000"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:18.6351109Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLF",
+    "monto": 54017.67,
+    "cantidad_reclamos": 3290
+  },
+  {
+    "codigo_externo": "2852-56-LE26",
+    "items": [
+      {
+        "codigo_producto": 81112005,
+        "codigo_categoria": "81112000"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:35.6415984Z",
+    "region_unidad": "Regi\u00F3n de los Lagos ",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 572
+  },
+  {
+    "codigo_externo": "29-81-LP26",
+    "items": [
+      {
+        "codigo_producto": 86111701,
+        "codigo_categoria": "86111700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:25.7830596Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 1468
+  },
+  {
+    "codigo_externo": "3047-54-LE26",
+    "items": [
+      {
+        "codigo_producto": 43222628,
+        "codigo_categoria": "43222600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:51.7725828Z",
+    "region_unidad": "Regi\u00F3n de Valpara\u00EDso ",
+    "moneda": "CLP",
+    "monto": 9999784.0,
+    "cantidad_reclamos": 2591
+  },
+  {
+    "codigo_externo": "3084-31-LE26",
+    "items": [
+      {
+        "codigo_producto": 80111613,
+        "codigo_categoria": "80111600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:19.7374858Z",
+    "region_unidad": "Regi\u00F3n de Valpara\u00EDso ",
+    "moneda": "CLP",
+    "monto": 10000000.0,
+    "cantidad_reclamos": 2591
+  },
+  {
+    "codigo_externo": "3269-10-LP26",
+    "items": [
+      {
+        "codigo_producto": 81112006,
+        "codigo_categoria": "81112000"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:07.2682024Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 94099000.0,
+    "cantidad_reclamos": 1468
+  },
+  {
+    "codigo_externo": "3378-51-LP26",
+    "items": [
+      {
+        "codigo_producto": 81111805,
+        "codigo_categoria": "81111800"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:22.3462021Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 272160000.0,
+    "cantidad_reclamos": 11856
+  },
+  {
+    "codigo_externo": "3447-145-LR26",
+    "items": [
+      {
+        "codigo_producto": 81111505,
+        "codigo_categoria": "81111500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:20.0030027Z",
+    "region_unidad": "Regi\u00F3n de Tarapac\u00E1  ",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 232
+  },
+  {
+    "codigo_externo": "3666-12-LE26",
+    "items": [
+      {
+        "codigo_producto": 43232202,
+        "codigo_categoria": "43232200"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:13.3951395Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 58000000.0,
+    "cantidad_reclamos": 106
+  },
+  {
+    "codigo_externo": "418-63-LE26",
+    "items": [
+      {
+        "codigo_producto": 80111715,
+        "codigo_categoria": "80111700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:38.2064663Z",
+    "region_unidad": "Regi\u00F3n Ays\u00E9n del General Carlos Ib\u00E1\u00F1ez del Campo",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 407
+  },
+  {
+    "codigo_externo": "4475-22-LE26",
+    "items": [
+      {
+        "codigo_producto": 43211507,
+        "codigo_categoria": "43211500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:58.6809303Z",
+    "region_unidad": "Regi\u00F3n del Maule ",
+    "moneda": "CLP",
+    "monto": 10800000.0,
+    "cantidad_reclamos": 55
+  },
+  {
+    "codigo_externo": "4511-53-LE26",
+    "items": [
+      {
+        "codigo_producto": 43232305,
+        "codigo_categoria": "43232300"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:35.2772991Z",
+    "region_unidad": "Regi\u00F3n del Maule ",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 219
+  },
+  {
+    "codigo_externo": "514862-125-LR26",
+    "items": [
+      {
+        "codigo_producto": 81112010,
+        "codigo_categoria": "81112000"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:32:01.2314716Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 408000000.0,
+    "cantidad_reclamos": 151
+  },
+  {
+    "codigo_externo": "5394-22-LE26",
+    "items": [
+      {
+        "codigo_producto": 80101507,
+        "codigo_categoria": "80101500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:01.6481156Z",
+    "region_unidad": "Regi\u00F3n de Magallanes y de la Ant\u00E1rtica",
+    "moneda": "CLP",
+    "monto": 20000000.0,
+    "cantidad_reclamos": 77
+  },
+  {
+    "codigo_externo": "5413-71-LE26",
+    "items": [
+      {
+        "codigo_producto": 81111805,
+        "codigo_categoria": "81111800"
+      },
+      {
+        "codigo_producto": 80111711,
+        "codigo_categoria": "80111700"
+      },
+      {
+        "codigo_producto": 80111711,
+        "codigo_categoria": "80111700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:29:57.961879Z",
+    "region_unidad": "Regi\u00F3n de los Lagos ",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 278
+  },
+  {
+    "codigo_externo": "5418-13-LE26",
+    "items": [
+      {
+        "codigo_producto": 81112005,
+        "codigo_categoria": "81112000"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:01.275653Z",
+    "region_unidad": "Regi\u00F3n de Los R\u00EDos",
+    "moneda": "CLP",
+    "monto": 56000000.0,
+    "cantidad_reclamos": 2
+  },
+  {
+    "codigo_externo": "5482-100-LP26",
+    "items": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:10.0321541Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 284
+  },
+  {
+    "codigo_externo": "5482-101-LR26",
+    "items": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      },
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:12.4965527Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 284
+  },
+  {
+    "codigo_externo": "5482-103-LP26",
+    "items": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:07.0640787Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 284
+  },
+  {
+    "codigo_externo": "548874-72-LR26",
+    "items": [
+      {
+        "codigo_producto": 43232304,
+        "codigo_categoria": "43232300"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:22.7105338Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLF",
+    "monto": 24000.0,
+    "cantidad_reclamos": 81
+  },
+  {
+    "codigo_externo": "548874-74-LR26",
+    "items": [
+      {
+        "codigo_producto": 43233205,
+        "codigo_categoria": "43233200"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:25.3895204Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "USD",
+    "monto": 565250.0,
+    "cantidad_reclamos": 81
+  },
+  {
+    "codigo_externo": "548874-77-LR26",
+    "items": [
+      {
+        "codigo_producto": 43233203,
+        "codigo_categoria": "43233200"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:27.9486162Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLF",
+    "monto": 11000.0,
+    "cantidad_reclamos": 81
+  },
+  {
+    "codigo_externo": "5586-139-LE26",
+    "items": [
+      {
+        "codigo_producto": 43231512,
+        "codigo_categoria": "43231500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:23.1182619Z",
+    "region_unidad": "Regi\u00F3n de la Araucan\u00EDa ",
+    "moneda": "CLP",
+    "monto": 10565838.0,
+    "cantidad_reclamos": 353
+  },
+  {
+    "codigo_externo": "584105-31-LE26",
+    "items": [
+      {
+        "codigo_producto": 93151607,
+        "codigo_categoria": "93151600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:28.5523135Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 68
+  },
+  {
+    "codigo_externo": "587-49-LE26",
+    "items": [
+      {
+        "codigo_producto": 81112005,
+        "codigo_categoria": "81112000"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:45.3151021Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 25000000.0,
+    "cantidad_reclamos": 110
+  },
+  {
+    "codigo_externo": "5890-11-LP26",
+    "items": [
+      {
+        "codigo_producto": 43202103,
+        "codigo_categoria": "43202100"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:47.9169986Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 235620000.0,
+    "cantidad_reclamos": 459
+  },
+  {
+    "codigo_externo": "591-26-LP26",
+    "items": [
+      {
+        "codigo_producto": 43231512,
+        "codigo_categoria": "43231500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:13.7917421Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 86
+  },
+  {
+    "codigo_externo": "598-16-LE26",
+    "items": [
+      {
+        "codigo_producto": 80111504,
+        "codigo_categoria": "80111500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:30.9113277Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 54
+  },
+  {
+    "codigo_externo": "598-21-LE26",
+    "items": [
+      {
+        "codigo_producto": 76111501,
+        "codigo_categoria": "76111500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:52.9221698Z",
+    "region_unidad": "Regi\u00F3n del Maule ",
+    "moneda": "CLP",
+    "monto": 14000000.0,
+    "cantidad_reclamos": 54
+  },
+  {
+    "codigo_externo": "598-22-LE26",
+    "items": [
+      {
+        "codigo_producto": 76111501,
+        "codigo_categoria": "76111500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:50.5355118Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 14000000.0,
+    "cantidad_reclamos": 54
+  },
+  {
+    "codigo_externo": "608-197-LR26",
+    "items": [
+      {
+        "codigo_producto": 81111503,
+        "codigo_categoria": "81111500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:32.354451Z",
+    "region_unidad": "Regi\u00F3n de Valpara\u00EDso ",
+    "moneda": "CLP",
+    "monto": 675433201.0,
+    "cantidad_reclamos": 3578
+  },
+  {
+    "codigo_externo": "608897-57-LE26",
+    "items": [
+      {
+        "codigo_producto": 77101701,
+        "codigo_categoria": "77101700"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:32.7200153Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 35000000.0,
+    "cantidad_reclamos": 335
+  },
+  {
+    "codigo_externo": "612-19-LE26",
+    "items": [
+      {
+        "codigo_producto": 81112006,
+        "codigo_categoria": "81112000"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:52.1533508Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 45000000.0,
+    "cantidad_reclamos": 215
+  },
+  {
+    "codigo_externo": "721703-40-LP26",
+    "items": [
+      {
+        "codigo_producto": 82121501,
+        "codigo_categoria": "82121500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:57.7573371Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 130132269.0,
+    "cantidad_reclamos": 8
+  },
+  {
+    "codigo_externo": "726931-1-LE26",
+    "items": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:29:56.9421688Z",
+    "region_unidad": "Regi\u00F3n de Arica y Parinacota",
+    "moneda": "CLP",
+    "monto": 15000000.0,
+    "cantidad_reclamos": 168
+  },
+  {
+    "codigo_externo": "730566-21-LP26",
+    "items": [
+      {
+        "codigo_producto": 43222627,
+        "codigo_categoria": "43222600"
+      },
+      {
+        "codigo_producto": 43223204,
+        "codigo_categoria": "43223200"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:33.6749699Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 16
+  },
+  {
+    "codigo_externo": "732434-20-LP26",
+    "items": [
+      {
+        "codigo_producto": 81111501,
+        "codigo_categoria": "81111500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:34.1149658Z",
+    "region_unidad": "Regi\u00F3n del Biob\u00EDo ",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 219
+  },
+  {
+    "codigo_externo": "759-32-LP26",
+    "items": [
+      {
+        "codigo_producto": 93151607,
+        "codigo_categoria": "93151600"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:58.146169Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 45
+  },
+  {
+    "codigo_externo": "761391-138-LE26",
+    "items": [
+      {
+        "codigo_producto": 81111505,
+        "codigo_categoria": "81111500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:41.8804953Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 16333332.0,
+    "cantidad_reclamos": 1468
+  },
+  {
+    "codigo_externo": "85-34-LP26",
+    "items": [
+      {
+        "codigo_producto": 43222503,
+        "codigo_categoria": "43222500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:36.6945924Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 156
+  },
+  {
+    "codigo_externo": "85-41-LE26",
+    "items": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:37.7817436Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 156
+  },
+  {
+    "codigo_externo": "858-69-LP26",
+    "items": [
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      },
+      {
+        "codigo_producto": 43232101,
+        "codigo_categoria": "43232100"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:07.4768128Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "USD",
+    "monto": 179063.0,
+    "cantidad_reclamos": 383
+  },
+  {
+    "codigo_externo": "869591-12-LP26",
+    "items": [
+      {
+        "codigo_producto": 43232202,
+        "codigo_categoria": "43232200"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:53.3000686Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": null,
+    "monto": null,
+    "cantidad_reclamos": 71
+  },
+  {
+    "codigo_externo": "875-7-LE26",
+    "items": [
+      {
+        "codigo_producto": 55101519,
+        "codigo_categoria": "55101500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:51.530911Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLF",
+    "monto": 440.0,
+    "cantidad_reclamos": 2
+  },
+  {
+    "codigo_externo": "885-81-LP26",
+    "items": [
+      {
+        "codigo_producto": 43231512,
+        "codigo_categoria": "43231500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:38.0036687Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 95000000.0,
+    "cantidad_reclamos": 33
+  },
+  {
+    "codigo_externo": "885-83-LE26",
+    "items": [
+      {
+        "codigo_producto": 43222501,
+        "codigo_categoria": "43222500"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:30:43.6212811Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 16000000.0,
+    "cantidad_reclamos": 33
+  },
+  {
+    "codigo_externo": "885-84-LE26",
+    "items": [
+      {
+        "codigo_producto": 81111812,
+        "codigo_categoria": "81111800"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:55.8440867Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 30000000.0,
+    "cantidad_reclamos": 33
+  },
+  {
+    "codigo_externo": "948354-138-LE26",
+    "items": [
+      {
+        "codigo_producto": 43232310,
+        "codigo_categoria": "43232300"
+      }
+    ],
+    "obtenido_en": "2026-09-19T05:31:56.1246873Z",
+    "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+    "moneda": "CLP",
+    "monto": 35000000.0,
+    "cantidad_reclamos": 395
+  }
+]
