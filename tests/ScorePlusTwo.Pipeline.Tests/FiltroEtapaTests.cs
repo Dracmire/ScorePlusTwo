@@ -16,6 +16,7 @@ public class FiltroEtapaTests
         {
             new("compliance", "alta", new List<string> { "auditor" }),
             new("vigilancia", "secundaria", new List<string> { "camara" }),
+            new("ti", "alta", new List<string> { "informatic", "plataforma" }, TerminosAmbiguos: new List<string> { "plataforma" }),
         },
         DescarteDuro: new List<string> { "vehiculo", "construccion" },
         TiposPrivados: new List<string> { "CO" },
@@ -212,6 +213,44 @@ public class FiltroEtapaTests
     }
 
     [Fact]
+    public void TerminoAmbiguoSolo_NoPromueve_QuedaMarcadoParaRevisionAmbigua()
+    {
+        // RubroCriterio.TerminosAmbiguos (2026-09-19): "plataforma" es el
+        // único término que matchea en el rubro "ti" — por lo demás
+        // calificaría para Prioritarias (rubro alta + región elegible),
+        // pero una señal única y ambigua no alcanza. EsRevisionAmbigua es lo
+        // que Program.CrearCandidata traduce a EstadoFlujo.RevisionAmbigua.
+        var licitaciones = new[] { Licitacion("1-1-LE26", "SUSCRIPCION A PLATAFORMA DE GESTION", 5) };
+        var cache = CacheConCodigoProducto("1-1-LE26", CodigoProductoServicio, RegionElegible);
+
+        var resultado = EjecutarFiltro(licitaciones, CriteriosDePrueba(), cache);
+
+        Assert.Empty(resultado.Prioritarias);
+        var secundaria = Assert.Single(resultado.Secundarias);
+        Assert.Equal("ti", secundaria.RubroMatch);
+        Assert.Equal("plataforma", secundaria.TerminoMatch);
+        Assert.True(secundaria.EsRevisionAmbigua);
+    }
+
+    [Fact]
+    public void TerminoAmbiguoMasTerminoSolido_PromueveNormal_SinRevisionAmbigua()
+    {
+        // Si el mismo rubro matchea ADEMÁS un término no ambiguo
+        // ("informatic"), ese gana y el comportamiento es idéntico al de
+        // antes de este campo — la ambigüedad no descarta ni degrada nada
+        // cuando hay una señal sólida presente.
+        var licitaciones = new[] { Licitacion("1-1-LE26", "PLATAFORMA DE SISTEMA INFORMATICO", 5) };
+        var cache = CacheConCodigoProducto("1-1-LE26", CodigoProductoServicio, RegionElegible);
+
+        var resultado = EjecutarFiltro(licitaciones, CriteriosDePrueba(), cache);
+
+        var candidata = Assert.Single(resultado.Prioritarias);
+        Assert.Equal("ti", candidata.RubroMatch);
+        Assert.Equal("informatic", candidata.TerminoMatch);
+        Assert.False(candidata.EsRevisionAmbigua);
+    }
+
+    [Fact]
     public void FamiliaUnspscAmbigua_VaASecundarias_ConRubroEvaluado()
     {
         // RevisionManual recibe el mismo tratamiento que Servicio en
@@ -260,7 +299,7 @@ public class FiltroEtapaTests
     [Fact]
     public void TipoL1_VaATramoBajo_NoSeMezclaConElResto()
     {
-        var licitaciones = new[] { Licitacion("1-1-L126", "AUDITORIA GENERAL", 5) };
+        var licitaciones = new[] { Licitacion("1-1-L126", "SERVICIO GENERICO SIN RUBRO CONOCIDO", 5) };
 
         var resultado = EjecutarFiltro(licitaciones, CriteriosDePrueba());
 
@@ -269,6 +308,25 @@ public class FiltroEtapaTests
         var tramoBajo = Assert.Single(resultado.TramoBajo);
         Assert.Null(tramoBajo.RubroMatch);
         Assert.Null(tramoBajo.TerminoMatch);
+    }
+
+    [Fact]
+    public void TipoL1_SiMatcheaRubro_QuedaVisibleParaProspeccion_PeroSigueEnTramoBajo()
+    {
+        // Extensión de rubro a Tramo bajo (2026-09-19): informativo, nunca
+        // cambia su segmentación de lista — L1 nunca se auto-promueve a
+        // Prioritarias, con o sin rubro_match. Sin enriquecimiento UNSPSC
+        // (no se agrega en este cambio): UnspscEstado queda en su default.
+        var licitaciones = new[] { Licitacion("1-1-L126", "AUDITORIA GENERAL", 5) };
+
+        var resultado = EjecutarFiltro(licitaciones, CriteriosDePrueba());
+
+        Assert.Empty(resultado.Prioritarias);
+        Assert.Empty(resultado.Secundarias);
+        var tramoBajo = Assert.Single(resultado.TramoBajo);
+        Assert.Equal("compliance", tramoBajo.RubroMatch);
+        Assert.Equal("auditor", tramoBajo.TerminoMatch);
+        Assert.Equal(UnspscEstado.PendienteEnriquecimiento, tramoBajo.UnspscEstado);
     }
 
     [Fact]

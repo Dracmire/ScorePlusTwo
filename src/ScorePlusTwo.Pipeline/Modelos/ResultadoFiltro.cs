@@ -9,6 +9,12 @@ namespace ScorePlusTwo.Pipeline.Modelos;
 // por rubro (ver FiltroLicitaciones). Region viene de EntradaCacheUnspsc.
 // RegionUnidad (F2, 2026-09-17) cuando hubo enriquecimiento — null si nunca
 // se enriqueció.
+// EsRevisionAmbigua (2026-09-19): true cuando el unico termino de rubro que
+// matcheo esta en RubroCriterio.TerminosAmbiguos y por lo demas habria
+// calificado para Prioritarias (rubro alta + region elegible) — Program.
+// CrearCandidata lo traduce a EstadoFlujo.RevisionAmbigua al crear la
+// candidata. Siempre false para TramoBajo (nunca se auto-promueve de todas
+// formas, asi que la distincion no aplica).
 public sealed record CandidataDetectada(
     LicitacionRaw Origen,
     string Tipo,
@@ -19,7 +25,8 @@ public sealed record CandidataDetectada(
     string? Region = null,
     string? Moneda = null,
     decimal? Monto = null,
-    int? CantidadReclamos = null);
+    int? CantidadReclamos = null,
+    bool EsRevisionAmbigua = false);
 
 // Una licitación que sobrevivió estado+tipo+descarte_duro, todavía sin
 // clasificar por rubro. Tipo ya viene resuelto (derivado de CodigoExterno

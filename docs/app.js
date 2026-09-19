@@ -1,6 +1,104 @@
 (function () {
   "use strict";
 
+  // Pestaña "Revisión" (2026-09-19): escribe directo a la API de GitHub
+  // (contents API), sin backend propio — ver docs/app.js más abajo y
+  // data/overrides.json. Repo hardcodeado porque este tablero solo sirve a
+  // este proyecto.
+  var GITHUB_REPO = "Dracmire/ScorePlusTwo";
+  var TOKEN_KEY = "gh_token";
+
+  function githubToken() {
+    try {
+      return localStorage.getItem(TOKEN_KEY);
+    } catch (e) {
+      return null; // localStorage bloqueado (navegación privada, etc.)
+    }
+  }
+
+  // El token nunca se envía a ningún lado salvo a api.github.com — se pide
+  // una sola vez y se guarda en localStorage de este navegador.
+  function pedirToken() {
+    var token = prompt(
+      "Token de GitHub (permiso 'repo') para guardar decisiones de revisión.\n" +
+      "Se guarda solo en este navegador y solo se envía a la API de GitHub."
+    );
+    if (token) {
+      try {
+        localStorage.setItem(TOKEN_KEY, token);
+      } catch (e) {
+        // sin persistencia disponible: igual sirve para esta sesión de página
+      }
+    }
+    return token;
+  }
+
+  function utf8ToBase64(texto) {
+    return btoa(unescape(encodeURIComponent(texto)));
+  }
+
+  function base64ToUtf8(b64) {
+    return decodeURIComponent(escape(atob(b64.replace(/\n/g, ""))));
+  }
+
+  // Lee data/overrides.json vía la Contents API (no raw.githubusercontent.com:
+  // docs/ es lo único que sirve GitHub Pages, data/ queda fuera). Sin token
+  // funciona igual si el repo es público; el archivo puede no existir
+  // todavía (404 = sin overrides, no un error).
+  function leerOverrides() {
+    var headers = { Accept: "application/vnd.github+json" };
+    var token = githubToken();
+    if (token) headers.Authorization = "Bearer " + token;
+
+    return fetch("https://api.github.com/repos/" + GITHUB_REPO + "/contents/data/overrides.json", { headers: headers })
+      .then(function (respuesta) {
+        if (respuesta.status === 404) return { overrides: {}, sha: null };
+        if (!respuesta.ok) throw new Error("No se pudo leer overrides.json (HTTP " + respuesta.status + ")");
+        return respuesta.json().then(function (cuerpo) {
+          var contenido = cuerpo.content ? base64ToUtf8(cuerpo.content) : "{}";
+          return { overrides: JSON.parse(contenido || "{}"), sha: cuerpo.sha };
+        });
+      });
+  }
+
+  // PUT directo a contents/data/overrides.json — el pipeline de la
+  // siguiente corrida nocturna es quien realmente mueve la candidata entre
+  // listas (ver AplicadorOverrides.cs), esto solo escribe la decisión.
+  function guardarOverride(codigo, listaDestino) {
+    var token = githubToken() || pedirToken();
+    if (!token) return Promise.reject(new Error("Sin token, no se guardó."));
+
+    return leerOverrides().then(function (actual) {
+      actual.overrides[codigo] = {
+        lista_destino: listaDestino,
+        revisado: true,
+        observado_en: new Date().toISOString(),
+      };
+
+      var cuerpo = {
+        message: "override: " + codigo + " -> " + listaDestino,
+        content: utf8ToBase64(JSON.stringify(actual.overrides, null, 2)),
+        branch: "main",
+      };
+      if (actual.sha) cuerpo.sha = actual.sha;
+
+      return fetch("https://api.github.com/repos/" + GITHUB_REPO + "/contents/data/overrides.json", {
+        method: "PUT",
+        headers: {
+          Accept: "application/vnd.github+json",
+          Authorization: "Bearer " + token,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cuerpo),
+      });
+    }).then(function (respuesta) {
+      if (respuesta.ok) return respuesta.json();
+      return respuesta.json().catch(function () { return {}; }).then(function (error) {
+        throw new Error(error.message || ("Error HTTP " + respuesta.status + " al guardar."));
+      });
+    });
+  }
+
   function formatearFecha(iso) {
     if (!iso) return "—";
     var d = new Date(iso);
@@ -59,6 +157,18 @@
   function renderRegion(candidata) {
     if (!candidata.region) return '<span class="vacio">—</span>';
     return escaparHtml(candidata.region);
+  }
+
+  // Por qué una fila cae en la cola de revisión — los dos motivos posibles
+  // no son excluyentes en teoría, pero en la práctica cada candidata trae
+  // como mucho uno (ver FiltroLicitaciones).
+  function razonRevision(candidata) {
+    var razones = [];
+    if (candidata.unspsc_estado === "revision_manual") razones.push("UNSPSC ambiguo en modalidad");
+    if (candidata.estado_flujo === "revision_ambigua") {
+      razones.push("rubro ambiguo (" + escaparHtml(candidata.termino_match || "") + ")");
+    }
+    return razones.length ? razones.join(" · ") : '<span class="vacio">—</span>';
   }
 
   // Calculado en el navegador, SIEMPRE contra la fecha de hoy del cliente —
@@ -140,6 +250,68 @@
           setTimeout(function () {
             span.textContent = textoOriginal;
           }, 1000);
+        });
+      });
+    });
+  }
+
+  // Pestaña "Revisión": junta unspsc_estado=revision_manual y
+  // estado_flujo=revision_ambigua de Secundarias (ver razonRevision) — hoy
+  // invisibles salvo bajando el CSV completo. Cada fila trae dos botones
+  // que escriben un override vía la API de GitHub (ver guardarOverride);
+  // el resultado real (mover la candidata de lista) lo aplica la próxima
+  // corrida nocturna del pipeline, nunca esta página.
+  function renderTablaRevision(candidatas) {
+    var contenedor = document.getElementById("tabla-candidatas");
+
+    if (!candidatas.length) {
+      contenedor.innerHTML = '<p class="vacio">Nada pendiente de revisión.</p>';
+      return;
+    }
+
+    var filas = candidatas.map(function (c) {
+      return '<tr data-codigo="' + escaparHtml(c.codigo) + '">' +
+        "<td>" + renderCodigo(c) + "</td>" +
+        "<td>" + escaparHtml(c.nombre) + "</td>" +
+        "<td>" + renderRubro(c) + "</td>" +
+        "<td>" + razonRevision(c) + "</td>" +
+        "<td>" + renderRegion(c) + "</td>" +
+        '<td class="fila-acciones">' +
+          '<button class="boton-accion boton-accion-primaria" data-accion="prioritarias">Mover a Prioritarias</button>' +
+          '<button class="boton-accion" data-accion="secundarias">Confirmar en Secundarias</button>' +
+        "</td>" +
+        "</tr>";
+    }).join("");
+
+    contenedor.innerHTML =
+      "<table>" +
+      "<thead><tr>" +
+      "<th>Código</th><th>Nombre</th><th>Rubro</th><th>Motivo</th><th>Región</th><th>Acciones</th>" +
+      "</tr></thead>" +
+      "<tbody>" + filas + "</tbody>" +
+      "</table>";
+
+    contenedor.querySelectorAll("tr[data-codigo]").forEach(function (fila) {
+      var codigo = fila.getAttribute("data-codigo");
+      var botones = fila.querySelectorAll("button[data-accion]");
+
+      botones.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+          var destino = boton.getAttribute("data-accion");
+          var textoOriginal = boton.textContent;
+          botones.forEach(function (b) { b.disabled = true; });
+          boton.textContent = "Guardando…";
+
+          guardarOverride(codigo, destino)
+            .then(function () {
+              fila.querySelector(".fila-acciones").textContent =
+                "Guardado — se aplica en la próxima corrida nocturna.";
+            })
+            .catch(function (error) {
+              botones.forEach(function (b) { b.disabled = false; });
+              boton.textContent = textoOriginal;
+              alert("No se pudo guardar la decisión: " + error.message);
+            });
         });
       });
     });
@@ -249,8 +421,52 @@
 
       var botonCsv = document.getElementById("btn-descargar-csv");
       var panelGrafico = document.getElementById("panel-grafico");
+      var notaRevision = document.getElementById("nota-revision");
+
+      // "Revisión" no es un dataset propio de data.json: se computa al
+      // vuelo filtrando Secundarias (ver razonRevision) y cruzando contra
+      // data/overrides.json (vía la API de GitHub, async) — una fila con
+      // override ya tiene una decisión humana encima, así que desaparece de
+      // la cola aunque el pipeline todavía no haya corrido para aplicarla.
+      function renderRevisionActiva() {
+        var contenedor = document.getElementById("tabla-candidatas");
+        contenedor.innerHTML = '<p class="vacio">Cargando…</p>';
+
+        var enCola = datasets.secundarias.filter(function (c) {
+          return c.unspsc_estado === "revision_manual" || c.estado_flujo === "revision_ambigua";
+        });
+
+        if (!enCola.length) {
+          renderTablaRevision([]);
+          return;
+        }
+
+        leerOverrides()
+          .then(function (actual) {
+            var pendientes = enCola.filter(function (c) {
+              return !Object.prototype.hasOwnProperty.call(actual.overrides, c.codigo);
+            });
+            renderTablaRevision(pendientes);
+          })
+          .catch(function (error) {
+            // Sin poder leer overrides (sin token en un repo privado, error
+            // de red): se muestra la cola completa sin filtrar — nunca se
+            // oculta trabajo pendiente por un fallo de lectura.
+            console.error(error);
+            renderTablaRevision(enCola);
+          });
+      }
 
       function renderTabActiva() {
+        notaRevision.hidden = tabActiva !== "revision";
+
+        if (tabActiva === "revision") {
+          panelGrafico.hidden = true;
+          botonCsv.hidden = true;
+          renderRevisionActiva();
+          return;
+        }
+
         var candidatas = datasets[tabActiva];
         renderTabla(candidatas);
 

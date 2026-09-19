@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-17",
+  "version": "2026-09-19",
   "tipos": ["LE", "LP", "LQ", "LR", "LS", "L1", "CO", "B2", "E2", "H2", "I2"],
   "estados": [5],
   "regiones": ["Metropolitana", "Valparaíso", "Coquimbo"],
@@ -43,7 +43,8 @@
         "gestión documental",
         "base de datos",
         "interoperabilidad"
-      ]
+      ],
+      "terminos_ambiguos": ["plataforma"]
     },
     {
       "id": "ia",

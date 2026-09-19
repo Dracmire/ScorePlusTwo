@@ -111,6 +111,39 @@ header p {
   filter: brightness(0.97);
 }
 
+.fila-acciones {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.boton-accion {
+  font: inherit;
+  font-size: 0.78rem;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 0.3rem 0.55rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.boton-accion:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.boton-accion:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.boton-accion-primaria {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

@@ -2,11 +2,31 @@ using System.Text.Json.Serialization;
 
 namespace ScorePlusTwo.Pipeline.Modelos;
 
+// NOTA: JsonOpciones.Config solo tiene PropertyNameCaseInsensitive (sin
+// naming policy) — un JSON con guion bajo como "terminos_ambiguos" no
+// matchea "TerminosAmbiguos" por case-insensitive solo, necesita
+// JsonPropertyName explícito. Mismo motivo por el que Criterios ya lo hace
+// para descarte_duro/tipos_privados/familias_unspsc_revision_manual.
+
 // Prioridad reemplaza al viejo booleano Activo: "alta" es lo que hoy va al
 // tablero (Lista A), "secundaria" es inventario de prospección (Lista B) —
 // ya no existe un tercer estado "inactivo" que borre matches sin dejar
 // rastro (ver FiltroLicitaciones).
-public sealed record RubroCriterio(string Id, string Prioridad, List<string> Terminos);
+//
+// TerminosAmbiguos (2026-09-19, opcional — null/vacío para rubros sin
+// ninguno, ej. compliance/ia): subconjunto de Terminos cuya sola presencia
+// no basta como señal de rubro. Caso real: "plataforma" en ti colisiona
+// con suscripciones de puro bien ("plataforma de streaming corporativo"),
+// no solo con servicios TI. Si el único término que matchea está en esta
+// lista, FiltroLicitaciones no promueve a Prioritarias — cae en
+// Secundarias con EstadoFlujo.RevisionAmbigua. Si matchea ADEMÁS un
+// término no ambiguo del mismo rubro, ese gana y el comportamiento es
+// idéntico al de antes de este campo.
+public sealed record RubroCriterio(
+    string Id,
+    string Prioridad,
+    List<string> Terminos,
+    [property: JsonPropertyName("terminos_ambiguos")] List<string>? TerminosAmbiguos = null);
 
 public sealed record Criterios(
     string Version,

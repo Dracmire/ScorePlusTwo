@@ -21,15 +21,66 @@ y solo obras públicas/suministros (`descarte_duro`) desaparecen sin rastro:
   geográfica, sin enriquecer todavía, rubro de prioridad `"secundaria"`,
   sin ningún rubro, o tipo de licitación privada. Es el inventario para
   prospectar rubros que todavía no se atienden.
-- **Tramo bajo** (`data/tramo_bajo.json`): tipo `L1`, aceptado pero fuera de
-  la clasificación de rubro — no se mezcla con el resto, es opción solo si
-  aparece un cliente que la tome.
+- **Tramo bajo** (`data/tramo_bajo.json`): tipo `L1`, aceptado pero nunca se
+  mezcla con el resto — es opción solo si aparece un cliente que la tome, sin
+  importar qué rubro matchee. Sí se evalúa contra `rubros` (con términos
+  ambiguos incluidos) para dejar `rubro_match`/`termino_match` visibles en el
+  tablero/CSV como dato de prospección, pero eso nunca cambia su
+  segmentación ni gasta una llamada de enriquecimiento UNSPSC.
 
 Para correrlo manualmente sobre un fixture local, sin red ni `MP_TICKET`:
 
 ```bash
 dotnet run --project src/ScorePlusTwo.Pipeline -- --fixture tests/fixtures/2026-09-03.json --fecha 03-09-2026
 ```
+
+## Revisión humana: términos ambiguos y overrides
+
+Dos mecanismos relacionados para cuando una señal automática no alcanza por
+sí sola:
+
+**Términos ambiguos** (`config/criterios.json`, campo `terminos_ambiguos`
+por rubro — hoy solo `["plataforma"]` en `ti`): un término marcado ahí
+colisiona con negocios que no son el rubro (ej. "plataforma" aparece tanto
+en servicios TI reales como en suscripciones de puro bien). Si el ÚNICO
+término que matchea un rubro está en esta lista, la candidata no se
+promueve a Prioritarias aunque UNSPSC y región digan que sí — cae en
+Secundarias con `estado_flujo: "revision_ambigua"`, con `rubro_match`/
+`termino_match` igual poblados. Si matchea además un término no ambiguo del
+mismo rubro, ese gana y el resultado es idéntico a como sería sin este
+campo — la ambigüedad nunca descarta nada, solo baja la confianza de una
+señal única.
+
+**`data/overrides.json`** (`Dictionary<CodigoExterno, override>`): decisión
+humana que fuerza un código a Prioritarias o Secundarias, sin importar lo
+que diga la clasificación automática. Se aplica en cada corrida, sobre las
+listas ya fusionadas, antes de persistirlas — y **nunca expira**: si un
+override ya está en el destino correcto, la corrida siguiente es un no-op.
+La única forma de revertirlo es escribir un override nuevo o borrar la
+entrada a mano.
+
+```json
+{
+  "85-41-LE26": {
+    "lista_destino": "prioritarias",
+    "revisado": true,
+    "observado_en": "2026-09-19T12:00:00Z"
+  }
+}
+```
+
+**Pestaña "Revisión" del tablero** (`docs/index.html`/`docs/app.js`): junta
+las Secundarias con `unspsc_estado: "revision_manual"` o
+`estado_flujo: "revision_ambigua"` — hoy la única forma de verlas sin bajar
+el CSV completo. Cada fila trae dos botones ("Mover a Prioritarias" /
+"Confirmar en Secundarias") que escriben directo en `data/overrides.json`
+vía la API REST de GitHub (`PUT contents/data/overrides.json`), sin backend
+propio. La primera vez que se usa un botón, el navegador pide un token de
+GitHub (permiso `repo`) y lo guarda en `localStorage` de ese navegador — el
+token nunca se envía a otro destino que no sea `api.github.com`. **El
+cambio real de lista no es instantáneo**: la fila desaparece de la cola de
+inmediato, pero el override recién se aplica en la próxima corrida nocturna
+del pipeline (o disparando el workflow manualmente).
 
 ## Re-filtrado manual del histórico acumulado
 
