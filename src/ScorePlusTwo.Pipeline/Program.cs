@@ -839,6 +839,8 @@ public static class Program
             .Distinct()
             .ToList();
 
+        var cronometroEnriquecimiento = System.Diagnostics.Stopwatch.StartNew();
+        var enriquecidos = 0;
         if (faltantes.Count > 0)
         {
             var nuevas = await EnriquecimientoUnspscService.EnriquecerAsync(cliente, faltantes);
@@ -846,7 +848,11 @@ public static class Program
             {
                 cacheUnspsc[entrada.CodigoExterno] = entrada;
             }
+
+            enriquecidos = nuevas.Count;
         }
+        cronometroEnriquecimiento.Stop();
+        var fallidos = faltantes.Count - enriquecidos;
 
         if (cacheUnspsc.Count != cacheUnspscCountInicial)
         {
@@ -866,6 +872,12 @@ public static class Program
             ["fuera_de_region"] = 0,
             ["sin_resolver"] = 0,
         };
+        // Códigos concretos de sin_resolver (2026-09-19, pedido explícito del
+        // usuario): un volumen alto acá es señal de que config/catalogo-
+        // unspsc.tsv necesita actualizarse — el mismo tipo de gap ya visto
+        // en la investigación de septiembre (1057049-338-LE26, código
+        // ausente del catálogo).
+        var codigosSinResolver = new List<string>();
 
         foreach (var candidata in prioritarias)
         {
@@ -904,6 +916,7 @@ public static class Program
                 candidata.TerminoMatch = null;
                 seMueven.Add(candidata);
                 conteos["sin_resolver"]++;
+                codigosSinResolver.Add(candidata.Codigo);
                 continue;
             }
 
@@ -963,6 +976,16 @@ public static class Program
         Console.WriteLine($"Movidas a Secundarias por 'revision_manual': {conteos["revision_manual"]}");
         Console.WriteLine($"Movidas a Secundarias por 'fuera_de_region': {conteos["fuera_de_region"]}");
         Console.WriteLine($"Movidas a Secundarias por 'sin_resolver': {conteos["sin_resolver"]}");
+        Console.WriteLine(
+            $"Enriquecimiento: llamadas_intentadas={faltantes.Count} exitosas={enriquecidos} " +
+            $"fallidas={fallidos} tiempo_total={cronometroEnriquecimiento.Elapsed.TotalSeconds:F1}s " +
+            (faltantes.Count > 0
+                ? $"promedio={cronometroEnriquecimiento.Elapsed.TotalSeconds / faltantes.Count:F2}s/llamada"
+                : "(nada que enriquecer, todo ya estaba en cache)"));
+        if (codigosSinResolver.Count > 0)
+        {
+            Console.WriteLine($"Códigos sin_resolver ({codigosSinResolver.Count}): {string.Join(", ", codigosSinResolver)}");
+        }
 
         return 0;
     }
