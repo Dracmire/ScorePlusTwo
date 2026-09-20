@@ -20,7 +20,9 @@
   // una sola vez y se guarda en localStorage de este navegador.
   function pedirToken() {
     var token = prompt(
-      "Token de GitHub (permiso 'repo') para guardar decisiones de revisión.\n" +
+      "Token de GitHub para guardar decisiones de revisión (ver README —\n" +
+      "usa un fine-grained token con expiración, acotado a este repo,\n" +
+      "permiso 'Contents: Read and write' solamente).\n" +
       "Se guarda solo en este navegador y solo se envía a la API de GitHub."
     );
     if (token) {
@@ -265,7 +267,7 @@
     var contenedor = document.getElementById("tabla-candidatas");
 
     if (!candidatas.length) {
-      contenedor.innerHTML = '<p class="vacio">Nada pendiente de revisión.</p>';
+      contenedor.innerHTML = '<p class="vacio">Todo al día — no hay nada pendiente de revisión.</p>';
       return;
     }
 

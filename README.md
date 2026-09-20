@@ -76,11 +76,31 @@ el CSV completo. Cada fila trae dos botones ("Mover a Prioritarias" /
 "Confirmar en Secundarias") que escriben directo en `data/overrides.json`
 vía la API REST de GitHub (`PUT contents/data/overrides.json`), sin backend
 propio. La primera vez que se usa un botón, el navegador pide un token de
-GitHub (permiso `repo`) y lo guarda en `localStorage` de ese navegador — el
-token nunca se envía a otro destino que no sea `api.github.com`. **El
-cambio real de lista no es instantáneo**: la fila desaparece de la cola de
-inmediato, pero el override recién se aplica en la próxima corrida nocturna
-del pipeline (o disparando el workflow manualmente).
+GitHub y lo guarda en `localStorage` de ese navegador — el token nunca se
+envía a otro destino que no sea `api.github.com`. **El cambio real de
+lista no es instantáneo**: la fila desaparece de la cola de inmediato, pero
+el override recién se aplica en la próxima corrida nocturna del pipeline
+(o disparando el workflow manualmente). Cuando no queda ninguna fila
+pendiente, la pestaña muestra explícitamente "Todo al día — no hay nada
+pendiente de revisión." — nunca una tabla vacía sin explicación, que se
+leería como la pestaña rota en vez de como una cola resuelta.
+
+**Qué token usar — importante:** generar un **fine-grained personal access
+token** (GitHub → Settings → Developer settings → Fine-grained tokens), no
+un token clásico de scope `repo` completo. Configurarlo con:
+- **Repository access**: "Only select repositories" → este repositorio
+  únicamente.
+- **Permissions**: `Contents: Read and write` — nada más.
+- **Expiration**: una fecha concreta, no "No expiration".
+
+La diferencia importa: un token clásico de scope `repo` completo puede leer
+y escribir en TODOS los repositorios (públicos y privados) de la cuenta que
+lo generó. Si el tablero tiene un bug algún día, o el token queda expuesto
+por accidente (historial del navegador, extensión maliciosa, captura de
+pantalla), un fine-grained token acotado a este repo y con fecha de
+expiración limita el daño a "alguien puede escribir en este repo hasta tal
+fecha" — un token clásico de scope completo lo expone todo, sin fecha
+límite, hasta que alguien lo revoque a mano.
 
 ## Re-filtrado manual del histórico acumulado
 
