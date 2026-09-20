@@ -172,20 +172,35 @@ public static class Program
             // candidatas.json; Secundarias y TramoBajo son nuevos, con la
             // misma lógica de "activas rescata lo que el diario no habría
             // detectado" aplicada a las tres por igual.
-            var (todasPrioritarias, nuevasPrioritariasDiario, nuevasPrioritariasActivas) = FusionarLista(
-                Path.Combine(repoRoot, "data", "candidatas.json"),
-                resultadoDiario.Prioritarias, resultadoActivas?.Prioritarias,
+            var rutaPrioritarias = Path.Combine(repoRoot, "data", "candidatas.json");
+            var rutaSecundarias = Path.Combine(repoRoot, "data", "secundarias.json");
+            var rutaTramoBajo = Path.Combine(repoRoot, "data", "tramo_bajo.json");
+
+            var (todasPrioritariasSinOverride, nuevasPrioritariasDiario, nuevasPrioritariasActivas) = FusionarLista(
+                rutaPrioritarias, resultadoDiario.Prioritarias, resultadoActivas?.Prioritarias,
                 fecha, fechaActivas, tramo: null, tiposPrivados);
 
-            var (todasSecundarias, nuevasSecundariasDiario, nuevasSecundariasActivas) = FusionarLista(
-                Path.Combine(repoRoot, "data", "secundarias.json"),
-                resultadoDiario.Secundarias, resultadoActivas?.Secundarias,
+            var (todasSecundariasSinOverride, nuevasSecundariasDiario, nuevasSecundariasActivas) = FusionarLista(
+                rutaSecundarias, resultadoDiario.Secundarias, resultadoActivas?.Secundarias,
                 fecha, fechaActivas, tramo: null, tiposPrivados);
 
             var (todasTramoBajo, nuevasTramoBajoDiario, nuevasTramoBajoActivas) = FusionarLista(
-                Path.Combine(repoRoot, "data", "tramo_bajo.json"),
-                resultadoDiario.TramoBajo, resultadoActivas?.TramoBajo,
+                rutaTramoBajo, resultadoDiario.TramoBajo, resultadoActivas?.TramoBajo,
                 fecha, fechaActivas, tramo: "bajo", tiposPrivados);
+
+            // Overrides humanos (ver AplicadorOverrides, data/overrides.json):
+            // nunca expiran, se reaplican en cada corrida sobre las listas ya
+            // fusionadas — ANTES de que candidatas.json/secundarias.json
+            // toquen disco. TramoBajo nunca participa.
+            var overrides = JsonStore.CargarOPredeterminado(
+                Path.Combine(repoRoot, "data", "overrides.json"), JsonOpciones.Persistencia,
+                new Dictionary<string, EntradaOverride>());
+            var (todasPrioritarias, todasSecundarias, _) = AplicadorOverrides.Aplicar(
+                overrides, todasPrioritariasSinOverride, todasSecundariasSinOverride);
+
+            JsonStore.Guardar(rutaPrioritarias, todasPrioritarias, JsonOpciones.Persistencia);
+            JsonStore.Guardar(rutaSecundarias, todasSecundarias, JsonOpciones.Persistencia);
+            JsonStore.Guardar(rutaTramoBajo, todasTramoBajo, JsonOpciones.Persistencia);
 
             // El filtro de estado solo se aplica al capturar — de ahí en
             // adelante las listas nunca vuelven a consultar el estado y
@@ -195,18 +210,15 @@ public static class Program
             // distinto de Publicada, se mueve a data/historico/ — salvo que
             // ya tenga triage humano encima, que se respeta tal cual.
             var (prioritariasActivas, prioritariasMovidas) = RevalidarEstado(
-                Path.Combine(repoRoot, "data", "candidatas.json"),
-                Path.Combine(repoRoot, "data", "historico", "candidatas.json"),
+                rutaPrioritarias, Path.Combine(repoRoot, "data", "historico", "candidatas.json"),
                 todasPrioritarias, loteDiario);
 
             var (secundariasActivas, secundariasMovidas) = RevalidarEstado(
-                Path.Combine(repoRoot, "data", "secundarias.json"),
-                Path.Combine(repoRoot, "data", "historico", "secundarias.json"),
+                rutaSecundarias, Path.Combine(repoRoot, "data", "historico", "secundarias.json"),
                 todasSecundarias, loteDiario);
 
             var (tramoBajoActivas, tramoBajoMovidas) = RevalidarEstado(
-                Path.Combine(repoRoot, "data", "tramo_bajo.json"),
-                Path.Combine(repoRoot, "data", "historico", "tramo_bajo.json"),
+                rutaTramoBajo, Path.Combine(repoRoot, "data", "historico", "tramo_bajo.json"),
                 todasTramoBajo, loteDiario);
 
             var totalMovidasHistorico = prioritariasMovidas + secundariasMovidas + tramoBajoMovidas;
@@ -420,7 +432,11 @@ public static class Program
             Moneda = detectada.Moneda,
             Monto = detectada.Monto,
             CantidadReclamos = detectada.CantidadReclamos,
-            EstadoFlujo = EstadoFlujo.Pendiente,
+            // RevisionAmbigua (2026-09-19): solo al crear la candidata —
+            // nunca se recalcula después (ver FiltroLicitaciones y
+            // EstadoFlujo.RevisionAmbigua). Un humano la resuelve desde el
+            // tablero, lo que escribe un override, no cambiando este campo.
+            EstadoFlujo = detectada.EsRevisionAmbigua ? EstadoFlujo.RevisionAmbigua : EstadoFlujo.Pendiente,
             Notas = null,
             ClienteAsignado = null,
             Origen = origen,
@@ -436,6 +452,11 @@ public static class Program
     // ya haya salido del lote diario de hoy no se duplica — es lo que permite
     // medir después cuántas se habrían perdido sin el barrido, generalizado a
     // las tres listas por igual.
+    //
+    // NO escribe a disco (2026-09-19, antes sí lo hacía): AplicadorOverrides
+    // necesita corregir el destino de Prioritarias/Secundarias ANTES de que
+    // cualquiera de las dos toque disco, así que el llamador (Main) persiste
+    // explícitamente después de aplicar overrides.
     private static (List<Candidata> Todas, List<Candidata> NuevasDiario, List<Candidata> NuevasActivas) FusionarLista(
         string rutaArchivo,
         IReadOnlyList<CandidataDetectada> detectadasDiario,
@@ -462,7 +483,6 @@ public static class Program
                 .ToList();
 
         var todas = existentes.Concat(nuevasDiario).Concat(nuevasActivas).ToList();
-        JsonStore.Guardar(rutaArchivo, todas, JsonOpciones.Persistencia);
 
         return (todas, nuevasDiario, nuevasActivas);
     }

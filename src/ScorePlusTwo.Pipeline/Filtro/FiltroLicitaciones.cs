@@ -113,12 +113,6 @@ public static class FiltroLicitaciones
         IReadOnlyDictionary<string, EntradaCacheUnspsc> cacheUnspsc,
         CatalogoUnspsc catalogoUnspsc)
     {
-        // Tramo bajo: no pasa por enriquecimiento ni clasificación de rubro,
-        // va directo a su lista.
-        var tramoBajo = sobrevivientes.TramoBajo
-            .Select(item => new CandidataDetectada(item.Licitacion, item.Tipo, RubroMatch: null, TerminoMatch: null))
-            .ToList();
-
         var prioritarias = new List<CandidataDetectada>();
         var secundarias = new List<CandidataDetectada>();
 
@@ -144,20 +138,57 @@ public static class FiltroLicitaciones
         var trasRegion = 0;
         var familiasRevisionManual = criterios.FamiliasUnspscRevisionManual.ToHashSet();
 
-        (RubroCriterio? Rubro, string? Termino) EvaluarRubro(string nombreNormalizado)
+        // Términos ambiguos (RubroCriterio.TerminosAmbiguos, 2026-09-19): un
+        // match SOLO contra un término marcado como ambiguo (ej.
+        // "plataforma" en ti — colisiona con suscripciones de puro bien) no
+        // es señal suficiente por sí sola. Si el mismo rubro matchea ADEMÁS
+        // un término no ambiguo, ese gana de inmediato y el resultado es
+        // idéntico al comportamiento anterior a este campo — la ambigüedad
+        // nunca descarta nada, solo baja la confianza de una señal única.
+        (RubroCriterio? Rubro, string? Termino, bool EsAmbiguo) EvaluarRubro(string nombreNormalizado)
         {
             foreach (var rubro in criterios.Rubros)
             {
-                var match = rubro.Terminos.FirstOrDefault(
-                    termino => nombreNormalizado.Contains(TextoNormalizador.Normalizar(termino), StringComparison.Ordinal));
-                if (match is not null)
+                var ambiguos = rubro.TerminosAmbiguos ?? new List<string>();
+                string? matchAmbiguo = null;
+
+                foreach (var termino in rubro.Terminos)
                 {
-                    return (rubro, match);
+                    if (!nombreNormalizado.Contains(TextoNormalizador.Normalizar(termino), StringComparison.Ordinal))
+                    {
+                        continue;
+                    }
+
+                    if (!ambiguos.Contains(termino, StringComparer.Ordinal))
+                    {
+                        return (rubro, termino, false);
+                    }
+
+                    matchAmbiguo ??= termino;
+                }
+
+                if (matchAmbiguo is not null)
+                {
+                    return (rubro, matchAmbiguo, true);
                 }
             }
 
-            return (null, null);
+            return (null, null, false);
         }
+
+        // Tramo bajo: no pasa por enriquecimiento UNSPSC ni por su
+        // segmentación de lista (siempre TramoBajo, nunca se auto-promueve
+        // a Prioritarias) — pero sí se evalúa rubro por palabra (2026-09-19)
+        // igual que Regular, puramente informativo: sirve para prospectar
+        // qué hay ahí sin gastar una llamada de detalle sobre potencialmente
+        // cientos de L1 diarios.
+        var tramoBajo = sobrevivientes.TramoBajo
+            .Select(item =>
+            {
+                var (rubro, termino, _) = EvaluarRubro(TextoNormalizador.Normalizar(item.Licitacion.Nombre));
+                return new CandidataDetectada(item.Licitacion, item.Tipo, rubro?.Id, termino);
+            })
+            .ToList();
 
         foreach (var (licitacion, tipo) in sobrevivientes.Regular)
         {
@@ -193,7 +224,7 @@ public static class FiltroLicitaciones
             {
                 revisionManualUnspsc++;
 
-                var (rubroRevision, terminoRevision) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
+                var (rubroRevision, terminoRevision, _) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
                 secundarias.Add(new CandidataDetectada(
                     licitacion, tipo, rubroRevision?.Id, terminoRevision, estadoUnspsc, codigosProducto, region,
                     moneda, monto, cantidadReclamos));
@@ -213,13 +244,19 @@ public static class FiltroLicitaciones
                 trasRegion++;
             }
 
-            var (rubroEncontrado, terminoMatch) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
+            var (rubroEncontrado, terminoMatch, esAmbiguo) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
+            var calificaParaPrioritarias = rubroEncontrado is not null && rubroEncontrado.Prioridad == "alta" && regionElegible;
 
             var candidata = new CandidataDetectada(
                 licitacion, tipo, rubroEncontrado?.Id, terminoMatch, estadoUnspsc, codigosProducto, region,
-                moneda, monto, cantidadReclamos);
+                moneda, monto, cantidadReclamos,
+                // Habría promovido a Prioritarias de no ser porque el único
+                // término que matcheó está marcado como ambiguo — un humano
+                // decide desde el tablero (pestaña "Revisión"), lo que
+                // escribe un override en data/overrides.json.
+                EsRevisionAmbigua: calificaParaPrioritarias && esAmbiguo);
 
-            if (rubroEncontrado is not null && rubroEncontrado.Prioridad == "alta" && regionElegible)
+            if (calificaParaPrioritarias && !esAmbiguo)
             {
                 prioritarias.Add(candidata);
             }

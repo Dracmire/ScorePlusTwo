@@ -19,9 +19,15 @@
           <button class="tab tab-activa" data-tab="prioritarias" role="tab" aria-selected="true">Prioritarias</button>
           <button class="tab" data-tab="secundarias" role="tab" aria-selected="false">Secundarias</button>
           <button class="tab" data-tab="tramo_bajo" role="tab" aria-selected="false">Tramo bajo</button>
+          <button class="tab" data-tab="revision" role="tab" aria-selected="false">Revisión</button>
         </div>
         <button id="btn-descargar-csv" class="boton-secundario" hidden>Descargar CSV</button>
       </div>
+      <p id="nota-revision" class="vacio" hidden>
+        Mover o confirmar una fila escribe la decisión en el repo — el
+        cambio real de lista lo aplica la siguiente corrida nocturna del
+        pipeline, no es instantáneo.
+      </p>
       <div id="tabla-candidatas"></div>
     </section>
 
