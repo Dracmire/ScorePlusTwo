@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-09-19T05:32:01.5085297Z",
+  "generado_en": "2026-09-20T03:29:28.2326603Z",
   "prioritarias": [
     {
       "codigo": "2446-251-LE26",
@@ -61445,6 +61445,12 @@
     {
       "fecha": "2026-09-18",
       "total": 4,
+      "prioritarias": 0,
+      "tasa": 0
+    },
+    {
+      "fecha": "2026-09-19",
+      "total": 2,
       "prioritarias": 0,
       "tasa": 0
     }

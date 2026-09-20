@@ -138,5 +138,12 @@
     "accion": "backfill_unspsc",
     "codigo": null,
     "detalle": "total=79 confirmadas=23 bien=12 revision_manual=25 fuera_de_region=18 sin_resolver=1"
+  },
+  {
+    "timestamp": "2026-09-20T03:29:28.2316303Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=2 prioritarias=0 secundarias=0 tramo_bajo=0 nuevas=0 movidas_historico=0"
   }
 ]
