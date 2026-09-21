@@ -46,7 +46,7 @@ public static class EnriquecimientoUnspscService
     public static EntradaCacheUnspsc ConstruirEntrada(string codigo, DetalleLicitacion? licitacion)
     {
         var items = (licitacion?.Items?.Listado ?? new List<DetalleItem>())
-            .Select(i => new ItemUnspscCache(i.CodigoProducto, i.CodigoCategoria))
+            .Select(i => new ItemUnspscCache(i.CodigoProducto, i.CodigoCategoria, i.Categoria))
             .ToList();
 
         // VisibilidadMonto==0 (o ausente) significa "el organismo no

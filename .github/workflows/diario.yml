@@ -79,6 +79,11 @@ on:
         required: false
         type: boolean
         default: false
+      consultar_licitacion:
+        description: 'Código externo a consultar (ej. 734-50-LE26): corre --consultar-licitacion <codigo> en vez del flujo normal, escribe data/consultas/{codigo}.json. Ignora "fecha", "backfill_unspsc" y "reevaluar_inventario".'
+        required: false
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -106,8 +111,11 @@ jobs:
           FECHA_INPUT: ${{ github.event.inputs.fecha }}
           BACKFILL_UNSPSC: ${{ github.event.inputs.backfill_unspsc }}
           REEVALUAR_INVENTARIO: ${{ github.event.inputs.reevaluar_inventario }}
+          CONSULTAR_LICITACION: ${{ github.event.inputs.consultar_licitacion }}
         run: |
-          if [ "$REEVALUAR_INVENTARIO" = "true" ]; then
+          if [ -n "$CONSULTAR_LICITACION" ]; then
+            dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --consultar-licitacion "$CONSULTAR_LICITACION"
+          elif [ "$REEVALUAR_INVENTARIO" = "true" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --reevaluar-inventario
           elif [ "$BACKFILL_UNSPSC" = "true" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --backfill-unspsc
@@ -128,7 +136,7 @@ jobs:
           # cero los mismos códigos ya enriquecidos el día anterior. Mismo
           # modo de falla que ya pasó con secundarias.json/tramo_bajo.json
           # cuando esas listas se crearon (2026-09-16).
-          git add data/raw data/adjudicadas data/candidatas.json data/secundarias.json data/tramo_bajo.json data/cache-unspsc.json data/historico data/informes.json data/eventos.json docs/data.json
+          git add data/raw data/adjudicadas data/candidatas.json data/secundarias.json data/tramo_bajo.json data/cache-unspsc.json data/historico data/informes.json data/eventos.json data/consultas docs/data.json
           if git diff --cached --quiet; then
             echo "Sin cambios que commitear"
           else

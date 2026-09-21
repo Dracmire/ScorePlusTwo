@@ -73,4 +73,11 @@ public sealed class Candidata
     // — para auditoría/depuración manual, no para volver a resolver la raíz
     // (eso ya lo hizo ClasificadorUnspsc antes de persistir la candidata).
     public List<int> CodigosProductoUnspsc { get; set; } = new();
+
+    // Ítems completos del cache (CodigoProducto + Categoria en texto,
+    // 2026-09-21) — CodigosProductoUnspsc arriba solo guarda los enteros;
+    // el tablero necesita también la descripción de texto completa para el
+    // detalle expandible de la pestaña Revisión. Mismo default vacío que
+    // CodigosProductoUnspsc para lo que nunca se enriquece.
+    public List<ItemUnspscCache> ItemsUnspsc { get; set; } = new();
 }

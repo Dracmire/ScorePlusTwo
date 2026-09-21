@@ -212,6 +212,52 @@
     return escaparHtml(monto) + " " + escaparHtml(candidata.moneda);
   }
 
+  // Monto SIN redondear ni agrupar por miles (a diferencia de renderMonto,
+  // que usa toLocaleString para la tabla compacta) — para el panel de
+  // detalle expandible de la pestaña Revisión, donde el número exacto
+  // importa más que la legibilidad rápida.
+  function renderMontoExacto(candidata) {
+    if (candidata.monto == null || !candidata.moneda) return '<span class="vacio">—</span>';
+    return escaparHtml(String(candidata.monto)) + " " + escaparHtml(candidata.moneda);
+  }
+
+  // Lista de ítems UNSPSC con su descripción completa (candidata.categoria
+  // en cada ítem, texto ya resuelto por la API con los niveles separados
+  // por "/") — no solo el rubro ya resuelto por palabra, que es lo único
+  // que ya se ve en la tabla compacta (renderRubro).
+  function renderItemsUnspsc(candidata) {
+    var items = candidata.items_unspsc || [];
+    if (!items.length) return '<p class="vacio">Sin ítems UNSPSC (no enriquecido todavía).</p>';
+
+    var filas = items.map(function (item) {
+      return "<li>" +
+        '<span class="codigo-producto">' + escaparHtml(String(item.codigo_producto || "—")) + "</span>" +
+        " — " +
+        (item.categoria ? escaparHtml(item.categoria) : '<span class="vacio">sin categoría resuelta</span>') +
+        "</li>";
+    }).join("");
+
+    return "<ul class=\"lista-items-unspsc\">" + filas + "</ul>";
+  }
+
+  // Panel de detalle expandible, solo para la pestaña Revisión (2026-09-21):
+  // datos que ya vienen en docs/data.json pero que la tabla compacta no
+  // muestra — ítems UNSPSC completos, cantidad_reclamos, monto exacto sin
+  // redondear, y la región cruda tal cual la devolvió la API (candidata.region
+  // ya es ese dato crudo, sin normalizar — no hace falta transformarlo).
+  function renderPanelDetalle(candidata) {
+    return '<div class="panel-detalle">' +
+      "<div><strong>Ítems UNSPSC:</strong>" + renderItemsUnspsc(candidata) + "</div>" +
+      "<div><strong>Cantidad de reclamos:</strong> " +
+        (candidata.cantidad_reclamos == null ? '<span class="vacio">—</span>' : escaparHtml(String(candidata.cantidad_reclamos))) +
+      "</div>" +
+      "<div><strong>Monto exacto:</strong> " + renderMontoExacto(candidata) + "</div>" +
+      "<div><strong>Región (cruda, tal cual la API):</strong> " +
+        (candidata.region ? escaparHtml(candidata.region) : '<span class="vacio">—</span>') +
+      "</div>" +
+      "</div>";
+  }
+
   function renderTabla(candidatas) {
     var contenedor = document.getElementById("tabla-candidatas");
 
@@ -277,6 +323,9 @@
 
     var filas = candidatas.map(function (c) {
       return '<tr data-codigo="' + escaparHtml(c.codigo) + '">' +
+        "<td>" +
+          '<button class="boton-detalle" data-toggle-detalle aria-expanded="false">▸ Ver detalle</button>' +
+        "</td>" +
         "<td>" + renderCodigo(c) + "</td>" +
         "<td>" + escaparHtml(c.nombre) + "</td>" +
         "<td>" + renderRubro(c) + "</td>" +
@@ -286,16 +335,27 @@
           '<button class="boton-accion boton-accion-primaria" data-accion="prioritarias">Mover a Prioritarias</button>' +
           '<button class="boton-accion" data-accion="secundarias">Confirmar en Secundarias</button>' +
         "</td>" +
-        "</tr>";
+        "</tr>" +
+        '<tr class="fila-detalle" hidden><td colspan="7">' + renderPanelDetalle(c) + "</td></tr>";
     }).join("");
 
     contenedor.innerHTML =
       "<table>" +
       "<thead><tr>" +
-      "<th>Código</th><th>Nombre</th><th>Rubro</th><th>Motivo</th><th>Región</th><th>Acciones</th>" +
+      "<th></th><th>Código</th><th>Nombre</th><th>Rubro</th><th>Motivo</th><th>Región</th><th>Acciones</th>" +
       "</tr></thead>" +
       "<tbody>" + filas + "</tbody>" +
       "</table>";
+
+    contenedor.querySelectorAll("button[data-toggle-detalle]").forEach(function (boton) {
+      boton.addEventListener("click", function () {
+        var filaDetalle = boton.closest("tr").nextElementSibling;
+        var expandido = boton.getAttribute("aria-expanded") === "true";
+        filaDetalle.hidden = expandido;
+        boton.setAttribute("aria-expanded", String(!expandido));
+        boton.textContent = (expandido ? "▸" : "▾") + " Ver detalle";
+      });
+    });
 
     contenedor.querySelectorAll("tr[data-codigo]").forEach(function (fila) {
       var codigo = fila.getAttribute("data-codigo");

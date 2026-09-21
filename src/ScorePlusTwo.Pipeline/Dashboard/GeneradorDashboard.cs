@@ -23,7 +23,14 @@ public sealed record DashboardCandidata(
     // en Candidata/data/candidatas.json, nunca llegaba al tablero. Serializa
     // en snake_case vía el mismo JsonStringEnumConverter que ya usa
     // EstadoFlujo (ver JsonOpciones.Persistencia).
-    UnspscEstado UnspscEstado);
+    UnspscEstado UnspscEstado,
+    // CantidadReclamos e ItemsUnspsc (2026-09-21): mismo caso que
+    // UnspscEstado arriba — ya existían en Candidata pero nunca llegaban al
+    // tablero. Necesarios para el detalle expandible de la pestaña
+    // Revisión (cantidad de reclamos y descripción UNSPSC completa por
+    // ítem, no solo el rubro ya resuelto).
+    int? CantidadReclamos,
+    IReadOnlyList<ItemUnspscCache> ItemsUnspsc);
 
 public sealed record DashboardSerieItem(DateOnly Fecha, int Total, int Prioritarias, double Tasa);
 
@@ -72,7 +79,9 @@ public static class GeneradorDashboard
                 Tramo: c.Tramo,
                 TipoPrivado: c.TipoPrivado,
                 UrlFicha: null,
-                UnspscEstado: c.UnspscEstado))
+                UnspscEstado: c.UnspscEstado,
+                CantidadReclamos: c.CantidadReclamos,
+                ItemsUnspsc: c.ItemsUnspsc))
             .ToList();
 
         var serie = informes

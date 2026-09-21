@@ -6,7 +6,13 @@ namespace ScorePlusTwo.Pipeline.Modelos;
 // Servicio de Fotocopiado ... con Entrega de Equipos", 1057548-21-LE26) es
 // exactamente un servicio con un ítem de bien mezclado adentro. Cachear
 // solo el primer ítem perdería ese caso.
-public sealed record ItemUnspscCache(int? CodigoProducto, string? CodigoCategoria);
+//
+// Categoria (2026-09-21): texto de la jerarquía UNSPSC ya resuelto por la
+// API (ver DetalleItem) — capturado para mostrar en el tablero la
+// descripción completa de cada ítem, no solo CodigoCategoria (el código
+// numérico crudo). Parámetro opcional al final para no romper los
+// constructores posicionales existentes (tests, fixtures).
+public sealed record ItemUnspscCache(int? CodigoProducto, string? CodigoCategoria, string? Categoria = null);
 
 // data/cache-unspsc.json: el hecho crudo de qué devolvió el detalle de la
 // API para un CodigoExterno, nunca la raíz ya resuelta. El código UNSPSC
