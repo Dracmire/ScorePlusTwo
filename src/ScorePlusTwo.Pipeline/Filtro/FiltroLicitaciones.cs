@@ -138,44 +138,6 @@ public static class FiltroLicitaciones
         var trasRegion = 0;
         var familiasRevisionManual = criterios.FamiliasUnspscRevisionManual.ToHashSet();
 
-        // Términos ambiguos (RubroCriterio.TerminosAmbiguos, 2026-09-19): un
-        // match SOLO contra un término marcado como ambiguo (ej.
-        // "plataforma" en ti — colisiona con suscripciones de puro bien) no
-        // es señal suficiente por sí sola. Si el mismo rubro matchea ADEMÁS
-        // un término no ambiguo, ese gana de inmediato y el resultado es
-        // idéntico al comportamiento anterior a este campo — la ambigüedad
-        // nunca descarta nada, solo baja la confianza de una señal única.
-        (RubroCriterio? Rubro, string? Termino, bool EsAmbiguo) EvaluarRubro(string nombreNormalizado)
-        {
-            foreach (var rubro in criterios.Rubros)
-            {
-                var ambiguos = rubro.TerminosAmbiguos ?? new List<string>();
-                string? matchAmbiguo = null;
-
-                foreach (var termino in rubro.Terminos)
-                {
-                    if (!nombreNormalizado.Contains(TextoNormalizador.Normalizar(termino), StringComparison.Ordinal))
-                    {
-                        continue;
-                    }
-
-                    if (!ambiguos.Contains(termino, StringComparer.Ordinal))
-                    {
-                        return (rubro, termino, false);
-                    }
-
-                    matchAmbiguo ??= termino;
-                }
-
-                if (matchAmbiguo is not null)
-                {
-                    return (rubro, matchAmbiguo, true);
-                }
-            }
-
-            return (null, null, false);
-        }
-
         // Tramo bajo: no pasa por enriquecimiento UNSPSC ni por su
         // segmentación de lista (siempre TramoBajo, nunca se auto-promueve
         // a Prioritarias) — pero sí se evalúa rubro por palabra (2026-09-19)
@@ -185,7 +147,7 @@ public static class FiltroLicitaciones
         var tramoBajo = sobrevivientes.TramoBajo
             .Select(item =>
             {
-                var (rubro, termino, _) = EvaluarRubro(TextoNormalizador.Normalizar(item.Licitacion.Nombre));
+                var (rubro, termino, _) = EvaluarRubro(criterios, TextoNormalizador.Normalizar(item.Licitacion.Nombre));
                 return new CandidataDetectada(item.Licitacion, item.Tipo, rubro?.Id, termino);
             })
             .ToList();
@@ -224,7 +186,7 @@ public static class FiltroLicitaciones
             {
                 revisionManualUnspsc++;
 
-                var (rubroRevision, terminoRevision, _) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
+                var (rubroRevision, terminoRevision, _) = EvaluarRubro(criterios, TextoNormalizador.Normalizar(licitacion.Nombre));
                 secundarias.Add(new CandidataDetectada(
                     licitacion, tipo, rubroRevision?.Id, terminoRevision, estadoUnspsc, codigosProducto, region,
                     moneda, monto, cantidadReclamos));
@@ -244,7 +206,7 @@ public static class FiltroLicitaciones
                 trasRegion++;
             }
 
-            var (rubroEncontrado, terminoMatch, esAmbiguo) = EvaluarRubro(TextoNormalizador.Normalizar(licitacion.Nombre));
+            var (rubroEncontrado, terminoMatch, esAmbiguo) = EvaluarRubro(criterios, TextoNormalizador.Normalizar(licitacion.Nombre));
             var calificaParaPrioritarias = rubroEncontrado is not null && rubroEncontrado.Prioridad == "alta" && regionElegible;
 
             var candidata = new CandidataDetectada(
@@ -295,5 +257,49 @@ public static class FiltroLicitaciones
 
         var regionNormalizada = TextoNormalizador.Normalizar(regionUnidad);
         return criterios.Regiones.Any(r => regionNormalizada.Contains(TextoNormalizador.Normalizar(r), StringComparison.Ordinal));
+    }
+
+    // Promovido de función local privada dentro de ClasificarYFiltrarRubro
+    // (2026-09-21) para que --reevaluar-inventario pueda reusar exactamente
+    // la misma regla de términos ambiguos sin duplicarla — mismo motivo y
+    // mismo patrón que EsRegionElegible se promovió para --backfill-unspsc.
+    //
+    // Términos ambiguos (RubroCriterio.TerminosAmbiguos, 2026-09-19): un
+    // match SOLO contra un término marcado como ambiguo (ej. "plataforma"
+    // en ti — colisiona con suscripciones de puro bien) no es señal
+    // suficiente por sí sola. Si el mismo rubro matchea ADEMÁS un término
+    // no ambiguo, ese gana de inmediato y el resultado es idéntico al
+    // comportamiento anterior a este campo — la ambigüedad nunca descarta
+    // nada, solo baja la confianza de una señal única.
+    public static (RubroCriterio? Rubro, string? Termino, bool EsAmbiguo) EvaluarRubro(
+        Criterios criterios, string nombreNormalizado)
+    {
+        foreach (var rubro in criterios.Rubros)
+        {
+            var ambiguos = rubro.TerminosAmbiguos ?? new List<string>();
+            string? matchAmbiguo = null;
+
+            foreach (var termino in rubro.Terminos)
+            {
+                if (!nombreNormalizado.Contains(TextoNormalizador.Normalizar(termino), StringComparison.Ordinal))
+                {
+                    continue;
+                }
+
+                if (!ambiguos.Contains(termino, StringComparer.Ordinal))
+                {
+                    return (rubro, termino, false);
+                }
+
+                matchAmbiguo ??= termino;
+            }
+
+            if (matchAmbiguo is not null)
+            {
+                return (rubro, matchAmbiguo, true);
+            }
+        }
+
+        return (null, null, false);
     }
 }

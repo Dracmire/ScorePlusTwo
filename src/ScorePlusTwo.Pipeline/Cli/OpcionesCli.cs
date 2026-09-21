@@ -17,6 +17,13 @@ namespace ScorePlusTwo.Pipeline.Cli;
 // F2 (UNSPSC) existiera, moviendo a Secundarias las que no correspondan.
 // Requiere MP_TICKET (sin equivalente a --fixture) y no se combina con
 // ningún otro flag.
+//
+// --reevaluar-inventario (2026-09-21), mismo patrón que --backfill-unspsc
+// (ver Program.EjecutarReevaluarInventarioAsync): mantenimiento puntual
+// sobre Prioritarias + Tramo bajo (Secundarias queda intacto) — revalida
+// Estado y reclasifica con las reglas actuales (términos ambiguos
+// incluidos). Requiere MP_TICKET, sin --fixture, no se combina con otro
+// flag.
 public sealed record OpcionesCli(
     string? RutaFixture,
     DateOnly? Fecha,
@@ -24,7 +31,8 @@ public sealed record OpcionesCli(
     string? RutaCriteriosAlternativos,
     DateOnly? Desde,
     string? RutaSalidaRefiltrado,
-    bool BackfillUnspsc)
+    bool BackfillUnspsc,
+    bool ReevaluarInventario)
 {
     public static OpcionesCli Parse(string[] args)
     {
@@ -35,6 +43,7 @@ public sealed record OpcionesCli(
         DateOnly? desde = null;
         string? rutaSalidaRefiltrado = null;
         var backfillUnspsc = false;
+        var reevaluarInventario = false;
 
         for (var i = 0; i < args.Length; i++)
         {
@@ -61,10 +70,14 @@ public sealed record OpcionesCli(
                 case "--backfill-unspsc":
                     backfillUnspsc = true;
                     break;
+                case "--reevaluar-inventario":
+                    reevaluarInventario = true;
+                    break;
             }
         }
 
         return new OpcionesCli(
-            rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado, backfillUnspsc);
+            rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado,
+            backfillUnspsc, reevaluarInventario);
     }
 }

@@ -26,6 +26,10 @@ namespace ScorePlusTwo.Pipeline.Modelos;
 public sealed record DetalleLicitacionResponse(
     int Cantidad, string FechaCreacion, string Version, List<DetalleLicitacion> Listado);
 
+// CodigoEstado (2026-09-21): root-level, mismo nombre y significado que
+// LicitacionRaw.CodigoEstado en el listado — 5 es Publicada. Lo que
+// permite a --reevaluar-inventario traer Estado y los ítems UNSPSC en la
+// misma llamada de detalle, sin pedir dos veces.
 public sealed record DetalleLicitacion(
     string CodigoExterno,
     DetalleItems? Items,
@@ -33,7 +37,8 @@ public sealed record DetalleLicitacion(
     string? Moneda,
     int? VisibilidadMonto,
     decimal? MontoEstimado,
-    int? CantidadReclamos);
+    int? CantidadReclamos,
+    int CodigoEstado);
 
 public sealed record DetalleItems(List<DetalleItem> Listado);
 

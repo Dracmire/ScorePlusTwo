@@ -23,4 +23,15 @@ public enum EstadoFlujo
     // tablero (pestaña "Revisión"), lo que escribe un override en
     // data/overrides.json — ver Filtro/AplicadorOverrides.cs.
     RevisionAmbigua,
+    // Asignado por --reevaluar-inventario (2026-09-21), no al crear la
+    // candidata sino al DEGRADARLA: una Prioritaria existente que, al
+    // reclasificarse con las reglas actuales (UNSPSC + región + rubro con
+    // términos ambiguos), deja de calificar como Servicio+región
+    // elegible+rubro alta. Se mueve a Secundarias con este estado en vez
+    // de uno genérico, para que la pestaña "Revisión" del tablero la
+    // muestre igual que RevisionManual/RevisionAmbigua — un humano decide
+    // si estaba bien degradarla (Confirmar en Secundarias) o si el
+    // resultado automático se equivocó (Mover a Prioritarias, escribe un
+    // override que gana sobre esta reclasificación).
+    RevisionDegradada,
 }

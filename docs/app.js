@@ -161,14 +161,17 @@
     return escaparHtml(candidata.region);
   }
 
-  // Por qué una fila cae en la cola de revisión — los dos motivos posibles
-  // no son excluyentes en teoría, pero en la práctica cada candidata trae
-  // como mucho uno (ver FiltroLicitaciones).
+  // Por qué una fila cae en la cola de revisión — los motivos posibles no
+  // son excluyentes en teoría, pero en la práctica cada candidata trae
+  // como mucho uno (ver FiltroLicitaciones/Program.EjecutarReevaluarInventarioAsync).
   function razonRevision(candidata) {
     var razones = [];
     if (candidata.unspsc_estado === "revision_manual") razones.push("UNSPSC ambiguo en modalidad");
     if (candidata.estado_flujo === "revision_ambigua") {
       razones.push("rubro ambiguo (" + escaparHtml(candidata.termino_match || "") + ")");
+    }
+    if (candidata.estado_flujo === "revision_degradada") {
+      razones.push("dejó de calificar para Prioritarias (reevaluación de inventario)");
     }
     return razones.length ? razones.join(" · ") : '<span class="vacio">—</span>';
   }
@@ -258,8 +261,9 @@
   }
 
   // Pestaña "Revisión": junta unspsc_estado=revision_manual y
-  // estado_flujo=revision_ambigua de Secundarias (ver razonRevision) — hoy
-  // invisibles salvo bajando el CSV completo. Cada fila trae dos botones
+  // estado_flujo=revision_ambigua/revision_degradada de Secundarias (ver
+  // razonRevision) — hoy invisibles salvo bajando el CSV completo. Cada
+  // fila trae dos botones
   // que escriben un override vía la API de GitHub (ver guardarOverride);
   // el resultado real (mover la candidata de lista) lo aplica la próxima
   // corrida nocturna del pipeline, nunca esta página.
@@ -435,7 +439,9 @@
         contenedor.innerHTML = '<p class="vacio">Cargando…</p>';
 
         var enCola = datasets.secundarias.filter(function (c) {
-          return c.unspsc_estado === "revision_manual" || c.estado_flujo === "revision_ambigua";
+          return c.unspsc_estado === "revision_manual"
+            || c.estado_flujo === "revision_ambigua"
+            || c.estado_flujo === "revision_degradada";
         });
 
         if (!enCola.length) {

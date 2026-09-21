@@ -74,6 +74,11 @@ on:
         required: false
         type: boolean
         default: false
+      reevaluar_inventario:
+        description: 'true = correr --reevaluar-inventario (revalida Estado y reclasifica Prioritarias + Tramo bajo con las reglas actuales) en vez del flujo normal. Ignora "fecha" y "backfill_unspsc".'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -100,8 +105,11 @@ jobs:
           MP_TICKET: ${{ secrets.MP_TICKET }}
           FECHA_INPUT: ${{ github.event.inputs.fecha }}
           BACKFILL_UNSPSC: ${{ github.event.inputs.backfill_unspsc }}
+          REEVALUAR_INVENTARIO: ${{ github.event.inputs.reevaluar_inventario }}
         run: |
-          if [ "$BACKFILL_UNSPSC" = "true" ]; then
+          if [ "$REEVALUAR_INVENTARIO" = "true" ]; then
+            dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --reevaluar-inventario
+          elif [ "$BACKFILL_UNSPSC" = "true" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --backfill-unspsc
           elif [ -n "$FECHA_INPUT" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --fecha "$FECHA_INPUT"
