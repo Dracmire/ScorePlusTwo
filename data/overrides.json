@@ -153,5 +153,10 @@
     "lista_destino": "prioritarias",
     "revisado": true,
     "observado_en": "2026-09-21T22:11:45.415Z"
+  },
+  "1002588-97-LP26": {
+    "lista_destino": "secundarias",
+    "revisado": true,
+    "observado_en": "2026-09-21T22:11:58.714Z"
   }
 }
