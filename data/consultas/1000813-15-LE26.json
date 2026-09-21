@@ -1,0 +1,32 @@
+{
+  "codigo_externo": "1000813-15-LE26",
+  "consultado_en": "2026-09-21T22:45:06.5696416Z",
+  "encontrado": true,
+  "detalle": {
+    "codigo_externo": "1000813-15-LE26",
+    "items": {
+      "listado": [
+        {
+          "codigo_producto": 30181507,
+          "codigo_categoria": "30181500",
+          "categoria": "Art\u00EDculos para estructuras, obras y construcciones / Artefactos sanitarios / Loza sanitaria"
+        }
+      ]
+    },
+    "comprador": {
+      "region_unidad": "Regi\u00F3n de Magallanes y de la Ant\u00E1rtica"
+    },
+    "moneda": "CLP",
+    "visibilidad_monto": 0,
+    "monto_estimado": null,
+    "cantidad_reclamos": 11859,
+    "codigo_estado": 8,
+    "adjudicacion": {
+      "Tipo": 2,
+      "Fecha": "2026-09-16T00:00:00",
+      "Numero": "4182-121",
+      "NumeroOferentes": 2,
+      "UrlActa": "http://www.mercadopublico.cl/Procurement/Modules/RFB/StepsProcessAward/PreviewAwardAct.aspx?qs=hJcWUZawMi84XDTApkfVasOHAfpxg8u71evM\u002BL7OBGg="
+    }
+  }
+}
