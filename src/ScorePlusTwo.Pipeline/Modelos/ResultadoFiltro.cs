@@ -26,7 +26,14 @@ public sealed record CandidataDetectada(
     string? Moneda = null,
     decimal? Monto = null,
     int? CantidadReclamos = null,
-    bool EsRevisionAmbigua = false);
+    bool EsRevisionAmbigua = false,
+    // Ítems completos del cache (CodigoProducto + Categoria en texto),
+    // 2026-09-21 — CodigosProductoUnspsc ya guarda los enteros para
+    // auditoría, pero el tablero necesita también la descripción de texto
+    // para el detalle expandible de la pestaña Revisión. Null para lo que
+    // nunca se enriquece (TramoBajo, tipos privados), igual criterio que
+    // el resto de los campos de enriquecimiento.
+    IReadOnlyList<ItemUnspscCache>? ItemsUnspsc = null);
 
 // Una licitación que sobrevivió estado+tipo+descarte_duro, todavía sin
 // clasificar por rubro. Tipo ya viene resuelto (derivado de CodigoExterno

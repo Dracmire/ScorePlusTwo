@@ -24,6 +24,12 @@ namespace ScorePlusTwo.Pipeline.Cli;
 // Estado y reclasifica con las reglas actuales (términos ambiguos
 // incluidos). Requiere MP_TICKET, sin --fixture, no se combina con otro
 // flag.
+//
+// --consultar-licitacion <codigo> (2026-09-21), mismo patrón estructural
+// que los dos anteriores (ver Program.EjecutarConsultarLicitacionAsync):
+// una sola llamada de detalle sobre un código puntual, persistida en
+// data/consultas/{codigo}.json — sirve de cache para el botón "Consultar"
+// del tablero. Requiere MP_TICKET, sin --fixture.
 public sealed record OpcionesCli(
     string? RutaFixture,
     DateOnly? Fecha,
@@ -32,7 +38,8 @@ public sealed record OpcionesCli(
     DateOnly? Desde,
     string? RutaSalidaRefiltrado,
     bool BackfillUnspsc,
-    bool ReevaluarInventario)
+    bool ReevaluarInventario,
+    string? ConsultarLicitacion)
 {
     public static OpcionesCli Parse(string[] args)
     {
@@ -44,6 +51,7 @@ public sealed record OpcionesCli(
         string? rutaSalidaRefiltrado = null;
         var backfillUnspsc = false;
         var reevaluarInventario = false;
+        string? consultarLicitacion = null;
 
         for (var i = 0; i < args.Length; i++)
         {
@@ -73,11 +81,14 @@ public sealed record OpcionesCli(
                 case "--reevaluar-inventario":
                     reevaluarInventario = true;
                     break;
+                case "--consultar-licitacion" when i + 1 < args.Length:
+                    consultarLicitacion = args[++i];
+                    break;
             }
         }
 
         return new OpcionesCli(
             rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado,
-            backfillUnspsc, reevaluarInventario);
+            backfillUnspsc, reevaluarInventario, consultarLicitacion);
     }
 }

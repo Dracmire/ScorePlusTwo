@@ -178,7 +178,7 @@ public static class FiltroLicitaciones
 
                 secundarias.Add(new CandidataDetectada(
                     licitacion, tipo, RubroMatch: null, TerminoMatch: null, estadoUnspsc, codigosProducto, region,
-                    moneda, monto, cantidadReclamos));
+                    moneda, monto, cantidadReclamos, ItemsUnspsc: entrada?.Items));
                 continue;
             }
 
@@ -189,7 +189,7 @@ public static class FiltroLicitaciones
                 var (rubroRevision, terminoRevision, _) = EvaluarRubro(criterios, TextoNormalizador.Normalizar(licitacion.Nombre));
                 secundarias.Add(new CandidataDetectada(
                     licitacion, tipo, rubroRevision?.Id, terminoRevision, estadoUnspsc, codigosProducto, region,
-                    moneda, monto, cantidadReclamos));
+                    moneda, monto, cantidadReclamos, ItemsUnspsc: entrada?.Items));
                 continue;
             }
 
@@ -216,7 +216,8 @@ public static class FiltroLicitaciones
                 // término que matcheó está marcado como ambiguo — un humano
                 // decide desde el tablero (pestaña "Revisión"), lo que
                 // escribe un override en data/overrides.json.
-                EsRevisionAmbigua: calificaParaPrioritarias && esAmbiguo);
+                EsRevisionAmbigua: calificaParaPrioritarias && esAmbiguo,
+                ItemsUnspsc: entrada?.Items);
 
             if (calificaParaPrioritarias && !esAmbiguo)
             {

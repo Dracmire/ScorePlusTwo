@@ -56,6 +56,16 @@ public static class Program
                 return await EjecutarReevaluarInventarioAsync(repoRoot);
             }
 
+            // Otra rama completamente aparte (2026-09-21, mismo criterio
+            // estructural que los dos anteriores): una sola llamada de
+            // detalle sobre un código puntual, persistida en
+            // data/consultas/{codigo}.json para que sirva de cache al botón
+            // "Consultar" del tablero. Ver EjecutarConsultarLicitacionAsync.
+            if (opciones.ConsultarLicitacion is not null)
+            {
+                return await EjecutarConsultarLicitacionAsync(repoRoot, opciones.ConsultarLicitacion);
+            }
+
             var criterios = JsonStore.Cargar<Criterios>(
                 Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
             var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
@@ -455,6 +465,7 @@ public static class Program
             TipoPrivado = tiposPrivados.Contains(detectada.Tipo),
             UnspscEstado = detectada.UnspscEstado,
             CodigosProductoUnspsc = detectada.CodigosProductoUnspsc?.ToList() ?? new List<int>(),
+            ItemsUnspsc = detectada.ItemsUnspsc?.ToList() ?? new List<ItemUnspscCache>(),
         };
 
     // Mismo merge/dedupe para las tres listas (Prioritarias -> candidatas.json,
@@ -924,6 +935,7 @@ public static class Program
                 .Where(i => i.CodigoProducto is not null)
                 .Select(i => i.CodigoProducto!.Value)
                 .ToList() ?? new List<int>();
+            candidata.ItemsUnspsc = entrada?.Items ?? new List<ItemUnspscCache>();
 
             // Bien/SinResolver/PendienteEnriquecimiento nunca evalúan rubro
             // (mismo invariante que ClasificarYFiltrarRubro) — se limpia
@@ -1148,6 +1160,7 @@ public static class Program
                 .Where(i => i.CodigoProducto is not null)
                 .Select(i => i.CodigoProducto!.Value)
                 .ToList();
+            candidata.ItemsUnspsc = entrada.Items;
 
             bool seMantiene;
             if (estadoUnspsc is UnspscEstado.Bien or UnspscEstado.SinResolver or UnspscEstado.PendienteEnriquecimiento)
@@ -1321,6 +1334,53 @@ public static class Program
             (llamadasIntentadas > 0
                 ? $"promedio={cronometro.Elapsed.TotalSeconds / llamadasIntentadas:F2}s/llamada"
                 : "(nada que procesar)"));
+
+        return 0;
+    }
+
+    // Requiere MP_TICKET real — no tiene equivalente a --fixture (consultar
+    // un código puntual no tiene sentido offline).
+    //
+    // A diferencia de --backfill-unspsc/--reevaluar-inventario, este modo no
+    // toca candidatas.json/secundarias.json/tramo_bajo.json/eventos.json —
+    // es una consulta puntual, sin efecto sobre el estado del pipeline. Su
+    // única salida es data/consultas/{codigo}.json, que además sirve de
+    // cache: si el tablero vuelve a pedir el mismo código, lo lee directo
+    // sin disparar este modo de nuevo (ver diseño de la pestaña "Consulta").
+    private static async Task<int> EjecutarConsultarLicitacionAsync(string repoRoot, string codigo)
+    {
+        var ticket = Environment.GetEnvironmentVariable("MP_TICKET")
+            ?? throw new MercadoPublicoApiException(
+                "Falta la variable de entorno MP_TICKET (--consultar-licitacion requiere red real, no tiene modo --fixture).");
+
+        using var http = new HttpClient();
+        var cliente = new MercadoPublicoClient(http, ticket);
+        var respuesta = await cliente.ObtenerDetalleAsync(codigo);
+        var detalle = respuesta.Listado.FirstOrDefault(l => l.CodigoExterno == codigo);
+
+        var resultado = new ResultadoConsulta(codigo, DateTime.UtcNow, detalle is not null, detalle);
+
+        // Saneo defensivo del nombre de archivo: los códigos reales usan
+        // '-' (ej. 734-50-LE26), válido en cualquier filesystem, así que
+        // esto solo importa si el tablero envía un código con caracteres
+        // inválidos (espacio, '/', etc.) — nunca debería pasar con un
+        // código real, pero el input viene de un campo de texto libre.
+        var codigoSaneado = string.Concat(codigo.Select(c => Path.GetInvalidFileNameChars().Contains(c) ? '_' : c));
+        var rutaSalida = Path.Combine(repoRoot, "data", "consultas", $"{codigoSaneado}.json");
+        JsonStore.Guardar(rutaSalida, resultado, JsonOpciones.Persistencia);
+
+        if (!resultado.Encontrado)
+        {
+            Console.WriteLine($"[CONSULTA] {codigo}: no encontrado (Listado vacío en la respuesta de la API).");
+            return 0;
+        }
+
+        Console.WriteLine($"[CONSULTA] {codigo}: encontrado. CodigoEstado={detalle!.CodigoEstado}");
+        Console.WriteLine(
+            $"[CONSULTA] Adjudicacion crudo: " +
+            (detalle.Adjudicacion is null
+                ? "null (campo ausente en la respuesta)"
+                : detalle.Adjudicacion.Value.GetRawText()));
 
         return 0;
     }

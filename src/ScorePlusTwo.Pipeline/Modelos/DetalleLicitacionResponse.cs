@@ -30,6 +30,12 @@ public sealed record DetalleLicitacionResponse(
 // LicitacionRaw.CodigoEstado en el listado — 5 es Publicada. Lo que
 // permite a --reevaluar-inventario traer Estado y los ítems UNSPSC en la
 // misma llamada de detalle, sin pedir dos veces.
+// Adjudicacion (2026-09-21): campo crudo, sin modelar — su shape real no
+// está verificado todavía (ver Program.EjecutarConsultarLicitacionAsync).
+// Se captura como JsonElement? a propósito, mismo criterio ya usado en esta
+// sesión para no adivinar shapes de API: primero se inspecciona con datos
+// reales de un código adjudicado (estado 8), y solo si vale la pena se
+// tipa un record propio más adelante.
 public sealed record DetalleLicitacion(
     string CodigoExterno,
     DetalleItems? Items,
@@ -38,11 +44,21 @@ public sealed record DetalleLicitacion(
     int? VisibilidadMonto,
     decimal? MontoEstimado,
     int? CantidadReclamos,
-    int CodigoEstado);
+    int CodigoEstado,
+    System.Text.Json.JsonElement? Adjudicacion = null);
 
 public sealed record DetalleItems(List<DetalleItem> Listado);
 
-public sealed record DetalleItem(int? CodigoProducto, string? CodigoCategoria);
+// Categoria (2026-09-21): texto ya resuelto por la API con los niveles de
+// la jerarquía UNSPSC separados por "/" (ej. "Servicios profesionales,
+// administrativos y consultorías de gestión empresarial / Servicios de
+// recursos humanos / Consultorías para el desarrollo de recursos humanos")
+// — confirmado con datos reales en la investigación UNSPSC de septiembre,
+// pero nunca capturado hasta ahora porque F2 no lo necesitaba (la raíz
+// bien/servicio se resuelve caminando CodigoProducto contra el catálogo,
+// no leyendo este texto). El tablero sí lo necesita para mostrar la
+// descripción completa de cada ítem, no solo el rubro ya resuelto.
+public sealed record DetalleItem(int? CodigoProducto, string? CodigoCategoria, string? Categoria);
 
 // La API real devuelve RegionUnidad con espacio final en al menos un caso
 // verificado ("Región del Biobío ", código 732434-20-LP26) — el matching
