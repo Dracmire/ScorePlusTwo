@@ -45,6 +45,17 @@ public static class Program
                 return await EjecutarBackfillUnspscAsync(repoRoot);
             }
 
+            // Otra rama completamente aparte (2026-09-21, mismo criterio
+            // estructural que --backfill-unspsc): mantenimiento puntual
+            // sobre Prioritarias + Tramo bajo, revalidando Estado y
+            // reclasificando con las reglas actuales (términos ambiguos
+            // incluidos). Secundarias nunca se toca. Ver
+            // EjecutarReevaluarInventarioAsync.
+            if (opciones.ReevaluarInventario)
+            {
+                return await EjecutarReevaluarInventarioAsync(repoRoot);
+            }
+
             var criterios = JsonStore.Cargar<Criterios>(
                 Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
             var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
@@ -1006,6 +1017,310 @@ public static class Program
         {
             Console.WriteLine($"Códigos sin_resolver ({codigosSinResolver.Count}): {string.Join(", ", codigosSinResolver)}");
         }
+
+        return 0;
+    }
+
+    // Mantenimiento puntual (2026-09-21): las Prioritarias y Tramo bajo
+    // existentes quedaron congeladas con clasificaciones de antes de los
+    // cambios de PR #31 (términos ambiguos, rubro en Tramo bajo) — mismo
+    // problema que motivó --backfill-unspsc, mismo remedio: revalida
+    // Estado (mismo criterio que RevalidarEstado) y reclasifica con las
+    // reglas actuales. Secundarias queda intacto por diseño explícito —
+    // sigue siendo repositorio sin filtrar.
+    //
+    // Requiere MP_TICKET real — no tiene equivalente a --fixture.
+    private static async Task<int> EjecutarReevaluarInventarioAsync(string repoRoot)
+    {
+        var ticket = Environment.GetEnvironmentVariable("MP_TICKET")
+            ?? throw new MercadoPublicoApiException(
+                "Falta la variable de entorno MP_TICKET (--reevaluar-inventario requiere red real, no tiene modo --fixture).");
+
+        var criterios = JsonStore.Cargar<Criterios>(
+            Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
+        var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
+            Path.Combine(repoRoot, "config", "catalogo-unspsc.tsv"));
+        var familiasRevisionManual = criterios.FamiliasUnspscRevisionManual.ToHashSet();
+
+        var rutaCacheUnspsc = Path.Combine(repoRoot, "data", "cache-unspsc.json");
+        var cacheUnspscInicial = JsonStore.CargarOPredeterminado(
+            rutaCacheUnspsc, JsonOpciones.Persistencia, new List<EntradaCacheUnspsc>());
+        var cacheUnspsc = cacheUnspscInicial.ToDictionary(e => e.CodigoExterno);
+
+        var rutaPrioritarias = Path.Combine(repoRoot, "data", "candidatas.json");
+        var rutaTramoBajo = Path.Combine(repoRoot, "data", "tramo_bajo.json");
+        var rutaSecundarias = Path.Combine(repoRoot, "data", "secundarias.json");
+        var rutaHistoricoPrioritarias = Path.Combine(repoRoot, "data", "historico", "candidatas.json");
+        var rutaHistoricoTramoBajo = Path.Combine(repoRoot, "data", "historico", "tramo_bajo.json");
+
+        var prioritarias = JsonStore.CargarOPredeterminado(rutaPrioritarias, JsonOpciones.Persistencia, new List<Candidata>());
+        var tramoBajo = JsonStore.CargarOPredeterminado(rutaTramoBajo, JsonOpciones.Persistencia, new List<Candidata>());
+
+        using var http = new HttpClient();
+        var cliente = new MercadoPublicoClient(http, ticket);
+
+        var cronometro = System.Diagnostics.Stopwatch.StartNew();
+        var llamadasIntentadas = 0;
+        var llamadasExitosas = 0;
+        var cacheModificado = false;
+
+        // Un fallo puntual (agotados los reintentos) nunca es fatal para el
+        // resto — misma asimetría ya establecida (EnriquecimientoUnspscService,
+        // barrido activas): la candidata se deja tal cual, se reintenta en
+        // una corrida futura.
+        async Task<DetalleLicitacion?> ObtenerDetalleSeguro(string codigo)
+        {
+            llamadasIntentadas++;
+            try
+            {
+                var respuesta = await cliente.ObtenerDetalleAsync(codigo);
+                llamadasExitosas++;
+                return respuesta.Listado.FirstOrDefault(l => l.CodigoExterno == codigo);
+            }
+            catch (MercadoPublicoApiException ex)
+            {
+                Console.Error.WriteLine(
+                    $"[ADVERTENCIA] Detalle omitido para {codigo}, se reintenta la próxima corrida: {ex.Message}");
+                return null;
+            }
+        }
+
+        var prioritariasActivas = new List<Candidata>();
+        var prioritariasHistorico = new List<Candidata>();
+        var secundariasNuevas = new List<Candidata>();
+        var tramoBajoActivas = new List<Candidata>();
+        var tramoBajoHistorico = new List<Candidata>();
+
+        var movidasHistoricoPrioritarias = 0;
+        var movidasHistoricoTramoBajo = 0;
+        var tramoBajoConRubro = 0;
+        var prioritariasConfirmadas = 0;
+        var prioritariasDegradadas = 0;
+
+        foreach (var candidata in prioritarias)
+        {
+            var licitacion = await ObtenerDetalleSeguro(candidata.Codigo);
+            if (licitacion is null)
+            {
+                prioritariasActivas.Add(candidata);
+                continue;
+            }
+
+            cacheUnspsc[candidata.Codigo] = EnriquecimientoUnspscService.ConstruirEntrada(candidata.Codigo, licitacion);
+            cacheModificado = true;
+
+            if (candidata.EstadoFlujo != EstadoFlujo.Pendiente)
+            {
+                // Triage humano ya encima — se respeta tal cual, mismo
+                // criterio que RevalidarEstado (ni se mueve a histórico ni
+                // se reclasifica, aunque Mercado Público ya la muestre
+                // cerrada o UNSPSC diga que ya no calificaría).
+                prioritariasActivas.Add(candidata);
+                continue;
+            }
+
+            if (licitacion.CodigoEstado != 5)
+            {
+                var estadoCierre = MapearEstadoDeCierre(licitacion.CodigoEstado);
+                if (estadoCierre is null)
+                {
+                    Console.Error.WriteLine(
+                        $"[ADVERTENCIA] Estado no documentado ({licitacion.CodigoEstado}) en {candidata.Codigo}, " +
+                        "tratado como Cerrada por defecto.");
+                }
+
+                candidata.EstadoFlujo = estadoCierre ?? EstadoFlujo.Cerrada;
+                prioritariasHistorico.Add(candidata);
+                movidasHistoricoPrioritarias++;
+                continue;
+            }
+
+            // Sigue Publicada: reclasificar con las reglas actuales, misma
+            // precedencia que ClasificarYFiltrarRubro para Regular.
+            var entrada = cacheUnspsc[candidata.Codigo];
+            var estadoUnspsc = ClasificadorUnspsc.Clasificar(entrada, catalogoUnspsc, familiasRevisionManual);
+            candidata.UnspscEstado = estadoUnspsc;
+            candidata.Region = entrada.RegionUnidad;
+            candidata.Moneda = entrada.Moneda;
+            candidata.Monto = entrada.Monto;
+            candidata.CantidadReclamos = entrada.CantidadReclamos;
+            candidata.CodigosProductoUnspsc = entrada.Items
+                .Where(i => i.CodigoProducto is not null)
+                .Select(i => i.CodigoProducto!.Value)
+                .ToList();
+
+            bool seMantiene;
+            if (estadoUnspsc is UnspscEstado.Bien or UnspscEstado.SinResolver or UnspscEstado.PendienteEnriquecimiento)
+            {
+                candidata.RubroMatch = null;
+                candidata.TerminoMatch = null;
+                seMantiene = false;
+            }
+            else if (estadoUnspsc == UnspscEstado.RevisionManual)
+            {
+                var (rubroRevision, terminoRevision, _) = FiltroLicitaciones.EvaluarRubro(
+                    criterios, TextoNormalizador.Normalizar(candidata.Nombre));
+                candidata.RubroMatch = rubroRevision?.Id;
+                candidata.TerminoMatch = terminoRevision;
+                seMantiene = false;
+            }
+            else // Servicio
+            {
+                var (rubro, termino, esAmbiguo) = FiltroLicitaciones.EvaluarRubro(
+                    criterios, TextoNormalizador.Normalizar(candidata.Nombre));
+                var regionElegible = FiltroLicitaciones.EsRegionElegible(criterios, candidata.Region);
+                candidata.RubroMatch = rubro?.Id;
+                candidata.TerminoMatch = termino;
+                seMantiene = rubro is not null && rubro.Prioridad == "alta" && regionElegible && !esAmbiguo;
+            }
+
+            if (seMantiene)
+            {
+                prioritariasConfirmadas++;
+                prioritariasActivas.Add(candidata);
+            }
+            else
+            {
+                candidata.EstadoFlujo = EstadoFlujo.RevisionDegradada;
+                prioritariasDegradadas++;
+                secundariasNuevas.Add(candidata);
+            }
+        }
+
+        foreach (var candidata in tramoBajo)
+        {
+            var licitacion = await ObtenerDetalleSeguro(candidata.Codigo);
+            if (licitacion is null)
+            {
+                tramoBajoActivas.Add(candidata);
+                continue;
+            }
+
+            cacheUnspsc[candidata.Codigo] = EnriquecimientoUnspscService.ConstruirEntrada(candidata.Codigo, licitacion);
+            cacheModificado = true;
+
+            if (candidata.EstadoFlujo != EstadoFlujo.Pendiente)
+            {
+                tramoBajoActivas.Add(candidata);
+                continue;
+            }
+
+            if (licitacion.CodigoEstado != 5)
+            {
+                var estadoCierre = MapearEstadoDeCierre(licitacion.CodigoEstado);
+                if (estadoCierre is null)
+                {
+                    Console.Error.WriteLine(
+                        $"[ADVERTENCIA] Estado no documentado ({licitacion.CodigoEstado}) en {candidata.Codigo}, " +
+                        "tratado como Cerrada por defecto.");
+                }
+
+                candidata.EstadoFlujo = estadoCierre ?? EstadoFlujo.Cerrada;
+                tramoBajoHistorico.Add(candidata);
+                movidasHistoricoTramoBajo++;
+                continue;
+            }
+
+            // Sigue Publicada: UNSPSC + rubro SIEMPRE, para cualquier
+            // UnspscEstado resultante — a diferencia de Regular, acá
+            // rubro_match/termino_match son el dato que se muestra en el
+            // tablero, nunca deciden promoción de lista (Tramo bajo nunca
+            // cambia de lista, con o sin rubro, con o sin UNSPSC).
+            var entrada = cacheUnspsc[candidata.Codigo];
+            var estadoUnspsc = ClasificadorUnspsc.Clasificar(entrada, catalogoUnspsc, familiasRevisionManual);
+            var (rubro, termino, _) = FiltroLicitaciones.EvaluarRubro(
+                criterios, TextoNormalizador.Normalizar(candidata.Nombre));
+            candidata.UnspscEstado = estadoUnspsc;
+            candidata.RubroMatch = rubro?.Id;
+            candidata.TerminoMatch = termino;
+            if (rubro is not null)
+            {
+                tramoBajoConRubro++;
+            }
+
+            tramoBajoActivas.Add(candidata);
+        }
+
+        cronometro.Stop();
+
+        // Overrides humanos (ver AplicadorOverrides): una decisión ya
+        // tomada desde el tablero debe seguir ganando aunque este modo
+        // diga lo contrario — se aplica al final, sobre el resultado ya
+        // reclasificado, antes de persistir.
+        var secundariasExistentes = JsonStore.CargarOPredeterminado(
+            rutaSecundarias, JsonOpciones.Persistencia, new List<Candidata>());
+        var codigosSecundariasExistentes = secundariasExistentes.Select(c => c.Codigo).ToHashSet();
+        foreach (var candidata in secundariasNuevas)
+        {
+            if (codigosSecundariasExistentes.Add(candidata.Codigo))
+            {
+                secundariasExistentes.Add(candidata);
+            }
+        }
+
+        var overrides = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "overrides.json"), JsonOpciones.Persistencia,
+            new Dictionary<string, EntradaOverride>());
+        var (prioritariasFinal, secundariasFinal, _) = AplicadorOverrides.Aplicar(
+            overrides, prioritariasActivas, secundariasExistentes);
+
+        JsonStore.Guardar(rutaPrioritarias, prioritariasFinal, JsonOpciones.Persistencia);
+        JsonStore.Guardar(rutaSecundarias, secundariasFinal, JsonOpciones.Persistencia);
+        JsonStore.Guardar(rutaTramoBajo, tramoBajoActivas, JsonOpciones.Persistencia);
+
+        if (prioritariasHistorico.Count > 0)
+        {
+            var historico = JsonStore.CargarOPredeterminado(rutaHistoricoPrioritarias, JsonOpciones.Persistencia, new List<Candidata>());
+            historico.AddRange(prioritariasHistorico);
+            JsonStore.Guardar(rutaHistoricoPrioritarias, historico, JsonOpciones.Persistencia);
+        }
+
+        if (tramoBajoHistorico.Count > 0)
+        {
+            var historico = JsonStore.CargarOPredeterminado(rutaHistoricoTramoBajo, JsonOpciones.Persistencia, new List<Candidata>());
+            historico.AddRange(tramoBajoHistorico);
+            JsonStore.Guardar(rutaHistoricoTramoBajo, historico, JsonOpciones.Persistencia);
+        }
+
+        // A diferencia del flujo diario (que solo agrega códigos nuevos y
+        // por eso puede usar "¿creció el conteo?" como señal de cambio),
+        // este modo SIEMPRE refresca entradas ya cacheadas — el conteo
+        // puede quedar igual aunque el contenido haya cambiado. Se
+        // reescribe sin condición si se procesó al menos un código.
+        if (cacheModificado)
+        {
+            var cacheOrdenado = cacheUnspsc.Values.OrderBy(e => e.CodigoExterno, StringComparer.Ordinal).ToList();
+            JsonStore.Guardar(rutaCacheUnspsc, cacheOrdenado, JsonOpciones.Persistencia);
+        }
+
+        var informesExistentes = CargarInformesConMigracion(Path.Combine(repoRoot, "data", "informes.json"));
+        var dashboard = GeneradorDashboard.Construir(
+            prioritariasFinal, secundariasFinal, tramoBajoActivas, informesExistentes, DateTime.UtcNow);
+        JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
+
+        var totalProcesadas = prioritarias.Count + tramoBajo.Count;
+        var detalleEvento = $"total={totalProcesadas} historico_prioritarias={movidasHistoricoPrioritarias} " +
+            $"historico_tramo_bajo={movidasHistoricoTramoBajo} tramo_bajo_con_rubro={tramoBajoConRubro} " +
+            $"prioritarias_confirmadas={prioritariasConfirmadas} prioritarias_revision_degradada={prioritariasDegradadas}";
+        var eventos = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "eventos.json"), JsonOpciones.Persistencia, new List<EventoAuditoria>());
+        eventos.Add(new EventoAuditoria(DateTime.UtcNow, "sistema", "reevaluar_inventario", null, detalleEvento));
+        JsonStore.Guardar(Path.Combine(repoRoot, "data", "eventos.json"), eventos, JsonOpciones.Persistencia);
+
+        Console.WriteLine("== Resumen de --reevaluar-inventario ==");
+        Console.WriteLine($"Procesadas: {totalProcesadas} (Prioritarias={prioritarias.Count}, Tramo bajo={tramoBajo.Count})");
+        Console.WriteLine(
+            $"Movidas a histórico por cierre: {movidasHistoricoPrioritarias + movidasHistoricoTramoBajo} " +
+            $"(Prioritarias={movidasHistoricoPrioritarias}, Tramo bajo={movidasHistoricoTramoBajo})");
+        Console.WriteLine($"Tramo bajo con rubro_match poblado: {tramoBajoConRubro}");
+        Console.WriteLine($"Prioritarias confirmadas (sin cambios): {prioritariasConfirmadas}");
+        Console.WriteLine($"Prioritarias a RevisionDegradada: {prioritariasDegradadas}");
+        Console.WriteLine(
+            $"Enriquecimiento: llamadas_intentadas={llamadasIntentadas} exitosas={llamadasExitosas} " +
+            $"fallidas={llamadasIntentadas - llamadasExitosas} tiempo_total={cronometro.Elapsed.TotalSeconds:F1}s " +
+            (llamadasIntentadas > 0
+                ? $"promedio={cronometro.Elapsed.TotalSeconds / llamadasIntentadas:F2}s/llamada"
+                : "(nada que procesar)"));
 
         return 0;
     }

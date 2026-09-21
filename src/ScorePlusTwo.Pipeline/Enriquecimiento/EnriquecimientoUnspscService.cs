@@ -24,22 +24,7 @@ public static class EnriquecimientoUnspscService
             {
                 var detalle = await cliente.ObtenerDetalleAsync(codigo, ct);
                 var licitacion = detalle.Listado.FirstOrDefault(l => l.CodigoExterno == codigo);
-                var items = (licitacion?.Items?.Listado ?? new List<DetalleItem>())
-                    .Select(i => new ItemUnspscCache(i.CodigoProducto, i.CodigoCategoria))
-                    .ToList();
-
-                // VisibilidadMonto==0 (o ausente) significa "el organismo no
-                // publicó el monto" — se normaliza a null en Moneda/Monto acá,
-                // en el punto de captura, para que el cache mismo ya refleje
-                // "no publicado" sin que cada consumidor tenga que repetir el
-                // chequeo de VisibilidadMonto (ver EntradaCacheUnspsc).
-                var montoVisible = (licitacion?.VisibilidadMonto ?? 0) != 0;
-                var moneda = montoVisible ? licitacion?.Moneda : null;
-                var monto = montoVisible ? licitacion?.MontoEstimado : null;
-
-                nuevas.Add(new EntradaCacheUnspsc(
-                    codigo, items, DateTime.UtcNow, licitacion?.Comprador?.RegionUnidad,
-                    moneda, monto, licitacion?.CantidadReclamos));
+                nuevas.Add(ConstruirEntrada(codigo, licitacion));
             }
             catch (MercadoPublicoApiException ex)
             {
@@ -49,5 +34,32 @@ public static class EnriquecimientoUnspscService
         }
 
         return nuevas;
+    }
+
+    // Extraído (2026-09-21) para que --reevaluar-inventario pueda construir
+    // la misma EntradaCacheUnspsc a partir de un DetalleLicitacion que ya
+    // obtuvo por su cuenta (también necesita CodigoEstado del mismo
+    // response, que este servicio no expone) — sin este método compartido,
+    // la alternativa era duplicar la normalización de Moneda/Monto en un
+    // segundo lugar, el mismo riesgo de deriva que ya se señaló con
+    // descarte_duro. Sin cambio de comportamiento para EnriquecerAsync.
+    public static EntradaCacheUnspsc ConstruirEntrada(string codigo, DetalleLicitacion? licitacion)
+    {
+        var items = (licitacion?.Items?.Listado ?? new List<DetalleItem>())
+            .Select(i => new ItemUnspscCache(i.CodigoProducto, i.CodigoCategoria))
+            .ToList();
+
+        // VisibilidadMonto==0 (o ausente) significa "el organismo no
+        // publicó el monto" — se normaliza a null en Moneda/Monto acá, en
+        // el punto de captura, para que el cache mismo ya refleje "no
+        // publicado" sin que cada consumidor tenga que repetir el chequeo
+        // de VisibilidadMonto (ver EntradaCacheUnspsc).
+        var montoVisible = (licitacion?.VisibilidadMonto ?? 0) != 0;
+        var moneda = montoVisible ? licitacion?.Moneda : null;
+        var monto = montoVisible ? licitacion?.MontoEstimado : null;
+
+        return new EntradaCacheUnspsc(
+            codigo, items, DateTime.UtcNow, licitacion?.Comprador?.RegionUnidad,
+            moneda, monto, licitacion?.CantidadReclamos);
     }
 }
