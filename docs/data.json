@@ -1,63 +1,6 @@
 {
-  "generado_en": "2026-09-21T04:48:38.2404551Z",
+  "generado_en": "2026-09-21T05:53:35.9420112Z",
   "prioritarias": [
-    {
-      "codigo": "2446-251-LE26",
-      "nombre": "IMPLEMENTACION PLATAFORMA E-LEARNING",
-      "tipo": "LE",
-      "fecha_cierre": "2026-09-07T15:09:00",
-      "rubro_match": "ti",
-      "termino_match": "plataforma",
-      "region": "Regi\u00F3n de Coquimbo ",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 14000000.0,
-      "estado_flujo": "pendiente",
-      "origen": "activas",
-      "fecha_lote": "2026-09-05",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
-      "codigo": "3378-51-LP26",
-      "nombre": "SERVICIO DE SOPORTE Y MANTENCI\u00D3N DE SISTEMA Y BASE DE DATOS SAP-HANA BUSINESS ONE PARA EL HMS POR 36 MESES",
-      "tipo": "LP",
-      "fecha_cierre": "2026-09-07T16:00:00",
-      "rubro_match": "ti",
-      "termino_match": "base de datos",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 272160000.0,
-      "estado_flujo": "pendiente",
-      "origen": "activas",
-      "fecha_lote": "2026-09-05",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
-      "codigo": "598-16-LE26",
-      "nombre": "SERVICIO DE CAPACITACI\u00D3N EN PROTECCI\u00D3N DE DATOS PERSONALES GOBERNANZA DE DATOS Y CUMPLIMIENTO NORMATIVO",
-      "tipo": "LE",
-      "fecha_cierre": "2026-09-08T09:00:00",
-      "rubro_match": "compliance",
-      "termino_match": "cumplimiento normativ",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "activas",
-      "fecha_lote": "2026-09-05",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
     {
       "codigo": "612-19-LE26",
       "nombre": "Almacenaje y digitalizaci\u00F3n de Doc. Confidenciales",
@@ -110,25 +53,6 @@
       "estado_flujo": "pendiente",
       "origen": "diario",
       "fecha_lote": "2026-09-08",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
-      "codigo": "1606-30-LE26",
-      "nombre": "CONTRATACI\u00D3N SERVICIO DE DIAGRAMACI\u00D3N DE PIEZAS GR\u00C1FICAS Y WEB DEL PROYECTO \u201CFORTALECIMIENTO DE LAS CAPACIDADES DE LATINOAM\u00C9RICA Y EL CARIBE EN MATERIA DE CIBERSEGURIDAD\u201D FINANCIADO POR LA UNI\u00D3N EUROPEA.",
-      "tipo": "LE",
-      "fecha_cierre": "2026-09-24T15:10:00",
-      "rubro_match": "ti",
-      "termino_match": "ciberseguridad",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 15000.0,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-14",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null,
@@ -230,25 +154,6 @@
       "unspsc_estado": "servicio"
     },
     {
-      "codigo": "3269-10-LP26",
-      "nombre": "S.A. 68 SOPORTE Y MANTTO PLATAFORMA DATOS QUMULO",
-      "tipo": "LP",
-      "fecha_cierre": "2026-09-30T12:00:00",
-      "rubro_match": "ti",
-      "termino_match": "plataforma",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 94099000.0,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-10",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
       "codigo": "721703-40-LP26",
       "nombre": "Diagramaci\u00F3n ilustraci\u00F3n y digitalizaci\u00F3n SNE y DIA 2027",
       "tipo": "LP",
@@ -268,25 +173,6 @@
       "unspsc_estado": "servicio"
     },
     {
-      "codigo": "885-84-LE26",
-      "nombre": "Soporte mantenci\u00F3n y monitoreo plataforma legacy IBM Spectrum para la Contralor\u00EDa General de la Rep\u00FAblica",
-      "tipo": "LE",
-      "fecha_cierre": "2026-09-30T16:00:00",
-      "rubro_match": "ti",
-      "termino_match": "plataforma",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 30000000.0,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-15",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
       "codigo": "2741-60-LE26",
       "nombre": "SERVICIO AUDITORIA EXTERNA ESTADOS FINANCIEROS",
       "tipo": "LE",
@@ -300,44 +186,6 @@
       "estado_flujo": "pendiente",
       "origen": "diario",
       "fecha_lote": "2026-09-07",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
-      "codigo": "598-22-LE26",
-      "nombre": "Servicio de Aseo Plataforma Regional Puerto Montt",
-      "tipo": "LE",
-      "fecha_cierre": "2026-10-02T09:00:00",
-      "rubro_match": "ti",
-      "termino_match": "plataforma",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 14000000.0,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-15",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
-      "codigo": "1562-61-LP26",
-      "nombre": "PLATAFORMA DE SEGURIDAD PERIMETRAL",
-      "tipo": "LP",
-      "fecha_cierre": "2026-10-05T15:01:00",
-      "rubro_match": "ti",
-      "termino_match": "plataforma",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 78172750.0,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-15",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null,
@@ -376,63 +224,6 @@
       "estado_flujo": "pendiente",
       "origen": "diario",
       "fecha_lote": "2026-09-09",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
-      "codigo": "29-81-LP26",
-      "nombre": "AGF - PLATAFORMA INGLES",
-      "tipo": "LP",
-      "fecha_cierre": "2026-10-13T15:01:00",
-      "rubro_match": "ti",
-      "termino_match": "plataforma",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-11",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
-      "codigo": "608-197-LR26",
-      "nombre": "SERVICIO DE OPERACI\u00D3N MANTENIMIENTO Y ACTUALIZACI\u00D3N DE PLATAFORMAS TECNOL\u00D3GICAS DE LA SALA DE CONTROL CENTRALIZADO DEL HOSPITAL DR. GUSTAVO FRICKE",
-      "tipo": "LR",
-      "fecha_cierre": "2026-10-15T16:29:00",
-      "rubro_match": "ti",
-      "termino_match": "plataforma",
-      "region": "Regi\u00F3n de Valpara\u00EDso ",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 675433201.0,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-14",
-      "tramo": null,
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "servicio"
-    },
-    {
-      "codigo": "514862-125-LR26",
-      "nombre": "10032938 PLATAFORMA DE AGENDAMIENTO TELECONSULTAS",
-      "tipo": "LR",
-      "fecha_cierre": "2026-10-19T15:00:00",
-      "rubro_match": "ti",
-      "termino_match": "plataforma",
-      "region": "Regi\u00F3n Metropolitana de Santiago",
-      "organismo": null,
-      "moneda": "CLP",
-      "monto": 408000000.0,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-16",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null,
@@ -47409,6 +47200,25 @@
       "unspsc_estado": "servicio"
     },
     {
+      "codigo": "3269-10-LP26",
+      "nombre": "S.A. 68 SOPORTE Y MANTTO PLATAFORMA DATOS QUMULO",
+      "tipo": "LP",
+      "fecha_cierre": "2026-09-30T12:00:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": null,
+      "moneda": "CLP",
+      "monto": 94099000.0,
+      "estado_flujo": "revision_degradada",
+      "origen": "diario",
+      "fecha_lote": "2026-09-10",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio"
+    },
+    {
       "codigo": "3847-42-LE26",
       "nombre": "Semillas de afecto celebrando vinculo familiar",
       "tipo": "LE",
@@ -49664,6 +49474,25 @@
       "estado_flujo": "pendiente",
       "origen": "activas",
       "fecha_lote": "2026-09-21",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio"
+    },
+    {
+      "codigo": "885-84-LE26",
+      "nombre": "Soporte mantenci\u00F3n y monitoreo plataforma legacy IBM Spectrum para la Contralor\u00EDa General de la Rep\u00FAblica",
+      "tipo": "LE",
+      "fecha_cierre": "2026-09-30T16:00:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": null,
+      "moneda": "CLP",
+      "monto": 30000000.0,
+      "estado_flujo": "revision_degradada",
+      "origen": "diario",
+      "fecha_lote": "2026-09-15",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null,
@@ -52461,6 +52290,25 @@
       "tipo_privado": false,
       "url_ficha": null,
       "unspsc_estado": "pendiente_enriquecimiento"
+    },
+    {
+      "codigo": "598-22-LE26",
+      "nombre": "Servicio de Aseo Plataforma Regional Puerto Montt",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-02T09:00:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": null,
+      "moneda": "CLP",
+      "monto": 14000000.0,
+      "estado_flujo": "revision_degradada",
+      "origen": "diario",
+      "fecha_lote": "2026-09-15",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4105-8-LP26",
@@ -55345,6 +55193,25 @@
       "estado_flujo": "pendiente",
       "origen": "activas",
       "fecha_lote": "2026-09-21",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio"
+    },
+    {
+      "codigo": "1562-61-LP26",
+      "nombre": "PLATAFORMA DE SEGURIDAD PERIMETRAL",
+      "tipo": "LP",
+      "fecha_cierre": "2026-10-05T15:01:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": null,
+      "moneda": "CLP",
+      "monto": 78172750.0,
+      "estado_flujo": "revision_degradada",
+      "origen": "diario",
+      "fecha_lote": "2026-09-15",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null,
@@ -61830,6 +61697,25 @@
       "unspsc_estado": "servicio"
     },
     {
+      "codigo": "29-81-LP26",
+      "nombre": "AGF - PLATAFORMA INGLES",
+      "tipo": "LP",
+      "fecha_cierre": "2026-10-13T15:01:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "revision_degradada",
+      "origen": "diario",
+      "fecha_lote": "2026-09-11",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio"
+    },
+    {
       "codigo": "2153-61-LR26",
       "nombre": "SERVICIO DE ASEO RES N\u00B0 2141",
       "tipo": "LR",
@@ -64034,6 +63920,25 @@
       "unspsc_estado": "sin_resolver"
     },
     {
+      "codigo": "608-197-LR26",
+      "nombre": "SERVICIO DE OPERACI\u00D3N MANTENIMIENTO Y ACTUALIZACI\u00D3N DE PLATAFORMAS TECNOL\u00D3GICAS DE LA SALA DE CONTROL CENTRALIZADO DEL HOSPITAL DR. GUSTAVO FRICKE",
+      "tipo": "LR",
+      "fecha_cierre": "2026-10-15T16:29:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": "Regi\u00F3n de Valpara\u00EDso ",
+      "organismo": null,
+      "moneda": "CLP",
+      "monto": 675433201.0,
+      "estado_flujo": "revision_degradada",
+      "origen": "diario",
+      "fecha_lote": "2026-09-14",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio"
+    },
+    {
       "codigo": "1195104-18-LR26",
       "nombre": "Red MPLS VoIP Redes Inal\u00E1mbricas y Seguridad",
       "tipo": "LR",
@@ -64826,6 +64731,25 @@
       "estado_flujo": "pendiente",
       "origen": "diario",
       "fecha_lote": "2026-09-17",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio"
+    },
+    {
+      "codigo": "514862-125-LR26",
+      "nombre": "10032938 PLATAFORMA DE AGENDAMIENTO TELECONSULTAS",
+      "tipo": "LR",
+      "fecha_cierre": "2026-10-19T15:00:00",
+      "rubro_match": "ti",
+      "termino_match": "plataforma",
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": null,
+      "moneda": "CLP",
+      "monto": 408000000.0,
+      "estado_flujo": "revision_degradada",
+      "origen": "diario",
+      "fecha_lote": "2026-09-16",
       "tramo": null,
       "tipo_privado": false,
       "url_ficha": null,
@@ -66202,63 +66126,6 @@
   ],
   "tramo_bajo": [
     {
-      "codigo": "900-36-L126",
-      "nombre": "HDS - SERVICIO DE COFFE BREAK PARA 4 CURSOS, UNIDAD DE CAPACITACIONES",
-      "tipo": "L1",
-      "fecha_cierre": "2026-09-14T15:00:00",
-      "rubro_match": null,
-      "termino_match": null,
-      "region": null,
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "activas",
-      "fecha_lote": "2026-09-14",
-      "tramo": "bajo",
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
-    },
-    {
-      "codigo": "4037-62-L126",
-      "nombre": "SERVICIO ESPECIALIZADO EN EL AREA INGENIERIA",
-      "tipo": "L1",
-      "fecha_cierre": "2026-09-14T15:27:00",
-      "rubro_match": null,
-      "termino_match": null,
-      "region": null,
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-08",
-      "tramo": "bajo",
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
-    },
-    {
-      "codigo": "900-38-L126",
-      "nombre": "HDS - COMPRA DE LAPICES PARA U.P.F.T.",
-      "tipo": "L1",
-      "fecha_cierre": "2026-09-14T18:48:00",
-      "rubro_match": null,
-      "termino_match": null,
-      "region": null,
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "activas",
-      "fecha_lote": "2026-09-14",
-      "tramo": "bajo",
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
-    },
-    {
       "codigo": "4885-24-L126",
       "nombre": "SERVICIO DE PRODUCCI\u00D3N INTEGRAL ENCUENTROS REGIONALES PUNTOS DE CULTURA COMUNITARIO",
       "tipo": "L1",
@@ -66275,7 +66142,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1978-97-L126",
@@ -66294,7 +66161,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "915-4-L126",
@@ -66313,26 +66180,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
-    },
-    {
-      "codigo": "900-34-L126",
-      "nombre": "HDS - COMPRA DE LIBROS EDUCATIVOS, LEY T.E.A.",
-      "tipo": "L1",
-      "fecha_cierre": "2026-09-16T09:10:00",
-      "rubro_match": null,
-      "termino_match": null,
-      "region": null,
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "activas",
-      "fecha_lote": "2026-09-14",
-      "tramo": "bajo",
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2408-215-L126",
@@ -66351,7 +66199,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "838108-11-L126",
@@ -66370,7 +66218,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "900-40-L126",
@@ -66389,7 +66237,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1562-56-L126",
@@ -66408,26 +66256,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
-    },
-    {
-      "codigo": "4037-63-L126",
-      "nombre": "SERVICIO ESPECIALIZADO EN EL AREA INGENIERIA SEGUN TTR.",
-      "tipo": "L1",
-      "fecha_cierre": "2026-09-17T09:00:00",
-      "rubro_match": null,
-      "termino_match": null,
-      "region": null,
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-09",
-      "tramo": "bajo",
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4451-105-L126",
@@ -66446,7 +66275,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2730-90-L126",
@@ -66465,26 +66294,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
-    },
-    {
-      "codigo": "3588-46-L126",
-      "nombre": "MEJORAMIENTO SISTEMA DE TRANSPORTE RIO CHOLGUAN",
-      "tipo": "L1",
-      "fecha_cierre": "2026-09-17T11:59:00",
-      "rubro_match": null,
-      "termino_match": null,
-      "region": null,
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "diario",
-      "fecha_lote": "2026-09-10",
-      "tramo": "bajo",
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2188-14-L126",
@@ -66503,7 +66313,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "993-44-L126",
@@ -66522,7 +66332,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1057385-46-L126",
@@ -66541,7 +66351,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1657-17-L126",
@@ -66560,7 +66370,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1072229-41-L126",
@@ -66579,7 +66389,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4146-10-L126",
@@ -66598,7 +66408,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "revision_manual"
     },
     {
       "codigo": "1057461-55-L126",
@@ -66617,7 +66427,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "564162-121-L126",
@@ -66636,7 +66446,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1040538-15-L126",
@@ -66655,7 +66465,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "519209-4-L126",
@@ -66674,7 +66484,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "635-146-L126",
@@ -66693,7 +66503,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1153624-18-L126",
@@ -66712,7 +66522,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "revision_manual"
     },
     {
       "codigo": "1469-183-L126",
@@ -66731,7 +66541,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1491-18-L126",
@@ -66750,7 +66560,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2146-67-L126",
@@ -66769,7 +66579,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4210-3-L126",
@@ -66788,7 +66598,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4469-168-L126",
@@ -66807,7 +66617,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4469-170-L126",
@@ -66826,7 +66636,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2409-96-L126",
@@ -66845,7 +66655,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2974-71-L126",
@@ -66864,7 +66674,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2122-30-L126",
@@ -66883,7 +66693,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2122-29-L126",
@@ -66902,7 +66712,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1108338-39-L126",
@@ -66921,7 +66731,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2974-73-L126",
@@ -66940,7 +66750,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1110404-193-L126",
@@ -66959,7 +66769,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1432083-30-L126",
@@ -66978,7 +66788,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3251-30-L126",
@@ -66997,7 +66807,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "5349-101-L126",
@@ -67016,7 +66826,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "5349-102-L126",
@@ -67035,7 +66845,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "635-147-L126",
@@ -67054,7 +66864,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "867990-92-L126",
@@ -67073,7 +66883,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4596-31-L126",
@@ -67092,7 +66902,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1393575-15-L126",
@@ -67111,7 +66921,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "2693-35-L126",
@@ -67130,7 +66940,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "867990-89-L126",
@@ -67149,7 +66959,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "635-145-L126",
@@ -67168,7 +66978,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4881-37-L126",
@@ -67187,7 +66997,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4881-38-L126",
@@ -67206,7 +67016,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1621-23-L126",
@@ -67225,7 +67035,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4285-18-L126",
@@ -67244,7 +67054,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2188-13-L126",
@@ -67263,7 +67073,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3841-30-L126",
@@ -67282,7 +67092,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3085-63-L126",
@@ -67301,7 +67111,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1057448-50-L126",
@@ -67320,7 +67130,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4306-33-L126",
@@ -67339,7 +67149,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2658-312-L126",
@@ -67358,7 +67168,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2467-102-L126",
@@ -67377,7 +67187,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "769-83-L126",
@@ -67396,7 +67206,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2789-30-L126",
@@ -67415,7 +67225,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4469-169-L126",
@@ -67434,7 +67244,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1090-12-L126",
@@ -67453,7 +67263,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1254658-14-L126",
@@ -67472,7 +67282,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1254658-15-L126",
@@ -67491,7 +67301,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "229-97-L126",
@@ -67510,7 +67320,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4055-69-L126",
@@ -67529,7 +67339,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2703-189-L126",
@@ -67548,7 +67358,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "2703-179-L126",
@@ -67567,7 +67377,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4993-76-L126",
@@ -67586,7 +67396,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "986278-19-L126",
@@ -67605,7 +67415,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3540-65-L126",
@@ -67624,7 +67434,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "2658-313-L126",
@@ -67643,7 +67453,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3942-21-L126",
@@ -67662,7 +67472,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1057508-114-L126",
@@ -67681,7 +67491,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1209-8-L126",
@@ -67700,7 +67510,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3210-11-L126",
@@ -67719,7 +67529,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4112-23-L126",
@@ -67738,7 +67548,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "900-46-L126",
@@ -67757,7 +67567,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1557-34-L126",
@@ -67776,7 +67586,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2658-318-L126",
@@ -67795,7 +67605,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1113159-20-L126",
@@ -67814,7 +67624,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1067476-37-L126",
@@ -67833,7 +67643,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3807-10-L126",
@@ -67852,7 +67662,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1057428-40-L126",
@@ -67871,7 +67681,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3117-89-L126",
@@ -67890,7 +67700,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4455-52-L126",
@@ -67909,7 +67719,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2186-24-L126",
@@ -67928,7 +67738,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1480209-16-L126",
@@ -67947,7 +67757,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1514-118-L126",
@@ -67966,7 +67776,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1480127-9-L126",
@@ -67985,7 +67795,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1002588-98-L126",
@@ -68004,7 +67814,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3416-65-L126",
@@ -68023,7 +67833,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1626-28-L126",
@@ -68042,7 +67852,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1562-59-L126",
@@ -68061,7 +67871,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3890-195-L126",
@@ -68080,26 +67890,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
-    },
-    {
-      "codigo": "5558-5-L126",
-      "nombre": "SERVICIO DE IMPLEMENTACI\u00D3N PUNTO VERDE Y SERVICIO DE RECICLAJE PARA DEPENDENCIAS DEL INSTITUTO DE SEGURIDAD LABORAL EN LA REGI\u00D3N DE LA ARAUCAN\u00CDA",
-      "tipo": "L1",
-      "fecha_cierre": "2026-09-22T15:00:00",
-      "rubro_match": null,
-      "termino_match": null,
-      "region": null,
-      "organismo": null,
-      "moneda": null,
-      "monto": null,
-      "estado_flujo": "pendiente",
-      "origen": "activas",
-      "fecha_lote": "2026-09-14",
-      "tramo": "bajo",
-      "tipo_privado": false,
-      "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "900-52-L126",
@@ -68118,7 +67909,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "937232-83-L126",
@@ -68137,7 +67928,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2757-12-L126",
@@ -68156,7 +67947,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "2409-97-L126",
@@ -68175,7 +67966,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3545-28-L126",
@@ -68194,7 +67985,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1057379-23-L126",
@@ -68213,7 +68004,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3890-197-L126",
@@ -68232,7 +68023,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "900-29-L126",
@@ -68251,7 +68042,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1398-94-L126",
@@ -68270,7 +68061,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2736-36-L126",
@@ -68289,7 +68080,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3416-67-L126",
@@ -68308,7 +68099,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3268-28-L126",
@@ -68327,7 +68118,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2332-111-L126",
@@ -68346,7 +68137,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "2422-153-L126",
@@ -68365,7 +68156,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "483-48-L126",
@@ -68384,7 +68175,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "900-47-L126",
@@ -68403,7 +68194,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2125-34-L126",
@@ -68422,7 +68213,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1552-90-L126",
@@ -68441,7 +68232,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2766-138-L126",
@@ -68460,7 +68251,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "514848-36-L126",
@@ -68479,7 +68270,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3328-100-L126",
@@ -68498,7 +68289,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1062018-24-L126",
@@ -68517,7 +68308,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "revision_manual"
     },
     {
       "codigo": "3710-89-L126",
@@ -68536,7 +68327,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2332-110-L126",
@@ -68555,7 +68346,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3710-88-L126",
@@ -68574,7 +68365,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4887-30-L126",
@@ -68593,7 +68384,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4075-28-L126",
@@ -68612,7 +68403,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1417913-123-L126",
@@ -68631,7 +68422,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2445-118-L126",
@@ -68650,7 +68441,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1153624-19-L126",
@@ -68669,7 +68460,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2402-82-L126",
@@ -68688,7 +68479,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3996-38-L126",
@@ -68707,7 +68498,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3253-84-L126",
@@ -68726,7 +68517,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3938-38-L126",
@@ -68745,7 +68536,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "983344-8-L126",
@@ -68764,7 +68555,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "874750-24-L126",
@@ -68783,7 +68574,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1469-205-L126",
@@ -68802,7 +68593,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1555-77-L126",
@@ -68821,7 +68612,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "564162-122-L126",
@@ -68840,7 +68631,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "564162-124-L126",
@@ -68859,7 +68650,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "564162-126-L126",
@@ -68878,7 +68669,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "5067-136-L126",
@@ -68897,7 +68688,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1469-195-L126",
@@ -68916,7 +68707,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3092-19-L126",
@@ -68935,7 +68726,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2817-64-L126",
@@ -68954,7 +68745,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1464-63-L126",
@@ -68973,7 +68764,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4993-77-L126",
@@ -68992,7 +68783,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3948-41-L126",
@@ -69011,7 +68802,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2408-235-L126",
@@ -69030,7 +68821,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "revision_manual"
     },
     {
       "codigo": "1469-185-L126",
@@ -69049,7 +68840,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1398-96-L126",
@@ -69068,7 +68859,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "993-46-L126",
@@ -69087,7 +68878,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "983344-9-L126",
@@ -69106,7 +68897,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "711841-14-L126",
@@ -69125,7 +68916,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "635-149-L126",
@@ -69144,7 +68935,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1305541-4-L126",
@@ -69163,7 +68954,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2101-154-L126",
@@ -69182,7 +68973,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2703-190-L126",
@@ -69201,7 +68992,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1019-109-L126",
@@ -69220,7 +69011,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2101-144-L126",
@@ -69239,7 +69030,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3530-20-L126",
@@ -69258,7 +69049,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "2125-36-L126",
@@ -69277,7 +69068,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4844-22-L126",
@@ -69296,7 +69087,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1057438-18-L126",
@@ -69315,7 +69106,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2311-39-L126",
@@ -69334,7 +69125,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "730566-26-L126",
@@ -69353,7 +69144,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3877-9-L126",
@@ -69372,7 +69163,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2658-317-L126",
@@ -69391,7 +69182,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2145-61-L126",
@@ -69410,7 +69201,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2145-63-L126",
@@ -69429,7 +69220,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2658-319-L126",
@@ -69448,7 +69239,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2393-19-L126",
@@ -69467,7 +69258,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4469-174-L126",
@@ -69486,7 +69277,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3121-1-L126",
@@ -69505,7 +69296,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4055-73-L126",
@@ -69524,7 +69315,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4906-36-L126",
@@ -69543,7 +69334,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2467-100-L126",
@@ -69562,7 +69353,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4469-171-L126",
@@ -69581,7 +69372,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1469-208-L126",
@@ -69600,7 +69391,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "564162-127-L126",
@@ -69619,7 +69410,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "564162-125-L126",
@@ -69638,7 +69429,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1657-18-L126",
@@ -69657,7 +69448,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3046-29-L126",
@@ -69676,7 +69467,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2408-226-L126",
@@ -69695,7 +69486,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "2408-228-L126",
@@ -69714,7 +69505,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "revision_manual"
     },
     {
       "codigo": "4881-39-L126",
@@ -69733,7 +69524,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2408-227-L126",
@@ -69752,7 +69543,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1746-43-L126",
@@ -69771,7 +69562,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1398-102-L126",
@@ -69790,7 +69581,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3540-66-L126",
@@ -69809,7 +69600,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1562-57-L126",
@@ -69828,7 +69619,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3730-94-L126",
@@ -69847,7 +69638,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "2961-67-L126",
@@ -69866,7 +69657,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3890-200-L126",
@@ -69885,7 +69676,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4407-25-L126",
@@ -69904,7 +69695,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "635-150-L126",
@@ -69923,7 +69714,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "revision_manual"
     },
     {
       "codigo": "3890-199-L126",
@@ -69942,7 +69733,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4451-106-L126",
@@ -69961,7 +69752,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3890-201-L126",
@@ -69980,7 +69771,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2445-119-L126",
@@ -69999,7 +69790,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1398-101-L126",
@@ -70018,7 +69809,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2658-316-L126",
@@ -70037,7 +69828,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3416-62-L126",
@@ -70056,7 +69847,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1736-101-L126",
@@ -70075,7 +69866,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3540-67-L126",
@@ -70094,7 +69885,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1664-23-L126",
@@ -70113,7 +69904,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1111432-63-L126",
@@ -70132,7 +69923,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2790-55-L126",
@@ -70151,7 +69942,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2548-86-L126",
@@ -70170,7 +69961,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1658-216-L126",
@@ -70189,7 +69980,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1624-22-L126",
@@ -70208,7 +69999,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2145-62-L126",
@@ -70227,7 +70018,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4055-74-L126",
@@ -70246,7 +70037,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3710-90-L126",
@@ -70265,7 +70056,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "635-151-L126",
@@ -70284,7 +70075,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1218393-44-L126",
@@ -70303,7 +70094,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4308-22-L126",
@@ -70322,7 +70113,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1469-193-L126",
@@ -70341,7 +70132,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4469-177-L126",
@@ -70360,7 +70151,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2445-120-L126",
@@ -70379,7 +70170,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1469-215-L126",
@@ -70398,7 +70189,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1469-213-L126",
@@ -70417,7 +70208,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2101-150-L126",
@@ -70436,7 +70227,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2378-112-L126",
@@ -70455,7 +70246,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3938-40-L126",
@@ -70474,7 +70265,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3730-93-L126",
@@ -70493,7 +70284,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3710-91-L126",
@@ -70512,7 +70303,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4429-98-L126",
@@ -70531,7 +70322,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4469-172-L126",
@@ -70550,7 +70341,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4469-176-L126",
@@ -70569,7 +70360,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4469-175-L126",
@@ -70588,7 +70379,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "revision_manual"
     },
     {
       "codigo": "4469-173-L126",
@@ -70607,7 +70398,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2605-12-L126",
@@ -70626,7 +70417,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "4469-164-L126",
@@ -70645,7 +70436,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4469-179-L126",
@@ -70664,7 +70455,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2494-83-L126",
@@ -70683,7 +70474,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "5877-36-L126",
@@ -70702,7 +70493,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "5877-35-L126",
@@ -70721,7 +70512,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "900-60-L126",
@@ -70740,7 +70531,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2408-233-L126",
@@ -70759,7 +70550,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "5349-111-L126",
@@ -70778,7 +70569,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "5349-112-L126",
@@ -70797,7 +70588,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "5349-110-L126",
@@ -70816,7 +70607,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2548-88-L126",
@@ -70835,7 +70626,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3890-203-L126",
@@ -70854,7 +70645,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1469-211-L126",
@@ -70873,7 +70664,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4881-41-L126",
@@ -70892,7 +70683,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1057374-27-L126",
@@ -70911,7 +70702,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1237328-67-L126",
@@ -70930,7 +70721,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2179-15-L126",
@@ -70949,7 +70740,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4469-167-L126",
@@ -70968,7 +70759,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1696-17-L126",
@@ -70987,7 +70778,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4055-70-L126",
@@ -71006,7 +70797,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1057532-75-L126",
@@ -71025,7 +70816,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2188-15-L126",
@@ -71044,7 +70835,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1469-214-L126",
@@ -71063,7 +70854,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2790-54-L126",
@@ -71082,7 +70873,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4734-14-L126",
@@ -71101,7 +70892,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1233600-54-L126",
@@ -71120,7 +70911,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1129-7-L126",
@@ -71139,7 +70930,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1660-137-L126",
@@ -71158,7 +70949,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1624-23-L126",
@@ -71177,7 +70968,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1110404-199-L126",
@@ -71196,7 +70987,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3656-159-L126",
@@ -71215,7 +71006,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1110404-198-L126",
@@ -71234,7 +71025,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "707412-20-L126",
@@ -71253,7 +71044,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4889-38-L126",
@@ -71272,7 +71063,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1660-138-L126",
@@ -71291,7 +71082,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2548-87-L126",
@@ -71310,15 +71101,15 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3968-42-L126",
       "nombre": "AUDITORIA EXTERNA FINANCIERA Y CONTABLE DEL DAEM",
       "tipo": "L1",
       "fecha_cierre": "2026-09-28T15:00:00",
-      "rubro_match": null,
-      "termino_match": null,
+      "rubro_match": "compliance",
+      "termino_match": "auditor",
       "region": null,
       "organismo": null,
       "moneda": null,
@@ -71329,7 +71120,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4883-16-L126",
@@ -71348,7 +71139,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3073-48-L126",
@@ -71367,7 +71158,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "3866-7-L126",
@@ -71386,7 +71177,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3889-44-L126",
@@ -71405,7 +71196,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1754-46-L126",
@@ -71424,7 +71215,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1197-21-L126",
@@ -71443,7 +71234,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3117-90-L126",
@@ -71462,7 +71253,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "4881-40-L126",
@@ -71481,7 +71272,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2730-123-L126",
@@ -71500,7 +71291,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "900-63-L126",
@@ -71519,7 +71310,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "2591-171-L126",
@@ -71538,7 +71329,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "523059-9-L126",
@@ -71557,7 +71348,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "2409-98-L126",
@@ -71576,7 +71367,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "4844-23-L126",
@@ -71595,7 +71386,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "948-27-L126",
@@ -71614,7 +71405,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "969221-2-L126",
@@ -71633,7 +71424,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1660-140-L126",
@@ -71652,7 +71443,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "483-50-L126",
@@ -71671,7 +71462,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1057384-140-L126",
@@ -71690,7 +71481,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "900-50-L126",
@@ -71709,15 +71500,15 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "900-58-L126",
       "nombre": "HDS - CURSO SECRETARIA JURIDICA, UPFT",
       "tipo": "L1",
       "fecha_cierre": "2026-09-29T15:00:00",
-      "rubro_match": null,
-      "termino_match": null,
+      "rubro_match": "compliance",
+      "termino_match": "jur\u00EDdic",
       "region": null,
       "organismo": null,
       "moneda": null,
@@ -71728,7 +71519,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "643553-24-L126",
@@ -71747,7 +71538,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1973-98-L126",
@@ -71766,7 +71557,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3117-94-L126",
@@ -71785,7 +71576,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "3117-93-L126",
@@ -71804,7 +71595,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "900-57-L126",
@@ -71823,7 +71614,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1628-19-L126",
@@ -71842,7 +71633,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1628-20-L126",
@@ -71861,7 +71652,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "1230848-64-L126",
@@ -71880,7 +71671,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "3515-10-L126",
@@ -71899,7 +71690,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     },
     {
       "codigo": "1080089-44-L126",
@@ -71918,7 +71709,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "bien"
     },
     {
       "codigo": "1660-139-L126",
@@ -71937,7 +71728,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "547640-16-L126",
@@ -71956,7 +71747,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "servicio"
     },
     {
       "codigo": "729944-4-L126",
@@ -71975,7 +71766,7 @@
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
-      "unspsc_estado": "pendiente_enriquecimiento"
+      "unspsc_estado": "sin_resolver"
     }
   ],
   "serie_tasa_rubro": [

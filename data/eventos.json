@@ -152,5 +152,12 @@
     "accion": "corrida_pipeline",
     "codigo": null,
     "detalle": "total=2 prioritarias=0 secundarias=2 tramo_bajo=0 nuevas=559 movidas_historico=0 activas_total=4541 activas_prioritarias=0 activas_secundarias=3430"
+  },
+  {
+    "timestamp": "2026-09-21T05:53:35.9660019Z",
+    "actor": "sistema",
+    "accion": "reevaluar_inventario",
+    "codigo": null,
+    "detalle": "total=327 historico_prioritarias=4 historico_tramo_bajo=7 tramo_bajo_con_rubro=3 prioritarias_confirmadas=12 prioritarias_revision_degradada=7"
   }
 ]

@@ -460,5 +460,101 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": []
+  },
+  {
+    "codigo": "2446-251-LE26",
+    "nombre": "IMPLEMENTACION PLATAFORMA E-LEARNING",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-07T15:09:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n de Coquimbo ",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 14000000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 4061,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      86141703
+    ]
+  },
+  {
+    "codigo": "3378-51-LP26",
+    "nombre": "SERVICIO DE SOPORTE Y MANTENCI\u00D3N DE SISTEMA Y BASE DE DATOS SAP-HANA BUSINESS ONE PARA EL HMS POR 36 MESES",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-07T16:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "base de datos",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 272160000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 11856,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      81111805
+    ]
+  },
+  {
+    "codigo": "598-16-LE26",
+    "nombre": "SERVICIO DE CAPACITACI\u00D3N EN PROTECCI\u00D3N DE DATOS PERSONALES GOBERNANZA DE DATOS Y CUMPLIMIENTO NORMATIVO",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-08T09:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "compliance",
+    "termino_match": "cumplimiento normativ",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 54,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      80111504
+    ]
+  },
+  {
+    "codigo": "1606-30-LE26",
+    "nombre": "CONTRATACI\u00D3N SERVICIO DE DIAGRAMACI\u00D3N DE PIEZAS GR\u00C1FICAS Y WEB DEL PROYECTO \u201CFORTALECIMIENTO DE LAS CAPACIDADES DE LATINOAM\u00C9RICA Y EL CARIBE EN MATERIA DE CIBERSEGURIDAD\u201D FINANCIADO POR LA UNI\u00D3N EUROPEA.",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-24T15:10:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": "ti",
+    "termino_match": "ciberseguridad",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 15000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 18,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      82121501
+    ]
   }
 ]
