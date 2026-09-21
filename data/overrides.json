@@ -68,5 +68,10 @@
     "lista_destino": "secundarias",
     "revisado": true,
     "observado_en": "2026-09-21T21:02:04.902Z"
+  },
+  "885-84-LE26": {
+    "lista_destino": "prioritarias",
+    "revisado": true,
+    "observado_en": "2026-09-21T21:11:00.525Z"
   }
 }
