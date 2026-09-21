@@ -123,5 +123,10 @@
     "lista_destino": "secundarias",
     "revisado": true,
     "observado_en": "2026-09-21T21:55:43.496Z"
+  },
+  "1007793-15-LE26": {
+    "lista_destino": "prioritarias",
+    "revisado": true,
+    "observado_en": "2026-09-21T21:55:47.814Z"
   }
 }
