@@ -173,5 +173,12 @@
     "accion": "corrida_pipeline",
     "codigo": null,
     "detalle": "total=1713 prioritarias=0 secundarias=285 tramo_bajo=47 nuevas=0 movidas_historico=782"
+  },
+  {
+    "timestamp": "2026-09-22T20:50:57.592925Z",
+    "actor": "sistema",
+    "accion": "refrescar_descriptivos",
+    "codigo": null,
+    "detalle": "total=58 prioritarias=33 cola_revision=25 llamadas_exitosas=58 llamadas_fallidas=0"
   }
 ]

@@ -8,7 +8,12 @@
     "rubro_match": "ti",
     "termino_match": "inform\u00E1tic",
     "region": "Regi\u00F3n de Valpara\u00EDso ",
-    "organismo": null,
+    "organismo": "DIRECCION DE ABASTECIMIENTO DE LA ARMADA",
+    "comuna": "",
+    "descripcion": "SERVICIO REPARACI\u00D3N DE OFICINAS PARA LA DIRECCI\u00D3N DE TELECOMUNICACIONES E INFORM\u00C1TICA DE LA ARMADA.\r\n\r\n",
+    "prohibicion_contratacion": "1.\tLos derechos y obligaciones que nacen con ocasi\u00F3n del desarrollo del presente procedimiento de contrataci\u00F3n p\u00FAblica, ser\u00E1n intransferibles, sin perjuicio de que una norma legal especial permita expresamente la cesi\u00F3n de derechos y obligaciones.",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -17,12 +22,18 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": 2591,
+    "cantidad_reclamos": 2592,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       80111613
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 80111613,
+        "codigo_categoria": "80111600",
+        "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios de recursos humanos / Servicios de personal temporal"
+      }
+    ]
   },
   {
     "codigo": "2741-60-LE26",
@@ -33,7 +44,12 @@
     "rubro_match": "compliance",
     "termino_match": "auditor",
     "region": "Regi\u00F3n de Valpara\u00EDso ",
-    "organismo": null,
+    "organismo": "I MUNICIPALIDAD DE SAN FELIPE",
+    "comuna": "San Felipe",
+    "descripcion": "SERVICIO AUDITORIA EXTERNA DE ESTADOS FINANCIEROS Y CONTRATOS PERIODO 2021 - 2025",
+    "prohibicion_contratacion": "Art. 11.4 de las Bases Administrativas",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -47,7 +63,13 @@
     "codigos_producto_unspsc": [
       84111602
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 84111602,
+        "codigo_categoria": "84111600",
+        "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
+      }
+    ]
   },
   {
     "codigo": "2020-21-LE26",
@@ -58,7 +80,12 @@
     "rubro_match": "ti",
     "termino_match": "inform\u00E1tic",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "Biblioteca del Congreso Nacional",
+    "comuna": "Santiago Centro",
+    "descripcion": "PROYECTO DE MEJORA DE LA PLATAFORMA INFORM\u00C1TICA DEL SISTEMA HISTORIA DE LA LEY Y LABOR PARLAMENTARIA PARA LA BIBLIOTECA DEL CONGRESO NACIONAL.",
+    "prohibicion_contratacion": "Seg\u00FAn restricciones establecidas en el numeral 26. Subcontrataci\u00F3n de las Bases de Licitaci\u00F3n Adjuntas.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -72,7 +99,13 @@
     "codigos_producto_unspsc": [
       81112202
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 81112202,
+        "codigo_categoria": "81112200",
+        "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Mantenimiento y soporte de software"
+      }
+    ]
   },
   {
     "codigo": "1431841-61-LE26",
@@ -83,7 +116,12 @@
     "rubro_match": "compliance",
     "termino_match": "auditor",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "I MUNICIPALIDAD DE RECOLETA",
+    "comuna": "Recoleta",
+    "descripcion": "La Municipalidad de Recoleta tiene por objeto la contrataci\u00F3n del \u201CSERVICIO DE AUDITOR\u00CDA DE CERTIFICACI\u00D3N BAJO LA NORMA NCH3262:2021 DEL SISTEMA DE GESTI\u00D3N DE IGUALDAD DE G\u00C9NERO Y CONCILIACI\u00D3N DE LA VIDA LABORAL, FAMILIAR Y PERSONAL DE LA MUNICIPALIDAD DE RECOLETA\u201D.\r\n\r\nEl alcance de la certificaci\u00F3n NCh3262:2021 est\u00E1 delimitado para las siguientes \u00E1reas de la instituci\u00F3n:\r\n\u25CFAlcald\u00EDa \r\n\u25CF Administraci\u00F3n Municipal \r\n\u25CF Secretar\u00EDa de Planificaci\u00F3n Comunitaria \r\n\u25CF Direcci\u00F3n de Comunicaciones \r\n\u25CF Direcci\u00F3n de Asesor\u00EDa Jur\u00EDdica \r\n\u25CF Direcci\u00F3n de Vivienda \r\n\u25CF Direcci\u00F3n de Abastecimiento y Gesti\u00F3n de Compras P\u00FAblicas \r\n\u25CF Departamento de Gesti\u00F3n de Personas, Direcci\u00F3n de Administraci\u00F3n y Finanzas \r\n\u25CF Unidad de Gesti\u00F3n de Personas, Departamento de Salud Municipal \r\n\u25CF Unidad de Gesti\u00F3n de Personas, Departamento de Educaci\u00F3n Municipal. \r\n\r\nEl alcance delimitado para estas unidades comprende un total de 170 personas aproximadamente. Estos procesos se desarrollan f\u00EDsicamente en el Edificio Consistorial ubicado en Av. Recoleta 2774.",
+    "prohibicion_contratacion": "El adjudicatario no podr\u00E1 subcontratar, ceder ni transferir en forma alguna, total ni parcialmente, los derechos y obligaciones que nacen del desarrollo de esta licitaci\u00F3n y, en especial, los establecidos en el respectivo contrato que se celebre con la",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -97,7 +135,13 @@
     "codigos_producto_unspsc": [
       80101506
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 80101506,
+        "codigo_categoria": "80101500",
+        "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Consultor\u00EDas o asesor\u00EDas en gesti\u00F3n empresarial / Servicios de consultor\u00EDa en gesti\u00F3n de empresas"
+      }
+    ]
   },
   {
     "codigo": "721703-40-LP26",
@@ -108,7 +152,12 @@
     "rubro_match": "ti",
     "termino_match": "digitalizaci\u00F3n",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "AGENCIA DE CALIDAD DE LA EDUCACION",
+    "comuna": "Santiago",
+    "descripcion": "La Agencia de Calidad de la Educaci\u00F3n, en adelante la Agencia, es un servicio p\u00FAblico, funcionalmente descentralizado, con consejo exclusivo, dotado de personalidad jur\u00EDdica y patrimonio propio, que se relaciona con el Presidente de la Rep\u00FAblica por medio del Ministerio de Educaci\u00F3n.\r\n\r\nEs la responsable de elaborar y aplicar pruebas que permitan conocer los logros de aprendizaje de los estudiantes",
+    "prohibicion_contratacion": "Conforme a lo establecido en el punto 9.7 de las bases administrativas.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -122,7 +171,13 @@
     "codigos_producto_unspsc": [
       82121501
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 82121501,
+        "codigo_categoria": "82121500",
+        "categoria": "Servicios editoriales, de dise\u00F1o, publicidad, gr\u00E1ficos y artistas / Servicios de impresi\u00F3n y reproducci\u00F3n / Impresi\u00F3n"
+      }
+    ]
   },
   {
     "codigo": "759-32-LP26",
@@ -133,7 +188,12 @@
     "rubro_match": "compliance",
     "termino_match": "auditor",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "SUBSECRETARIA DEL MINISTERIO DE JUSTICIA",
+    "comuna": "Santiago Centro",
+    "descripcion": "Dar cumplimiento a los est\u00E1ndares del servicio exigidos, es que esta Subsecretar\u00EDa ha estimado necesario licitar este servicio atendida la relevancia de contar con informaci\u00F3n actualizada de la percepci\u00F3n de las personas usuarias del Sistema Nacional de Mediaci\u00F3n Familiar, a fin de supervisar el funcionamiento de los centros de mediaci\u00F3n y evaluar peri\u00F3dicamente la introducci\u00F3n de mejoras.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -142,12 +202,18 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": 45,
+    "cantidad_reclamos": 46,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       93151607
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 93151607,
+        "codigo_categoria": "93151600",
+        "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
+      }
+    ]
   },
   {
     "codigo": "584105-31-LE26",
@@ -158,7 +224,12 @@
     "rubro_match": "compliance",
     "termino_match": "auditor",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "SUBSECRETARIA DE ENERGIA",
+    "comuna": "Santiago",
+    "descripcion": "E1O2RT9 Auditar el Sistema de Gesti\u00F3n de Igualdad de G\u00E9nero y Conciliaci\u00F3n de la vida laboral, familiar y personal de la Subsecretaria de Energ\u00EDa para dar cumplimiento a la Norma NCH 3262:2021, dispuesta por el instituto nacional de normalizaci\u00F3n de chile (INN), con el fin de recibir la recomendaci\u00F3n de certificaci\u00F3n bajo la Norma NCH 3262:2021",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -172,7 +243,13 @@
     "codigos_producto_unspsc": [
       93151607
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 93151607,
+        "codigo_categoria": "93151600",
+        "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
+      }
+    ]
   },
   {
     "codigo": "608897-57-LE26",
@@ -183,7 +260,12 @@
     "rubro_match": "ti",
     "termino_match": "sistema de gesti\u00F3n",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "SUBSECRETARIA DEL MEDIO AMBIENTE",
+    "comuna": "Santiago",
+    "descripcion": "representar al Departamento de Redes\r\nde Monitoreo en el proceso de mantenci\u00F3n de la acreditaci\u00F3n\r\nISO/IEC17025:2017 de su sistema de gesti\u00F3n, otorgada por ENAC",
+    "prohibicion_contratacion": "De acuerdo a lo indicado en punto 27 de bases de licitaci\u00F3n",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -197,18 +279,29 @@
     "codigos_producto_unspsc": [
       77101701
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 77101701,
+        "codigo_categoria": "77101700",
+        "categoria": "Servicios medioambientales / Gesti\u00F3n medioambiental / Servicios de asesor\u00EDa medioambiental"
+      }
+    ]
   },
   {
     "codigo": "761391-138-LE26",
     "nombre": "EE-133-GUB-DAS-SVC. ARRI. EQUIPOS INFORMATICOS",
     "tipo": "LE",
-    "fecha_cierre": "2026-09-25T15:00:00",
+    "fecha_cierre": "2026-10-05T15:01:00",
     "fecha_lote": "2026-09-15",
     "rubro_match": "ti",
     "termino_match": "inform\u00E1tic",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "FUERZA AEREA DE CHILE COMANDO LOGISTICO",
+    "comuna": "El Bosque",
+    "descripcion": "CONTRATACI\u00D3N DEL SERVICIO DE ARRIENDO DE EQUIPOS INFORMATICOS PARA LA IMPLEMENTACI\u00D3N DE SIMULADOR DE AIRBUS ACT ACADEMY DURANTE EL PERIODO COMPRENDIDO ENTRE EL 01 DE OCTUBRE Y EL 31 DE DICIEMBRE DEL A\u00D1O 2026, DE ACUERDO A BASES T\u00C9CNICAS, BASES ADM Y ANEXOS ADJUNTOS.",
+    "prohibicion_contratacion": "EN CONFORMIDAD A LO ESTABLECIDO EN EL PARRAFO I.-NORMAS GENERALES DEL LLAMADO A PROPUESTA, LETRA P DE LAS BASES ADMINISTRATIVAS ADJUNTAS.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -222,7 +315,13 @@
     "codigos_producto_unspsc": [
       81111505
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 81111505,
+        "codigo_categoria": "81111500",
+        "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Ingenier\u00EDa en computaci\u00F3n e inform\u00E1tica"
+      }
+    ]
   },
   {
     "codigo": "587-49-LE26",
@@ -233,7 +332,12 @@
     "rubro_match": "ti",
     "termino_match": "digitalizaci\u00F3n",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "SUBSECRETARIA DEL MINISTERIO DE LA VIVIENDA Y URBANISMO",
+    "comuna": "",
+    "descripcion": "Servicio de digitalizaci\u00F3n e indexaci\u00F3n de documentaci\u00F3n del MINVU y de la SEREMI Regi\u00F3n Metropolitana.",
+    "prohibicion_contratacion": "NO PERMITE SUBCONTRATACI\u00D3N VER PUNTO 1.13.5.7. \u201CSUBCONTRATACI\u00D3N\u201D DE LAS BASES ADMINISTRATIVAS.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -247,7 +351,13 @@
     "codigos_producto_unspsc": [
       81112005
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 81112005,
+        "codigo_categoria": "81112000",
+        "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Servicios de datos"
+      }
+    ]
   },
   {
     "codigo": "1606-32-LE26",
@@ -258,7 +368,12 @@
     "rubro_match": "ti",
     "termino_match": "ciberseguridad",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "AGENCIA CHILENA DE COOPERACION INTERNACIONAL PARA EL DESARROLLO",
+    "comuna": "Santiago",
+    "descripcion": "Contratar un servicio especializado de dise\u00F1o gr\u00E1fico, dise\u00F1o editorial y diagramaci\u00F3n que permita desarrollar una l\u00EDnea gr\u00E1fica para los productos del proyecto y aplicarla de manera consistente en sus documentos t\u00E9cnicos, materiales de difusi\u00F3n y componentes digitales, incluyendo el dise\u00F1o visual del sitio web y los insumos gr\u00E1ficos necesarios para su posterior desarrollo t\u00E9cnico.",
+    "prohibicion_contratacion": "Seg\u00FAn bases de licitaci\u00F3n",
+    "tipo_pago": "2",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -272,7 +387,13 @@
     "codigos_producto_unspsc": [
       82121501
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 82121501,
+        "codigo_categoria": "82121500",
+        "categoria": "Servicios editoriales, de dise\u00F1o, publicidad, gr\u00E1ficos y artistas / Servicios de impresi\u00F3n y reproducci\u00F3n / Impresi\u00F3n"
+      }
+    ]
   },
   {
     "codigo": "726931-1-LE26",
@@ -283,7 +404,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n de Arica y Parinacota",
-    "organismo": null,
+    "organismo": "UNIVERSIDAD DE TARAPACA",
+    "comuna": "Arica",
+    "descripcion": "La Universidad de Tarapac\u00E1 solicita la adquisici\u00F3n de servicio de plataforma integral ALUMNI y empleabilidad por un periodo de 24 meses de duraci\u00F3n, seg\u00FAn especificaciones t\u00E9cnicas descritas en el Anexo N\u00B01. Asociada a la SC N\u00B0 2026070283.",
+    "prohibicion_contratacion": "De acuerdo al Cap\u00EDtulo VIII Contrato de suministro y servicio, p\u00E1rrafo 4 Cesi\u00F3n y subcontrataci\u00F3n, Art\u00EDculo 128. Subcontrataci\u00F3n del reglamento de Ley N\u00BA 19.886 sobre compras p\u00FAblicas.",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -297,7 +423,13 @@
     "codigos_producto_unspsc": [
       43232408
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
   },
   {
     "codigo": "1007793-15-LE26",
@@ -308,7 +440,12 @@
     "rubro_match": "ti",
     "termino_match": "inform\u00E1tic",
     "region": "Regi\u00F3n de los Lagos ",
-    "organismo": null,
+    "organismo": "CENTRO DE FORMACION TECNICA ESTATAL DE LA REGION DE LOS LAGOS",
+    "comuna": "Llanquihue",
+    "descripcion": "Se requiere la adquisici\u00F3n de una soluci\u00F3n inform\u00E1tica institucional para la gesti\u00F3n de iniciativas de vinculaci\u00F3n con el medio del CFT Estatal de la Regi\u00F3n de Los Lagos.",
+    "prohibicion_contratacion": "Revisar Res.Ex.98 que aprueba bases de licitaci\u00F3n.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -324,7 +461,23 @@
       43232408,
       43232408
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      },
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      },
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
   },
   {
     "codigo": "1725-197-LP26",
@@ -335,7 +488,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n de Valpara\u00EDso ",
-    "organismo": null,
+    "organismo": "SUBSECRETAR\u00CDA DE LAS CULTURAS Y LAS ARTES",
+    "comuna": "Valpara\u00EDso",
+    "descripcion": "SERVICIOS DE IMPLEMENTACI\u00D3N Y EXPLOTACI\u00D3N DE INFRAESTRUCTURA TECNOL\u00D3GICA PARA LA PLATAFORMA DE FONDOS CONCURSABLES DE LA SUBSECRETAR\u00CDA DE LAS CULTURAS Y LAS ARTES",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -349,18 +507,29 @@
     "codigos_producto_unspsc": [
       43232408
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
   },
   {
     "codigo": "2770-120-LR26",
     "nombre": "SISTEMA DE GESTI\u00D3N INTEGRADO SMAPA",
     "tipo": "LR",
-    "fecha_cierre": "2026-09-10T14:00:00",
+    "fecha_cierre": "2026-10-13T15:01:00",
     "fecha_lote": "2026-09-05",
     "rubro_match": "ti",
     "termino_match": "sistema de gesti\u00F3n",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "I MUNICIPALIDAD DE MAIPU",
+    "comuna": "Maip\u00FA",
+    "descripcion": "La presenta licitaci\u00F3n tiene por finalidad la adquisici\u00F3n, implementaci\u00F3n y ejecuci\u00F3n de un sistema TI (tecnolog\u00EDa de la informaci\u00F3n) enfocado en unificar e integrar todas las tareas de las diferentes unidades de SMAPA en una sola plataforma, de manera de tener una sola fuente de informaci\u00F3n, sin necesidad de traspasos manuales, para as\u00ED prestar un mejor servicio a los usuarios, as\u00ED como tambi\u00E9n el facturador electr\u00F3nico de la Municipalidad de Maip\u00FA. \r\nTodo lo anterior en virtud de lo dispuesto en las presentes Bases Administrativas, las Bases T\u00E9cnicas y todos sus anexos.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLF",
@@ -369,12 +538,18 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "activas",
-    "cantidad_reclamos": 3290,
+    "cantidad_reclamos": 3319,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [
       43233001
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233001,
+        "codigo_categoria": "43233000",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de entorno operativo"
+      }
+    ]
   },
   {
     "codigo": "548874-72-LR26",
@@ -385,7 +560,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "INSTITUTO DE PREVISION SOCIAL",
+    "comuna": "Santiago",
+    "descripcion": "SERVICIO DE ADMINISTRACION, GESTION, CONFIGURACION, RESPALDOS Y\r\nMANTENCION DE LAS PLATAFORMAS TECNOLOGICAS DE IPS\u2013 E1O2RT8",
+    "prohibicion_contratacion": "Ver bases administrativas punto 16.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLF",
@@ -399,7 +579,13 @@
     "codigos_producto_unspsc": [
       43232304
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232304,
+        "codigo_categoria": "43232300",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de consultas y gesti\u00F3n de datos"
+      }
+    ]
   },
   {
     "codigo": "548874-74-LR26",
@@ -410,7 +596,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "INSTITUTO DE PREVISION SOCIAL",
+    "comuna": "Santiago",
+    "descripcion": "E102RT8 - SERVICIO DE PLATAFORMA SIEM DE NUEVA GENERACI\u00D3N EN MODALIDAD SAAS PARA EL INSTITUTO DE PREVISI\u00D3N SOCIAL",
+    "prohibicion_contratacion": "Seg\u00FAn punto 16 de las bases",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "USD",
@@ -424,7 +615,13 @@
     "codigos_producto_unspsc": [
       43233205
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233205,
+        "codigo_categoria": "43233200",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
+      }
+    ]
   },
   {
     "codigo": "548874-77-LR26",
@@ -435,7 +632,12 @@
     "rubro_match": "ti",
     "termino_match": "ciberseguridad",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "INSTITUTO DE PREVISION SOCIAL",
+    "comuna": "Santiago",
+    "descripcion": "E1O2RT8 - SERVICIO DE MANTENCI\u00D3N Y MEJORA DEL SISTEMA DE GESTI\u00D3N DE SEGURIDAD DE LA INFORMACI\u00D3N Y CIBERSEGURIDAD INSTITUCIONAL NCH ISOIEC 27001",
+    "prohibicion_contratacion": "Ver bases punto 16",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLF",
@@ -449,18 +651,29 @@
     "codigos_producto_unspsc": [
       43233203
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233203,
+        "codigo_categoria": "43233200",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
+      }
+    ]
   },
   {
     "codigo": "85-41-LE26",
     "nombre": "PLATAFORMA INTEGRAL SOPORTE TI CON CONTROL REMOTO",
     "tipo": "LE",
-    "fecha_cierre": "2026-09-21T15:01:00",
+    "fecha_cierre": "2026-09-23T15:01:00",
     "fecha_lote": "2026-09-05",
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "JUNTA NACIONAL DE AUXILIO ESCOLAR Y BECA",
+    "comuna": "Santiago Centro",
+    "descripcion": "Se requiere la adquisici\u00F3n de una soluci\u00F3n tecnol\u00F3gica centralizada, bajo la modalidad de suscripci\u00F3n plurianual por un per\u00EDodo de 36 meses, denominada Plataforma de Gesti\u00F3n de Activos TI ITAM y Administraci\u00F3n de Licenciamiento de Software SAM para JUNAEB.",
+    "prohibicion_contratacion": "SEG\u00DAN LO INDICADO EN EL T\u00CDTULO 19 DE LAS BASES ADMINISTRATIVAS.",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -474,7 +687,13 @@
     "codigos_producto_unspsc": [
       43232408
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
   },
   {
     "codigo": "188-83-LP26",
@@ -485,7 +704,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "CORP MUNICIPAL DE EDUC SALUD CULTURA Y RECREACION DE LA FLORIDA",
+    "comuna": "La Florida",
+    "descripcion": "La Corporaci\u00F3n Municipal de La Florida, en adelante tambi\u00E9n llamado \u201CCOMUDEF\u201D o \u201CLa Corporaci\u00F3n\u201D, ha elaborado las presentes Bases Administrativas, Bases T\u00E9cnicas y Anexos de Licitaci\u00F3n P\u00FAblica, las cuales contienen todas las condiciones y especificaciones t\u00E9cnicas que deber\u00E1n cumplir los oferentes para materializar la \u201CCONTRATACI\u00D3N, IMPLEMENTACI\u00D3N Y SOPORTE DE PLATAFORMA DIGITAL DE SISTEMA DE  SEGUIMIENTO Y CONTROL DE PROYECTOS, SERVICIOS Y HONORARIOS CORPORATIVOS PARA LA CORPORACI\u00D3N MUNICIPAL DE LA FLORIDA \u2013 COMUDEF\u201D, por un periodo de doce 12 meses.",
+    "prohibicion_contratacion": "Seg\u00FAn Resoluci\u00F3n N\u00B0 369-2026, punto 19, de las bases administrativas.",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -494,12 +718,18 @@
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
-    "cantidad_reclamos": 1532,
+    "cantidad_reclamos": 1537,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [
       43233415
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233415,
+        "codigo_categoria": "43233400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de controladores de dispositivos y utilidades"
+      }
+    ]
   },
   {
     "codigo": "1447930-11-LP26",
@@ -510,7 +740,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "SUBSECRETARIA DE SEGURIDAD PUBLICA",
+    "comuna": "Santiago",
+    "descripcion": "La Subsecretar\u00EDa de Seguridad P\u00FAblica, llama a licitaci\u00F3n p\u00FAblica, para la adquisici\u00F3n e implementaci\u00F3n de equipamiento, software, puesta en marcha y paso a producci\u00F3n de una plataforma de virtualizaci\u00F3n on-premise para implementar en las dependencias del nivel central de la Subsecretar\u00EDa de Seguridad P\u00FAblica, ubicadas en Teatinos N\u00B0220, piso 6.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -524,7 +759,13 @@
     "codigos_producto_unspsc": [
       43232915
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232915,
+        "codigo_categoria": "43232900",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software para trabajo en redes"
+      }
+    ]
   },
   {
     "codigo": "5482-103-LP26",
@@ -535,7 +776,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "I MUNICIPALIDAD DE NUNOA",
+    "comuna": "\u00D1u\u00F1oa",
+    "descripcion": "La contrataci\u00F3n comprende siete (7) m\u00F3dulos de negocio integrados sobre seis (6) capas transversales. El proveedor adjudicado ser\u00E1 responsable del suministro, configuraci\u00F3n,\r\nparametrizaci\u00F3n, integraci\u00F3n, capacitaci\u00F3n y soporte de todos los m\u00F3dulos descritos en las bases t\u00E9cnicas.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -549,7 +795,13 @@
     "codigos_producto_unspsc": [
       43232408
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
   },
   {
     "codigo": "5482-100-LP26",
@@ -560,7 +812,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "I MUNICIPALIDAD DE NUNOA",
+    "comuna": "\u00D1u\u00F1oa",
+    "descripcion": "La contrataci\u00F3n comprende siete 7 m\u00F3dulos de negocio integrados sobre seis 6 capas transversales. El proveedor adjudicado ser\u00E1 responsable del suministro, configuraci\u00F3n, parametrizaci\u00F3n, integraci\u00F3n, capacitaci\u00F3n y soporte de todos los m\u00F3dulos descritos en las bases t\u00E9cnicas.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -574,7 +831,13 @@
     "codigos_producto_unspsc": [
       43232408
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
   },
   {
     "codigo": "5482-101-LR26",
@@ -585,7 +848,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "I MUNICIPALIDAD DE NUNOA",
+    "comuna": "\u00D1u\u00F1oa",
+    "descripcion": "La presente licitaci\u00F3n contempla como objetivo general, contratar el suministro,\r\nimplementaci\u00F3n, puesta en marcha y soporte continuo de una plataforma de Inteligencia Artificial para anal\u00EDtica de video y gesti\u00F3n inteligente de alertas, que opere sobre la red dec\u00E1maras yo el sistema VMS ya existentes de la Municipalidad de \u00D1u\u00F1oa.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -600,7 +868,18 @@
       43232408,
       43232408
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      },
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
   },
   {
     "codigo": "3666-12-LE26",
@@ -611,7 +890,12 @@
     "rubro_match": "ti",
     "termino_match": "gesti\u00F3n documental",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "I MUNICIPALIDAD DE TIL TIL",
+    "comuna": "Til Til",
+    "descripcion": "La presente Licitaci\u00F3n tiene por objeto la contrataci\u00F3n de una soluci\u00F3n que comprenda al menos cinco 5 m\u00F3dulos funcionales interoperables: gesti\u00F3n de expedientes electr\u00F3nicos, solicitudes ciudadanas, firma electr\u00F3nica, agendamiento ciudadano y anal\u00EDtica de datos, todo bajo infraestructura de alta disponibilidad y cumplimiento normativo vigente.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -625,7 +909,13 @@
     "codigos_producto_unspsc": [
       43232202
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232202,
+        "codigo_categoria": "43232200",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n de contenidos"
+      }
+    ]
   },
   {
     "codigo": "591-26-LP26",
@@ -636,7 +926,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "FONDO NACIONAL DE SALUD",
+    "comuna": "",
+    "descripcion": " El Oferente para la provisi\u00F3n de una plataforma de observabilidad SaaS y la prestaci\u00F3n de servicios profesionales especializados para su configuraci\u00F3n, despliegue multicloud y transferencia tecnol\u00F3gica",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -650,7 +945,13 @@
     "codigos_producto_unspsc": [
       43231512
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231512,
+        "codigo_categoria": "43231500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
+      }
+    ]
   },
   {
     "codigo": "1978-81-LE26",
@@ -661,7 +962,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n del Maule ",
-    "organismo": null,
+    "organismo": "SERVICIO DE SALUD DEL MAULE",
+    "comuna": "Maule",
+    "descripcion": "La presente licitaci\u00F3n tiene por objeto la contrataci\u00F3n de un servicio de plataforma de capacitaci\u00F3n e-learning denominada \u201CCAPMAULE\u201D, destinada a los funcionarios de la Direcci\u00F3n del Servicio de Salud Maule, de los hospitales y establecimientos de Atenci\u00F3n Primaria de Salud que integran su Red Asistencial, adem\u00E1s de otros funcionarios de servicios p\u00FAblicos que sean invitados por dicha Direcci\u00F3n.\r\n\r\nEl servicio considera la implementaci\u00F3n, configuraci\u00F3n, alojamiento, administraci\u00F3n, soporte y continuidad operativa de la plataforma, junto con la gesti\u00F3n de usuarios, cursos, evaluaciones y certificaciones, generaci\u00F3n de reportes y el despliegue y virtualizaci\u00F3n de contenidos de capacitaci\u00F3n, conforme a las Especificaciones T\u00E9cnicas de la licitaci\u00F3n.",
+    "prohibicion_contratacion": "De acuerdo a Art\u00EDculo N\u00BA29 de las Bases de Licitaci\u00F3n.",
+    "tipo_pago": "4",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -675,7 +981,13 @@
     "codigos_producto_unspsc": [
       43232701
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232701,
+        "codigo_categoria": "43232700",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de aplicaciones de red"
+      }
+    ]
   },
   {
     "codigo": "869591-12-LP26",
@@ -686,7 +998,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "DIRECCION DE COMPRAS Y CONTRATACION PUBLICA",
+    "comuna": "Santiago Centro",
+    "descripcion": "CONTRATACI\u00D3N DE PLATAFORMA DE GESTI\u00D3N DOCUMENTAL, EXPEDIENTE ELECTR\u00D3NICO Y GESTI\u00D3N DE PROCESOS PARA LA DIRECCI\u00D3N DE COMPRAS Y CONTRATACI\u00D3N P\u00DABLICA",
+    "prohibicion_contratacion": "ver clausula 10 de las bases especiales",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -700,7 +1017,13 @@
     "codigos_producto_unspsc": [
       43232202
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232202,
+        "codigo_categoria": "43232200",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n de contenidos"
+      }
+    ]
   },
   {
     "codigo": "1973-93-LR26",
@@ -711,7 +1034,12 @@
     "rubro_match": null,
     "termino_match": null,
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "CENTRO DE REFERENCIA DE SALUD DE PENALOLEN CORDILLERA ORIENTE",
+    "comuna": "Pe\u00F1alol\u00E9n",
+    "descripcion": "Las presentes bases regir\u00E1n la Propuesta P\u00FAblica convocada por el CRSCO para la contrataci\u00F3n de SISTEMA DE INFORMACI\u00D3N DE GESTI\u00D3N ADMINISTRATIVA Y FARMACIA por un periodo de 60 meses. \r\n\r\nSe entender\u00E1 que todo proveedor conoce y acepta irrevocablemente el contenido de estas Bases, por el solo hecho de presentar sus ofertas en este proceso de compra. \r\n\r\nLas caracter\u00EDsticas o especificaciones t\u00E9cnicas que presenten los oferentes deber\u00E1n cumplir con los requisitos se\u00F1alados en las bases y la idoneidad y calidad t\u00E9cnica del oferente, con el fin de asegurar que el adjudicatario se ajuste a los requisitos que el CRSCO ha especificado para la ejecuci\u00F3n del contrato licitado. \r\n",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -725,7 +1053,13 @@
     "codigos_producto_unspsc": [
       43231602
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231602,
+        "codigo_categoria": "43231600",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
+      }
+    ]
   },
   {
     "codigo": "29-81-LP26",
@@ -736,7 +1070,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "FUERZA AEREA DE CHILE COMANDO LOGISTICO",
+    "comuna": "El Bosque",
+    "descripcion": "CONTRATACI\u00D3N DE SERVICIO DE PLATAFORMA INTEGRAL DE CAPACITACI\u00D3N EN IDIOMA INGL\u00C9S MODALIDAD E-LEARNING CON TUTORIA",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
     "tramo": null,
     "tipo_privado": false,
     "moneda": null,
@@ -750,7 +1089,13 @@
     "codigos_producto_unspsc": [
       86111701
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 86111701,
+        "codigo_categoria": "86111700",
+        "categoria": "Educaci\u00F3n, formaci\u00F3n, entrenamiento y capacitaci\u00F3n / Sistemas educativos complementarios / Escuelas de idiomas"
+      }
+    ]
   },
   {
     "codigo": "608-197-LR26",
@@ -761,7 +1106,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n de Valpara\u00EDso ",
-    "organismo": null,
+    "organismo": "HOSPITAL DR GUSTAVO FRICKE DE VINA DEL MAR",
+    "comuna": "",
+    "descripcion": "Que la unidad de control centralizado integra plataformas tecnol\u00F3gicas y de comunicaci\u00F3n complejas que\r\npermiten el monitoreo constante y reacci\u00F3n inmediata ante incidentes y respuesta en tiempo real frente a\r\nemergencias.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -775,7 +1125,13 @@
     "codigos_producto_unspsc": [
       81111503
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 81111503,
+        "codigo_categoria": "81111500",
+        "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Ingenier\u00EDa en computaci\u00F3n e inform\u00E1tica"
+      }
+    ]
   },
   {
     "codigo": "885-84-LE26",
@@ -786,7 +1142,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "CONTRALORIA GENERAL DE LA REPUBLICA",
+    "comuna": "",
+    "descripcion": "Contratar el servicio de Soporte, Mantenimiento y Monitoreo de la plataforma de respaldo legacy de la Contralor\u00EDa General de la Rep\u00FAblica, la cual se encuentra integrada con servidores y librer\u00EDas robotizadas, y dispone de pol\u00EDticas de acceso, reportes generales y personalizados, adem\u00E1s de funciones de monitoreo. Este servicio resulta cr\u00EDtico para la conservaci\u00F3n hist\u00F3rica de respaldos de los servicios TIC institucionales.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -800,7 +1161,13 @@
     "codigos_producto_unspsc": [
       81111812
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 81111812,
+        "codigo_categoria": "81111800",
+        "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Administraci\u00F3n de sistemas"
+      }
+    ]
   },
   {
     "codigo": "514862-125-LR26",
@@ -811,7 +1178,12 @@
     "rubro_match": "ti",
     "termino_match": "plataforma",
     "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
+    "organismo": "CORPORACION MUNICIPAL DE PENALOLEN PARA EL DESARROLO SOCIAL CORMUP",
+    "comuna": "Pe\u00F1alol\u00E9n",
+    "descripcion": "SEGUN BASES ADJUNTAS",
+    "prohibicion_contratacion": "SEGUN BASES ADJUNTAS",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
     "tramo": null,
     "tipo_privado": false,
     "moneda": "CLP",
@@ -825,6 +1197,12 @@
     "codigos_producto_unspsc": [
       81112010
     ],
-    "items_unspsc": []
+    "items_unspsc": [
+      {
+        "codigo_producto": 81112010,
+        "codigo_categoria": "81112000",
+        "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Servicios de datos"
+      }
+    ]
   }
 ]
