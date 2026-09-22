@@ -247,6 +247,39 @@ tbody tr:last-child td {
   font-size: 0.82rem;
 }
 
+.panel-consulta {
+  padding: 0.5rem 0.2rem;
+}
+
+.fila-consulta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.fila-consulta input[type="text"] {
+  flex: 1;
+  min-width: 220px;
+  font: inherit;
+  font-size: 0.88rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.45rem 0.6rem;
+  background: var(--panel);
+  color: var(--text);
+}
+
+.fila-consulta input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.fila-consulta input[type="text"]:disabled,
+.fila-consulta button:disabled {
+  opacity: 0.6;
+}
+
 .grafico-serie {
   width: 100%;
   height: auto;
