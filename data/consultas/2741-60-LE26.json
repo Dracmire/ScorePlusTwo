@@ -1,0 +1,26 @@
+{
+  "codigo_externo": "2741-60-LE26",
+  "consultado_en": "2026-09-22T15:54:31.2164236Z",
+  "encontrado": true,
+  "detalle": {
+    "codigo_externo": "2741-60-LE26",
+    "items": {
+      "listado": [
+        {
+          "codigo_producto": 84111602,
+          "codigo_categoria": "84111600",
+          "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
+        }
+      ]
+    },
+    "comprador": {
+      "region_unidad": "Regi\u00F3n de Valpara\u00EDso "
+    },
+    "moneda": "CLP",
+    "visibilidad_monto": 1,
+    "monto_estimado": 65000000.0,
+    "cantidad_reclamos": 477,
+    "codigo_estado": 5,
+    "adjudicacion": null
+  }
+}
