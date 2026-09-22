@@ -153,6 +153,28 @@
       body: JSON.stringify({ ref: "main", inputs: { consultar_licitacion: codigo } }),
     }).then(function (respuesta) {
       if (respuesta.status === 204) return;
+
+      // 403 (a veces 404, para no revelar el recurso a un token sin
+      // permiso) es lo que devuelve GitHub cuando el fine-grained token
+      // no tiene 'Actions: Read and write' — confirmado con el error real
+      // que reportó un usuario con un token de antes de que ese permiso
+      // se documentara. El texto crudo de GitHub ("Resource not
+      // accessible by personal access token") no dice qué hacer; acá se
+      // reemplaza por un mensaje accionable, y se limpia el token
+      // guardado para que el siguiente intento vuelva a pedirlo — si no,
+      // el usuario regenera el token en GitHub pero el tablero sigue
+      // reintentando en silencio con el viejo hasta que borre
+      // localStorage a mano.
+      if (respuesta.status === 403 || respuesta.status === 404) {
+        try { localStorage.removeItem(TOKEN_KEY); } catch (e) { /* sin persistencia disponible */ }
+        throw new Error(
+          "Tu token no tiene permiso para disparar Actions. Regenéralo en GitHub " +
+          "(Settings → Developer settings → Fine-grained tokens) agregando el permiso " +
+          "'Actions: Read and write', además de 'Contents: Read and write' que ya tiene. " +
+          "Vuelve a intentar — te va a pedir el token de nuevo."
+        );
+      }
+
       return respuesta.json().catch(function () { return {}; }).then(function (error) {
         throw new Error(error.message || ("Error HTTP " + respuesta.status + " al disparar la consulta."));
       });

@@ -1382,6 +1382,15 @@ public static class Program
                 ? "null (campo ausente en la respuesta)"
                 : detalle.Adjudicacion.Value.GetRawText()));
 
+        // TEMPORAL (2026-09-22): volcado del JSON crudo completo, para
+        // verificar el shape real de Descripcion/NombreOrganismo/
+        // ComunaUnidad/Tiempo/UnidadTiempo/SubContratacion/TipoPago/
+        // ProhibicionContratacion antes de modelarlos (ver
+        // MercadoPublicoClient.ObtenerDetalleCrudoAsync) — se elimina en
+        // cuanto se confirmen los nombres/anidamiento/tipos reales.
+        var crudo = await cliente.ObtenerDetalleCrudoAsync(codigo);
+        Console.WriteLine($"[CONSULTA] JSON crudo completo: {crudo}");
+
         return 0;
     }
 }
