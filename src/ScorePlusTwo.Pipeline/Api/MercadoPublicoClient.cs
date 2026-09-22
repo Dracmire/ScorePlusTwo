@@ -46,16 +46,6 @@ public sealed class MercadoPublicoClient
     public Task<DetalleLicitacionResponse> ObtenerDetalleAsync(string codigoExterno, CancellationToken ct = default) =>
         ObtenerAsync<DetalleLicitacionResponse>($"{BaseUrl}?codigo={codigoExterno}&ticket={_ticket}", ct);
 
-    // TEMPORAL (2026-09-22): volcado crudo para verificar el shape real de
-    // Descripcion/NombreOrganismo/ComunaUnidad/Tiempo/UnidadTiempo/
-    // SubContratacion/TipoPago/ProhibicionContratacion antes de modelarlos
-    // — mismo patrón ya usado en la investigación UNSPSC de septiembre
-    // (ObtenerDetalleCrudoAsync). Se elimina en cuanto se confirmen los
-    // nombres/anidamiento/tipos reales, junto con el volcado en
-    // Program.EjecutarConsultarLicitacionAsync que lo invoca.
-    public Task<string> ObtenerDetalleCrudoAsync(string codigoExterno, CancellationToken ct = default) =>
-        ObtenerTextoAsync($"{BaseUrl}?codigo={codigoExterno}&ticket={_ticket}", ct);
-
     private static string FormatearFecha(DateOnly fecha) => fecha.ToString("ddMMyyyy", CultureInfo.InvariantCulture);
 
     // Barrido semanal: corte transversal del mercado, sin parámetro de fecha.

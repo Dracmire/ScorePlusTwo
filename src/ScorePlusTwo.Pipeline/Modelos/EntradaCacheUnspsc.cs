@@ -31,8 +31,18 @@ public sealed record ItemUnspscCache(int? CodigoProducto, string? CodigoCategori
 // publicado) se guarda como null en ambos, nunca como 0 — para que el
 // tablero muestre un guión en vez de un importe falso de cero pesos.
 // CantidadReclamos se guarda tal cual, sin usarse como filtro todavía (ver
-// Candidata.CantidadReclamos): valores reales de 5 a 459 no son comparables
-// entre organismos de distinto tamaño sin normalizar por volumen de compras.
+// Candidata.CantidadReclamos): valores reales de 5 a 11.860 no son
+// comparables entre organismos de distinto tamaño sin normalizar por
+// volumen de compras.
+//
+// Descripcion/NombreOrganismo/ComunaUnidad/FechaCierre/
+// ProhibicionContratacion/TipoPago/SubContratacion (2026-09-22): mismo
+// detalle, sin llamada adicional — verificados contra datos reales antes
+// de agregarlos (ver DetalleLicitacionResponse.cs para el detalle de cada
+// uno, incluida la advertencia de que TipoPago/SubContratacion son
+// códigos sin diccionario de traducción disponible, y que FechaCierre acá
+// es la del DETALLE, no la del listado diario — solo se usa para
+// refrescar Candidata.FechaCierre vía --refrescar-descriptivos).
 public sealed record EntradaCacheUnspsc(
     string CodigoExterno,
     List<ItemUnspscCache> Items,
@@ -40,4 +50,11 @@ public sealed record EntradaCacheUnspsc(
     string? RegionUnidad = null,
     string? Moneda = null,
     decimal? Monto = null,
-    int? CantidadReclamos = null);
+    int? CantidadReclamos = null,
+    string? Descripcion = null,
+    string? NombreOrganismo = null,
+    string? ComunaUnidad = null,
+    DateTime? FechaCierre = null,
+    string? ProhibicionContratacion = null,
+    string? TipoPago = null,
+    string? SubContratacion = null);

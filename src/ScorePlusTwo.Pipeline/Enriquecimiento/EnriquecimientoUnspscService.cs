@@ -60,6 +60,9 @@ public static class EnriquecimientoUnspscService
 
         return new EntradaCacheUnspsc(
             codigo, items, DateTime.UtcNow, licitacion?.Comprador?.RegionUnidad,
-            moneda, monto, licitacion?.CantidadReclamos);
+            moneda, monto, licitacion?.CantidadReclamos,
+            licitacion?.Descripcion, licitacion?.Comprador?.NombreOrganismo, licitacion?.Comprador?.ComunaUnidad,
+            licitacion?.Fechas?.FechaCierre, licitacion?.ProhibicionContratacion, licitacion?.TipoPago,
+            licitacion?.SubContratacion);
     }
 }

@@ -30,7 +30,18 @@ public sealed record DashboardCandidata(
     // Revisión (cantidad de reclamos y descripción UNSPSC completa por
     // ítem, no solo el rubro ya resuelto).
     int? CantidadReclamos,
-    IReadOnlyList<ItemUnspscCache> ItemsUnspsc);
+    IReadOnlyList<ItemUnspscCache> ItemsUnspsc,
+    // Comuna/Descripcion/ProhibicionContratacion/TipoPago/SubContratacion
+    // (2026-09-22): mismo caso que CantidadReclamos/ItemsUnspsc arriba —
+    // ya existían en Candidata pero nunca llegaban al tablero. TipoPago/
+    // SubContratacion son códigos crudos sin diccionario de traducción
+    // (ver DetalleLicitacionResponse.cs) — el panel los muestra ocultos
+    // por default (ver config/panel-revision.json).
+    string? Comuna,
+    string? Descripcion,
+    string? ProhibicionContratacion,
+    string? TipoPago,
+    string? SubContratacion);
 
 public sealed record DashboardSerieItem(DateOnly Fecha, int Total, int Prioritarias, double Tasa);
 
@@ -81,7 +92,12 @@ public static class GeneradorDashboard
                 UrlFicha: null,
                 UnspscEstado: c.UnspscEstado,
                 CantidadReclamos: c.CantidadReclamos,
-                ItemsUnspsc: c.ItemsUnspsc))
+                ItemsUnspsc: c.ItemsUnspsc,
+                Comuna: c.Comuna,
+                Descripcion: c.Descripcion,
+                ProhibicionContratacion: c.ProhibicionContratacion,
+                TipoPago: c.TipoPago,
+                SubContratacion: c.SubContratacion))
             .ToList();
 
         var serie = informes

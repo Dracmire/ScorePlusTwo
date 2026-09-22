@@ -247,6 +247,14 @@ tbody tr:last-child td {
   font-size: 0.82rem;
 }
 
+.bloque-campos-ocultos {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border);
+}
+
 .panel-consulta {
   padding: 0.5rem 0.2rem;
 }

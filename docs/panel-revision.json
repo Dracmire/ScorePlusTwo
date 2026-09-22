@@ -1,0 +1,18 @@
+{
+  "version": "2026-09-22",
+  "campos_visibles": [
+    "descripcion",
+    "fecha_cierre",
+    "organismo",
+    "region",
+    "monto",
+    "cantidad_reclamos"
+  ],
+  "campos_ocultos_por_default": [
+    "items_unspsc",
+    "comuna",
+    "sub_contratacion",
+    "prohibicion_contratacion",
+    "tipo_pago"
+  ]
+}

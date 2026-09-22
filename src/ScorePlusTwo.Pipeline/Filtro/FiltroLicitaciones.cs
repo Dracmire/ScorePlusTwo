@@ -178,7 +178,10 @@ public static class FiltroLicitaciones
 
                 secundarias.Add(new CandidataDetectada(
                     licitacion, tipo, RubroMatch: null, TerminoMatch: null, estadoUnspsc, codigosProducto, region,
-                    moneda, monto, cantidadReclamos, ItemsUnspsc: entrada?.Items));
+                    moneda, monto, cantidadReclamos, ItemsUnspsc: entrada?.Items,
+                    Organismo: entrada?.NombreOrganismo, Comuna: entrada?.ComunaUnidad, Descripcion: entrada?.Descripcion,
+                    ProhibicionContratacion: entrada?.ProhibicionContratacion, TipoPago: entrada?.TipoPago,
+                    SubContratacion: entrada?.SubContratacion));
                 continue;
             }
 
@@ -189,7 +192,10 @@ public static class FiltroLicitaciones
                 var (rubroRevision, terminoRevision, _) = EvaluarRubro(criterios, TextoNormalizador.Normalizar(licitacion.Nombre));
                 secundarias.Add(new CandidataDetectada(
                     licitacion, tipo, rubroRevision?.Id, terminoRevision, estadoUnspsc, codigosProducto, region,
-                    moneda, monto, cantidadReclamos, ItemsUnspsc: entrada?.Items));
+                    moneda, monto, cantidadReclamos, ItemsUnspsc: entrada?.Items,
+                    Organismo: entrada?.NombreOrganismo, Comuna: entrada?.ComunaUnidad, Descripcion: entrada?.Descripcion,
+                    ProhibicionContratacion: entrada?.ProhibicionContratacion, TipoPago: entrada?.TipoPago,
+                    SubContratacion: entrada?.SubContratacion));
                 continue;
             }
 
@@ -217,7 +223,10 @@ public static class FiltroLicitaciones
                 // decide desde el tablero (pestaña "Revisión"), lo que
                 // escribe un override en data/overrides.json.
                 EsRevisionAmbigua: calificaParaPrioritarias && esAmbiguo,
-                ItemsUnspsc: entrada?.Items);
+                ItemsUnspsc: entrada?.Items,
+                Organismo: entrada?.NombreOrganismo, Comuna: entrada?.ComunaUnidad, Descripcion: entrada?.Descripcion,
+                ProhibicionContratacion: entrada?.ProhibicionContratacion, TipoPago: entrada?.TipoPago,
+                SubContratacion: entrada?.SubContratacion);
 
             if (calificaParaPrioritarias && !esAmbiguo)
             {

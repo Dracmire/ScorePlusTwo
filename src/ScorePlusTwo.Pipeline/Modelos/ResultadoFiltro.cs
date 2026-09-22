@@ -27,6 +27,17 @@ public sealed record CandidataDetectada(
     decimal? Monto = null,
     int? CantidadReclamos = null,
     bool EsRevisionAmbigua = false,
+    // Organismo/Comuna/Descripcion/ProhibicionContratacion/TipoPago/
+    // SubContratacion (2026-09-22): mismo detalle de enriquecimiento que
+    // Region/Moneda/Monto — ver EntradaCacheUnspsc/Candidata para el
+    // detalle de cada campo. Null con el mismo criterio que el resto:
+    // nunca se enriqueció, o el organismo no lo publicó.
+    string? Organismo = null,
+    string? Comuna = null,
+    string? Descripcion = null,
+    string? ProhibicionContratacion = null,
+    string? TipoPago = null,
+    string? SubContratacion = null,
     // Ítems completos del cache (CodigoProducto + Categoria en texto),
     // 2026-09-21 — CodigosProductoUnspsc ya guarda los enteros para
     // auditoría, pero el tablero necesita también la descripción de texto
