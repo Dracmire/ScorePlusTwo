@@ -75,31 +75,6 @@
     "items_unspsc": []
   },
   {
-    "codigo": "612-19-LE26",
-    "nombre": "Almacenaje y digitalizaci\u00F3n de Doc. Confidenciales",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-21T20:00:00",
-    "fecha_lote": "2026-09-08",
-    "rubro_match": "ti",
-    "termino_match": "digitalizaci\u00F3n",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": null,
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 45000000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 215,
-    "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": [
-      81112006
-    ],
-    "items_unspsc": []
-  },
-  {
     "codigo": "1431841-61-LE26",
     "nombre": "AUDITORIA  CERTIFICACION NORMA NCH 3262:2021",
     "tipo": "LE",
