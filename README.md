@@ -90,7 +90,12 @@ token** (GitHub → Settings → Developer settings → Fine-grained tokens), no
 un token clásico de scope `repo` completo. Configurarlo con:
 - **Repository access**: "Only select repositories" → este repositorio
   únicamente.
-- **Permissions**: `Contents: Read and write` — nada más.
+- **Permissions**: `Contents: Read and write` y `Actions: Read and write`
+  — nada más. `Actions` es necesaria para la pestaña "Consulta" (ver más
+  abajo), que dispara `workflow_dispatch`; si el token es de antes de esa
+  pestaña y solo tiene `Contents`, "Revisión" sigue funcionando pero
+  "Consulta" fallará al disparar — hay que regenerar el token agregando el
+  permiso.
 - **Expiration**: una fecha concreta, no "No expiration".
 
 La diferencia importa: un token clásico de scope `repo` completo puede leer
@@ -101,6 +106,60 @@ pantalla), un fine-grained token acotado a este repo y con fecha de
 expiración limita el daño a "alguien puede escribir en este repo hasta tal
 fecha" — un token clásico de scope completo lo expone todo, sin fecha
 límite, hasta que alguien lo revoque a mano.
+
+## Consulta puntual de un código de licitación
+
+Pestaña "Consulta" del tablero: un campo de texto para pegar un código
+externo (ej. `734-50-LE26`) y un botón "Consultar" que trae su detalle
+completo, incluyendo la metadata de adjudicación si el código ya está
+adjudicado (fecha del acta, número de acta, cantidad de oferentes, y un
+link al acta real en Mercado Público) — sin esperar a que ese código pase
+por el flujo diario ni aparezca en ninguna de las tres listas.
+
+**Requiere el mismo token de la pestaña "Revisión"**, con el permiso
+adicional `Actions: Read and write` (ver arriba) — la pestaña necesita
+poder disparar el workflow, no solo leer/escribir archivos.
+
+**Cómo funciona:** primero intenta leer `data/consultas/{codigo}.json` vía
+la API de contenidos de GitHub — si ese código ya se consultó antes, lo
+muestra al instante, sin disparar nada. Si no existe, dispara
+`workflow_dispatch` sobre `diario.yml` con el código (equivalente a correr
+`--consultar-licitacion <codigo>`, ver más abajo) y hace polling del
+estado del run cada 10-15 segundos; cuando termina, vuelve a leer el
+archivo (que el propio workflow ya commiteó) y lo muestra.
+
+**Una consulta nueva puede tardar 1-2 minutos — no es instantánea.** El
+tiempo real es la suma de la cola de `workflow_dispatch` en Actions más el
+tiempo de build+ejecución del pipeline (unos 20-30 segundos, medido en
+corridas reales) — a diferencia del cron nocturno, `workflow_dispatch` no
+sufre el atraso documentado más abajo (`diario.yml`, 1h52-4h58), pero
+sigue sin ser instantáneo.
+
+**Sobre el campo "Adjudicación": no trae el nombre del ganador.** La API
+de Mercado Público solo entrega metadata del proceso (fecha del acta,
+número de acta, cantidad de oferentes) y un link a la ficha real del acta
+en `mercadopublico.cl` — para ver quién ganó hay que abrir ese link a
+mano. Deliberadamente no se intenta traer el nombre del ganador
+automáticamente (scrapeando esa página): es el mismo riesgo ya conocido
+con `url_ficha` en el dashboard (URLs de ese dominio con querystring de
+sesión que no siempre resuelven al recurso pedido) y el valor no
+justifica el mantenimiento para una consulta puntual y poco frecuente. Si
+en algún momento conocer ganadores de forma sistemática (no puntual) se
+vuelve una necesidad recurrente, la vía correcta es el bulk de datos
+abiertos OCDS de ChileCompra (histórico de adjudicaciones estructurado,
+sin scraping) — no esta pestaña.
+
+**Modo de servidor** (`--consultar-licitacion <codigo>`), para quien
+prefiera correrlo directo en vez de usar el botón:
+
+```bash
+dotnet run --project src/ScorePlusTwo.Pipeline -- --consultar-licitacion 734-50-LE26
+```
+
+Requiere `MP_TICKET` real (sin equivalente a `--fixture`) y escribe/
+sobrescribe `data/consultas/{codigo saneado}.json` — persistente, sirve de
+cache para la próxima vez que se consulte el mismo código, sea desde el
+tablero o desde la línea de comandos.
 
 ## Re-filtrado manual del histórico acumulado
 

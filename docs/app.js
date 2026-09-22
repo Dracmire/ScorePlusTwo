@@ -5,7 +5,13 @@
   // (contents API), sin backend propio — ver docs/app.js más abajo y
   // data/overrides.json. Repo hardcodeado porque este tablero solo sirve a
   // este proyecto.
+  //
+  // Pestaña "Consulta" (2026-09-22) reusa el mismo token, pero además de
+  // Contents necesita disparar workflow_dispatch (ver dispararConsulta) —
+  // por eso pedirToken() pide los dos permisos desde ahora, aunque un
+  // token viejo con solo Contents siga sirviendo para Revisión.
   var GITHUB_REPO = "Dracmire/ScorePlusTwo";
+  var GITHUB_WORKFLOW = "diario.yml";
   var TOKEN_KEY = "gh_token";
 
   function githubToken() {
@@ -20,9 +26,9 @@
   // una sola vez y se guarda en localStorage de este navegador.
   function pedirToken() {
     var token = prompt(
-      "Token de GitHub para guardar decisiones de revisión (ver README —\n" +
-      "usa un fine-grained token con expiración, acotado a este repo,\n" +
-      "permiso 'Contents: Read and write' solamente).\n" +
+      "Token de GitHub para las pestañas Revisión y Consulta (ver README —\n" +
+      "usa un fine-grained token con expiración, acotado a este repo, con\n" +
+      "los permisos 'Contents: Read and write' y 'Actions: Read and write').\n" +
       "Se guarda solo en este navegador y solo se envía a la API de GitHub."
     );
     if (token) {
@@ -98,6 +104,101 @@
       return respuesta.json().catch(function () { return {}; }).then(function (error) {
         throw new Error(error.message || ("Error HTTP " + respuesta.status + " al guardar."));
       });
+    });
+  }
+
+  // Pestaña "Consulta" (2026-09-22): mismo saneo de nombre de archivo que
+  // Program.EjecutarConsultarLicitacionAsync — si no calzan, esta pestaña
+  // nunca encuentra el archivo que escribió --consultar-licitacion.
+  function sanearCodigoArchivo(codigo) {
+    return codigo.replace(/[/\\:*?"<>|\s]/g, "_");
+  }
+
+  // Lee data/consultas/{codigo}.json vía la Contents API — null si no
+  // existe todavía (404, no un error: significa "nunca se consultó este
+  // código, o el resultado se perdió al no ser un archivo tracked" — en la
+  // práctica siempre va a existir tras el primer --consultar-licitacion
+  // exitoso, porque ese modo lo commitea).
+  function leerConsulta(codigo) {
+    var headers = { Accept: "application/vnd.github+json" };
+    var token = githubToken();
+    if (token) headers.Authorization = "Bearer " + token;
+
+    var ruta = "data/consultas/" + sanearCodigoArchivo(codigo) + ".json";
+    return fetch("https://api.github.com/repos/" + GITHUB_REPO + "/contents/" + ruta, { headers: headers })
+      .then(function (respuesta) {
+        if (respuesta.status === 404) return null;
+        if (!respuesta.ok) throw new Error("No se pudo leer la consulta (HTTP " + respuesta.status + ")");
+        return respuesta.json().then(function (cuerpo) {
+          return JSON.parse(base64ToUtf8(cuerpo.content));
+        });
+      });
+  }
+
+  // POST a la API de Actions para disparar diario.yml con
+  // consultar_licitacion=codigo — primera vez que este tablero dispara un
+  // workflow en vez de solo escribir un archivo (por eso el token
+  // necesita también Actions: Read and write, ver pedirToken).
+  function dispararConsulta(codigo) {
+    var token = githubToken() || pedirToken();
+    if (!token) return Promise.reject(new Error("Sin token, no se pudo disparar la consulta."));
+
+    return fetch("https://api.github.com/repos/" + GITHUB_REPO + "/actions/workflows/" + GITHUB_WORKFLOW + "/dispatches", {
+      method: "POST",
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: "Bearer " + token,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ref: "main", inputs: { consultar_licitacion: codigo } }),
+    }).then(function (respuesta) {
+      if (respuesta.status === 204) return;
+      return respuesta.json().catch(function () { return {}; }).then(function (error) {
+        throw new Error(error.message || ("Error HTTP " + respuesta.status + " al disparar la consulta."));
+      });
+    });
+  }
+
+  // Polling cada 12s (dentro del rango 10-15s pedido) sobre el run de
+  // workflow_dispatch más reciente que sea posterior a `desde` — así no se
+  // confunde con un run manual anterior que ya estaba en la lista. El
+  // límite de reintentos deja ~5 minutos de margen: el atraso medido del
+  // cron (1h52-4h58, ver diario.yml) no aplica acá porque workflow_dispatch
+  // no compite con la cola de `schedule`, pero igual no es instantáneo.
+  function esperarRunDeConsulta(token, desde) {
+    var headers = { Accept: "application/vnd.github+json" };
+    if (token) headers.Authorization = "Bearer " + token;
+    var url = "https://api.github.com/repos/" + GITHUB_REPO + "/actions/workflows/" + GITHUB_WORKFLOW + "/runs?event=workflow_dispatch&per_page=5";
+
+    return new Promise(function (resolve, reject) {
+      var intentosRestantes = 24;
+
+      function unIntento() {
+        fetch(url, { headers: headers })
+          .then(function (respuesta) {
+            if (!respuesta.ok) throw new Error("Error al consultar el estado del workflow (HTTP " + respuesta.status + ")");
+            return respuesta.json();
+          })
+          .then(function (cuerpo) {
+            var runs = cuerpo.workflow_runs || [];
+            var run = runs.filter(function (r) { return new Date(r.created_at) >= desde; })[0];
+
+            if (run && run.status === "completed") {
+              resolve(run);
+              return;
+            }
+
+            if (intentosRestantes-- <= 0) {
+              reject(new Error("La consulta sigue en curso en Actions — intenta leerla de nuevo en un momento."));
+              return;
+            }
+
+            setTimeout(unIntento, 12000);
+          })
+          .catch(reject);
+      }
+
+      unIntento();
     });
   }
 
@@ -256,6 +357,146 @@
         (candidata.region ? escaparHtml(candidata.region) : '<span class="vacio">—</span>') +
       "</div>" +
       "</div>";
+  }
+
+  // Adjudicacion (2026-09-22): campo crudo de la API, verificado contra un
+  // código real (1000813-15-LE26, estado 8) — NO trae nombre/RUT del
+  // adjudicatario, solo metadata del acta (Tipo sin documentar, Fecha,
+  // Numero, NumeroOferentes) y un link a la ficha real en
+  // mercadopublico.cl (UrlActa). Decisión explícita del usuario: mostrar
+  // esta metadata + el link para que un humano lo abra si quiere ver el
+  // ganador, sin invertir en resolver esa página (mismo riesgo ya
+  // documentado con url_ficha en GeneradorDashboard.cs — querystring de
+  // sesión sobre un dominio que ya bloqueó accesos automatizados).
+  function renderPanelAdjudicacion(detalle) {
+    var adj = detalle && detalle.adjudicacion;
+    if (!adj) return '<p class="vacio">Sin información de adjudicación.</p>';
+
+    return '<ul class="lista-items-unspsc">' +
+      "<li><strong>Fecha:</strong> " + (adj.Fecha ? formatearFecha(adj.Fecha) : '<span class="vacio">—</span>') + "</li>" +
+      "<li><strong>Número de acta:</strong> " + (adj.Numero ? escaparHtml(adj.Numero) : '<span class="vacio">—</span>') + "</li>" +
+      "<li><strong>Oferentes:</strong> " + (adj.NumeroOferentes != null ? escaparHtml(String(adj.NumeroOferentes)) : '<span class="vacio">—</span>') + "</li>" +
+      (adj.UrlActa
+        ? '<li><a href="' + escaparHtml(adj.UrlActa) + '" target="_blank" rel="noopener">Ver acta de adjudicación (Mercado Público) ↗</a></li>'
+        : "") +
+      "</ul>";
+  }
+
+  // Adapta el shape crudo de ResultadoConsulta (snake_case, ver
+  // Modelos/ResultadoConsulta.cs y DetalleLicitacionResponse.cs) al shape
+  // que ya esperan renderItemsUnspsc/renderMontoExacto (mismos campos que
+  // docs/data.json) — evita duplicar esos dos renders para la pestaña
+  // Consulta.
+  function renderResultadoConsulta(resultado, codigoIngresado) {
+    var contenedor = document.getElementById("resultado-consulta");
+
+    if (!resultado || !resultado.encontrado) {
+      contenedor.innerHTML = '<p class="vacio">No se encontró información para el código '
+        + escaparHtml(codigoIngresado) + ".</p>";
+      return;
+    }
+
+    var d = resultado.detalle;
+    var candidataLike = {
+      items_unspsc: (d.items && d.items.listado || []).map(function (item) {
+        return { codigo_producto: item.codigo_producto, categoria: item.categoria };
+      }),
+      region: d.comprador && d.comprador.region_unidad,
+      moneda: d.moneda,
+      monto: d.monto_estimado,
+    };
+
+    contenedor.innerHTML =
+      '<div class="panel-detalle">' +
+      "<div><strong>Código:</strong> " + escaparHtml(resultado.codigo_externo) + "</div>" +
+      "<div><strong>Código de estado:</strong> " + escaparHtml(String(d.codigo_estado)) + "</div>" +
+      "<div><strong>Ítems UNSPSC:</strong>" + renderItemsUnspsc(candidataLike) + "</div>" +
+      "<div><strong>Región (cruda, tal cual la API):</strong> " +
+        (candidataLike.region ? escaparHtml(candidataLike.region) : '<span class="vacio">—</span>') +
+      "</div>" +
+      "<div><strong>Monto exacto:</strong> " + renderMontoExacto(candidataLike) + "</div>" +
+      "<div><strong>Adjudicación:</strong>" + renderPanelAdjudicacion(d) + "</div>" +
+      '<div class="vacio">Consultado el ' + new Date(resultado.consultado_en).toLocaleString("es-CL") + "</div>" +
+      "</div>";
+  }
+
+  // Flujo: (1) leer data/consultas/{codigo}.json — si existe, mostrarlo
+  // directo, sin disparar nada. (2) Si no existe, disparar workflow_dispatch
+  // con consultar_licitacion=codigo, mostrar "Consultando…" y hacer polling
+  // hasta que el run termine. (3) Reintentar la lectura y renderizar. Nunca
+  // falla en silencio: cualquier error de red/API se muestra tal cual en el
+  // panel de resultado.
+  function renderConsultaActiva() {
+    var contenedor = document.getElementById("tabla-candidatas");
+    contenedor.innerHTML =
+      '<div class="panel-consulta">' +
+      '<div class="fila-consulta">' +
+      '<input type="text" id="input-consulta" placeholder="Código de licitación (ej. 734-50-LE26)" />' +
+      '<button id="btn-consultar" class="boton-accion boton-accion-primaria">Consultar</button>' +
+      "</div>" +
+      '<div id="estado-consulta" class="vacio"></div>' +
+      '<div id="resultado-consulta"></div>' +
+      "</div>";
+
+    var input = document.getElementById("input-consulta");
+    var boton = document.getElementById("btn-consultar");
+    var estado = document.getElementById("estado-consulta");
+    var resultado = document.getElementById("resultado-consulta");
+
+    function habilitar() {
+      boton.disabled = false;
+      input.disabled = false;
+    }
+
+    function mostrarError(error) {
+      estado.textContent = "";
+      resultado.innerHTML = '<p class="vacio">' + escaparHtml(error.message) + "</p>";
+      habilitar();
+    }
+
+    boton.addEventListener("click", function () {
+      var codigo = input.value.trim();
+      if (!codigo) return;
+
+      boton.disabled = true;
+      input.disabled = true;
+      resultado.innerHTML = "";
+      estado.textContent = "Buscando " + codigo + "…";
+
+      leerConsulta(codigo)
+        .then(function (encontrado) {
+          if (encontrado) {
+            estado.textContent = "";
+            renderResultadoConsulta(encontrado, codigo);
+            habilitar();
+            return;
+          }
+
+          var token = githubToken() || pedirToken();
+          if (!token) {
+            mostrarError(new Error("Sin token, no se pudo disparar la consulta."));
+            return;
+          }
+
+          var desde = new Date();
+          estado.textContent = "Consultando… (puede tardar 1-2 minutos por la cola de Actions)";
+
+          dispararConsulta(codigo)
+            .then(function () { return esperarRunDeConsulta(token, desde); })
+            .then(function () { return leerConsulta(codigo); })
+            .then(function (encontradoTrasCorrida) {
+              estado.textContent = "";
+              renderResultadoConsulta(encontradoTrasCorrida, codigo);
+              habilitar();
+            })
+            .catch(mostrarError);
+        })
+        .catch(mostrarError);
+    });
+
+    input.addEventListener("keydown", function (evento) {
+      if (evento.key === "Enter") boton.click();
+    });
   }
 
   function renderTabla(candidatas) {
@@ -532,6 +773,18 @@
           panelGrafico.hidden = true;
           botonCsv.hidden = true;
           renderRevisionActiva();
+          return;
+        }
+
+        // "Consulta" tampoco es un dataset de data.json (ver Consulta,
+        // 2026-09-22): no hay CSV ni gráfico que le correspondan, y su
+        // contenido no depende de datasets — se regenera vacía cada vez
+        // que se entra a la pestaña (misma decisión que Revisión, que
+        // tampoco preserva estado entre pestañas).
+        if (tabActiva === "consulta") {
+          panelGrafico.hidden = true;
+          botonCsv.hidden = true;
+          renderConsultaActiva();
           return;
         }
 
