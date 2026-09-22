@@ -178,5 +178,10 @@
     "lista_destino": "prioritarias",
     "revisado": true,
     "observado_en": "2026-09-22T21:00:11.327Z"
+  },
+  "948354-138-LE26": {
+    "lista_destino": "secundarias",
+    "revisado": true,
+    "observado_en": "2026-09-22T21:47:49.871Z"
   }
 }
