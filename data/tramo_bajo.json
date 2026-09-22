@@ -19,7 +19,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1072229-41-L126",
@@ -41,7 +42,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3416-62-L126",
@@ -63,7 +65,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4146-10-L126",
@@ -85,7 +88,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3416-65-L126",
@@ -107,7 +111,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-205-L126",
@@ -129,7 +134,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "993-44-L126",
@@ -151,7 +157,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057461-55-L126",
@@ -173,7 +180,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1562-56-L126",
@@ -195,7 +203,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "229-97-L126",
@@ -217,7 +226,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2408-215-L126",
@@ -239,7 +249,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1626-28-L126",
@@ -261,7 +272,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3085-63-L126",
@@ -283,7 +295,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1555-77-L126",
@@ -305,7 +318,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057385-46-L126",
@@ -327,7 +341,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-171-L126",
@@ -349,7 +364,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3117-90-L126",
@@ -371,7 +387,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4596-31-L126",
@@ -393,7 +410,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1562-59-L126",
@@ -415,7 +433,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-174-L126",
@@ -437,7 +456,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4885-24-L126",
@@ -459,7 +479,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1480209-16-L126",
@@ -481,7 +502,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1562-57-L126",
@@ -503,7 +525,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "564162-121-L126",
@@ -525,7 +548,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1305541-4-L126",
@@ -547,7 +571,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2179-15-L126",
@@ -569,7 +594,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2422-153-L126",
@@ -591,7 +617,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-208-L126",
@@ -613,7 +640,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1480127-9-L126",
@@ -635,7 +663,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1002588-98-L126",
@@ -657,7 +686,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4055-69-L126",
@@ -679,7 +709,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-172-L126",
@@ -701,7 +732,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4881-37-L126",
@@ -723,7 +755,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4112-23-L126",
@@ -745,7 +778,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4881-38-L126",
@@ -767,7 +801,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2703-189-L126",
@@ -789,7 +824,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1062018-24-L126",
@@ -811,7 +847,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1153624-19-L126",
@@ -833,7 +870,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3540-65-L126",
@@ -855,7 +893,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "564162-122-L126",
@@ -877,7 +916,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-176-L126",
@@ -899,7 +939,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2188-13-L126",
@@ -921,7 +962,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "769-83-L126",
@@ -943,7 +985,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2445-118-L126",
@@ -965,7 +1008,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-175-L126",
@@ -987,7 +1031,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2188-14-L126",
@@ -1009,7 +1054,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-173-L126",
@@ -1031,7 +1077,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "564162-127-L126",
@@ -1053,7 +1100,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-177-L126",
@@ -1075,7 +1123,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "564162-125-L126",
@@ -1097,7 +1146,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "838108-11-L126",
@@ -1119,7 +1169,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "547640-16-L126",
@@ -1141,7 +1192,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "564162-124-L126",
@@ -1163,7 +1215,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2186-24-L126",
@@ -1185,7 +1238,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2605-12-L126",
@@ -1207,7 +1261,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2658-313-L126",
@@ -1229,7 +1284,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1040538-15-L126",
@@ -1251,7 +1307,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-214-L126",
@@ -1273,7 +1330,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3416-67-L126",
@@ -1295,7 +1353,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3807-10-L126",
@@ -1317,7 +1376,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "519209-4-L126",
@@ -1339,7 +1399,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "635-146-L126",
@@ -1361,7 +1422,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1209-8-L126",
@@ -1383,7 +1445,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4451-105-L126",
@@ -1405,7 +1468,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-164-L126",
@@ -1427,7 +1491,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-179-L126",
@@ -1449,7 +1514,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "564162-126-L126",
@@ -1471,7 +1537,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057428-40-L126",
@@ -1493,7 +1560,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1393575-15-L126",
@@ -1515,7 +1583,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "483-48-L126",
@@ -1537,7 +1606,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "5067-136-L126",
@@ -1559,7 +1629,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-50-L126",
@@ -1581,7 +1652,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2125-34-L126",
@@ -1603,7 +1675,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2703-179-L126",
@@ -1625,7 +1698,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2730-90-L126",
@@ -1647,7 +1721,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-215-L126",
@@ -1669,7 +1744,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3877-9-L126",
@@ -1691,7 +1767,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-167-L126",
@@ -1713,7 +1790,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "635-145-L126",
@@ -1735,7 +1813,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "711841-14-L126",
@@ -1757,7 +1836,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-213-L126",
@@ -1779,7 +1859,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2789-30-L126",
@@ -1801,7 +1882,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2591-171-L126",
@@ -1823,7 +1905,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4993-76-L126",
@@ -1845,7 +1928,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3890-195-L126",
@@ -1867,7 +1951,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057508-114-L126",
@@ -1889,7 +1974,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1153624-18-L126",
@@ -1911,7 +1997,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1233600-54-L126",
@@ -1933,7 +2020,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-183-L126",
@@ -1955,7 +2043,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-195-L126",
@@ -1977,7 +2066,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1491-18-L126",
@@ -1999,7 +2089,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1978-97-L126",
@@ -2021,7 +2112,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2146-67-L126",
@@ -2043,7 +2135,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2693-35-L126",
@@ -2065,7 +2158,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3117-89-L126",
@@ -2087,7 +2181,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4210-3-L126",
@@ -2109,7 +2204,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-168-L126",
@@ -2131,7 +2227,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-169-L126",
@@ -2153,7 +2250,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4469-170-L126",
@@ -2175,7 +2273,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "867990-89-L126",
@@ -2197,7 +2296,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-40-L126",
@@ -2219,7 +2319,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-46-L126",
@@ -2241,7 +2342,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-47-L126",
@@ -2263,7 +2365,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-52-L126",
@@ -2285,7 +2388,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "915-4-L126",
@@ -2307,7 +2411,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1019-109-L126",
@@ -2329,7 +2434,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1657-18-L126",
@@ -2351,7 +2457,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2145-61-L126",
@@ -2373,7 +2480,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2409-96-L126",
@@ -2395,7 +2503,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2445-120-L126",
@@ -2417,7 +2526,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2494-83-L126",
@@ -2439,7 +2549,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2101-154-L126",
@@ -2461,7 +2572,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2145-62-L126",
@@ -2483,7 +2595,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4844-23-L126",
@@ -2505,7 +2618,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3328-100-L126",
@@ -2527,7 +2641,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3540-67-L126",
@@ -2549,7 +2664,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057438-18-L126",
@@ -2571,7 +2687,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2402-82-L126",
@@ -2593,7 +2710,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2766-138-L126",
@@ -2615,7 +2733,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3092-19-L126",
@@ -2637,7 +2756,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1664-23-L126",
@@ -2659,7 +2779,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1696-17-L126",
@@ -2681,7 +2802,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2145-63-L126",
@@ -2703,7 +2825,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2332-111-L126",
@@ -2725,7 +2848,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "635-149-L126",
@@ -2747,7 +2871,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1254658-14-L126",
@@ -2769,7 +2894,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1398-96-L126",
@@ -2791,7 +2917,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3210-11-L126",
@@ -2813,7 +2940,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2332-110-L126",
@@ -2835,7 +2963,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2974-71-L126",
@@ -2857,7 +2986,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3889-44-L126",
@@ -2879,7 +3009,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4306-33-L126",
@@ -2901,7 +3032,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "5877-36-L126",
@@ -2923,7 +3055,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1254658-15-L126",
@@ -2945,7 +3078,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2101-144-L126",
@@ -2967,7 +3101,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3046-29-L126",
@@ -2989,7 +3124,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3730-94-L126",
@@ -3011,7 +3147,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3996-38-L126",
@@ -3033,7 +3170,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "523059-9-L126",
@@ -3055,7 +3193,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1417913-123-L126",
@@ -3077,7 +3216,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2122-30-L126",
@@ -3099,7 +3239,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4055-73-L126",
@@ -3121,7 +3262,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4451-106-L126",
@@ -3143,7 +3285,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "5877-35-L126",
@@ -3165,7 +3308,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1398-94-L126",
@@ -3187,7 +3331,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2122-29-L126",
@@ -3209,7 +3354,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3530-20-L126",
@@ -3231,7 +3377,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3540-66-L126",
@@ -3253,7 +3400,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4055-70-L126",
@@ -3275,7 +3423,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "937232-83-L126",
@@ -3297,7 +3446,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1067476-37-L126",
@@ -3319,7 +3469,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1197-21-L126",
@@ -3341,7 +3492,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1398-101-L126",
@@ -3363,7 +3515,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2467-102-L126",
@@ -3385,7 +3538,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2817-64-L126",
@@ -3407,7 +3561,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2658-316-L126",
@@ -3429,7 +3584,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2961-67-L126",
@@ -3451,7 +3607,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1110404-199-L126",
@@ -3473,7 +3630,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3890-200-L126",
@@ -3495,7 +3653,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "635-150-L126",
@@ -3517,7 +3676,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3656-159-L126",
@@ -3539,7 +3699,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2548-86-L126",
@@ -3561,7 +3722,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2757-12-L126",
@@ -3583,7 +3745,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "635-151-L126",
@@ -3605,7 +3768,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1108338-39-L126",
@@ -3627,7 +3791,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1110404-198-L126",
@@ -3649,7 +3814,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-57-L126",
@@ -3671,7 +3837,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1660-137-L126",
@@ -3693,7 +3860,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1218393-44-L126",
@@ -3715,7 +3883,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1464-63-L126",
@@ -3737,7 +3906,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1621-23-L126",
@@ -3759,7 +3929,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2408-226-L126",
@@ -3781,7 +3952,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1552-90-L126",
@@ -3803,7 +3975,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2408-228-L126",
@@ -3825,7 +3998,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2658-317-L126",
@@ -3847,7 +4021,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2974-73-L126",
@@ -3869,7 +4044,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2393-19-L126",
@@ -3891,7 +4067,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2409-97-L126",
@@ -3913,7 +4090,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2658-318-L126",
@@ -3935,7 +4113,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2658-319-L126",
@@ -3957,7 +4136,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3545-28-L126",
@@ -3979,7 +4159,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3841-30-L126",
@@ -4001,7 +4182,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3938-38-L126",
@@ -4023,7 +4205,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3890-201-L126",
@@ -4045,7 +4228,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3890-199-L126",
@@ -4067,7 +4251,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4734-14-L126",
@@ -4089,7 +4274,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4993-77-L126",
@@ -4111,7 +4297,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4055-74-L126",
@@ -4133,7 +4320,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4881-39-L126",
@@ -4155,7 +4343,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "707412-20-L126",
@@ -4177,7 +4366,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-58-L126",
@@ -4199,7 +4389,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-60-L126",
@@ -4221,7 +4412,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2408-227-L126",
@@ -4243,7 +4435,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "730566-26-L126",
@@ -4265,7 +4458,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-63-L126",
@@ -4287,7 +4481,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057448-50-L126",
@@ -4309,7 +4504,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1230848-64-L126",
@@ -4331,7 +4527,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057374-27-L126",
@@ -4353,7 +4550,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057532-75-L126",
@@ -4375,7 +4573,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1628-19-L126",
@@ -4397,7 +4596,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1398-102-L126",
@@ -4419,7 +4619,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2125-36-L126",
@@ -4441,7 +4642,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2408-233-L126",
@@ -4463,7 +4665,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3117-93-L126",
@@ -4485,7 +4688,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3121-1-L126",
@@ -4507,7 +4711,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1080089-44-L126",
@@ -4529,7 +4734,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1129-7-L126",
@@ -4551,7 +4757,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1113159-20-L126",
@@ -4573,7 +4780,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3268-28-L126",
@@ -4595,7 +4803,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4889-38-L126",
@@ -4617,7 +4826,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1660-138-L126",
@@ -4639,7 +4849,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3710-91-L126",
@@ -4661,7 +4872,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1624-22-L126",
@@ -4683,7 +4895,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1973-98-L126",
@@ -4705,7 +4918,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2548-87-L126",
@@ -4727,7 +4941,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3515-10-L126",
@@ -4749,7 +4964,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3948-41-L126",
@@ -4771,7 +4987,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "5349-111-L126",
@@ -4793,7 +5010,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3253-84-L126",
@@ -4815,7 +5033,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3710-90-L126",
@@ -4837,7 +5056,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4906-36-L126",
@@ -4859,7 +5079,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "5349-112-L126",
@@ -4881,7 +5102,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3968-42-L126",
@@ -4903,7 +5125,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4883-16-L126",
@@ -4925,7 +5148,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "5349-110-L126",
@@ -4947,7 +5171,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1237328-67-L126",
@@ -4969,7 +5194,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1628-20-L126",
@@ -4991,7 +5217,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3117-94-L126",
@@ -5013,7 +5240,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1658-216-L126",
@@ -5035,7 +5263,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1660-139-L126",
@@ -5057,7 +5286,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1660-140-L126",
@@ -5079,7 +5309,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2188-15-L126",
@@ -5101,7 +5332,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2408-235-L126",
@@ -5123,7 +5355,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2409-98-L126",
@@ -5145,7 +5378,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2467-100-L126",
@@ -5167,7 +5401,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2736-36-L126",
@@ -5189,7 +5424,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4075-28-L126",
@@ -5211,7 +5447,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4407-25-L126",
@@ -5233,7 +5470,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4455-52-L126",
@@ -5255,7 +5493,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "983344-8-L126",
@@ -5277,7 +5516,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057384-140-L126",
@@ -5299,7 +5539,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1754-46-L126",
@@ -5321,7 +5562,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1514-118-L126",
@@ -5343,7 +5585,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1624-23-L126",
@@ -5365,7 +5608,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3073-48-L126",
@@ -5387,7 +5631,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "643553-24-L126",
@@ -5409,7 +5654,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "948-27-L126",
@@ -5431,7 +5677,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3938-40-L126",
@@ -5453,7 +5700,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4308-22-L126",
@@ -5475,7 +5723,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4881-40-L126",
@@ -5497,7 +5746,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4429-98-L126",
@@ -5519,7 +5769,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "969221-2-L126",
@@ -5541,7 +5792,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "483-50-L126",
@@ -5563,7 +5815,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "729944-4-L126",
@@ -5585,7 +5838,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "983344-9-L126",
@@ -5607,7 +5861,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4881-41-L126",
@@ -5629,7 +5884,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2548-88-L126",
@@ -5651,7 +5907,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4887-30-L126",
@@ -5673,7 +5930,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2730-123-L126",
@@ -5695,7 +5953,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3890-203-L126",
@@ -5717,7 +5976,8 @@
     "origen": "diario",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1057379-23-L126",
@@ -5739,7 +5999,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1090-12-L126",
@@ -5761,7 +6022,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1110404-193-L126",
@@ -5783,7 +6045,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1111432-63-L126",
@@ -5805,7 +6068,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1432083-30-L126",
@@ -5827,7 +6091,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-185-L126",
@@ -5849,7 +6114,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-193-L126",
@@ -5871,7 +6137,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1469-211-L126",
@@ -5893,7 +6160,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1557-34-L126",
@@ -5915,7 +6183,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1736-101-L126",
@@ -5937,7 +6206,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "1746-43-L126",
@@ -5959,7 +6229,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2101-150-L126",
@@ -5981,7 +6252,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2311-39-L126",
@@ -6003,7 +6275,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2378-112-L126",
@@ -6025,7 +6298,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2445-119-L126",
@@ -6047,7 +6321,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2658-312-L126",
@@ -6069,7 +6344,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2703-190-L126",
@@ -6091,7 +6367,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2790-54-L126",
@@ -6113,7 +6390,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "2790-55-L126",
@@ -6135,7 +6413,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3251-30-L126",
@@ -6157,7 +6436,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3710-88-L126",
@@ -6179,7 +6459,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3710-89-L126",
@@ -6201,7 +6482,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3730-93-L126",
@@ -6223,7 +6505,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3866-7-L126",
@@ -6245,7 +6528,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3890-197-L126",
@@ -6267,7 +6551,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "3942-21-L126",
@@ -6289,7 +6574,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4285-18-L126",
@@ -6311,7 +6597,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "4844-22-L126",
@@ -6333,7 +6620,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "514848-36-L126",
@@ -6355,7 +6643,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "5349-101-L126",
@@ -6377,7 +6666,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "5349-102-L126",
@@ -6399,7 +6689,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "635-147-L126",
@@ -6421,7 +6712,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "867990-92-L126",
@@ -6443,7 +6735,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "874750-24-L126",
@@ -6465,7 +6758,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "900-29-L126",
@@ -6487,7 +6781,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "986278-19-L126",
@@ -6509,7 +6804,8 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   },
   {
     "codigo": "993-46-L126",
@@ -6531,6 +6827,1088 @@
     "origen": "activas",
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": []
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1057935-19-L126",
+    "nombre": "Adquisici\u00F3n de una camilla ginecol\u00F3gica para Hospital de Corral",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1080094-15-L126",
+    "nombre": "MANTENCI\u00D3N PREVENTIVA Y CORRECTIVA DEL SISTEMA DE CALEFACCI\u00D3N BASE SAMU MAGALLANES",
+    "tipo": "L1",
+    "fecha_cierre": "2026-10-05T20:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1153625-9-L126",
+    "nombre": "Adquisici\u00F3n Licencias Adobe Acrobat Pro DC",
+    "tipo": "L1",
+    "fecha_cierre": "2026-10-01T16:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1298357-13-L126",
+    "nombre": "SERVICIO PUBLICIDAD RADIAL PRENSA ESCRITA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:10:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1469-209-L126",
+    "nombre": "SERVICIO EDITORIAL PARA PROYECTO LITERARIO \u201CHAB\u00CDA UNA VEZ EN EL MAULE\u201D DEL FONDO DE LA CREACI\u00D3N ART\u00CDSTICA, DIRECCI\u00D3N DE CREACI\u00D3N, UNIVERSIDAD DE TALCA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1469-217-L126",
+    "nombre": "AUSPICIO EN PROGRAMA RADIAL PARA DIFUSION ALTERNATIVAS ACADEMICAS DEL CAMPUS TALCA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1660-143-L126",
+    "nombre": "COMPRA DE SERVICIOS DE M\u00C9DICO POR  55 PRESTACIONES EJECUTADAS DESDE OCTUBRE A DICIEMBRE 2026 PARA HOSPITAL DE SALAMANCA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-30T15:26:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1978-123-L126",
+    "nombre": "Adquisici\u00F3n de Bolsas Hermetica, Frascos de Muestras e Insumos para Sellado T\u00E9rmico",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "2284-33-L126",
+    "nombre": "INSUMOS CLINICOS DESTINADOS AL AREA DE SALUD MUNICIPAL. SOLICITUD 6472-2026",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:01:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "2284-35-L126",
+    "nombre": "INSUMOS HABITUALES DESTINADOS AL AREA DE SALUD MUNICIPAL. SOLICITUD 6458-2026",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T16:32:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "2324-116-L126",
+    "nombre": "Licitaci\u00F3n P\u00FAblica N\u00BA 114.2026 \u201CSERVICIO DE CAPACITACION ESCUELA BARRIAL DE SEGURIDAD COMUNITARIA Y VIAL UN BARRIO QUE SE CUIDA PROGRAMA RECUPARACION DE BARRIOS BARRIO 18 DE SEPTIEMBRE-MIRAMAR\u201D.",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T17:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "2424-84-L126",
+    "nombre": "SERVICIO DE MANTENCION CORRECTIVA ASCENSOR Y MONTACARGAS DEL TEATRO MUNICIPAL DE VI\u00D1A DEL MAR - 57 2117 - (V.D.V.)",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:30:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "2446-269-L126",
+    "nombre": "SERVICIO DE MANTENCI\u00D3N CORRECTIVA Y MANTENCIONES PREVENTIVAS POR 12 MESES DEL ASCENSOR DEL ESTADIO FRANCISCO SANCHEZ RUMOROSO.",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:01:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "2446-276-L126",
+    "nombre": "\u201CCURSO DE CAPACITACION PARA 20 PERSONAS SOBRE USO DEL PROGRAMA POWER BI\u201D",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "2703-193-L126",
+    "nombre": "SC 12473 Insumos cl\u00EDnicos. CESFAM. ",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:35:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3085-64-L126",
+    "nombre": "REPARACI\u00D3N DE TECHUMBRE, INSTALACI\u00D3N DE PUERTA Y VENTANA A LOGIA EN VIVIENDA FISCAL",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T20:01:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3095-11-L126",
+    "nombre": "Servicio de tala, poda, retiro de arboles y limpieza",
+    "tipo": "L1",
+    "fecha_cierre": "2026-10-08T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3253-85-L126",
+    "nombre": "CONTRATO DE SUMINISTRO DE SE\u00D1ALES REGLAMENTARIAS E INFORMATIVAS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:40:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3447-149-L126",
+    "nombre": "Mejoramiento de las Tapas de Protecci\u00F3n de la Fosa Com\u00FAn del Cementerio Municipal de Alto Hospicio.",
+    "tipo": "L1",
+    "fecha_cierre": "2026-10-05T15:35:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3671-65-L126",
+    "nombre": "\u201CINSTALACI\u00D3N DE ESTANQUE DE ACUMULACI\u00D3N DE AGUA POTABLE POSTA RUCAPEQU\u00C9N \u2013 SEGUNDO LLAMADO\u201D DE LA I. MUNICIPALIDAD DE CHILL\u00C1N VIEJO. ",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3730-97-L126",
+    "nombre": "CONTRATACION DE PRODUCTORA PARA ACTIVIDAD, PROG. QUIERO MI BARRIO PISAGUA ORIENTE",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-30T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3890-202-L126",
+    "nombre": "GIRA TEC. QUEPE-CURACAUTIN PPL-SECPLA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T16:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3890-204-L126",
+    "nombre": "ADQ. SILLAS EJEC. PARA UNIDADES MUNICIPALES FREIRE",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3934-36-L126",
+    "nombre": "INVERNADERO E INSUMOS PARA USO EN PROGRAMA PROMOCION DE SALUD",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:23:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3934-37-L126",
+    "nombre": "SERVICIOS DE PUBLICIDAD Y DIFUSION PROGRAMA PROMOCION DE SALUD",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:48:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3934-38-L126",
+    "nombre": "IMPLEMENTOS E INSUMOS PSICOMOTRICIDAD PROGRAMA PROMOCION DE SALUD",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:42:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3938-39-L126",
+    "nombre": "CONTRATACION DE SERVICIO DE TRASLADO DE AGRICULTORES PARA 11 ACCIONES FORMATIVAS - PDTI CURARREHUE",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:01:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3951-50-L126",
+    "nombre": "\u201CSERVICIO DE FACILITADOR/A INTERCULTURAL, PERIODO OCTUBRE-DICIEMBRE, CORRESPONDIENTE AL PROGRAMA PESPI DEL CVDS\u0022",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T16:57:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3960-66-L126",
+    "nombre": "TALLER CONFECCI\u00D3N DE ARREGLOS FLORALES",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:55:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3996-39-L126",
+    "nombre": "Servicios de Producci\u00F3n Audivisual",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:01:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "411-44-L126",
+    "nombre": "Contrataci\u00F3n servicio de transporte",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T16:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "4172-25-L126",
+    "nombre": "INSUMOS CURACION AVANZADA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T17:09:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "4358-34-L126",
+    "nombre": "\u201CServicio Integral de Salida Pedag\u00F3gica a Valpara\u00EDso Carnaval Mil Tambores 2026 Liceo Municipal de Nacimiento\u201D",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T15:30:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "4939-12-L126",
+    "nombre": "Material Fungible Escuela Rural Hueque Sep",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T18:56:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "4939-13-L126",
+    "nombre": "Material Did\u00E1ctico Escuela Rural Hueque",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T19:31:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "4939-14-L126",
+    "nombre": "Material did\u00E1ctico Escuela Rural Poyo",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T19:55:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "4939-15-L126",
+    "nombre": "Kit higiene personal mujer y hombre Pro retenci\u00F3n",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T20:21:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "5060-41-L126",
+    "nombre": "SOL. N\u00B0496 SEP ADQUISICI\u00D3N DE SERVICIO DE SALIDA PEDAG\u00D3GICA, PARQUE NACIONAL CONGUILLIO Y RESERVA NACIONAL MALALCAHUELLO, COLEGIO MUNDO M\u00C1GICO (sol. n\u00B067)",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T10:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "5061-27-L126",
+    "nombre": "SCH131, Adquisici\u00F3n de Tintas compatibles con impresora Canon Maxify GX7010, para stock en Bodega General del DSM Temuco.  Seg\u00FAn Especificaciones T\u00E9cnicas adjuntas.",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T15:05:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "5196-26-L126",
+    "nombre": "SAN021 Insumos M\u00E9dicos",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T16:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "5198-29-L126",
+    "nombre": "MANTENIMIENTO DE EQUIPOS  Y CALEFONTS",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-30T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "5416-35-L126",
+    "nombre": "Kits para ensayos",
+    "tipo": "L1",
+    "fecha_cierre": "2026-10-02T20:03:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "564162-129-L126",
+    "nombre": "Solicitud N\u00B092870 - Bolsas, etiquetas y cajas con impresi\u00F3n digital - CC112 / PS1772",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "594965-28-L126",
+    "nombre": "MANTENCION PREVENTIVA Y PROGRAMADA DE CALEFONT IONIZADO",
+    "tipo": "L1",
+    "fecha_cierre": "2026-10-05T15:01:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "707419-42-L126",
+    "nombre": "MANTENIMIENTO PREVENTIVO PARA CALEFONT, UBICADOS EN JARDINES INFANTILES , SALAS CUNAS DE FUNDACI\u00D3N INTEGRA, REGI\u00D3N DE VALPARA\u00CDSO\u201D",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-30T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "707419-43-L126",
+    "nombre": "MANTENIMIENTO PREVENTIVO Y CORRECTIVO PARA HIDROPACK Y EQUIPOS DE BOMBEO DE AGUA POTABLE Y LIMPIEZA DE ESTANQUE DE ACUMULACI\u00D3N, UBICADOS EN JARDINES INFANTILES, SALAS CUNA Y OFICINAS REGIONALES DE FUNDACI\u00D3N INTEGRA, REGI\u00D3N DE VALPARA\u00CDSO\u201D",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T15:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "769-89-L126",
+    "nombre": "ADQUISICIONES PROYECTO MEL ITEM 29",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-29T15:30:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": []
   }
 ]

@@ -21,7 +21,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       80111613
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "2741-60-LE26",
@@ -45,7 +46,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       84111602
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "2020-21-LE26",
@@ -69,7 +71,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       81112202
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "612-19-LE26",
@@ -93,7 +96,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       81112006
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "1431841-61-LE26",
@@ -117,7 +121,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       80101506
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "721703-40-LP26",
@@ -141,7 +146,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       82121501
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "759-32-LP26",
@@ -165,7 +171,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       93151607
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "584105-31-LE26",
@@ -189,7 +196,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       93151607
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "608897-57-LE26",
@@ -213,7 +221,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       77101701
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "761391-138-LE26",
@@ -237,7 +246,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       81111505
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "587-49-LE26",
@@ -261,7 +271,8 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       81112005
-    ]
+    ],
+    "items_unspsc": []
   },
   {
     "codigo": "1606-32-LE26",
@@ -285,6 +296,560 @@
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       82121501
-    ]
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "726931-1-LE26",
+    "nombre": "PLATAFORMA INTEGRAL ALUMNI Y EMPLEABILIDAD UTA",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-28T16:00:00",
+    "fecha_lote": "2026-09-04",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n de Arica y Parinacota",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 15000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 168,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1007793-15-LE26",
+    "nombre": "SOLUCI\u00D3N INFORM\u00C1TICA INSTITUCIONAL PARA EL CFT",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-07T15:30:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "inform\u00E1tic",
+    "region": "Regi\u00F3n de los Lagos ",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 11300000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 16,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408,
+      43232408,
+      43232408
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1725-197-LP26",
+    "nombre": "INFRAESTRUC.TECNOL\u00D3GICA PLATAFORMA FONDOS CONCURSA",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-23T12:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n de Valpara\u00EDso ",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 170000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 198,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "2770-120-LR26",
+    "nombre": "SISTEMA DE GESTI\u00D3N INTEGRADO SMAPA",
+    "tipo": "LR",
+    "fecha_cierre": "2026-09-10T14:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "sistema de gesti\u00F3n",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLF",
+    "monto": 54017.67,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 3290,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233001
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "548874-72-LR26",
+    "nombre": "SERV. DE ADMINISTRACION PLATAFORMAS TECNOLOGICAS",
+    "tipo": "LR",
+    "fecha_cierre": "2026-09-30T15:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLF",
+    "monto": 24000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 81,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232304
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "548874-74-LR26",
+    "nombre": "SERV DE PLATAFORMA SIEM NUEVA GENERACI\u00D3N SAAS IPS",
+    "tipo": "LR",
+    "fecha_cierre": "2026-10-02T15:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "USD",
+    "monto": 565250.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 81,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233205
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "548874-77-LR26",
+    "nombre": "MANTENCI\u00D3N Y MEJORA SISTEMA CIBERSEGURIDAD NCH ISO",
+    "tipo": "LR",
+    "fecha_cierre": "2026-10-06T15:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "ciberseguridad",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLF",
+    "monto": 11000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 81,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233203
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "85-41-LE26",
+    "nombre": "PLATAFORMA INTEGRAL SOPORTE TI CON CONTROL REMOTO",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-21T15:01:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 156,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "188-83-LP26",
+    "nombre": "Plataforma de Control de Proyectos COMUDEF",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-02T15:01:00",
+    "fecha_lote": "2026-09-07",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 1532,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233415
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1447930-11-LP26",
+    "nombre": "SSP - Plataforma de virtualizaci\u00F3n On Premise",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-29T17:00:00",
+    "fecha_lote": "2026-09-09",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 113050000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 2,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232915
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "5482-103-LP26",
+    "nombre": "PLATAFORMA DE GESTI\u00D3N TERRITORIAL Y DE RENTAS",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-30T15:01:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 284,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "5482-100-LP26",
+    "nombre": "PLATAFORMA DE GESTI\u00D3N TERRITORIAL Y DE RENTAS",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-30T15:01:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 284,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "5482-101-LR26",
+    "nombre": "Plataforma IA para video y seguridad urbana",
+    "tipo": "LR",
+    "fecha_cierre": "2026-10-13T15:01:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 284,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408,
+      43232408
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "3666-12-LE26",
+    "nombre": "GESTION DOCUMENTAL Y DIGITAL MUNICIPALIDAD TILTIL",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-29T12:00:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": "ti",
+    "termino_match": "gesti\u00F3n documental",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 58000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 106,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232202
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "591-26-LP26",
+    "nombre": "PLATAFORMA DE OBSERVABILIDAD AVANZADA MULTICLOUD PARA FONASA.",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-30T16:00:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 86,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231512
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1978-81-LE26",
+    "nombre": "PLATAFORMA DE CAPACITACI\u00D3N E-LEARNING CAPMAULE",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-28T15:01:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n del Maule ",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 445,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232701
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "869591-12-LP26",
+    "nombre": "CONTRATACI\u00D3N DE PLATAFORMA DE GESTI\u00D3N DOCUMENTAL EXPEDIENTE ELECTR\u00D3NICO Y GESTI\u00D3N DE PROCESOS",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-05T15:00:00",
+    "fecha_lote": "2026-09-15",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 71,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232202
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "1973-93-LR26",
+    "nombre": "SISTEMA DE INFORMACI\u00D3N DE GESTI\u00D3N ADMINISTRATIVA Y FARMACIA ",
+    "tipo": "LR",
+    "fecha_cierre": "2026-09-24T17:30:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 414000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 70,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231602
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "29-81-LP26",
+    "nombre": "AGF - PLATAFORMA INGLES",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-13T15:01:00",
+    "fecha_lote": "2026-09-11",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "revision_degradada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 1468,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      86111701
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "608-197-LR26",
+    "nombre": "SERVICIO DE OPERACI\u00D3N MANTENIMIENTO Y ACTUALIZACI\u00D3N DE PLATAFORMAS TECNOL\u00D3GICAS DE LA SALA DE CONTROL CENTRALIZADO DEL HOSPITAL DR. GUSTAVO FRICKE",
+    "tipo": "LR",
+    "fecha_cierre": "2026-10-15T16:29:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n de Valpara\u00EDso ",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 675433201.0,
+    "estado_flujo": "revision_degradada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 3578,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      81111503
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "885-84-LE26",
+    "nombre": "Soporte mantenci\u00F3n y monitoreo plataforma legacy IBM Spectrum para la Contralor\u00EDa General de la Rep\u00FAblica",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-30T16:00:00",
+    "fecha_lote": "2026-09-15",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 30000000.0,
+    "estado_flujo": "revision_degradada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 33,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      81111812
+    ],
+    "items_unspsc": []
+  },
+  {
+    "codigo": "514862-125-LR26",
+    "nombre": "10032938 PLATAFORMA DE AGENDAMIENTO TELECONSULTAS",
+    "tipo": "LR",
+    "fecha_cierre": "2026-10-19T15:00:00",
+    "fecha_lote": "2026-09-16",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": null,
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 408000000.0,
+    "estado_flujo": "revision_degradada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 151,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      81112010
+    ],
+    "items_unspsc": []
   }
 ]
