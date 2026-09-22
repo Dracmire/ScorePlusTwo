@@ -143,8 +143,13 @@ jobs:
           # nunca sobrevivía entre corridas — cada día se reenriquecían desde
           # cero los mismos códigos ya enriquecidos el día anterior. Mismo
           # modo de falla que ya pasó con secundarias.json/tramo_bajo.json
-          # cuando esas listas se crearon (2026-09-16).
-          git add data/raw data/adjudicadas data/candidatas.json data/secundarias.json data/tramo_bajo.json data/cache-unspsc.json data/historico data/informes.json data/eventos.json data/consultas docs/data.json
+          # cuando esas listas se crearon (2026-09-16), y de nuevo con
+          # docs/panel-revision.json (2026-09-22, corregido en el mismo PR
+          # que lo introdujo antes de que llegara a faltar en producción
+          # ni un solo día): Program.PublicarPanelRevisionConfig lo escribe
+          # en cada corrida, pero sin estar acá el runner efímero lo perdía
+          # igual que pasaba con el cache.
+          git add data/raw data/adjudicadas data/candidatas.json data/secundarias.json data/tramo_bajo.json data/cache-unspsc.json data/historico data/informes.json data/eventos.json data/consultas docs/data.json docs/panel-revision.json
           if git diff --cached --quiet; then
             echo "Sin cambios que commitear"
           else
