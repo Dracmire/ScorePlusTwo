@@ -1,0 +1,36 @@
+{
+  "codigo_externo": "948354-138-LE26",
+  "consultado_en": "2026-09-22T21:10:04.2893539Z",
+  "encontrado": true,
+  "detalle": {
+    "codigo_externo": "948354-138-LE26",
+    "items": {
+      "listado": [
+        {
+          "codigo_producto": 43232310,
+          "codigo_categoria": "43232300",
+          "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de consultas y gesti\u00F3n de datos",
+          "adjudicacion": null
+        }
+      ]
+    },
+    "comprador": {
+      "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+      "nombre_organismo": "FONDO HOSPITAL DE LA DIRECCION DE PREVISION DE CARABINEROS DE CHILE",
+      "comuna_unidad": "Las Condes"
+    },
+    "moneda": "CLP",
+    "visibilidad_monto": 1,
+    "monto_estimado": 35000000.0,
+    "cantidad_reclamos": 395,
+    "codigo_estado": 5,
+    "adjudicacion": null,
+    "descripcion": "El Hospital de la Direcci\u00F3n de Previsi\u00F3n de Carabineros de Chile, ubicado en Vital Apoquindo N\u00B01.200, Comuna de Las Condes, Regi\u00F3n Metropolitana, en adelante \u201CEL HOSPITAL\u201D, llama a Licitaci\u00F3n P\u00FAblica para la Contrataci\u00F3n del Servicio de Licenciamiento, Implementaci\u00F3n, Mantenci\u00F3n, Actualizaci\u00F3n y Soporte de Soluci\u00F3n Inform\u00E1tica para la Gesti\u00F3n de Calidad en Salud, en adelante \u201CEL SERVICIO\u201D, por un periodo de 36 meses, cuyas caracter\u00EDsticas y requisitos t\u00E9cnicos constan en las Bases Administrativas y T\u00E9cnicas de esta Licitaci\u00F3n con sus respectivos anexos.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "fechas": {
+      "fecha_cierre": "2026-09-25T16:00:00"
+    }
+  }
+}
