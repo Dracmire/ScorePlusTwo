@@ -30,6 +30,14 @@ namespace ScorePlusTwo.Pipeline.Cli;
 // una sola llamada de detalle sobre un código puntual, persistida en
 // data/consultas/{codigo}.json — sirve de cache para el botón "Consultar"
 // del tablero. Requiere MP_TICKET, sin --fixture.
+//
+// --refrescar-descriptivos (2026-09-22), mismo patrón estructural que los
+// tres anteriores (ver Program.EjecutarRefrescarDescriptivosAsync):
+// refresca campos descriptivos (Descripcion, Organismo, Comuna, Region,
+// Moneda, Monto, CantidadReclamos, ItemsUnspsc, etc.) de Prioritarias
+// completas + la cola de Revisión dentro de Secundarias — NUNCA
+// reclasifica ni mueve de lista (a diferencia de --reevaluar-inventario,
+// que sí lo hace). Requiere MP_TICKET, sin --fixture.
 public sealed record OpcionesCli(
     string? RutaFixture,
     DateOnly? Fecha,
@@ -39,7 +47,8 @@ public sealed record OpcionesCli(
     string? RutaSalidaRefiltrado,
     bool BackfillUnspsc,
     bool ReevaluarInventario,
-    string? ConsultarLicitacion)
+    string? ConsultarLicitacion,
+    bool RefrescarDescriptivos)
 {
     public static OpcionesCli Parse(string[] args)
     {
@@ -52,6 +61,7 @@ public sealed record OpcionesCli(
         var backfillUnspsc = false;
         var reevaluarInventario = false;
         string? consultarLicitacion = null;
+        var refrescarDescriptivos = false;
 
         for (var i = 0; i < args.Length; i++)
         {
@@ -84,11 +94,14 @@ public sealed record OpcionesCli(
                 case "--consultar-licitacion" when i + 1 < args.Length:
                     consultarLicitacion = args[++i];
                     break;
+                case "--refrescar-descriptivos":
+                    refrescarDescriptivos = true;
+                    break;
             }
         }
 
         return new OpcionesCli(
             rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado,
-            backfillUnspsc, reevaluarInventario, consultarLicitacion);
+            backfillUnspsc, reevaluarInventario, consultarLicitacion, refrescarDescriptivos);
     }
 }

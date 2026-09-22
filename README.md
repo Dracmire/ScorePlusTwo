@@ -107,6 +107,25 @@ expiración limita el daño a "alguien puede escribir en este repo hasta tal
 fecha" — un token clásico de scope completo lo expone todo, sin fecha
 límite, hasta que alguien lo revoque a mano.
 
+**Detalle expandible:** cada fila de la pestaña Revisión tiene un enlace
+"Ver detalle" que expande un panel con datos que la tabla compacta no
+muestra (descripción completa, organismo, ítems UNSPSC con su categoría
+resuelta, etc.). Qué campos se muestran por default y cuáles quedan detrás
+de "Mostrar más campos" es editable en `config/panel-revision.json` (mismo
+patrón que `config/criterios.json`) — el cambio se refleja en el tablero
+en la siguiente corrida del pipeline, no hace falta tocar código:
+
+```json
+{
+  "campos_visibles": ["descripcion", "fecha_cierre", "organismo", "region", "monto", "cantidad_reclamos"],
+  "campos_ocultos_por_default": ["items_unspsc", "comuna", "sub_contratacion", "prohibicion_contratacion", "tipo_pago"]
+}
+```
+
+`sub_contratacion` y `tipo_pago` son códigos numéricos que trae la API sin
+diccionario de traducción disponible (ej. `"4"`, `"1"`) — se muestran tal
+cual, por eso quedan ocultos por default.
+
 ## Consulta puntual de un código de licitación
 
 Pestaña "Consulta" del tablero: un campo de texto para pegar un código

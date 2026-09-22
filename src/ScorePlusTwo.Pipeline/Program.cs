@@ -66,6 +66,17 @@ public static class Program
                 return await EjecutarConsultarLicitacionAsync(repoRoot, opciones.ConsultarLicitacion);
             }
 
+            // Otra rama completamente aparte (2026-09-22, mismo criterio
+            // estructural que las tres anteriores): refresca campos
+            // descriptivos de Prioritarias completas + la cola de Revisión
+            // dentro de Secundarias — nunca reclasifica ni mueve de lista
+            // (a propósito, para no confundirse con --reevaluar-inventario).
+            // Ver EjecutarRefrescarDescriptivosAsync.
+            if (opciones.RefrescarDescriptivos)
+            {
+                return await EjecutarRefrescarDescriptivosAsync(repoRoot);
+            }
+
             var criterios = JsonStore.Cargar<Criterios>(
                 Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
             var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
@@ -294,6 +305,7 @@ public static class Program
 
             var dashboard = GeneradorDashboard.Construir(prioritariasActivas, secundariasActivas, tramoBajoActivas, informes, DateTime.UtcNow);
             JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
+            PublicarPanelRevisionConfig(repoRoot);
 
             ImprimirResumen(
                 resultadoDiario, nuevasPrioritariasDiario.Count, nuevasSecundariasDiario.Count, nuevasTramoBajoDiario.Count,
@@ -308,6 +320,30 @@ public static class Program
             Console.Error.WriteLine($"[FATAL] Pipeline abortado sin escribir cambios: {ex.Message}");
             return 1;
         }
+    }
+
+    // config/panel-revision.json (2026-09-22) es config editable por el
+    // usuario, mismo patrón que criterios.json — GitHub Pages solo sirve
+    // docs/, así que el frontend no puede leerlo directamente de config/.
+    // Se publica una copia textual en docs/ cada vez que se regenera
+    // docs/data.json (flujo normal + los tres modos de mantenimiento que
+    // también regeneran el dashboard), para que editar el archivo y
+    // esperar a la próxima corrida (nocturna o de mantenimiento) baste
+    // para que el tablero lo recoja, sin lógica de sincronización nueva.
+    // Copia textual, no un round-trip por un tipo C#: preserva el archivo
+    // tal cual lo dejó el usuario. Si config/panel-revision.json no existe
+    // (nunca debería pasar tras este cambio, pero por si se borra a mano),
+    // no falla la corrida — docs/app.js ya tiene un fallback hardcodeado.
+    private static void PublicarPanelRevisionConfig(string repoRoot)
+    {
+        var origen = Path.Combine(repoRoot, "config", "panel-revision.json");
+        if (!File.Exists(origen))
+        {
+            return;
+        }
+
+        var destino = Path.Combine(repoRoot, "docs", "panel-revision.json");
+        File.Copy(origen, destino, overwrite: true);
     }
 
     private static void GuardarRawDelDia(string repoRoot, DateOnly fecha, ListadoLicitacionesResponse respuesta)
@@ -449,7 +485,12 @@ public static class Program
             RubroMatch = detectada.RubroMatch,
             TerminoMatch = detectada.TerminoMatch,
             Region = detectada.Region,
-            Organismo = null,
+            Organismo = detectada.Organismo,
+            Comuna = detectada.Comuna,
+            Descripcion = detectada.Descripcion,
+            ProhibicionContratacion = detectada.ProhibicionContratacion,
+            TipoPago = detectada.TipoPago,
+            SubContratacion = detectada.SubContratacion,
             Moneda = detectada.Moneda,
             Monto = detectada.Monto,
             CantidadReclamos = detectada.CantidadReclamos,
@@ -931,6 +972,12 @@ public static class Program
             candidata.Moneda = entrada?.Moneda;
             candidata.Monto = entrada?.Monto;
             candidata.CantidadReclamos = entrada?.CantidadReclamos;
+            candidata.Organismo = entrada?.NombreOrganismo;
+            candidata.Comuna = entrada?.ComunaUnidad;
+            candidata.Descripcion = entrada?.Descripcion;
+            candidata.ProhibicionContratacion = entrada?.ProhibicionContratacion;
+            candidata.TipoPago = entrada?.TipoPago;
+            candidata.SubContratacion = entrada?.SubContratacion;
             candidata.CodigosProductoUnspsc = entrada?.Items
                 .Where(i => i.CodigoProducto is not null)
                 .Select(i => i.CodigoProducto!.Value)
@@ -1003,6 +1050,7 @@ public static class Program
         var informesExistentes = CargarInformesConMigracion(Path.Combine(repoRoot, "data", "informes.json"));
         var dashboard = GeneradorDashboard.Construir(seQuedan, secundarias, tramoBajo, informesExistentes, DateTime.UtcNow);
         JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
+        PublicarPanelRevisionConfig(repoRoot);
 
         var detalleEvento = $"total={prioritarias.Count} confirmadas={conteos["confirmada"]} " +
             $"bien={conteos["bien"]} revision_manual={conteos["revision_manual"]} " +
@@ -1156,6 +1204,12 @@ public static class Program
             candidata.Moneda = entrada.Moneda;
             candidata.Monto = entrada.Monto;
             candidata.CantidadReclamos = entrada.CantidadReclamos;
+            candidata.Organismo = entrada.NombreOrganismo;
+            candidata.Comuna = entrada.ComunaUnidad;
+            candidata.Descripcion = entrada.Descripcion;
+            candidata.ProhibicionContratacion = entrada.ProhibicionContratacion;
+            candidata.TipoPago = entrada.TipoPago;
+            candidata.SubContratacion = entrada.SubContratacion;
             candidata.CodigosProductoUnspsc = entrada.Items
                 .Where(i => i.CodigoProducto is not null)
                 .Select(i => i.CodigoProducto!.Value)
@@ -1310,6 +1364,7 @@ public static class Program
         var dashboard = GeneradorDashboard.Construir(
             prioritariasFinal, secundariasFinal, tramoBajoActivas, informesExistentes, DateTime.UtcNow);
         JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
+        PublicarPanelRevisionConfig(repoRoot);
 
         var totalProcesadas = prioritarias.Count + tramoBajo.Count;
         var detalleEvento = $"total={totalProcesadas} historico_prioritarias={movidasHistoricoPrioritarias} " +
@@ -1377,19 +1432,152 @@ public static class Program
 
         Console.WriteLine($"[CONSULTA] {codigo}: encontrado. CodigoEstado={detalle!.CodigoEstado}");
         Console.WriteLine(
-            $"[CONSULTA] Adjudicacion crudo: " +
+            "[CONSULTA] Adjudicacion: " +
             (detalle.Adjudicacion is null
-                ? "null (campo ausente en la respuesta)"
-                : detalle.Adjudicacion.Value.GetRawText()));
+                ? "null (licitación no adjudicada todavía)"
+                : $"Numero={detalle.Adjudicacion.Numero} Fecha={detalle.Adjudicacion.Fecha} " +
+                  $"NumeroOferentes={detalle.Adjudicacion.NumeroOferentes}"));
 
-        // TEMPORAL (2026-09-22): volcado del JSON crudo completo, para
-        // verificar el shape real de Descripcion/NombreOrganismo/
-        // ComunaUnidad/Tiempo/UnidadTiempo/SubContratacion/TipoPago/
-        // ProhibicionContratacion antes de modelarlos (ver
-        // MercadoPublicoClient.ObtenerDetalleCrudoAsync) — se elimina en
-        // cuanto se confirmen los nombres/anidamiento/tipos reales.
-        var crudo = await cliente.ObtenerDetalleCrudoAsync(codigo);
-        Console.WriteLine($"[CONSULTA] JSON crudo completo: {crudo}");
+        return 0;
+    }
+
+    // Requiere MP_TICKET real — no tiene equivalente a --fixture.
+    //
+    // A diferencia de --backfill-unspsc/--reevaluar-inventario, este modo
+    // NUNCA reclasifica ni mueve de lista — nunca llama a
+    // ClasificadorUnspsc.Clasificar ni a EvaluarRubro/EsRegionElegible, y
+    // nunca toca UnspscEstado/RubroMatch/TerminoMatch/EstadoFlujo. Su único
+    // trabajo es refrescar campos descriptivos (Region, Moneda, Monto,
+    // CantidadReclamos, ItemsUnspsc, Organismo, Comuna, Descripcion,
+    // ProhibicionContratacion, TipoPago, SubContratacion) sobre Prioritarias
+    // completas (sin el filtro de acumulados del flujo diario — acá es
+    // deliberado, mismo criterio que --backfill-unspsc/--reevaluar-inventario
+    // ya usan para procesar confirmadas) y la cola de Revisión dentro de
+    // Secundarias (mismo filtro que ya usa docs/app.js:
+    // unspsc_estado=revision_manual o estado_flujo en
+    // {revision_ambigua, revision_degradada}) — el resto de Secundarias
+    // (~3.700 códigos que nunca entraron a esa cola) queda fuera de
+    // alcance, sin cambios. Decisión explícita del usuario tras el
+    // hallazgo de que ningún modo tocaba Secundarias y el panel expandible
+    // de Revisión quedaba con campos vacíos para candidatas ya persistidas
+    // antes de que estos campos existieran en el modelo.
+    private static async Task<int> EjecutarRefrescarDescriptivosAsync(string repoRoot)
+    {
+        var ticket = Environment.GetEnvironmentVariable("MP_TICKET")
+            ?? throw new MercadoPublicoApiException(
+                "Falta la variable de entorno MP_TICKET (--refrescar-descriptivos requiere red real, no tiene modo --fixture).");
+
+        var rutaCacheUnspsc = Path.Combine(repoRoot, "data", "cache-unspsc.json");
+        var cacheUnspscInicial = JsonStore.CargarOPredeterminado(
+            rutaCacheUnspsc, JsonOpciones.Persistencia, new List<EntradaCacheUnspsc>());
+        var cacheUnspsc = cacheUnspscInicial.ToDictionary(e => e.CodigoExterno);
+
+        var rutaPrioritarias = Path.Combine(repoRoot, "data", "candidatas.json");
+        var prioritarias = JsonStore.CargarOPredeterminado(
+            rutaPrioritarias, JsonOpciones.Persistencia, new List<Candidata>());
+
+        var rutaSecundarias = Path.Combine(repoRoot, "data", "secundarias.json");
+        var secundarias = JsonStore.CargarOPredeterminado(
+            rutaSecundarias, JsonOpciones.Persistencia, new List<Candidata>());
+        var colaRevision = secundarias
+            .Where(c => c.UnspscEstado == UnspscEstado.RevisionManual
+                || c.EstadoFlujo == EstadoFlujo.RevisionAmbigua
+                || c.EstadoFlujo == EstadoFlujo.RevisionDegradada)
+            .ToList();
+
+        var candidatas = prioritarias.Concat(colaRevision).ToList();
+
+        using var http = new HttpClient();
+        var cliente = new MercadoPublicoClient(http, ticket);
+
+        var cronometro = System.Diagnostics.Stopwatch.StartNew();
+        var llamadasIntentadas = 0;
+        var llamadasExitosas = 0;
+
+        foreach (var candidata in candidatas)
+        {
+            llamadasIntentadas++;
+            DetalleLicitacion? detalle;
+            try
+            {
+                var respuesta = await cliente.ObtenerDetalleAsync(candidata.Codigo);
+                detalle = respuesta.Listado.FirstOrDefault(l => l.CodigoExterno == candidata.Codigo);
+            }
+            catch (MercadoPublicoApiException ex)
+            {
+                Console.Error.WriteLine(
+                    $"[ADVERTENCIA] Refresco omitido para {candidata.Codigo}, se reintenta la próxima corrida: {ex.Message}");
+                continue;
+            }
+
+            llamadasExitosas++;
+
+            // Siempre refresca la entrada de cache (no solo cache-miss, a
+            // diferencia del flujo diario) — mismo criterio que
+            // --reevaluar-inventario: el propósito de este modo es
+            // justamente traer datos más frescos que los ya cacheados.
+            var entrada = EnriquecimientoUnspscService.ConstruirEntrada(candidata.Codigo, detalle);
+            cacheUnspsc[candidata.Codigo] = entrada;
+
+            candidata.Region = entrada.RegionUnidad;
+            candidata.Moneda = entrada.Moneda;
+            candidata.Monto = entrada.Monto;
+            candidata.CantidadReclamos = entrada.CantidadReclamos;
+            candidata.Organismo = entrada.NombreOrganismo;
+            candidata.Comuna = entrada.ComunaUnidad;
+            candidata.Descripcion = entrada.Descripcion;
+            candidata.ProhibicionContratacion = entrada.ProhibicionContratacion;
+            candidata.TipoPago = entrada.TipoPago;
+            candidata.SubContratacion = entrada.SubContratacion;
+            candidata.CodigosProductoUnspsc = entrada.Items
+                .Where(i => i.CodigoProducto is not null)
+                .Select(i => i.CodigoProducto!.Value)
+                .ToList();
+            candidata.ItemsUnspsc = entrada.Items;
+            // FechaCierre del detalle es más fresco que el del listado
+            // original (ver DetalleLicitacionResponse.cs) — se usa para
+            // refrescar solo cuando viene poblado, nunca para borrar un
+            // valor ya conocido con uno ausente.
+            if (entrada.FechaCierre is not null)
+            {
+                candidata.FechaCierre = entrada.FechaCierre;
+            }
+        }
+        cronometro.Stop();
+
+        JsonStore.Guardar(rutaPrioritarias, prioritarias, JsonOpciones.Persistencia);
+        JsonStore.Guardar(rutaSecundarias, secundarias, JsonOpciones.Persistencia);
+
+        if (llamadasExitosas > 0)
+        {
+            var cacheOrdenado = cacheUnspsc.Values.OrderBy(e => e.CodigoExterno, StringComparer.Ordinal).ToList();
+            JsonStore.Guardar(rutaCacheUnspsc, cacheOrdenado, JsonOpciones.Persistencia);
+        }
+
+        var tramoBajo = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "tramo_bajo.json"), JsonOpciones.Persistencia, new List<Candidata>());
+        var informesExistentes = CargarInformesConMigracion(Path.Combine(repoRoot, "data", "informes.json"));
+        var dashboard = GeneradorDashboard.Construir(prioritarias, secundarias, tramoBajo, informesExistentes, DateTime.UtcNow);
+        JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
+        PublicarPanelRevisionConfig(repoRoot);
+
+        var detalleEvento = $"total={candidatas.Count} prioritarias={prioritarias.Count} " +
+            $"cola_revision={colaRevision.Count} llamadas_exitosas={llamadasExitosas} " +
+            $"llamadas_fallidas={llamadasIntentadas - llamadasExitosas}";
+        var eventos = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "eventos.json"), JsonOpciones.Persistencia, new List<EventoAuditoria>());
+        eventos.Add(new EventoAuditoria(DateTime.UtcNow, "sistema", "refrescar_descriptivos", null, detalleEvento));
+        JsonStore.Guardar(Path.Combine(repoRoot, "data", "eventos.json"), eventos, JsonOpciones.Persistencia);
+
+        Console.WriteLine("== Resumen de --refrescar-descriptivos ==");
+        Console.WriteLine(
+            $"Procesadas: {candidatas.Count} (Prioritarias={prioritarias.Count}, cola de Revisión={colaRevision.Count})");
+        Console.WriteLine(
+            $"Llamadas: intentadas={llamadasIntentadas} exitosas={llamadasExitosas} " +
+            $"fallidas={llamadasIntentadas - llamadasExitosas} tiempo_total={cronometro.Elapsed.TotalSeconds:F1}s " +
+            (llamadasIntentadas > 0
+                ? $"promedio={cronometro.Elapsed.TotalSeconds / llamadasIntentadas:F2}s/llamada"
+                : "(nada que procesar)"));
 
         return 0;
     }

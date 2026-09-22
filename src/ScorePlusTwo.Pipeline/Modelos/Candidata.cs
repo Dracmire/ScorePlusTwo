@@ -17,11 +17,25 @@ public sealed class Candidata
     // 2026-09-17) para toda candidata que se haya enriquecido — viene
     // gratis en el mismo detalle que ya se pide para UNSPSC, sin cache de
     // organismos. Null para lo que nunca se enriquece (TramoBajo, tipos
-    // privados) o para candidatas de antes de este cambio. Organismo sigue
-    // sin resolver — no forma parte de este dato, queda para cuando haga
-    // falta.
+    // privados) o para candidatas de antes de este cambio.
     public string? Region { get; set; }
+    // Organismo (2026-09-22): poblado desde NombreOrganismo del detalle,
+    // mismo objeto Comprador que ya trae RegionUnidad — el campo existe
+    // desde F1 pero quedó siempre null hasta ahora ("sin resolución de
+    // organismo todavía"). Comuna es nuevo, mismo objeto/misma fuente.
     public string? Organismo { get; set; }
+    public string? Comuna { get; set; }
+
+    // Descripcion/ProhibicionContratacion/TipoPago/SubContratacion
+    // (2026-09-22), mismo detalle de enriquecimiento, sin llamada
+    // adicional — ver EntradaCacheUnspsc para el detalle de cada uno.
+    // TipoPago/SubContratacion son códigos crudos sin diccionario de
+    // traducción disponible (ver DetalleLicitacionResponse.cs) — se
+    // guardan tal cual, el tablero los muestra ocultos por default.
+    public string? Descripcion { get; set; }
+    public string? ProhibicionContratacion { get; set; }
+    public string? TipoPago { get; set; }
+    public string? SubContratacion { get; set; }
 
     // "bajo" para tipo L1 (ver ResultadoFiltro.TramoBajo); null para el
     // resto. No se mezcla con Lista A/B — separa candidatas.json/

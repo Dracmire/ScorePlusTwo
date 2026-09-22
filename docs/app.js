@@ -363,52 +363,191 @@
     return "<ul class=\"lista-items-unspsc\">" + filas + "</ul>";
   }
 
-  // Panel de detalle expandible, solo para la pestaña Revisión (2026-09-21):
-  // datos que ya vienen en docs/data.json pero que la tabla compacta no
-  // muestra — ítems UNSPSC completos, cantidad_reclamos, monto exacto sin
-  // redondear, y la región cruda tal cual la devolvió la API (candidata.region
-  // ya es ese dato crudo, sin normalizar — no hace falta transformarlo).
-  function renderPanelDetalle(candidata) {
+  // Panel configurable (2026-09-22): en vez de una lista fija de campos en
+  // código, config/panel-revision.json (editado por el usuario, publicado
+  // en docs/ por Program.PublicarPanelRevisionConfig) decide qué se
+  // muestra por default y qué queda detrás de "Mostrar más campos". Este
+  // registro es el único lugar que mapea clave -> etiqueta + cómo
+  // renderizarla — agregar un campo nuevo al inventario en el futuro es
+  // agregar una entrada acá y a la config, no tocar renderTablaRevision ni
+  // renderResultadoConsulta (ambos comparten este registro).
+  var CAMPOS_PANEL = {
+    descripcion: {
+      etiqueta: "Descripción",
+      render: function (c) { return c.descripcion ? escaparHtml(c.descripcion) : '<span class="vacio">—</span>'; },
+    },
+    fecha_cierre: {
+      etiqueta: "Fecha de cierre",
+      render: function (c) { return formatearFecha(c.fecha_cierre); },
+    },
+    organismo: {
+      etiqueta: "Organismo",
+      render: function (c) { return c.organismo ? escaparHtml(c.organismo) : '<span class="vacio">—</span>'; },
+    },
+    region: {
+      etiqueta: "Región (cruda, tal cual la API)",
+      render: function (c) { return c.region ? escaparHtml(c.region) : '<span class="vacio">—</span>'; },
+    },
+    comuna: {
+      etiqueta: "Comuna",
+      render: function (c) { return c.comuna ? escaparHtml(c.comuna) : '<span class="vacio">—</span>'; },
+    },
+    monto: {
+      etiqueta: "Monto exacto",
+      render: renderMontoExacto,
+    },
+    cantidad_reclamos: {
+      etiqueta: "Cantidad de reclamos",
+      render: function (c) {
+        return c.cantidad_reclamos == null ? '<span class="vacio">—</span>' : escaparHtml(String(c.cantidad_reclamos));
+      },
+    },
+    items_unspsc: {
+      etiqueta: "Ítems UNSPSC",
+      render: renderItemsUnspsc,
+    },
+    // sub_contratacion/tipo_pago (2026-09-22): códigos numéricos como
+    // string ("1", "4", "0") SIN diccionario de traducción disponible
+    // (ver DetalleLicitacionResponse.cs) — se muestran crudos, con la
+    // etiqueta dejando claro que es un código sin traducir. Ocultos por
+    // default en config/panel-revision.json a propósito: un código sin
+    // contexto confunde más de lo que ayuda.
+    sub_contratacion: {
+      etiqueta: "Subcontratación (código, sin traducir)",
+      render: function (c) { return c.sub_contratacion != null ? escaparHtml(c.sub_contratacion) : '<span class="vacio">—</span>'; },
+    },
+    prohibicion_contratacion: {
+      etiqueta: "Prohibición de contratación",
+      render: function (c) {
+        return c.prohibicion_contratacion ? escaparHtml(c.prohibicion_contratacion) : '<span class="vacio">—</span>';
+      },
+    },
+    tipo_pago: {
+      etiqueta: "Tipo de pago (código, sin traducir)",
+      render: function (c) { return c.tipo_pago != null ? escaparHtml(c.tipo_pago) : '<span class="vacio">—</span>'; },
+    },
+  };
+
+  // Fallback si config/panel-revision.json todavía no se publicó (antes de
+  // la primera corrida tras este cambio) o la lectura falla — nunca un
+  // panel roto por un 404, mismo contenido que el archivo inicial.
+  var PANEL_CONFIG_DEFAULT = {
+    campos_visibles: ["descripcion", "fecha_cierre", "organismo", "region", "monto", "cantidad_reclamos"],
+    campos_ocultos_por_default: ["items_unspsc", "comuna", "sub_contratacion", "prohibicion_contratacion", "tipo_pago"],
+  };
+
+  var panelRevisionConfig = PANEL_CONFIG_DEFAULT;
+
+  function cargarPanelRevisionConfig() {
+    return fetch("panel-revision.json")
+      .then(function (respuesta) {
+        if (!respuesta.ok) throw new Error("panel-revision.json no disponible (HTTP " + respuesta.status + ")");
+        return respuesta.json();
+      })
+      .then(function (config) { panelRevisionConfig = config; })
+      .catch(function () { panelRevisionConfig = PANEL_CONFIG_DEFAULT; });
+  }
+
+  function renderBloqueCampos(candidata, claves) {
+    return (claves || []).map(function (clave) {
+      var campo = CAMPOS_PANEL[clave];
+      if (!campo) {
+        // Un campo referenciado en config/panel-revision.json que no
+        // existe en el registro (typo del usuario al editar, o un campo
+        // retirado del código) se ignora — nunca rompe el panel.
+        console.warn('config/panel-revision.json referencia un campo desconocido: "' + clave + '"');
+        return "";
+      }
+      return "<div><strong>" + escaparHtml(campo.etiqueta) + ":</strong> " + campo.render(candidata) + "</div>";
+    }).join("");
+  }
+
+  // Panel de detalle expandible (2026-09-21/22): datos que ya vienen en
+  // docs/data.json pero que la tabla compacta no muestra. Compartido entre
+  // la pestaña Revisión (renderTablaRevision) y la pestaña Consulta
+  // (renderResultadoConsulta) — cualquier campo nuevo que se agregue al
+  // registro CAMPOS_PANEL aparece automáticamente en ambos.
+  function renderCamposConfigurados(candidata) {
+    var config = panelRevisionConfig || PANEL_CONFIG_DEFAULT;
+    var visibles = config.campos_visibles || PANEL_CONFIG_DEFAULT.campos_visibles;
+    var ocultos = config.campos_ocultos_por_default || PANEL_CONFIG_DEFAULT.campos_ocultos_por_default;
+    var idOcultos = "campos-ocultos-" + Math.random().toString(36).slice(2);
+
     return '<div class="panel-detalle">' +
-      "<div><strong>Ítems UNSPSC:</strong>" + renderItemsUnspsc(candidata) + "</div>" +
-      "<div><strong>Cantidad de reclamos:</strong> " +
-        (candidata.cantidad_reclamos == null ? '<span class="vacio">—</span>' : escaparHtml(String(candidata.cantidad_reclamos))) +
-      "</div>" +
-      "<div><strong>Monto exacto:</strong> " + renderMontoExacto(candidata) + "</div>" +
-      "<div><strong>Región (cruda, tal cual la API):</strong> " +
-        (candidata.region ? escaparHtml(candidata.region) : '<span class="vacio">—</span>') +
-      "</div>" +
+      renderBloqueCampos(candidata, visibles) +
+      (ocultos.length
+        ? '<button class="boton-detalle" data-toggle-ocultos="' + idOcultos + '" aria-expanded="false">▸ Mostrar más campos</button>' +
+          '<div id="' + idOcultos + '" class="bloque-campos-ocultos" hidden>' + renderBloqueCampos(candidata, ocultos) + "</div>"
+        : "") +
       "</div>";
   }
 
-  // Adjudicacion (2026-09-22): campo crudo de la API, verificado contra un
-  // código real (1000813-15-LE26, estado 8) — NO trae nombre/RUT del
-  // adjudicatario, solo metadata del acta (Tipo sin documentar, Fecha,
-  // Numero, NumeroOferentes) y un link a la ficha real en
-  // mercadopublico.cl (UrlActa). Decisión explícita del usuario: mostrar
-  // esta metadata + el link para que un humano lo abra si quiere ver el
-  // ganador, sin invertir en resolver esa página (mismo riesgo ya
-  // documentado con url_ficha en GeneradorDashboard.cs — querystring de
-  // sesión sobre un dominio que ya bloqueó accesos automatizados).
+  // Activa el toggle "Mostrar más campos" para todos los paneles dentro de
+  // un contenedor — se llama después de escribir innerHTML, tanto en
+  // Revisión (una vez por fila) como en Consulta (una vez por resultado).
+  function activarTogglesOcultos(contenedor) {
+    contenedor.querySelectorAll("button[data-toggle-ocultos]").forEach(function (boton) {
+      boton.addEventListener("click", function () {
+        var bloqueOcultos = document.getElementById(boton.getAttribute("data-toggle-ocultos"));
+        var expandido = boton.getAttribute("aria-expanded") === "true";
+        bloqueOcultos.hidden = expandido;
+        boton.setAttribute("aria-expanded", String(!expandido));
+        boton.textContent = (expandido ? "▸" : "▾") + " Mostrar más campos";
+      });
+    });
+  }
+
+  // Adjudicacion (2026-09-21/22): metadata del acta a nivel de licitación
+  // (fecha/número/oferentes/link) — NUNCA trae el ganador, verificado
+  // contra 1000813-15-LE26. El ganador vive por ítem
+  // (detalle.items.listado[].adjudicacion: rut_proveedor/nombre_proveedor/
+  // monto_unitario, ver renderGanadores) — hallazgo del 2026-09-22 que
+  // corrige la conclusión anterior ("no sirve para ver ganadores"): sí se
+  // puede, sin scraping, solo estaba en otro nivel del JSON.
   function renderPanelAdjudicacion(detalle) {
     var adj = detalle && detalle.adjudicacion;
     if (!adj) return '<p class="vacio">Sin información de adjudicación.</p>';
 
     return '<ul class="lista-items-unspsc">' +
-      "<li><strong>Fecha:</strong> " + (adj.Fecha ? formatearFecha(adj.Fecha) : '<span class="vacio">—</span>') + "</li>" +
-      "<li><strong>Número de acta:</strong> " + (adj.Numero ? escaparHtml(adj.Numero) : '<span class="vacio">—</span>') + "</li>" +
-      "<li><strong>Oferentes:</strong> " + (adj.NumeroOferentes != null ? escaparHtml(String(adj.NumeroOferentes)) : '<span class="vacio">—</span>') + "</li>" +
-      (adj.UrlActa
-        ? '<li><a href="' + escaparHtml(adj.UrlActa) + '" target="_blank" rel="noopener">Ver acta de adjudicación (Mercado Público) ↗</a></li>'
+      "<li><strong>Fecha:</strong> " + (adj.fecha ? formatearFecha(adj.fecha) : '<span class="vacio">—</span>') + "</li>" +
+      "<li><strong>Número de acta:</strong> " + (adj.numero ? escaparHtml(adj.numero) : '<span class="vacio">—</span>') + "</li>" +
+      "<li><strong>Oferentes:</strong> " + (adj.numero_oferentes != null ? escaparHtml(String(adj.numero_oferentes)) : '<span class="vacio">—</span>') + "</li>" +
+      (adj.url_acta
+        ? '<li><a href="' + escaparHtml(adj.url_acta) + '" target="_blank" rel="noopener">Ver acta de adjudicación (Mercado Público) ↗</a></li>'
         : "") +
       "</ul>";
   }
 
+  // Ganador (2026-09-22): por ítem, no a nivel de la licitación completa
+  // (ver renderPanelAdjudicacion arriba) — la mayoría de las licitaciones
+  // tienen un solo ítem, pero se itera por si acaso más de uno quedó
+  // adjudicado a proveedores distintos. String vacío mientras no haya
+  // ningún ítem adjudicado, para que el llamador decida si mostrar la
+  // sección o no.
+  function renderGanadores(detalle) {
+    var items = (detalle.items && detalle.items.listado) || [];
+    var conGanador = items.filter(function (item) { return item.adjudicacion; });
+    if (!conGanador.length) return "";
+
+    var filas = conGanador.map(function (item) {
+      var g = item.adjudicacion;
+      var monto = g.monto_unitario != null
+        ? " — " + escaparHtml(String(g.monto_unitario)) + (detalle.moneda ? " " + escaparHtml(detalle.moneda) : "")
+        : "";
+      return "<li>" +
+        (g.nombre_proveedor ? escaparHtml(g.nombre_proveedor) : '<span class="vacio">proveedor sin nombre</span>') +
+        (g.rut_proveedor ? " (RUT " + escaparHtml(g.rut_proveedor) + ")" : "") +
+        monto +
+        "</li>";
+    }).join("");
+
+    return '<div><strong>Ganador:</strong><ul class="lista-items-unspsc">' + filas + "</ul></div>";
+  }
+
   // Adapta el shape crudo de ResultadoConsulta (snake_case, ver
   // Modelos/ResultadoConsulta.cs y DetalleLicitacionResponse.cs) al shape
-  // que ya esperan renderItemsUnspsc/renderMontoExacto (mismos campos que
-  // docs/data.json) — evita duplicar esos dos renders para la pestaña
-  // Consulta.
+  // que ya espera CAMPOS_PANEL (mismos campos que docs/data.json) — evita
+  // duplicar los renders entre Revisión y Consulta.
   function renderResultadoConsulta(resultado, codigoIngresado) {
     var contenedor = document.getElementById("resultado-consulta");
 
@@ -424,22 +563,31 @@
         return { codigo_producto: item.codigo_producto, categoria: item.categoria };
       }),
       region: d.comprador && d.comprador.region_unidad,
+      organismo: d.comprador && d.comprador.nombre_organismo,
+      comuna: d.comprador && d.comprador.comuna_unidad,
       moneda: d.moneda,
       monto: d.monto_estimado,
+      descripcion: d.descripcion,
+      fecha_cierre: d.fechas && d.fechas.fecha_cierre,
+      cantidad_reclamos: d.cantidad_reclamos,
+      prohibicion_contratacion: d.prohibicion_contratacion,
+      tipo_pago: d.tipo_pago,
+      sub_contratacion: d.sub_contratacion,
     };
 
     contenedor.innerHTML =
       '<div class="panel-detalle">' +
       "<div><strong>Código:</strong> " + escaparHtml(resultado.codigo_externo) + "</div>" +
       "<div><strong>Código de estado:</strong> " + escaparHtml(String(d.codigo_estado)) + "</div>" +
-      "<div><strong>Ítems UNSPSC:</strong>" + renderItemsUnspsc(candidataLike) + "</div>" +
-      "<div><strong>Región (cruda, tal cual la API):</strong> " +
-        (candidataLike.region ? escaparHtml(candidataLike.region) : '<span class="vacio">—</span>') +
       "</div>" +
-      "<div><strong>Monto exacto:</strong> " + renderMontoExacto(candidataLike) + "</div>" +
+      renderCamposConfigurados(candidataLike) +
+      '<div class="panel-detalle">' +
       "<div><strong>Adjudicación:</strong>" + renderPanelAdjudicacion(d) + "</div>" +
+      renderGanadores(d) +
       '<div class="vacio">Consultado el ' + new Date(resultado.consultado_en).toLocaleString("es-CL") + "</div>" +
       "</div>";
+
+    activarTogglesOcultos(contenedor);
   }
 
   // Flujo: (1) leer data/consultas/{codigo}.json — si existe, mostrarlo
@@ -599,7 +747,7 @@
           '<button class="boton-accion" data-accion="secundarias">Confirmar en Secundarias</button>' +
         "</td>" +
         "</tr>" +
-        '<tr class="fila-detalle" hidden><td colspan="7">' + renderPanelDetalle(c) + "</td></tr>";
+        '<tr class="fila-detalle" hidden><td colspan="7">' + renderCamposConfigurados(c) + "</td></tr>";
     }).join("");
 
     contenedor.innerHTML =
@@ -619,6 +767,7 @@
         boton.textContent = (expandido ? "▸" : "▾") + " Ver detalle";
       });
     });
+    activarTogglesOcultos(contenedor);
 
     contenedor.querySelectorAll("tr[data-codigo]").forEach(function (fila) {
       var codigo = fila.getAttribute("data-codigo");
@@ -733,6 +882,11 @@
       etiquetasX +
       "</svg>";
   }
+
+  // panel-revision.json se carga en paralelo, no bloquea el render de
+  // data.json — si tarda o falla, cargarPanelRevisionConfig ya deja
+  // panelRevisionConfig en PANEL_CONFIG_DEFAULT (ver su propio catch).
+  cargarPanelRevisionConfig();
 
   fetch("data.json")
     .then(function (respuesta) { return respuesta.json(); })

@@ -84,6 +84,11 @@ on:
         required: false
         type: string
         default: ''
+      refrescar_descriptivos:
+        description: 'true = correr --refrescar-descriptivos (refresca campos descriptivos de Prioritarias + la cola de Revisión en Secundarias, sin reclasificar ni mover de lista) en vez del flujo normal. Ignora "fecha", "backfill_unspsc", "reevaluar_inventario" y "consultar_licitacion".'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -112,8 +117,11 @@ jobs:
           BACKFILL_UNSPSC: ${{ github.event.inputs.backfill_unspsc }}
           REEVALUAR_INVENTARIO: ${{ github.event.inputs.reevaluar_inventario }}
           CONSULTAR_LICITACION: ${{ github.event.inputs.consultar_licitacion }}
+          REFRESCAR_DESCRIPTIVOS: ${{ github.event.inputs.refrescar_descriptivos }}
         run: |
-          if [ -n "$CONSULTAR_LICITACION" ]; then
+          if [ "$REFRESCAR_DESCRIPTIVOS" = "true" ]; then
+            dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --refrescar-descriptivos
+          elif [ -n "$CONSULTAR_LICITACION" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --consultar-licitacion "$CONSULTAR_LICITACION"
           elif [ "$REEVALUAR_INVENTARIO" = "true" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --reevaluar-inventario
