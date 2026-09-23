@@ -1,0 +1,36 @@
+{
+  "codigo_externo": "584105-31-LE26",
+  "consultado_en": "2026-09-23T19:20:31.9528428Z",
+  "encontrado": true,
+  "detalle": {
+    "codigo_externo": "584105-31-LE26",
+    "items": {
+      "listado": [
+        {
+          "codigo_producto": 93151607,
+          "codigo_categoria": "93151600",
+          "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas",
+          "adjudicacion": null
+        }
+      ]
+    },
+    "comprador": {
+      "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+      "nombre_organismo": "SUBSECRETARIA DE ENERGIA",
+      "comuna_unidad": "Santiago"
+    },
+    "moneda": "CLF",
+    "visibilidad_monto": 0,
+    "monto_estimado": null,
+    "cantidad_reclamos": 68,
+    "codigo_estado": 5,
+    "adjudicacion": null,
+    "descripcion": "E1O2RT9 Auditar el Sistema de Gesti\u00F3n de Igualdad de G\u00E9nero y Conciliaci\u00F3n de la vida laboral, familiar y personal de la Subsecretaria de Energ\u00EDa para dar cumplimiento a la Norma NCH 3262:2021, dispuesta por el instituto nacional de normalizaci\u00F3n de chile (INN), con el fin de recibir la recomendaci\u00F3n de certificaci\u00F3n bajo la Norma NCH 3262:2021",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "fechas": {
+      "fecha_cierre": "2026-09-25T15:01:00"
+    }
+  }
+}
