@@ -1,0 +1,36 @@
+{
+  "codigo_externo": "85-34-LP26",
+  "consultado_en": "2026-09-23T05:34:57.753331Z",
+  "encontrado": true,
+  "detalle": {
+    "codigo_externo": "85-34-LP26",
+    "items": {
+      "listado": [
+        {
+          "codigo_producto": 43222503,
+          "codigo_categoria": "43222500",
+          "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Equipos, plataformas y accesorios de redes multimedia, voz y datos / Equipos de seguridad de red",
+          "adjudicacion": null
+        }
+      ]
+    },
+    "comprador": {
+      "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+      "nombre_organismo": "JUNTA NACIONAL DE AUXILIO ESCOLAR Y BECA",
+      "comuna_unidad": "Santiago Centro"
+    },
+    "moneda": "CLP",
+    "visibilidad_monto": 0,
+    "monto_estimado": null,
+    "cantidad_reclamos": 156,
+    "codigo_estado": 5,
+    "adjudicacion": null,
+    "descripcion": "La presente licitaci\u00F3n tiene por objeto la adquisici\u00F3n, configuraci\u00F3n e implementaci\u00F3n de una soluci\u00F3n tecnol\u00F3gica integral tipo Software GRC Governance, Risk and Compliance, que permita automatizar, gestionar y dar soporte al Sistema de Gesti\u00F3n de Seguridad de la Informaci\u00F3n SGSI de JUNAEB, integrando la normativa vigente, la gesti\u00F3n de riesgos y los planes de continuidad operacional definidos por la instituci\u00F3n.\r\nEl producto entregable final constituye un activo de propiedad exclusiva de JUNAEB, compuesto por: a un activo intangible, en lo que respecta a la configuraci\u00F3n, parametrizaci\u00F3n, datos cargados y documentaci\u00F3n t\u00E9cnica generada, junto con todos los derechos de uso y configuraci\u00F3n asociados; y b un activo f\u00EDsico, correspondiente al hardware provisto por el oferente, el cual pasar\u00E1 a ser de propiedad exclusiva de JUNAEB una vez instalado y recibido conforme.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "fechas": {
+      "fecha_cierre": "2026-09-24T15:00:00"
+    }
+  }
+}
