@@ -1,0 +1,36 @@
+{
+  "codigo_externo": "608-197-LR26",
+  "consultado_en": "2026-09-23T20:04:25.2331073Z",
+  "encontrado": true,
+  "detalle": {
+    "codigo_externo": "608-197-LR26",
+    "items": {
+      "listado": [
+        {
+          "codigo_producto": 81111503,
+          "codigo_categoria": "81111500",
+          "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Ingenier\u00EDa en computaci\u00F3n e inform\u00E1tica",
+          "adjudicacion": null
+        }
+      ]
+    },
+    "comprador": {
+      "region_unidad": "Regi\u00F3n de Valpara\u00EDso ",
+      "nombre_organismo": "HOSPITAL DR GUSTAVO FRICKE DE VINA DEL MAR",
+      "comuna_unidad": ""
+    },
+    "moneda": "CLP",
+    "visibilidad_monto": 1,
+    "monto_estimado": 675433201.0,
+    "cantidad_reclamos": 3578,
+    "codigo_estado": 5,
+    "adjudicacion": null,
+    "descripcion": "Que la unidad de control centralizado integra plataformas tecnol\u00F3gicas y de comunicaci\u00F3n complejas que\r\npermiten el monitoreo constante y reacci\u00F3n inmediata ante incidentes y respuesta en tiempo real frente a\r\nemergencias.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "fechas": {
+      "fecha_cierre": "2026-10-15T16:29:00"
+    }
+  }
+}
