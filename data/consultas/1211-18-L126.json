@@ -1,0 +1,36 @@
+{
+  "codigo_externo": "1211-18-L126",
+  "consultado_en": "2026-09-23T05:46:17.9434553Z",
+  "encontrado": true,
+  "detalle": {
+    "codigo_externo": "1211-18-L126",
+    "items": {
+      "listado": [
+        {
+          "codigo_producto": 80111504,
+          "codigo_categoria": "80111500",
+          "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios de recursos humanos / Consultor\u00EDas para el desarrollo de recursos humanos",
+          "adjudicacion": null
+        }
+      ]
+    },
+    "comprador": {
+      "region_unidad": "Regi\u00F3n del Libertador General Bernardo O\u00B4Higgins",
+      "nombre_organismo": "SUBSECRETARIA DEL MINISTERIO DE EDUCACION PUBLICA",
+      "comuna_unidad": "Rancagua"
+    },
+    "moneda": "CLP",
+    "visibilidad_monto": 1,
+    "monto_estimado": 1500000.0,
+    "cantidad_reclamos": 402,
+    "codigo_estado": 5,
+    "adjudicacion": null,
+    "descripcion": "Contratar servicio de capacitadores para actividad presencial, de una jornada, destinada a 100 profesionales de establecimientos educacionales de la Regi\u00F3n de O\u2019Higgins que participaron en el Plan Piloto regional y que requieren preparaci\u00F3n para la implementaci\u00F3n gradual de la Ley N\u00B0 21.778.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "-1",
+    "sub_contratacion": "1",
+    "fechas": {
+      "fecha_cierre": "2026-09-29T15:00:00"
+    }
+  }
+}
