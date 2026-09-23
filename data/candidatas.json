@@ -1,41 +1,5 @@
 [
   {
-    "codigo": "3084-31-LE26",
-    "nombre": "SERVICIO REPARACI\u00D3N DE OFICINAS PARA LA DIRECCI\u00D3N DE TELECOMUNICACIONES E INFORM\u00C1TICA DE LA ARMADA.",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-22T15:01:00",
-    "fecha_lote": "2026-09-05",
-    "rubro_match": "ti",
-    "termino_match": "inform\u00E1tic",
-    "region": "Regi\u00F3n de Valpara\u00EDso ",
-    "organismo": "DIRECCION DE ABASTECIMIENTO DE LA ARMADA",
-    "comuna": "",
-    "descripcion": "SERVICIO REPARACI\u00D3N DE OFICINAS PARA LA DIRECCI\u00D3N DE TELECOMUNICACIONES E INFORM\u00C1TICA DE LA ARMADA.\r\n\r\n",
-    "prohibicion_contratacion": "1.\tLos derechos y obligaciones que nacen con ocasi\u00F3n del desarrollo del presente procedimiento de contrataci\u00F3n p\u00FAblica, ser\u00E1n intransferibles, sin perjuicio de que una norma legal especial permita expresamente la cesi\u00F3n de derechos y obligaciones.",
-    "tipo_pago": "4",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 10000000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": 2592,
-    "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": [
-      80111613
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 80111613,
-        "codigo_categoria": "80111600",
-        "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios de recursos humanos / Servicios de personal temporal"
-      }
-    ]
-  },
-  {
     "codigo": "2741-60-LE26",
     "nombre": "SERVICIO AUDITORIA EXTERNA ESTADOS FINANCIEROS",
     "tipo": "LE",
@@ -1202,6 +1166,114 @@
         "codigo_producto": 81112010,
         "codigo_categoria": "81112000",
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Servicios de datos"
+      }
+    ]
+  },
+  {
+    "codigo": "610-19-LE26",
+    "nombre": "Base de datos Plexos del Sistema El\u00E9ctrico Nacional",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-09T16:00:00",
+    "fecha_lote": "2026-09-22",
+    "rubro_match": "ti",
+    "termino_match": "base de datos",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "Comisi\u00F3n Nacional de Energ\u00EDa",
+    "comuna": "Santiago Centro",
+    "descripcion": "El objetivo general es contar con el desarrollo de una base de datos en el software Plexos, de car\u00E1cter multinodal y multiembalse, que permita a la Comisi\u00F3n simular la operaci\u00F3n econ\u00F3mica del SEN para los procesos regulatorios de su competencia, en particular el proceso de Fijaci\u00F3n de Precios de Nudo de Corto Plazo, en adelante \u201CPNCP\u201D, de manera consistente y comparable con los resultados obtenidos mediante el modelo actualmente en uso (OSE2000).",
+    "prohibicion_contratacion": "De acuerdo a lo establecido en Bases de Licitaci\u00F3n adjuntas.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 50000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 2,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      81101701
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 81101701,
+        "codigo_categoria": "81101700",
+        "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios profesionales de ingenier\u00EDa / Ingenier\u00EDa el\u00E9ctrica y electr\u00F3nica"
+      }
+    ]
+  },
+  {
+    "codigo": "1005498-22-LE26",
+    "nombre": "Servicio de implementaci\u00F3n de Jira o similar en modalidad Cloud ",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-30T16:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "COMISION PARA EL MERCADO FINANCIERO",
+    "comuna": "Santiago Centro",
+    "descripcion": "servicio de implementaci\u00F3n de Jira (o similar) en modalidad Cloud para la CMF",
+    "prohibicion_contratacion": "NO SE PERMITE",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 20000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 8,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231507
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231507,
+        "codigo_categoria": "43231500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
+      }
+    ]
+  },
+  {
+    "codigo": "1191688-70-LP26",
+    "nombre": "Servicio de Correo Electr\u00F3nico",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-13T15:01:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "I MUNICIPALIDAD DE LA COMUNA DE EL BOSQUE",
+    "comuna": "El Bosque",
+    "descripcion": "Se requiere contratar servicio de correo electr\u00F3nico corporativo que incluya herramientas de colaboraci\u00F3n, almacenamiento en la nube, inteligencia artificial IA, mensajer\u00EDa masiva mailing y servicios gestionados, seg\u00FAn especificaciones t\u00E9cnicas y solicitud de compra N\u00B0522.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 348000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 663,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233501
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233501,
+        "codigo_categoria": "43233500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de intercambio de informaci\u00F3n"
       }
     ]
   }

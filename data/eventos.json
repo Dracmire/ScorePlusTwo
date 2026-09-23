@@ -180,5 +180,12 @@
     "accion": "refrescar_descriptivos",
     "codigo": null,
     "detalle": "total=58 prioritarias=33 cola_revision=25 llamadas_exitosas=58 llamadas_fallidas=0"
+  },
+  {
+    "timestamp": "2026-09-23T03:31:34.0415328Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=1148 prioritarias=1 secundarias=250 tramo_bajo=41 nuevas=292 movidas_historico=341"
   }
 ]
