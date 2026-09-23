@@ -1,0 +1,36 @@
+{
+  "codigo_externo": "514862-125-LR26",
+  "consultado_en": "2026-09-23T03:56:53.8599796Z",
+  "encontrado": true,
+  "detalle": {
+    "codigo_externo": "514862-125-LR26",
+    "items": {
+      "listado": [
+        {
+          "codigo_producto": 81112010,
+          "codigo_categoria": "81112000",
+          "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Servicios de datos",
+          "adjudicacion": null
+        }
+      ]
+    },
+    "comprador": {
+      "region_unidad": "Regi\u00F3n Metropolitana de Santiago",
+      "nombre_organismo": "CORPORACION MUNICIPAL DE PENALOLEN PARA EL DESARROLO SOCIAL CORMUP",
+      "comuna_unidad": "Pe\u00F1alol\u00E9n"
+    },
+    "moneda": "CLP",
+    "visibilidad_monto": 1,
+    "monto_estimado": 408000000.0,
+    "cantidad_reclamos": 151,
+    "codigo_estado": 5,
+    "adjudicacion": null,
+    "descripcion": "SEGUN BASES ADJUNTAS",
+    "prohibicion_contratacion": "SEGUN BASES ADJUNTAS",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "fechas": {
+      "fecha_cierre": "2026-10-19T15:00:00"
+    }
+  }
+}
