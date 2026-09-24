@@ -772,5 +772,41 @@
         "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios de recursos humanos / Servicios de personal temporal"
       }
     ]
+  },
+  {
+    "codigo": "1725-197-LP26",
+    "nombre": "INFRAESTRUC.TECNOL\u00D3GICA PLATAFORMA FONDOS CONCURSA",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-23T12:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n de Valpara\u00EDso ",
+    "organismo": "SUBSECRETAR\u00CDA DE LAS CULTURAS Y LAS ARTES",
+    "comuna": "Valpara\u00EDso",
+    "descripcion": "SERVICIOS DE IMPLEMENTACI\u00D3N Y EXPLOTACI\u00D3N DE INFRAESTRUCTURA TECNOL\u00D3GICA PARA LA PLATAFORMA DE FONDOS CONCURSABLES DE LA SUBSECRETAR\u00CDA DE LAS CULTURAS Y LAS ARTES",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 170000000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 198,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
   }
 ]

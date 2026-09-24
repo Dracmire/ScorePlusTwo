@@ -469,5 +469,26 @@
     "sin_resolver_unspsc": 93,
     "revision_manual_unspsc": 7,
     "ahorrados_por_acumulados": 0
+  },
+  {
+    "fecha": "2026-09-23",
+    "total": 1068,
+    "tras_estado": 353,
+    "tras_tipo": 347,
+    "tras_region": 36,
+    "descarte_duro": 47,
+    "prioritarias": 0,
+    "secundarias": 258,
+    "tramo_bajo": 42,
+    "nuevas_prioritarias": 0,
+    "nuevas_secundarias": 258,
+    "nuevas_tramo_bajo": 42,
+    "barrido_activas": null,
+    "enriquecidos_hoy": 248,
+    "enriquecimientos_fallidos": 0,
+    "bienes": 83,
+    "sin_resolver_unspsc": 75,
+    "revision_manual_unspsc": 11,
+    "ahorrados_por_acumulados": 0
   }
 ]
