@@ -808,5 +808,77 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
     ]
+  },
+  {
+    "codigo": "608897-57-LE26",
+    "nombre": "REPRESENTACI\u00D3N EN PROCESO DE MANTENCI\u00D3N DE LA ACREDITACI\u00D3N ENAC ISOIEC17025:2017 DEL SISTEMA DE GESTI\u00D3N DE CALIDAD DEL DEPARTAMENTO REDES DE MONITOREO",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-24T15:30:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": "ti",
+    "termino_match": "sistema de gesti\u00F3n",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "SUBSECRETARIA DEL MEDIO AMBIENTE",
+    "comuna": "Santiago",
+    "descripcion": "representar al Departamento de Redes\r\nde Monitoreo en el proceso de mantenci\u00F3n de la acreditaci\u00F3n\r\nISO/IEC17025:2017 de su sistema de gesti\u00F3n, otorgada por ENAC",
+    "prohibicion_contratacion": "De acuerdo a lo indicado en punto 27 de bases de licitaci\u00F3n",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 35000000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 335,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      77101701
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 77101701,
+        "codigo_categoria": "77101700",
+        "categoria": "Servicios medioambientales / Gesti\u00F3n medioambiental / Servicios de asesor\u00EDa medioambiental"
+      }
+    ]
+  },
+  {
+    "codigo": "1973-93-LR26",
+    "nombre": "SISTEMA DE INFORMACI\u00D3N DE GESTI\u00D3N ADMINISTRATIVA Y FARMACIA ",
+    "tipo": "LR",
+    "fecha_cierre": "2026-09-24T17:30:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "CENTRO DE REFERENCIA DE SALUD DE PENALOLEN CORDILLERA ORIENTE",
+    "comuna": "Pe\u00F1alol\u00E9n",
+    "descripcion": "Las presentes bases regir\u00E1n la Propuesta P\u00FAblica convocada por el CRSCO para la contrataci\u00F3n de SISTEMA DE INFORMACI\u00D3N DE GESTI\u00D3N ADMINISTRATIVA Y FARMACIA por un periodo de 60 meses. \r\n\r\nSe entender\u00E1 que todo proveedor conoce y acepta irrevocablemente el contenido de estas Bases, por el solo hecho de presentar sus ofertas en este proceso de compra. \r\n\r\nLas caracter\u00EDsticas o especificaciones t\u00E9cnicas que presenten los oferentes deber\u00E1n cumplir con los requisitos se\u00F1alados en las bases y la idoneidad y calidad t\u00E9cnica del oferente, con el fin de asegurar que el adjudicatario se ajuste a los requisitos que el CRSCO ha especificado para la ejecuci\u00F3n del contrato licitado. \r\n",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 414000000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 70,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231602
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231602,
+        "codigo_categoria": "43231600",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
+      }
+    ]
   }
 ]
