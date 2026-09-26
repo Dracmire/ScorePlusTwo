@@ -1168,5 +1168,41 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de intercambio de informaci\u00F3n"
       }
     ]
+  },
+  {
+    "codigo": "623663-10-LE26",
+    "nombre": "AUDITOR\u00CDA EXTERNA ESTADOS FINANCIEROS AGENCIASE",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-05T15:00:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": "compliance",
+    "termino_match": "auditor",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "AGENCIA CHILENA DE EFICIENCIA ENERGETICA",
+    "comuna": "Providencia",
+    "descripcion": "La presente licitaci\u00F3n tiene por objeto efectuar un llamado p\u00FAblico, convocando a los\r\ninteresados para que, sujet\u00E1ndose a las bases fijadas, presenten propuestas para que la\r\nAgencia contrate los servicios de auditor\u00EDa externa a los estados financieros al 31 de\r\ndiciembre de 2025.\r\nLa licitaci\u00F3n se regir\u00E1 por lo dispuesto en las presentes bases, en las que se establecen los\r\nfines, condiciones, requisitos y funcionalidades que deben ser cubiertas por los bienes y\r\nservicios materia de la misma, y asimismo en lo pertinente y cuando le sea aplicable, por\r\nlas disposiciones de la Ley N\u00B019.886, de Bases de Contratos Administrativos de Suministro\r\ny Prestaci\u00F3n de Servicios y sus respectivas modificaciones, y su Reglamento, aprobado por\r\nel Decreto Supremo N\u00B0661 de 2024, del Ministerio de Hacienda, que contiene las\r\ninstrucciones y condiciones de operaci\u00F3n del portal de ChileCompra,\r\nwww.mercadopublico.cl en la medida en que se encuentren vigentes al momento de\r\nefectuar la contrataci\u00F3n.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 17,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      84111601
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 84111601,
+        "codigo_categoria": "84111600",
+        "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
+      }
+    ]
   }
 ]
