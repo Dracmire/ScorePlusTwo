@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-09-26T03:45:05.7619219Z",
+  "generado_en": "2026-09-27T03:46:14.8545326Z",
   "prioritarias": [
     {
       "codigo": "1007793-15-LE26",
@@ -29192,6 +29192,93 @@
       "sub_contratacion": "0"
     },
     {
+      "codigo": "1155683-24-LE26",
+      "nombre": "ADQUISICI\u00D3N DE EPP\u2019S  PEE CONAF NUBLE",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-01T12:40:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n del \u00D1uble",
+      "organismo": "CORP NACIONAL FORESTAL",
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "bien",
+      "cantidad_reclamos": 778,
+      "items_unspsc": [
+        {
+          "codigo_producto": 53131609,
+          "codigo_categoria": "53131600",
+          "categoria": "Ropa, maletas y productos de aseo personal / Art\u00EDculos de ba\u00F1o o tocador / Art\u00EDculos de ba\u00F1o y cuerpo"
+        },
+        {
+          "codigo_producto": 53102503,
+          "codigo_categoria": "53102500",
+          "categoria": "Ropa, maletas y productos de aseo personal / Ropa / Accesorios de vestir"
+        },
+        {
+          "codigo_producto": 31211903,
+          "codigo_categoria": "31211900",
+          "categoria": "Art\u00EDculos de fabricaci\u00F3n y producci\u00F3n / Pinturas, diluyentes y accesorios para pintado / Accesorios para pintar"
+        },
+        {
+          "codigo_producto": 31241501,
+          "codigo_categoria": "31241500",
+          "categoria": "Art\u00EDculos de fabricaci\u00F3n y producci\u00F3n / \u00D3ptica industrial / Lentes y prismas industriales"
+        },
+        {
+          "codigo_producto": 42141504,
+          "codigo_categoria": "42141500",
+          "categoria": "Equipamiento y suministros m\u00E9dicos / Suministros y productos cl\u00EDnicos / Torundas de algod\u00F3n y aplicadoras de algod\u00F3n"
+        },
+        {
+          "codigo_producto": 24122002,
+          "codigo_categoria": "24122000",
+          "categoria": "Equipamiento para manejo y estiba de materiales / Materiales para envasado / Botellas"
+        },
+        {
+          "codigo_producto": 10191508,
+          "codigo_categoria": "10191500",
+          "categoria": "Art\u00EDculos para plantas y animales / Productos para el control de plagas / Pesticidas o repelentes de plagas"
+        },
+        {
+          "codigo_producto": 46181504,
+          "codigo_categoria": "46181500",
+          "categoria": "Equipos y suministros de defensa, orden p\u00FAblico, protecci\u00F3n y seguridad / Seguridad y protecci\u00F3n personal / Ropa protectora de seguridad contra materias peligrosas"
+        },
+        {
+          "codigo_producto": 46181504,
+          "codigo_categoria": "46181500",
+          "categoria": "Equipos y suministros de defensa, orden p\u00FAblico, protecci\u00F3n y seguridad / Seguridad y protecci\u00F3n personal / Ropa protectora de seguridad contra materias peligrosas"
+        },
+        {
+          "codigo_producto": 42132202,
+          "codigo_categoria": "42132200",
+          "categoria": "Equipamiento y suministros m\u00E9dicos / Vestuario cl\u00EDnico / Guantes m\u00E9dicos y accesorios"
+        },
+        {
+          "codigo_producto": 46181527,
+          "codigo_categoria": "46181500",
+          "categoria": "Equipos y suministros de defensa, orden p\u00FAblico, protecci\u00F3n y seguridad / Seguridad y protecci\u00F3n personal / Ropa protectora de seguridad contra materias peligrosas"
+        },
+        {
+          "codigo_producto": 53103001,
+          "codigo_categoria": "53103000",
+          "categoria": "Ropa, maletas y productos de aseo personal / Ropa / Camisetas"
+        }
+      ],
+      "comuna": "Chill\u00E1n",
+      "descripcion": "La Corporaci\u00F3n Nacional Forestal requiere Elementos de Protecci\u00F3n personal para trabajadores del Programa de Empleo de Emergencia (PEE), Oficina Regional \u00D1uble, de un (a) proveedor(a) que entregue puesto a piso los siguientes productos. El oferente deber\u00E1 adjuntar una ficha con las caracter\u00EDsticas t\u00E9cnicas de los productos que oferta, las cuales deber\u00E1n ajustarse plenamente a las Especificaciones que se encuentran contenidas en las bases de licitaci\u00F3n. De no adjuntar la Ficha T\u00E9cnica de los productos ofertados y/o de no cumplir dicha Ficha con las especificaciones t\u00E9cnicas requeridas en las Bases, la oferta ser\u00E1 declarada inadmisible y eliminada del proceso de evaluaci\u00F3n. Podr\u00E1 ser adjudicaci\u00F3n m\u00FAltiple.",
+      "prohibicion_contratacion": "",
+      "tipo_pago": "1",
+      "sub_contratacion": "0"
+    },
+    {
       "codigo": "1147293-24-LE26",
       "nombre": "ADOPCI\u00D3N Y VALIDACI\u00D3N DE PAQUETE TECNOL\u00D3GICO",
       "tipo": "LE",
@@ -36376,6 +36463,43 @@
       "sub_contratacion": "1"
     },
     {
+      "codigo": "1155683-22-LE26",
+      "nombre": "ADQUISICI\u00D3N CALZADO SEGURIDAD PEE CONAF \u00D1UBLE VCL",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-02T11:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n del \u00D1uble",
+      "organismo": "CORP NACIONAL FORESTAL",
+      "moneda": "CLP",
+      "monto": 25100280.0,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "bien",
+      "cantidad_reclamos": 778,
+      "items_unspsc": [
+        {
+          "codigo_producto": 46181602,
+          "codigo_categoria": "46181600",
+          "categoria": "Equipos y suministros de defensa, orden p\u00FAblico, protecci\u00F3n y seguridad / Seguridad y protecci\u00F3n personal / Calzado de seguridad"
+        },
+        {
+          "codigo_producto": 46181602,
+          "codigo_categoria": "46181600",
+          "categoria": "Equipos y suministros de defensa, orden p\u00FAblico, protecci\u00F3n y seguridad / Seguridad y protecci\u00F3n personal / Calzado de seguridad"
+        }
+      ],
+      "comuna": "Chill\u00E1n",
+      "descripcion": "La Corporaci\u00F3n Nacional Forestal requiere adquirir Calzado de Seguridad para Actividades del Programa de Empleo PEE, Oficina Regional \u00D1uble, de un a proveedora que entregue puesto a piso los siguientes productos. El oferente deber\u00E1 adjuntar una ficha con las caracter\u00EDsticas t\u00E9cnicas de los productos que oferta, las cuales deber\u00E1n ajustarse plenamente a las Especificaciones que se solicitan.",
+      "prohibicion_contratacion": "No se permitir\u00E1 la subcontrataci\u00F3n de los productos.",
+      "tipo_pago": "1",
+      "sub_contratacion": "1"
+    },
+    {
       "codigo": "3251-32-LE26",
       "nombre": "SUMINISTRO CANASTA OFTALMOLOGIA Y OTORRINOLARINGOL",
       "tipo": "LE",
@@ -37195,6 +37319,78 @@
       "comuna": "Punta Arenas",
       "descripcion": "La Corporaci\u00F3n Nacional Forestal, en adelante \u201CCONAF\u201D o la \u201CCorporaci\u00F3n\u201D, indistintamente, invita a los oferentes inscritos en el portal de compras del Estado www.mercadopublico.cl, a participar en la licitaci\u00F3n p\u00FAblica para la adquisici\u00F3n de \u201CContenedor de frio de 20 pies para ASP PN Torres del Paine\u201D, de acuerdo con las especificaciones incluidas en las Bases de Licitaci\u00F3n y sus respectivos Anexos",
       "prohibicion_contratacion": "",
+      "tipo_pago": "1",
+      "sub_contratacion": "1"
+    },
+    {
+      "codigo": "1155683-23-LE26",
+      "nombre": "ADQUISICI\u00D3N HERRAMIENTAS MANUALES PEE CONAF \u00D1UBLE",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-02T12:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n del \u00D1uble",
+      "organismo": "CORP NACIONAL FORESTAL",
+      "moneda": "CLP",
+      "monto": 22120000.0,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "bien",
+      "cantidad_reclamos": 778,
+      "items_unspsc": [
+        {
+          "codigo_producto": 27112006,
+          "codigo_categoria": "27112000",
+          "categoria": "Herramientas y maquinaria en general / Herramientas manuales / Herramientas de jardiner\u00EDa"
+        },
+        {
+          "codigo_producto": 27111508,
+          "codigo_categoria": "27111500",
+          "categoria": "Herramientas y maquinaria en general / Herramientas manuales / Herramientas de corte, estaje y punzones"
+        },
+        {
+          "codigo_producto": 27112010,
+          "codigo_categoria": "27112000",
+          "categoria": "Herramientas y maquinaria en general / Herramientas manuales / Herramientas de jardiner\u00EDa"
+        },
+        {
+          "codigo_producto": 24101506,
+          "codigo_categoria": "24101500",
+          "categoria": "Equipamiento para manejo y estiba de materiales / Maquinaria para manejo de materiales / Camiones, carros y carretillas industriales"
+        },
+        {
+          "codigo_producto": 27112007,
+          "codigo_categoria": "27112000",
+          "categoria": "Herramientas y maquinaria en general / Herramientas manuales / Herramientas de jardiner\u00EDa"
+        },
+        {
+          "codigo_producto": 27111604,
+          "codigo_categoria": "27111600",
+          "categoria": "Herramientas y maquinaria en general / Herramientas manuales / Herramientas para perfilar"
+        },
+        {
+          "codigo_producto": 27112004,
+          "codigo_categoria": "27112000",
+          "categoria": "Herramientas y maquinaria en general / Herramientas manuales / Herramientas de jardiner\u00EDa"
+        },
+        {
+          "codigo_producto": 27112002,
+          "codigo_categoria": "27112000",
+          "categoria": "Herramientas y maquinaria en general / Herramientas manuales / Herramientas de jardiner\u00EDa"
+        },
+        {
+          "codigo_producto": 27112003,
+          "codigo_categoria": "27112000",
+          "categoria": "Herramientas y maquinaria en general / Herramientas manuales / Herramientas de jardiner\u00EDa"
+        }
+      ],
+      "comuna": "Chill\u00E1n",
+      "descripcion": "La Corporaci\u00F3n Nacional Forestal requiere Herramientas Manuales para trabajadores del Programa de Empleo de Emergencia PEE, Oficina Regional \u00D1uble, de un a proveedora que entregue puesto a piso los siguientes productos. El oferente deber\u00E1 adjuntar una ficha con las caracter\u00EDsticas t\u00E9cnicas de los productos que oferta, las cuales deber\u00E1n ajustarse plenamente a las Especificaciones.",
+      "prohibicion_contratacion": "Se proh\u00EDbe la subcontrataci\u00F3n de los productos",
       "tipo_pago": "1",
       "sub_contratacion": "1"
     },
@@ -65658,6 +65854,38 @@
       "sub_contratacion": "0"
     },
     {
+      "codigo": "2422-158-LE26",
+      "nombre": "SOL. DE ADQ. 945819 BOTAS DE CA\u00D1A Y OTROS",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-06T10:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": "I MUNICIPALIDAD DE PUENTE ALTO",
+      "moneda": "CLP",
+      "monto": 18000000.0,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "sin_resolver",
+      "cantidad_reclamos": 148,
+      "items_unspsc": [
+        {
+          "codigo_producto": 53111603,
+          "codigo_categoria": "53111600",
+          "categoria": "Ropa, maletas y productos de aseo personal / Calzado / Zapatos"
+        }
+      ],
+      "comuna": "Puente Alto",
+      "descripcion": "NECESIDAD DE DOTAR DE BOTAS A PERSDONAL DE SEGURIDAD PUBLICA",
+      "prohibicion_contratacion": "",
+      "tipo_pago": "1",
+      "sub_contratacion": "1"
+    },
+    {
       "codigo": "5586-150-LE26",
       "nombre": "BC ADQUISICI\u00D3N DE INSUMOS DENTALES",
       "tipo": "LE",
@@ -66741,6 +66969,38 @@
       "descripcion": "La presente adquisici\u00F3n tiene por objeto asegurar la continuidad operativa del sistema de visualizaci\u00F3n utilizado en las labores de monitoreo y coordinaci\u00F3n de la seguridad comunal, mediante la incorporaci\u00F3n de equipos dise\u00F1ados para funcionamiento continuo, con caracter\u00EDsticas espec\u00EDficas para configuraciones Video Wall y adecuados para entornos de misi\u00F3n cr\u00EDtica. Asimismo, se busca garantizar la disponibilidad, confiabilidad y calidad de visualizaci\u00F3n requeridas para el correcto desarrollo de las funciones de vigilancia y control.",
       "prohibicion_contratacion": "",
       "tipo_pago": "4",
+      "sub_contratacion": "1"
+    },
+    {
+      "codigo": "1155683-20-LE26",
+      "nombre": "SERVICIO DE REPARACI\u00D3N BA\u00D1OS DEPRIF CONAF \u00D1UBLE",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-06T13:31:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n del \u00D1uble",
+      "organismo": "CORP NACIONAL FORESTAL",
+      "moneda": "CLP",
+      "monto": 43000000.0,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "sin_resolver",
+      "cantidad_reclamos": 778,
+      "items_unspsc": [
+        {
+          "codigo_producto": 72102304,
+          "codigo_categoria": "72102300",
+          "categoria": "Servicios de construcci\u00F3n y mantenimiento / Servicios de atenci\u00F3n, mantenimiento y reparaciones de edificios / Gasfiter\u00EDa, calefacci\u00F3n y aire acondicionado"
+        }
+      ],
+      "comuna": "Chill\u00E1n",
+      "descripcion": "SERVICIO DE EJECUCI\u00D3N DE OBRAS DE REPARACI\u00D3N INTEGRAL DESTINADAS A LA HABILITACI\u00D3N DE SERVICIOS SANITARIOS PARA LA BASE DE LA BRIGADA HELITRANSPORTADA DEL DEPARTAMENTO DE PROTECCI\u00D3N CONTRA INCENDIOS FORESTALES CONAF \u00D1UBLE. La Corporaci\u00F3n Nacional Forestal requiere contratar el servicio de ejecuci\u00F3n de obras de construcci\u00F3n integral destinadas a la habilitaci\u00F3n de servicios sanitarios en la Base de la Brigada Helitransportada Departamento de Protecci\u00F3n contra Incendios Forestales, para la temporada 2026-2027.\r\n\r\nEl servicio comprende la ejecuci\u00F3n completa de las obras civiles necesarias para asegurar la correcta habilitaci\u00F3n, funcionamiento y puesta en operaci\u00F3n de las instalaciones, bajo la modalidad \u201Cllave en mano\u201D. Esto incluye, sin limitarse a ello, la construcci\u00F3n de fundaciones, radieres, estructuras, obras de edificaci\u00F3n, instalaciones sanitarias, el\u00E9ctricas y de gas, as\u00ED como todas las terminaciones y obras complementarias requeridas para la entrega final completamente operativa y conforme a los est\u00E1ndares exigidos.\r\n\r\nAsimismo, el contratista ser\u00E1 responsable de la provisi\u00F3n de mano de obra, materiales, equipos, herramientas y todo recurso necesario para la correcta ejecuci\u00F3n del proyecto, debiendo garantizar la calidad t\u00E9cnica de las obras y el cumplimiento de los plazos establecidos.\r\n\r\nEl adjudicatario deber\u00E1 implementar y dar estricto cumplimiento a todas las medidas preventivas y correctivas en materias de seguridad, salud ocupacional, medio ambiente y normativa sanitaria aplicable, asegurando que la ejecuci\u00F3n de las obras se ajuste a la legislaci\u00F3n vigente, a las buenas pr\u00E1cticas de la construcci\u00F3n y a lo establecido en las Bases T\u00E9cnicas y Administrativas de Licitaci\u00F3n",
+      "prohibicion_contratacion": "Seg\u00FAn Ley 19.886",
+      "tipo_pago": "1",
       "sub_contratacion": "1"
     },
     {
@@ -68562,6 +68822,38 @@
       "comuna": "Carahue",
       "descripcion": "SE REQUIERE EL EQUIPAMIENTO DE CAMAS Y COCINA PARA LAS FAMILIAS DE LOS PROGRAMAS SEGURIDADES YOPORTUNIDADES Y V\u00CDNCULOS, PARA REALIZAR LAS SIGUIENTES COMPRAS: DE MARQUESAS, LITERA, COLCHONES, SABANAS, FRAZADAS, ALMOHADAS, COBERTOR DE CAMA, CUBRE COLCHONES, COCINAS A LE\u00D1A, ESTUFAS A GAS, MUEBLES DE COCINA, LAVAPLATOS, COMEDOR Y CL\u00D3SETS, PARA QUE CADA MIEMBRO DE LA FAMILIA TENGA SU EQUIPAMIENTO B\u00C1SI",
       "prohibicion_contratacion": "",
+      "tipo_pago": "1",
+      "sub_contratacion": "1"
+    },
+    {
+      "codigo": "4809-62-LE26",
+      "nombre": "ACOPIO CCI FREIRE Comunidad Martin Curihuinca Chan",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-06T15:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n de la Araucan\u00EDa ",
+      "organismo": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
+      "moneda": "CLP",
+      "monto": 46639137.0,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "bien",
+      "cantidad_reclamos": 461,
+      "items_unspsc": [
+        {
+          "codigo_producto": 11111611,
+          "codigo_categoria": "11111600",
+          "categoria": "Productos derivados de minerales, plantas y animales / Tierra y piedra / Piedras"
+        }
+      ],
+      "comuna": "Temuco",
+      "descripcion": "El MOP - Direcci\u00F3n de Vialidad Regi\u00F3n de La Araucan\u00EDa solicita ofertas por adquisici\u00F3n de Acopio de Material Granular Comunidad Martin Curihuinca Chanco, Comuna de FREIRE, se trata de acopio puntual para obras del Programa 2026, abordados por la Unidad de CCI de la Direcci\u00F3n de Vialidad Provincia de Caut\u00EDn., conforme a los requerimientos administrativos y t\u00E9cnicos descritos en las presentes Bases de Licitaci\u00F3n.",
+      "prohibicion_contratacion": "No permite subcontrataci\u00F3n. El adjudicatario no podr\u00E1 subcontratar los trabajos derivados de la ejecuci\u00F3n\r\ndel contrato.",
       "tipo_pago": "1",
       "sub_contratacion": "1"
     },
@@ -72510,6 +72802,38 @@
       "sub_contratacion": "1"
     },
     {
+      "codigo": "2460-109-LE26",
+      "nombre": "Servicio de Producci\u00F3n de Evento Entre Calles Luces y Colores",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-07T12:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": "I MUNICIPALIDAD DE PROVIDENCIA",
+      "moneda": "CLP",
+      "monto": 15000000.0,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio",
+      "cantidad_reclamos": 114,
+      "items_unspsc": [
+        {
+          "codigo_producto": 80141607,
+          "codigo_categoria": "80141600",
+          "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios para la comercializaci\u00F3n y distribuci\u00F3n / Ventas y marketing"
+        }
+      ],
+      "comuna": "Providencia",
+      "descripcion": "fortalecer los barrios comerciales de la comuna, generando un mayor dinamismo en las \u00E1reas de venta y ofreciendo oportunidades a los locatarios y emprendedores de Providencia",
+      "prohibicion_contratacion": "",
+      "tipo_pago": "4",
+      "sub_contratacion": "1"
+    },
+    {
       "codigo": "1048-72-LE26",
       "nombre": "Suministro e instalacion de camaras barriales inalambricas e inteligentes EL TABO",
       "tipo": "LE",
@@ -74269,6 +74593,38 @@
       "prohibicion_contratacion": "",
       "tipo_pago": "1",
       "sub_contratacion": "0"
+    },
+    {
+      "codigo": "2460-127-LE26",
+      "nombre": "Servicio de Producci\u00F3n de Evento Red de Talento Femenino",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-07T16:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": "I MUNICIPALIDAD DE PROVIDENCIA",
+      "moneda": "CLP",
+      "monto": 8700000.0,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio",
+      "cantidad_reclamos": 114,
+      "items_unspsc": [
+        {
+          "codigo_producto": 80141607,
+          "codigo_categoria": "80141600",
+          "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios para la comercializaci\u00F3n y distribuci\u00F3n / Ventas y marketing"
+        }
+      ],
+      "comuna": "Providencia",
+      "descripcion": "potenciar la empleabilidad, el liderazgo y la autonom\u00EDa econ\u00F3mica de mujeres residentes en Providencia mediante un modelo de mentor\u00EDas especializadas con enfoque de g\u00E9nero y redes de apoyo colaborativo, dise\u00F1ado para adaptarse a las nuevas exigencias del mercado laboral y asegurar una trayectoria profesional sostenible",
+      "prohibicion_contratacion": "",
+      "tipo_pago": "4",
+      "sub_contratacion": "1"
     },
     {
       "codigo": "1660-142-LE26",
@@ -77401,6 +77757,38 @@
       "sub_contratacion": "1"
     },
     {
+      "codigo": "2460-131-LE26",
+      "nombre": "Servicio de Producci\u00F3n de Evento Regala Local - La F\u00E1brica de los Regalos",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-08T16:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n Metropolitana de Santiago",
+      "organismo": "I MUNICIPALIDAD DE PROVIDENCIA",
+      "moneda": "CLP",
+      "monto": 34000000.0,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio",
+      "cantidad_reclamos": 114,
+      "items_unspsc": [
+        {
+          "codigo_producto": 80141607,
+          "codigo_categoria": "80141600",
+          "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios para la comercializaci\u00F3n y distribuci\u00F3n / Ventas y marketing"
+        }
+      ],
+      "comuna": "Providencia",
+      "descripcion": "lograr beneficiar y generar dinamismo en las ventas de los emprendedores que participar\u00E1n en el evento, adem\u00E1s de generar una experiencia grata para los vecinos asistentes.",
+      "prohibicion_contratacion": "",
+      "tipo_pago": "4",
+      "sub_contratacion": "1"
+    },
+    {
       "codigo": "994-36-LP26",
       "nombre": "REACONDICIONAMIENTO DE CARROMATO DORMITORIO",
       "tipo": "LP",
@@ -78404,6 +78792,38 @@
       "prohibicion_contratacion": "",
       "tipo_pago": "4",
       "sub_contratacion": "1"
+    },
+    {
+      "codigo": "3333-43-LE26",
+      "nombre": "ADQUISICI\u00D3N DE JUGUETES NAVIDE\u00D1OS OLMU\u00C9 2026",
+      "tipo": "LE",
+      "fecha_cierre": "2026-10-09T13:00:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n de Valpara\u00EDso ",
+      "organismo": "I MUNICIPALIDAD DE OLMUE",
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "sin_resolver",
+      "cantidad_reclamos": 163,
+      "items_unspsc": [
+        {
+          "codigo_producto": 60141013,
+          "codigo_categoria": "60141000",
+          "categoria": "Instrumentos musicales, juegos, juguetes, artesan\u00EDas y materiales educativos / Juguetes y juegos / Juguetes"
+        }
+      ],
+      "comuna": "Olmu\u00E9",
+      "descripcion": "ADQUISICI\u00D3N DE JUGUETES NAVIDE\u00D1OS PARA LA COMIUNA DE OLMU\u00C9",
+      "prohibicion_contratacion": "",
+      "tipo_pago": "1",
+      "sub_contratacion": "0"
     },
     {
       "codigo": "872-47-LE26",
@@ -99902,6 +100322,38 @@
       "sub_contratacion": "1"
     },
     {
+      "codigo": "2129-8-LP26",
+      "nombre": "SERVICIO DE MANTENCION AREAS VERDE RANQUIL",
+      "tipo": "LP",
+      "fecha_cierre": "2026-10-16T10:03:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": "Regi\u00F3n del \u00D1uble",
+      "organismo": "Ilustre Municipalidad de Ranquil",
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": null,
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "servicio",
+      "cantidad_reclamos": 115,
+      "items_unspsc": [
+        {
+          "codigo_producto": 70111703,
+          "codigo_categoria": "70111700",
+          "categoria": "Servicios agr\u00EDcolas, pesqueros, forestales y relacionados con la fauna / Horticultura / Parques, jardines y huertos"
+        }
+      ],
+      "comuna": "Ranquil",
+      "descripcion": "Contrataci\u00F3n del servicio de mantenci\u00F3n de \u00E1reas verdes y espacios p\u00FAblicos de la comuna de R\u00E1nquil, de conformidad con las Bases Administrativas, T\u00E9rminos de Referencia y Anexos que regulan la presente licitaci\u00F3n.",
+      "prohibicion_contratacion": "",
+      "tipo_pago": "1",
+      "sub_contratacion": "0"
+    },
+    {
       "codigo": "2723-70-LE26",
       "nombre": "Serv. de Tala de Cuatro \u00C1rboles Piscina Municipal",
       "tipo": "LE",
@@ -119660,6 +120112,32 @@
       "sub_contratacion": null
     },
     {
+      "codigo": "3960-73-L126",
+      "nombre": "CONTRATACI\u00D3N DE SERVICIOS ART\u00CDSTICOS",
+      "tipo": "L1",
+      "fecha_cierre": "2026-10-02T15:20:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
+      "tramo": "bajo",
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "pendiente_enriquecimiento",
+      "cantidad_reclamos": null,
+      "items_unspsc": [],
+      "comuna": null,
+      "descripcion": null,
+      "prohibicion_contratacion": null,
+      "tipo_pago": null,
+      "sub_contratacion": null
+    },
+    {
       "codigo": "2403-71-L126",
       "nombre": "Servicio de tasaci\u00F3n de bienes ra\u00EDces municipales.",
       "tipo": "L1",
@@ -119751,6 +120229,32 @@
       "estado_flujo": "pendiente",
       "origen": "diario",
       "fecha_lote": "2026-09-24",
+      "tramo": "bajo",
+      "tipo_privado": false,
+      "url_ficha": null,
+      "unspsc_estado": "pendiente_enriquecimiento",
+      "cantidad_reclamos": null,
+      "items_unspsc": [],
+      "comuna": null,
+      "descripcion": null,
+      "prohibicion_contratacion": null,
+      "tipo_pago": null,
+      "sub_contratacion": null
+    },
+    {
+      "codigo": "3960-71-L126",
+      "nombre": "SERVICIO ARTISTICO Y PRODUCCI\u00D3N DE EVENTOS",
+      "tipo": "L1",
+      "fecha_cierre": "2026-10-02T15:52:00",
+      "rubro_match": null,
+      "termino_match": null,
+      "region": null,
+      "organismo": null,
+      "moneda": null,
+      "monto": null,
+      "estado_flujo": "pendiente",
+      "origen": "diario",
+      "fecha_lote": "2026-09-26",
       "tramo": "bajo",
       "tipo_privado": false,
       "url_ficha": null,
@@ -121144,6 +121648,12 @@
       "total": 1200,
       "prioritarias": 1,
       "tasa": 0.0008
+    },
+    {
+      "fecha": "2026-09-26",
+      "total": 23,
+      "prioritarias": 0,
+      "tasa": 0
     }
   ]
 }
