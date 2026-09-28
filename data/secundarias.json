@@ -129780,5 +129780,149 @@
         "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios para la comercializaci\u00F3n y distribuci\u00F3n / Ventas y marketing"
       }
     ]
+  },
+  {
+    "codigo": "1292-35-LE26",
+    "nombre": "servicio de vigilancia  Provincia Talca",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-06T15:02:00",
+    "fecha_lote": "2026-09-27",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n del Maule ",
+    "organismo": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
+    "comuna": "Talca",
+    "descripcion": "La Direcci\u00F3n de Vialidad \u2013 Provincia de Talca, solicita ofertas para la adquisici\u00F3n del siguiente suministro: Servicio De Vigilancia Para Las Dependencias De Provincias De Talca, Direcci\u00F3n De Vialidad, Regi\u00F3n Del Maule, conforme a los requerimientos administrativos y t\u00E9cnicos descritos en la presenta solicitud.",
+    "prohibicion_contratacion": "El adjudicatario ser\u00E1 el exclusivo empleador del personal que destine al cumplimiento de las obligaciones derivadas del contrato que se suscriba, personal que deber\u00E1 tener el adjudicatario de acuerdo a las normas del C\u00F3digo del Trabajo.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 50000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 461,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      92101501
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 92101501,
+        "codigo_categoria": "92101500",
+        "categoria": "Servicios de defensa nacional, orden p\u00FAblico y seguridad / Orden p\u00FAblico y seguridad / Servicios de seguridad y policiales"
+      }
+    ]
+  },
+  {
+    "codigo": "4809-54-LE26",
+    "nombre": "ACOPIO CCI LONCOCHE",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-06T15:00:00",
+    "fecha_lote": "2026-09-27",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n de la Araucan\u00EDa ",
+    "organismo": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
+    "comuna": "Temuco",
+    "descripcion": "El MOP - Direcci\u00F3n de Vialidad Regi\u00F3n de La Araucan\u00EDa solicita ofertas por adquisici\u00F3n de Acopio de Material  Granular para la Comunidad Margarita Quilec\u00E1n Penchuc\u00F3n, Comuna de LONCOCHE para obras del Programa 2026, abordados por la Unidad CCI de la Direcci\u00F3n de Vialidad Provincia de Caut\u00EDn, conforme a los requerimientos administrativos y t\u00E9cnicos descritos en las presentes Bases de Licitaci\u00F3n",
+    "prohibicion_contratacion": "No permite subcontrataci\u00F3n. El adjudicatario no podr\u00E1 subcontratar los trabajos derivados de la ejecuci\u00F3n\r\ndel contrato",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 60153500.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 461,
+    "unspsc_estado": "bien",
+    "codigos_producto_unspsc": [
+      11111611
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 11111611,
+        "codigo_categoria": "11111600",
+        "categoria": "Productos derivados de minerales, plantas y animales / Tierra y piedra / Piedras"
+      }
+    ]
+  },
+  {
+    "codigo": "739231-20-LE26",
+    "nombre": "Conservaci\u00F3n Recintos de Captaci\u00F3n de Agua Rural",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-16T17:00:00",
+    "fecha_lote": "2026-09-27",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n de los Lagos ",
+    "organismo": "I MUNICIPALIDAD PUERTO OCTAY",
+    "comuna": "Puerto Octay",
+    "descripcion": "Conservaci\u00F3n Recintos de Captaci\u00F3n de Agua Rural Sector Las Juntas y Puente Alto, comuna de Puerto Octay",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 20500000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 128,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      83101501
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 83101501,
+        "codigo_categoria": "83101500",
+        "categoria": "Servicios b\u00E1sicos y de informaci\u00F3n p\u00FAblica / Servicios b\u00E1sicos / Servicios relacionados con el agua"
+      }
+    ]
+  },
+  {
+    "codigo": "4809-58-LE26",
+    "nombre": "ACOPIO CCI PITRUFQUEN",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-06T15:00:00",
+    "fecha_lote": "2026-09-27",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n de la Araucan\u00EDa ",
+    "organismo": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
+    "comuna": "Temuco",
+    "descripcion": "El MOP - Direcci\u00F3n de Vialidad Regi\u00F3n de La Araucan\u00EDa solicita ofertas por adquisici\u00F3n de Acopio de Material  Granular para la Comunidad Variante Molco y Anita Inim\u00E1m, Comuna de PITRUFQUEN para obras del Programa 2026, abordados por la Unidad CCI de la Direcci\u00F3n de Vialidad Provincia de Caut\u00EDn, conforme a los requerimientos administrativos y t\u00E9cnicos descritos en las presentes Bases de Licitaci\u00F3n",
+    "prohibicion_contratacion": "No permite subcontrataci\u00F3n. El adjudicatario no podr\u00E1 subcontratar los trabajos derivados de la ejecuci\u00F3n\r\ndel contrato.",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 55039975.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 461,
+    "unspsc_estado": "bien",
+    "codigos_producto_unspsc": [
+      11111611
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 11111611,
+        "codigo_categoria": "11111600",
+        "categoria": "Productos derivados de minerales, plantas y animales / Tierra y piedra / Piedras"
+      }
+    ]
   }
 ]
