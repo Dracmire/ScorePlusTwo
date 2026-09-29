@@ -324,42 +324,6 @@
     ]
   },
   {
-    "codigo": "726931-1-LE26",
-    "nombre": "PLATAFORMA INTEGRAL ALUMNI Y EMPLEABILIDAD UTA",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-28T16:00:00",
-    "fecha_lote": "2026-09-04",
-    "rubro_match": "ti",
-    "termino_match": "plataforma",
-    "region": "Regi\u00F3n de Arica y Parinacota",
-    "organismo": "UNIVERSIDAD DE TARAPACA",
-    "comuna": "Arica",
-    "descripcion": "La Universidad de Tarapac\u00E1 solicita la adquisici\u00F3n de servicio de plataforma integral ALUMNI y empleabilidad por un periodo de 24 meses de duraci\u00F3n, seg\u00FAn especificaciones t\u00E9cnicas descritas en el Anexo N\u00B01. Asociada a la SC N\u00B0 2026070283.",
-    "prohibicion_contratacion": "De acuerdo al Cap\u00EDtulo VIII Contrato de suministro y servicio, p\u00E1rrafo 4 Cesi\u00F3n y subcontrataci\u00F3n, Art\u00EDculo 128. Subcontrataci\u00F3n del reglamento de Ley N\u00BA 19.886 sobre compras p\u00FAblicas.",
-    "tipo_pago": "4",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 15000000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 168,
-    "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": [
-      43232408
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 43232408,
-        "codigo_categoria": "43232400",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
-      }
-    ]
-  },
-  {
     "codigo": "1007793-15-LE26",
     "nombre": "SOLUCI\u00D3N INFORM\u00C1TICA INSTITUCIONAL PARA EL CFT",
     "tipo": "LE",
@@ -846,42 +810,6 @@
     ]
   },
   {
-    "codigo": "1978-81-LE26",
-    "nombre": "PLATAFORMA DE CAPACITACI\u00D3N E-LEARNING CAPMAULE",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-28T15:01:00",
-    "fecha_lote": "2026-09-14",
-    "rubro_match": "ti",
-    "termino_match": "plataforma",
-    "region": "Regi\u00F3n del Maule ",
-    "organismo": "SERVICIO DE SALUD DEL MAULE",
-    "comuna": "Maule",
-    "descripcion": "La presente licitaci\u00F3n tiene por objeto la contrataci\u00F3n de un servicio de plataforma de capacitaci\u00F3n e-learning denominada \u201CCAPMAULE\u201D, destinada a los funcionarios de la Direcci\u00F3n del Servicio de Salud Maule, de los hospitales y establecimientos de Atenci\u00F3n Primaria de Salud que integran su Red Asistencial, adem\u00E1s de otros funcionarios de servicios p\u00FAblicos que sean invitados por dicha Direcci\u00F3n.\r\n\r\nEl servicio considera la implementaci\u00F3n, configuraci\u00F3n, alojamiento, administraci\u00F3n, soporte y continuidad operativa de la plataforma, junto con la gesti\u00F3n de usuarios, cursos, evaluaciones y certificaciones, generaci\u00F3n de reportes y el despliegue y virtualizaci\u00F3n de contenidos de capacitaci\u00F3n, conforme a las Especificaciones T\u00E9cnicas de la licitaci\u00F3n.",
-    "prohibicion_contratacion": "De acuerdo a Art\u00EDculo N\u00BA29 de las Bases de Licitaci\u00F3n.",
-    "tipo_pago": "4",
-    "sub_contratacion": "0",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": null,
-    "monto": null,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 445,
-    "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": [
-      43232701
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 43232701,
-        "codigo_categoria": "43232700",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de aplicaciones de red"
-      }
-    ]
-  },
-  {
     "codigo": "869591-12-LP26",
     "nombre": "CONTRATACI\u00D3N DE PLATAFORMA DE GESTI\u00D3N DOCUMENTAL EXPEDIENTE ELECTR\u00D3NICO Y GESTI\u00D3N DE PROCESOS",
     "tipo": "LP",
@@ -1202,6 +1130,480 @@
         "codigo_producto": 84111601,
         "codigo_categoria": "84111600",
         "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
+      }
+    ]
+  },
+  {
+    "codigo": "585-9-LE26",
+    "nombre": "Adq. Licencias Para Plataforma Gesti\u00F3n de Tickes ",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-02T12:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "SERVICIO DE COOPERACION TECNICA",
+    "comuna": "Santiago Centro",
+    "descripcion": "Seg\u00FAn punto 1.2.1 de las bases",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 14500000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 16,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231512
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231512,
+        "codigo_categoria": "43231500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
+      }
+    ]
+  },
+  {
+    "codigo": "188-87-LP26",
+    "nombre": "SERVICIO DE APOYO A LA GESTI\u00D3N DE AGENDAMIENTO",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-13T15:01:00",
+    "fecha_lote": "2026-09-22",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "CORP MUNICIPAL DE EDUC SALUD CULTURA Y RECREACION DE LA FLORIDA",
+    "comuna": "La Florida",
+    "descripcion": "SERVICIO DE APOYO A LA GESTI\u00D3N DE AGENDAMIENTO, CONFIRMACI\u00D3N Y RECUPERACI\u00D3N DE HORAS DE ATENCI\u00D3N DE SALUD, PARA CENTROS DE SALUD DE LA CORPORACI\u00D3N MUNICIPAL DE LA FLORIDA",
+    "prohibicion_contratacion": "SEG\u00DAN RESOLUCI\u00D3N N\u00B0 381-2026",
+    "tipo_pago": "4",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 1537,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231603
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231603,
+        "codigo_categoria": "43231600",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
+      }
+    ]
+  },
+  {
+    "codigo": "3337-16-LP26",
+    "nombre": "SERVICIO RECEPCI\u00D3N LICENCIAS M\u00C9DICAS ELECTR\u00D3NICAS",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-14T15:00:00",
+    "fecha_lote": "2026-09-23",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "DIVISION LOGISTICA DEL EJERCITO",
+    "comuna": "Santiago",
+    "descripcion": "Asegurar la recepci\u00F3n segura, integra, trazable y oportuna de las Licencias Medicas Electr\u00F3nicas LME del personal institucional, para su transmisi\u00F3n al sistema Aurora de la DIVSAL. Comprende dos l\u00EDneas independientes: L\u00EDnea 1 red MEDIPASS y l\u00EDnea 2 red IMED, incluyendo soporte t\u00E9cnico y mantenci\u00F3n del sistema, conforme a las Bases Administrativas y T\u00E9cnicas.",
+    "prohibicion_contratacion": "No podr\u00E1n subcontratarse las tareas cr\u00EDticas de acceso a datos de salud, administraci\u00F3n de credenciales, gobierno de APIs, respuesta a incidentes ni decisi\u00F3n sobre tratamiento de datos, salvo autorizaci\u00F3n expresa y fundada de la DIVSAL. Todo subcontrati",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 89000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 11862,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232911,
+      43232911
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232911,
+        "codigo_categoria": "43232900",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software para trabajo en redes"
+      },
+      {
+        "codigo_producto": 43232911,
+        "codigo_categoria": "43232900",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software para trabajo en redes"
+      }
+    ]
+  },
+  {
+    "codigo": "5586-148-LE26",
+    "nombre": "JG ADQUISICI\u00D3N E IMPLEMENTACI\u00D3N DE SOFTWARE DE GESTI\u00D3N CL\u00CDNICA ADMINISTRATIVA FINANCIERA Y CONTACT CENTER CON INTELIGENCIA ARTIFICIAL",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-06T09:00:00",
+    "fecha_lote": "2026-09-23",
+    "rubro_match": "ia",
+    "termino_match": "inteligencia artificial",
+    "region": "Regi\u00F3n de la Araucan\u00EDa ",
+    "organismo": "UNIVERSIDAD DE LA FRONTERA",
+    "comuna": "Temuco",
+    "descripcion": "ADQUISICI\u00D3N E IMPLEMENTACI\u00D3N DE SOFTWARE DE GESTI\u00D3N CL\u00CDNICA, ADMINISTRATIVA, FINANCIERA Y CONTACT CENTER CON INTELIGENCIA ARTIFICIAL.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 9500000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 353,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232701
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232701,
+        "codigo_categoria": "43232700",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de aplicaciones de red"
+      }
+    ]
+  },
+  {
+    "codigo": "1195104-19-LE26",
+    "nombre": "M\u00D3DULO DE AUDITOR\u00CDA DE ESTATUS MIGRATORIO",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-05T17:00:00",
+    "fecha_lote": "2026-09-23",
+    "rubro_match": "compliance",
+    "termino_match": "auditor",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "SERVICIO NACIONAL DE MIGRACIONES",
+    "comuna": "Santiago",
+    "descripcion": "Automatizar y optimizar la auditor\u00EDa del estatus migratorio de personas extranjeras, reduciendo la revisi\u00F3n manual del historial registrado en el RNE y proporcionando al analista un diagn\u00F3stico uniforme, trazable y sustentado en el marco normativo vigente y en las reglas institucionales.\r\n\r\nLa soluci\u00F3n deber\u00E1 contribuir a reducir los tiempos de an\u00E1lisis y las inconsistencias entre evaluadores, facilitando la identificaci\u00F3n de situaciones tales como vencimientos, pr\u00F3rrogas, alertas e irregularidades, manteniendo siempre la decisi\u00F3n final en el personal del SERMIG.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 30000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 7,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
+  },
+  {
+    "codigo": "425-67-LE26",
+    "nombre": "Software de seguridad extendida y Ciberdefensa",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-06T16:00:00",
+    "fecha_lote": "2026-09-24",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "CORP ADMINISTRATIVA DEL PODER JUDICIAL",
+    "comuna": "Santiago Centro",
+    "descripcion": "UE(1804) Software de seguridad extendida y protecci\u00F3n de cadena de suministros para la Ciberdefensa de Poder Judicial, para ser utilizadas por el Departamento de Inform\u00E1tica y Computaci\u00F3n del Poder Judicial como herramienta de protecci\u00F3n de riesgos cibern\u00E9ticos \u201Cde la marca Poder Judicial\u201D",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "4",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 277,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233204
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233204,
+        "codigo_categoria": "43233200",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
+      }
+    ]
+  },
+  {
+    "codigo": "1002584-10-LE26",
+    "nombre": "SERVICIO ARRIENDO SISTEMA DE CONCILIACI\u00D3N BANCARIA",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-05T16:00:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "DIRECCION DE EDUCACION PUBLICA",
+    "comuna": "Santiago",
+    "descripcion": "La DEP requiere la contrataci\u00F3n del servicio de Arriendo de Sistema de Conciliaci\u00F3n Bancaria, el cual deber\u00E1 permitir automatizar y optimizar los procesos de conciliaci\u00F3n bancaria de la instituci\u00F3n, garantizando la trazabilidad de las operaciones, la seguridad de la informaci\u00F3n y la continuidad operacional del servicio durante toda la vigencia del contrato.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 10,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231601
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231601,
+        "codigo_categoria": "43231600",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
+      }
+    ]
+  },
+  {
+    "codigo": "4768-48-LE26",
+    "nombre": "MODIFICACION Y MODERNIZACION SEL SITIO WEB",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-30T17:45:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n del Libertador General Bernardo O\u00B4Higgins",
+    "organismo": "I MUNICIPALIDAD DE LA ESTRELLA",
+    "comuna": "La Estrella",
+    "descripcion": "Contratar el servicio de dise\u00F1o, modificaci\u00F3n, modernizaci\u00F3n, desarrollo, implementaci\u00F3n, puesta en marcha, capacitaci\u00F3n y soporte del sitio web institucional de la Municipalidad de La Estrella.",
+    "prohibicion_contratacion": "SEGUN LO INDICADO EN LAS BASES DE LICITACION",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 9000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 191,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
+  },
+  {
+    "codigo": "534615-1-LE26",
+    "nombre": "Servicio plataformas KOHA y DSpace DIBRA UV",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-02T17:00:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n de Valpara\u00EDso ",
+    "organismo": "UNIVERSIDAD DE VALPARAISO",
+    "comuna": "Valpara\u00EDso",
+    "descripcion": "La necesidad de contar con \u201CServicio de alojamiento, administraci\u00F3n, soporte, mantenci\u00F3n, actualizaci\u00F3n e integraci\u00F3n de las plataformas KOHA y DSpace, sistemas tecnol\u00F3gicos utilizados por la Direcci\u00F3n de Bibliotecas y Recursos para el Aprendizaje DIBRA de la Universidad de Valpara\u00EDso\u201D, por un periodo de 24 meses.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 2772,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232609
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232609,
+        "codigo_categoria": "43232600",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software espec\u00EDfico para la industria"
+      }
+    ]
+  },
+  {
+    "codigo": "1643-91-LP26",
+    "nombre": "SISTEMA INFORM\u00C1TICO ERP",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-15T17:00:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": "ti",
+    "termino_match": "inform\u00E1tic",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "SERVICIO NACIONAL DE SALUD HOSPITAL DE T",
+    "comuna": "Talagante",
+    "descripcion": "EL HOSPITAL DE TALAGANTE REQUIERE LA CONTRATACI\u00D3N DEL SERVICIO DE IMPLEMENTACI\u00D3N, MIGRACI\u00D3N, PUESTA EN MARCHA Y EJECUCI\u00D3N DE UN SISTEMA INFORM\u00C1TICO DE GESTI\u00D3N ERP POR 24 MESES.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 320000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 872,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231602
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231602,
+        "codigo_categoria": "43231600",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
+      }
+    ]
+  },
+  {
+    "codigo": "885-87-LE26",
+    "nombre": "Contrataci\u00F3n env\u00EDo masivo de correos electr\u00F3nicos",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-05T16:00:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "CONTRALORIA GENERAL DE LA REPUBLICA",
+    "comuna": "",
+    "descripcion": "La Contralor\u00EDa General de la Rep\u00FAblica requiere contratar una plataforma de env\u00EDo masivo de correos electr\u00F3nicos bajo modalidad Software como Servicio (SaaS) por el periodo de 36 meses, destinada a centralizar y gestionar el env\u00EDo de comunicaciones electr\u00F3nicas institucionales provenientes de los distintos sistemas y aplicaciones.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 18000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 33,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233501
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233501,
+        "codigo_categoria": "43233500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de intercambio de informaci\u00F3n"
+      }
+    ]
+  },
+  {
+    "codigo": "622-62-LE26",
+    "nombre": "Renovaci\u00F3n Licencias TOAD o equivalentes para TGR",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-15T15:00:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "TESORERIA GENERAL DE LA REPUBLICA",
+    "comuna": "Santiago",
+    "descripcion": "Renovaci\u00F3n de Licencias Toad o similar o equivalente si procede para el Departamento Desarrollo Y Mantenci\u00F3n De Software y Gesti\u00F3n de plataformas productivas, para lo cual el adjudicatario contar\u00E1 con la informaci\u00F3n entregada en las Bases T\u00E9cnicas, y respuestas a las aclaraciones, si las hubiere.",
+    "prohibicion_contratacion": "En esta licitaci\u00F3n p\u00FAblica no se permitir\u00E1 la subcontrataci\u00F3n, por lo que el oferente no podr\u00E1 entregar todo o parte de la ejecuci\u00F3n del contrato a subcontratistas, atendida la naturaleza de la contrataci\u00F3n.",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 9420000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 39,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231512
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231512,
+        "codigo_categoria": "43231500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
+      }
+    ]
+  },
+  {
+    "codigo": "463-5-LE26",
+    "nombre": "SERVICIO DE SOFTWARE DE GESTI\u00D3N DE PERSONAS",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-05T16:00:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "CENTRO DE INFORMACION DE RECURSOS NATURALES",
+    "comuna": "Santiago",
+    "descripcion": "SERVICIO DE SOFTWARE DE GESTI\u00D3N DE PERSONAS PARA CIREN",
+    "prohibicion_contratacion": "ART\u00CDCULO 21\u00B0: CESI\u00D3N DE DERECHOS Y SUBCONTRATACI\u00D3N \r\nEl adjudicatario no podr\u00E1 ceder ni transferir en forma alguna, total ni parcialmente \r\nlos derechos y obligaciones que nacen de la presente licitaci\u00F3n, y en especial los \r\n31 \r\nque se establezcan en el ",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLF",
+    "monto": 560.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 0,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231505
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231505,
+        "codigo_categoria": "43231500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
     ]
   }

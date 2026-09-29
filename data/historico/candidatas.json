@@ -880,5 +880,77 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
       }
     ]
+  },
+  {
+    "codigo": "726931-1-LE26",
+    "nombre": "PLATAFORMA INTEGRAL ALUMNI Y EMPLEABILIDAD UTA",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-28T16:00:00",
+    "fecha_lote": "2026-09-04",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n de Arica y Parinacota",
+    "organismo": "UNIVERSIDAD DE TARAPACA",
+    "comuna": "Arica",
+    "descripcion": "La Universidad de Tarapac\u00E1 solicita la adquisici\u00F3n de servicio de plataforma integral ALUMNI y empleabilidad por un periodo de 24 meses de duraci\u00F3n, seg\u00FAn especificaciones t\u00E9cnicas descritas en el Anexo N\u00B01. Asociada a la SC N\u00B0 2026070283.",
+    "prohibicion_contratacion": "De acuerdo al Cap\u00EDtulo VIII Contrato de suministro y servicio, p\u00E1rrafo 4 Cesi\u00F3n y subcontrataci\u00F3n, Art\u00EDculo 128. Subcontrataci\u00F3n del reglamento de Ley N\u00BA 19.886 sobre compras p\u00FAblicas.",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 15000000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 168,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ]
+  },
+  {
+    "codigo": "1978-81-LE26",
+    "nombre": "PLATAFORMA DE CAPACITACI\u00D3N E-LEARNING CAPMAULE",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-28T15:01:00",
+    "fecha_lote": "2026-09-14",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n del Maule ",
+    "organismo": "SERVICIO DE SALUD DEL MAULE",
+    "comuna": "Maule",
+    "descripcion": "La presente licitaci\u00F3n tiene por objeto la contrataci\u00F3n de un servicio de plataforma de capacitaci\u00F3n e-learning denominada \u201CCAPMAULE\u201D, destinada a los funcionarios de la Direcci\u00F3n del Servicio de Salud Maule, de los hospitales y establecimientos de Atenci\u00F3n Primaria de Salud que integran su Red Asistencial, adem\u00E1s de otros funcionarios de servicios p\u00FAblicos que sean invitados por dicha Direcci\u00F3n.\r\n\r\nEl servicio considera la implementaci\u00F3n, configuraci\u00F3n, alojamiento, administraci\u00F3n, soporte y continuidad operativa de la plataforma, junto con la gesti\u00F3n de usuarios, cursos, evaluaciones y certificaciones, generaci\u00F3n de reportes y el despliegue y virtualizaci\u00F3n de contenidos de capacitaci\u00F3n, conforme a las Especificaciones T\u00E9cnicas de la licitaci\u00F3n.",
+    "prohibicion_contratacion": "De acuerdo a Art\u00EDculo N\u00BA29 de las Bases de Licitaci\u00F3n.",
+    "tipo_pago": "4",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 445,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232701
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232701,
+        "codigo_categoria": "43232700",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de aplicaciones de red"
+      }
+    ]
   }
 ]
