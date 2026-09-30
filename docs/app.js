@@ -785,6 +785,9 @@
 
     var filas = candidatas.map(function (c) {
       return "<tr>" +
+        "<td>" +
+          '<button class="boton-detalle" data-toggle-detalle aria-expanded="false">▸ Ver detalle</button>' +
+        "</td>" +
         "<td>" + renderCodigo(c) + "</td>" +
         "<td>" + escaparHtml(c.nombre) + "</td>" +
         "<td>" + renderTipo(c) + "</td>" +
@@ -797,13 +800,14 @@
         "<td>" + renderEstadoFlujo(c) + " " + renderBadgesReverificacion(c) + "</td>" +
         "<td>" + escaparHtml(c.origen) + "</td>" +
         "<td>" + formatearFecha(c.fecha_lote) + "</td>" +
-        "</tr>";
+        "</tr>" +
+        '<tr class="fila-detalle" hidden><td colspan="13">' + renderCamposConfigurados(c) + "</td></tr>";
     }).join("");
 
     contenedor.innerHTML =
       "<table>" +
       "<thead><tr>" +
-      "<th>Código</th><th>Nombre</th><th>Tipo</th><th>Rubro</th><th>UNSPSC</th><th>Región</th><th>Monto</th>" +
+      "<th></th><th>Código</th><th>Nombre</th><th>Tipo</th><th>Rubro</th><th>UNSPSC</th><th>Región</th><th>Monto</th>" +
       "<th>Cierre</th><th>Plazo</th><th>Estado</th><th>Origen</th><th>Lote</th>" +
       "</tr></thead>" +
       "<tbody>" + filas + "</tbody>" +
@@ -821,6 +825,23 @@
         });
       });
     });
+
+    // Detalle expandible (2026-09-30): mismo mecanismo ya construido para
+    // Revisión/Consulta (CAMPOS_PANEL/renderCamposConfigurados/
+    // activarTogglesOcultos) — faltaba conectarlo acá, aunque los campos ya
+    // estaban en docs/data.json desde que se agregaron para esas otras dos
+    // vistas. Sirve a las 3 pestañas que usan renderTabla (Prioritarias/
+    // Secundarias/Tramo bajo), no solo la que reportó el usuario.
+    contenedor.querySelectorAll("button[data-toggle-detalle]").forEach(function (boton) {
+      boton.addEventListener("click", function () {
+        var filaDetalle = boton.closest("tr").nextElementSibling;
+        var expandido = boton.getAttribute("aria-expanded") === "true";
+        filaDetalle.hidden = expandido;
+        boton.setAttribute("aria-expanded", String(!expandido));
+        boton.textContent = (expandido ? "▸" : "▾") + " Ver detalle";
+      });
+    });
+    activarTogglesOcultos(contenedor);
   }
 
   // Pestaña "Revisión": junta unspsc_estado=revision_manual y
