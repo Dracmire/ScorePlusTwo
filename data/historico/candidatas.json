@@ -952,5 +952,113 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de aplicaciones de red"
       }
     ]
+  },
+  {
+    "codigo": "1431841-61-LE26",
+    "nombre": "AUDITORIA  CERTIFICACION NORMA NCH 3262:2021",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-29T15:00:00",
+    "fecha_lote": "2026-09-09",
+    "rubro_match": "compliance",
+    "termino_match": "auditor",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "I MUNICIPALIDAD DE RECOLETA",
+    "comuna": "Recoleta",
+    "descripcion": "La Municipalidad de Recoleta tiene por objeto la contrataci\u00F3n del \u201CSERVICIO DE AUDITOR\u00CDA DE CERTIFICACI\u00D3N BAJO LA NORMA NCH3262:2021 DEL SISTEMA DE GESTI\u00D3N DE IGUALDAD DE G\u00C9NERO Y CONCILIACI\u00D3N DE LA VIDA LABORAL, FAMILIAR Y PERSONAL DE LA MUNICIPALIDAD DE RECOLETA\u201D.\r\n\r\nEl alcance de la certificaci\u00F3n NCh3262:2021 est\u00E1 delimitado para las siguientes \u00E1reas de la instituci\u00F3n:\r\n\u25CFAlcald\u00EDa \r\n\u25CF Administraci\u00F3n Municipal \r\n\u25CF Secretar\u00EDa de Planificaci\u00F3n Comunitaria \r\n\u25CF Direcci\u00F3n de Comunicaciones \r\n\u25CF Direcci\u00F3n de Asesor\u00EDa Jur\u00EDdica \r\n\u25CF Direcci\u00F3n de Vivienda \r\n\u25CF Direcci\u00F3n de Abastecimiento y Gesti\u00F3n de Compras P\u00FAblicas \r\n\u25CF Departamento de Gesti\u00F3n de Personas, Direcci\u00F3n de Administraci\u00F3n y Finanzas \r\n\u25CF Unidad de Gesti\u00F3n de Personas, Departamento de Salud Municipal \r\n\u25CF Unidad de Gesti\u00F3n de Personas, Departamento de Educaci\u00F3n Municipal. \r\n\r\nEl alcance delimitado para estas unidades comprende un total de 170 personas aproximadamente. Estos procesos se desarrollan f\u00EDsicamente en el Edificio Consistorial ubicado en Av. Recoleta 2774.",
+    "prohibicion_contratacion": "El adjudicatario no podr\u00E1 subcontratar, ceder ni transferir en forma alguna, total ni parcialmente, los derechos y obligaciones que nacen del desarrollo de esta licitaci\u00F3n y, en especial, los establecidos en el respectivo contrato que se celebre con la",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 10700000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 4182,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      80101506
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 80101506,
+        "codigo_categoria": "80101500",
+        "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Consultor\u00EDas o asesor\u00EDas en gesti\u00F3n empresarial / Servicios de consultor\u00EDa en gesti\u00F3n de empresas"
+      }
+    ]
+  },
+  {
+    "codigo": "584105-31-LE26",
+    "nombre": "Auditoria de certificaci\u00F3n Norma NCh N\u00B03262-2021",
+    "tipo": "LE",
+    "fecha_cierre": "2026-09-25T15:01:00",
+    "fecha_lote": "2026-09-11",
+    "rubro_match": "compliance",
+    "termino_match": "auditor",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "SUBSECRETARIA DE ENERGIA",
+    "comuna": "Santiago",
+    "descripcion": "E1O2RT9 Auditar el Sistema de Gesti\u00F3n de Igualdad de G\u00E9nero y Conciliaci\u00F3n de la vida laboral, familiar y personal de la Subsecretaria de Energ\u00EDa para dar cumplimiento a la Norma NCH 3262:2021, dispuesta por el instituto nacional de normalizaci\u00F3n de chile (INN), con el fin de recibir la recomendaci\u00F3n de certificaci\u00F3n bajo la Norma NCH 3262:2021",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 68,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      93151607
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 93151607,
+        "codigo_categoria": "93151600",
+        "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
+      }
+    ]
+  },
+  {
+    "codigo": "1447930-11-LP26",
+    "nombre": "SSP - Plataforma de virtualizaci\u00F3n On Premise",
+    "tipo": "LP",
+    "fecha_cierre": "2026-09-29T17:00:00",
+    "fecha_lote": "2026-09-09",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "SUBSECRETARIA DE SEGURIDAD PUBLICA",
+    "comuna": "Santiago",
+    "descripcion": "La Subsecretar\u00EDa de Seguridad P\u00FAblica, llama a licitaci\u00F3n p\u00FAblica, para la adquisici\u00F3n e implementaci\u00F3n de equipamiento, software, puesta en marcha y paso a producci\u00F3n de una plataforma de virtualizaci\u00F3n on-premise para implementar en las dependencias del nivel central de la Subsecretar\u00EDa de Seguridad P\u00FAblica, ubicadas en Teatinos N\u00B0220, piso 6.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 113050000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 2,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232915
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232915,
+        "codigo_categoria": "43232900",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software para trabajo en redes"
+      }
+    ]
   }
 ]

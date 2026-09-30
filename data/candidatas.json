@@ -72,42 +72,6 @@
     ]
   },
   {
-    "codigo": "1431841-61-LE26",
-    "nombre": "AUDITORIA  CERTIFICACION NORMA NCH 3262:2021",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-29T15:00:00",
-    "fecha_lote": "2026-09-09",
-    "rubro_match": "compliance",
-    "termino_match": "auditor",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "I MUNICIPALIDAD DE RECOLETA",
-    "comuna": "Recoleta",
-    "descripcion": "La Municipalidad de Recoleta tiene por objeto la contrataci\u00F3n del \u201CSERVICIO DE AUDITOR\u00CDA DE CERTIFICACI\u00D3N BAJO LA NORMA NCH3262:2021 DEL SISTEMA DE GESTI\u00D3N DE IGUALDAD DE G\u00C9NERO Y CONCILIACI\u00D3N DE LA VIDA LABORAL, FAMILIAR Y PERSONAL DE LA MUNICIPALIDAD DE RECOLETA\u201D.\r\n\r\nEl alcance de la certificaci\u00F3n NCh3262:2021 est\u00E1 delimitado para las siguientes \u00E1reas de la instituci\u00F3n:\r\n\u25CFAlcald\u00EDa \r\n\u25CF Administraci\u00F3n Municipal \r\n\u25CF Secretar\u00EDa de Planificaci\u00F3n Comunitaria \r\n\u25CF Direcci\u00F3n de Comunicaciones \r\n\u25CF Direcci\u00F3n de Asesor\u00EDa Jur\u00EDdica \r\n\u25CF Direcci\u00F3n de Vivienda \r\n\u25CF Direcci\u00F3n de Abastecimiento y Gesti\u00F3n de Compras P\u00FAblicas \r\n\u25CF Departamento de Gesti\u00F3n de Personas, Direcci\u00F3n de Administraci\u00F3n y Finanzas \r\n\u25CF Unidad de Gesti\u00F3n de Personas, Departamento de Salud Municipal \r\n\u25CF Unidad de Gesti\u00F3n de Personas, Departamento de Educaci\u00F3n Municipal. \r\n\r\nEl alcance delimitado para estas unidades comprende un total de 170 personas aproximadamente. Estos procesos se desarrollan f\u00EDsicamente en el Edificio Consistorial ubicado en Av. Recoleta 2774.",
-    "prohibicion_contratacion": "El adjudicatario no podr\u00E1 subcontratar, ceder ni transferir en forma alguna, total ni parcialmente, los derechos y obligaciones que nacen del desarrollo de esta licitaci\u00F3n y, en especial, los establecidos en el respectivo contrato que se celebre con la",
-    "tipo_pago": "4",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 10700000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 4182,
-    "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": [
-      80101506
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 80101506,
-        "codigo_categoria": "80101500",
-        "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Consultor\u00EDas o asesor\u00EDas en gesti\u00F3n empresarial / Servicios de consultor\u00EDa en gesti\u00F3n de empresas"
-      }
-    ]
-  },
-  {
     "codigo": "721703-40-LP26",
     "nombre": "Diagramaci\u00F3n ilustraci\u00F3n y digitalizaci\u00F3n SNE y DIA 2027",
     "tipo": "LP",
@@ -167,42 +131,6 @@
     "cliente_asignado": null,
     "origen": "diario",
     "cantidad_reclamos": 46,
-    "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": [
-      93151607
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 93151607,
-        "codigo_categoria": "93151600",
-        "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
-      }
-    ]
-  },
-  {
-    "codigo": "584105-31-LE26",
-    "nombre": "Auditoria de certificaci\u00F3n Norma NCh N\u00B03262-2021",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-25T15:01:00",
-    "fecha_lote": "2026-09-11",
-    "rubro_match": "compliance",
-    "termino_match": "auditor",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "SUBSECRETARIA DE ENERGIA",
-    "comuna": "Santiago",
-    "descripcion": "E1O2RT9 Auditar el Sistema de Gesti\u00F3n de Igualdad de G\u00E9nero y Conciliaci\u00F3n de la vida laboral, familiar y personal de la Subsecretaria de Energ\u00EDa para dar cumplimiento a la Norma NCH 3262:2021, dispuesta por el instituto nacional de normalizaci\u00F3n de chile (INN), con el fin de recibir la recomendaci\u00F3n de certificaci\u00F3n bajo la Norma NCH 3262:2021",
-    "prohibicion_contratacion": "",
-    "tipo_pago": "1",
-    "sub_contratacion": "0",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": null,
-    "monto": null,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 68,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [
       93151607
@@ -584,42 +512,6 @@
         "codigo_producto": 43233415,
         "codigo_categoria": "43233400",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de controladores de dispositivos y utilidades"
-      }
-    ]
-  },
-  {
-    "codigo": "1447930-11-LP26",
-    "nombre": "SSP - Plataforma de virtualizaci\u00F3n On Premise",
-    "tipo": "LP",
-    "fecha_cierre": "2026-09-29T17:00:00",
-    "fecha_lote": "2026-09-09",
-    "rubro_match": "ti",
-    "termino_match": "plataforma",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "SUBSECRETARIA DE SEGURIDAD PUBLICA",
-    "comuna": "Santiago",
-    "descripcion": "La Subsecretar\u00EDa de Seguridad P\u00FAblica, llama a licitaci\u00F3n p\u00FAblica, para la adquisici\u00F3n e implementaci\u00F3n de equipamiento, software, puesta en marcha y paso a producci\u00F3n de una plataforma de virtualizaci\u00F3n on-premise para implementar en las dependencias del nivel central de la Subsecretar\u00EDa de Seguridad P\u00FAblica, ubicadas en Teatinos N\u00B0220, piso 6.",
-    "prohibicion_contratacion": "",
-    "tipo_pago": "1",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 113050000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 2,
-    "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": [
-      43232915
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 43232915,
-        "codigo_categoria": "43232900",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software para trabajo en redes"
       }
     ]
   },
@@ -1602,6 +1494,150 @@
     "items_unspsc": [
       {
         "codigo_producto": 43231505,
+        "codigo_categoria": "43231500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
+      }
+    ]
+  },
+  {
+    "codigo": "1221019-16-LE26",
+    "nombre": "Auditor\u00EDa de Estados Financieros periodo 2026-2027 Corporaci\u00F3n Municipal del Deporte de Vitacura. ",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-13T18:30:00",
+    "fecha_lote": "2026-09-29",
+    "rubro_match": "compliance",
+    "termino_match": "auditor",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "Corporaci\u00F3n Municipal de Deporte  de Vitacura",
+    "comuna": "Vitacura",
+    "descripcion": "La presente propuesta, tiene por finalidad convocar a los interesados, para que presenten sus ofertas para contratar la ejecuci\u00F3n del servicio: \u201CAuditor\u00EDa de Estados Financieros, periodo 2026 - 2027, Corporaci\u00F3n Municipal de Deportes de Vitacura, con el objeto de poder obtener una opini\u00F3n profesional e independiente de la situaci\u00F3n financiera de la empresa, conforme a la normativa vigente. \r\n\r\nLa Corporaci\u00F3n adjudicar\u00E1 la licitaci\u00F3n a un solo oferente que hubiere obtenido el puntaje m\u00E1s alto, luego de aplicados los criterios de evaluaci\u00F3n correspondientes y de desempate si procediere.\r\n\r\nEs importante establecer que, s\u00F3lo podr\u00E1n ser consideradas para el proceso de adjudicaci\u00F3n aquellas ofertas que obtengan un puntaje final igual o superior a 76 puntos.\r\n\r\nEn el caso de que ninguna de las ofertas evaluadas alcance el puntaje m\u00EDnimo de 76 puntos, est\u00E1s ser\u00E1n declaradas fuera de bases, (inadmisibles en la plataforma) y por ende desierto el proceso licitatorio.\r\n",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "4",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 9,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      93151607
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 93151607,
+        "codigo_categoria": "93151600",
+        "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
+      }
+    ]
+  },
+  {
+    "codigo": "2784-4-LE26",
+    "nombre": "ASESORIA JURIDICA REGULARIZACI\u00D3N DE COMUNIDADES",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-13T16:01:00",
+    "fecha_lote": "2026-09-29",
+    "rubro_match": "compliance",
+    "termino_match": "jur\u00EDdic",
+    "region": "Regi\u00F3n de Valpara\u00EDso ",
+    "organismo": "I MUNICIPALIDAD DE LA LIGUA",
+    "comuna": "La Ligua",
+    "descripcion": "La Ilustre Municipalidad de La Ligua, debe contratar los servicios de ASESORIA JURIDICA para REGULARIZACI\u00D3N   de 11 COMUNIDADES de DESAG\u00DAE de ALCANTARILLADO, del sector PLACILLA - LA CHIMBA, comuna de La Ligua.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "2",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 11000000.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 208,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      80111715
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 80111715,
+        "codigo_categoria": "80111700",
+        "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios de recursos humanos / Contrataci\u00F3n de personal"
+      }
+    ]
+  },
+  {
+    "codigo": "568658-71-LE26",
+    "nombre": "SOFTWARE DE GESTI\u00D3N PARA FARMACIAS Y OPTICAS",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-14T09:00:00",
+    "fecha_lote": "2026-09-28",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n de Valpara\u00EDso ",
+    "organismo": "CORPORACION MUNICIPAL VINA DEL MAR PARA EL DESARROLLO SOCIAL",
+    "comuna": "Vi\u00F1a del Mar",
+    "descripcion": "Las presentes Bases Administrativas tienen por objeto regular el llamado a propuesta p\u00FAblica denominada \u201CCONTRATACI\u00D3N DE UNA SOLUCI\u00D3N INTEGRAL DE SOFTWARE DE GESTI\u00D3N PARA FARMACIAS MUNICIPALES Y \u00D3PTICA MUNICIPAL\u201D Esta licitaci\u00F3n es de car\u00E1cter p\u00FAblico y tiene por objeto la contrataci\u00F3n de un sistema inform\u00E1tico para gestionar Farmacias Municipales y la \u00D3ptica Municipal. ",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 35112264.0,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 533,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232310
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232310,
+        "codigo_categoria": "43232300",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de consultas y gesti\u00F3n de datos"
+      }
+    ]
+  },
+  {
+    "codigo": "2686-127-LP26",
+    "nombre": "SERVICIO DE IMPLEMENTACI\u00D3N Y MANTENCI\u00D3N DE PROGRAM",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-19T15:10:00",
+    "fecha_lote": "2026-09-28",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "I MUNICIPALIDAD DE COLINA",
+    "comuna": "Colina",
+    "descripcion": "\u201CSERVICIO DE IMPLEMENTACI\u00D3N Y MANTENCI\u00D3N DE PROGRAMAS COMPUTACIONALES DE GESTI\u00D3N MUNICIPAL DE LA MUNICIPALIDAD DE COLINA\u201D\r\nLa presente contrataci\u00F3n tiene por objeto mantener la continuidad operacional de los sistemas y servicios inform\u00E1ticos utilizados por la Municipalidad de Colina, asegurando su disponibilidad, funcionamiento, mantenimiento y actualizaci\u00F3n, tanto para la gesti\u00F3n interna municipal como para la prestaci\u00F3n de servicios destinados a los vecinos de la comuna.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "pendiente",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 285,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231512
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231512,
         "codigo_categoria": "43231500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
