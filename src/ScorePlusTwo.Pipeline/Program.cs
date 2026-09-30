@@ -1450,6 +1450,16 @@ public static class Program
             cacheUnspsc[candidata.Codigo] = EnriquecimientoUnspscService.ConstruirEntrada(candidata.Codigo, licitacion);
             cacheModificado = true;
 
+            // Se registra lo que devolvió la API ANTES del guard de
+            // triage humano (2026-09-30, ajuste sobre el hotfix de
+            // CodigoEstado): nunca toca EstadoFlujo ni mueve de lista,
+            // solo dice qué vio la API — así una Scorecard/Candidata/
+            // Enviada ya revocada muestra el badge igual que lo hace
+            // ReverificarCandidatasAsync, en vez de esperar a la próxima
+            // re-verificación automática.
+            candidata.EstadoMp = licitacion.CodigoEstado;
+            candidata.UltimaVerificacion = AhoraChile();
+
             if (candidata.EstadoFlujo != EstadoFlujo.Pendiente)
             {
                 // Triage humano ya encima — se respeta tal cual, mismo
@@ -1464,9 +1474,6 @@ public static class Program
             {
                 var (resultadoApi, estadoTerminal) = Verificacion.ReverificacionService
                     .ClasificarEstadoApi(licitacion.CodigoEstado, candidata.Codigo);
-
-                candidata.EstadoMp = licitacion.CodigoEstado;
-                candidata.UltimaVerificacion = AhoraChile();
 
                 if (resultadoApi == Verificacion.ReverificacionService.ResultadoEstadoApi.Suspendida)
                 {
@@ -1553,6 +1560,12 @@ public static class Program
             cacheUnspsc[candidata.Codigo] = EnriquecimientoUnspscService.ConstruirEntrada(candidata.Codigo, licitacion);
             cacheModificado = true;
 
+            // Mismo criterio que en Prioritarias: se registra ANTES del
+            // guard de triage humano, sin tocar EstadoFlujo ni mover de
+            // lista.
+            candidata.EstadoMp = licitacion.CodigoEstado;
+            candidata.UltimaVerificacion = AhoraChile();
+
             if (candidata.EstadoFlujo != EstadoFlujo.Pendiente)
             {
                 tramoBajoActivas.Add(candidata);
@@ -1563,9 +1576,6 @@ public static class Program
             {
                 var (resultadoApi, estadoTerminal) = Verificacion.ReverificacionService
                     .ClasificarEstadoApi(licitacion.CodigoEstado, candidata.Codigo);
-
-                candidata.EstadoMp = licitacion.CodigoEstado;
-                candidata.UltimaVerificacion = AhoraChile();
 
                 if (resultadoApi == Verificacion.ReverificacionService.ResultadoEstadoApi.Suspendida)
                 {
