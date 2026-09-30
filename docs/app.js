@@ -315,13 +315,18 @@
   // Etiquetas legibles para CodigoEstado crudo de Mercado Público (ver
   // Verificacion/ReverificacionService.ClasificarEstadoApi) — 5
   // (Publicada) nunca se muestra como badge, es el estado esperado y no
-  // aporta información. Cualquier valor no listado acá (no documentado,
-  // ej. 15 visto en el fixture) cae en el fallback "Estado {n}", nunca en
-  // blanco.
+  // aporta información. Cualquier valor no listado acá (no documentado)
+  // cae en el fallback "Estado {n}", nunca en blanco. 15/16 verificados a
+  // mano contra Mercado Público el 2026-09-30 (mismo hotfix que corrigió
+  // ClasificarEstadoApi): la API usa 15/16 para Revocada/Suspendida, no
+  // 18/19 — se conservan igual, por si el listado los usa en otro
+  // contexto.
   var ETIQUETAS_ESTADO_MP = {
     6: "Cerrada",
     7: "Desierta",
     8: "Adjudicada",
+    15: "Revocada",
+    16: "Suspendida",
     18: "Revocada",
     19: "Suspendida",
   };
