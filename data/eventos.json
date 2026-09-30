@@ -1594,5 +1594,19 @@
     "accion": "corrida_pipeline",
     "codigo": null,
     "detalle": "total=1198 prioritarias=0 secundarias=331 tramo_bajo=63 nuevas=0 movidas_historico=0"
+  },
+  {
+    "timestamp": "2026-09-30T18:00:00.0000000Z",
+    "actor": "usuario",
+    "accion": "correccion_manual",
+    "codigo": "2369-70-LR26",
+    "detalle": "El fallback de ClasificarEstadoApi trato erroneamente CodigoEstado 16 (Suspendida, verificado a mano en Mercado Publico) como no documentado y lo cerro (estado_flujo=cerrada), bloqueandolo ademas para reingreso. ClasificarEstadoApi ya esta corregido (16 -> Suspendida, no terminal). Restaurado a data/secundarias.json con estado_flujo=pendiente, estado_mp=16, motivo_cierre=null."
+  },
+  {
+    "timestamp": "2026-09-30T18:00:00.0000000Z",
+    "actor": "usuario",
+    "accion": "correccion_manual",
+    "codigo": null,
+    "detalle": "El fallback de ClasificarEstadoApi trato CodigoEstado 15 (Revocada, verificado a mano en Mercado Publico) como no documentado y lo cerro con estado_flujo=cerrada en vez de revocada. ClasificarEstadoApi ya esta corregido (15 -> Revocada, terminal). Corregidos in-place (sin mover de archivo, siguen terminales) 34 codigos: 1 en data/historico/candidatas.json, 32 en data/historico/secundarias.json, 1 en data/historico/tramo_bajo.json. Codigos: 1057472-119-LR26, 1057501-539-LE26, 1079454-12-LE26, 1126922-37-LP26, 1185-3-LP26, 1259850-4-LP26, 1406-8-LE26, 1412-3-LS26, 1417913-124-LE26, 1950-51-LP26, 1965-14-LE26, 2258-37-LR26, 229-96-LE26, 2415-23-LE26, 2494-81-LP26, 2656-66-LE26, 2924-19-LE26, 2924-20-LE26, 3431-5-LS26, 3453-82-LE26, 3474-54-LE26, 3477-82-LE26, 3587-19-LE26, 3794-73-LE26, 3892-30-LE26, 4037-65-LE26, 4375-105-LE26, 4449-33-L126, 4610-68-LP26, 4967-28-LP26, 5482-100-LP26, 5554-3-LE26, 707426-33-LE26, 732-14-LP26"
   }
 ]

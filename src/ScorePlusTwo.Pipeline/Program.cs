@@ -1462,15 +1462,21 @@ public static class Program
 
             if (licitacion.CodigoEstado != 5)
             {
-                var estadoCierre = MapearEstadoDeCierre(licitacion.CodigoEstado);
-                if (estadoCierre is null)
+                var (resultadoApi, estadoTerminal) = Verificacion.ReverificacionService
+                    .ClasificarEstadoApi(licitacion.CodigoEstado, candidata.Codigo);
+
+                candidata.EstadoMp = licitacion.CodigoEstado;
+                candidata.UltimaVerificacion = AhoraChile();
+
+                if (resultadoApi == Verificacion.ReverificacionService.ResultadoEstadoApi.Suspendida)
                 {
-                    Console.Error.WriteLine(
-                        $"[ADVERTENCIA] Estado no documentado ({licitacion.CodigoEstado}) en {candidata.Codigo}, " +
-                        "tratado como Cerrada por defecto.");
+                    // 16/19: nunca cierra ni mueve, puede reactivarse —
+                    // mismo criterio que ReverificarCandidatasAsync.
+                    prioritariasActivas.Add(candidata);
+                    continue;
                 }
 
-                candidata.EstadoFlujo = estadoCierre ?? EstadoFlujo.Cerrada;
+                candidata.EstadoFlujo = estadoTerminal!.Value;
                 prioritariasHistorico.Add(candidata);
                 movidasHistoricoPrioritarias++;
                 continue;
@@ -1555,15 +1561,19 @@ public static class Program
 
             if (licitacion.CodigoEstado != 5)
             {
-                var estadoCierre = MapearEstadoDeCierre(licitacion.CodigoEstado);
-                if (estadoCierre is null)
+                var (resultadoApi, estadoTerminal) = Verificacion.ReverificacionService
+                    .ClasificarEstadoApi(licitacion.CodigoEstado, candidata.Codigo);
+
+                candidata.EstadoMp = licitacion.CodigoEstado;
+                candidata.UltimaVerificacion = AhoraChile();
+
+                if (resultadoApi == Verificacion.ReverificacionService.ResultadoEstadoApi.Suspendida)
                 {
-                    Console.Error.WriteLine(
-                        $"[ADVERTENCIA] Estado no documentado ({licitacion.CodigoEstado}) en {candidata.Codigo}, " +
-                        "tratado como Cerrada por defecto.");
+                    tramoBajoActivas.Add(candidata);
+                    continue;
                 }
 
-                candidata.EstadoFlujo = estadoCierre ?? EstadoFlujo.Cerrada;
+                candidata.EstadoFlujo = estadoTerminal!.Value;
                 tramoBajoHistorico.Add(candidata);
                 movidasHistoricoTramoBajo++;
                 continue;
