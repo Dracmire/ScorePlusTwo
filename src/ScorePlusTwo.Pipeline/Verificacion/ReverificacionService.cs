@@ -303,6 +303,9 @@ public static class ReverificacionService
                     {
                         candidata.EstadoFlujo = estadoTerminal!.Value;
                         pasaronATerminal.Add(candidata);
+                        eventos.Add(new EventoAuditoria(
+                            DateTime.UtcNow, "sistema", "estado_actualizado", candidata.Codigo,
+                            $"estado_nuevo={estadoTerminal} codigo_estado_api={codigoEstado}"));
                     }
                     else if (huboTransicion)
                     {
