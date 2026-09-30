@@ -53,27 +53,50 @@ public static class ReverificacionService
     // Pura, testeable sin red. Reusa MapearEstadoDeCierre (promovida de
     // private a internal en Program.cs, mismo criterio ya usado con
     // EvaluarRubro/EsRegionElegible) para 6/7/8 — es la única función que
-    // decide el tratamiento de 5/18/19/no documentado.
+    // decide el tratamiento de 5/15/16/18/19/no documentado. Las dos ramas
+    // de Program.EjecutarReevaluarInventarioAsync la reusan en vez de
+    // mapear por su cuenta (2026-09-30, hotfix). RevalidarEstado
+    // (Program.cs, sobre el lote diario crudo) sigue usando
+    // MapearEstadoDeCierre directamente, sin pasar por acá — pendiente
+    // conocido, sin riesgo de cierre erróneo (MapearEstadoDeCierre nunca
+    // mapea 15/16/18/19), solo un posible retraso de una corrida hasta
+    // que la re-verificación automática lo alcance.
     //
     // Valores reales de CodigoEstado conocidos: 5 Publicada (no terminal),
-    // 19 Suspendida (NO terminal — puede reactivarse), 18 Revocada
-    // (terminal, nuevo), 6/7/8 Cerrada/Desierta/Adjudicada (terminal, ya
-    // mapeados), cualquier otro valor no documentado (ej. 15, visto en el
-    // fixture) — mismo fallback conservador que --reevaluar-inventario ya
-    // usa: Cerrada + advertencia impresa, nunca silencioso.
-    public static (ResultadoEstadoApi Resultado, EstadoFlujo? EstadoTerminal) ClasificarEstadoApi(int codigoEstado)
+    // 15 Revocada (terminal), 16 Suspendida (NO terminal — puede
+    // reactivarse), 18/19 se conservan con el mismo tratamiento (Revocada/
+    // Suspendida respectivamente) por si el listado los usa en otro
+    // contexto, 6/7/8 Cerrada/Desierta/Adjudicada (terminal, ya mapeados),
+    // cualquier otro valor no documentado — mismo fallback conservador que
+    // --reevaluar-inventario ya usa: Cerrada + advertencia impresa, nunca
+    // silencioso.
+    //
+    // 15/16 verificados a mano contra Mercado Público el 2026-09-30
+    // (usuario), tras la primera corrida real de re-verificación:
+    // 1007793-15-LE26 (6) = Cerrada [correcto]; 732-14-LP26 y
+    // 5482-100-LP26 (15) = Revocada, NO Cerrada; 2369-70-LR26 (16) =
+    // Suspendida, NO terminal. El fallback anterior trataba 15/16 como no
+    // documentados y los cerraba — cerró una Revocada (destino correcto,
+    // EstadoFlujo equivocado) y, más grave, cerró y bloqueó para
+    // reingreso una Suspendida que puede reactivarse.
+    //
+    // codigoExterno (opcional): solo para enriquecer el mensaje de
+    // advertencia del fallback no documentado con qué código lo disparó —
+    // no cambia la clasificación.
+    public static (ResultadoEstadoApi Resultado, EstadoFlujo? EstadoTerminal) ClasificarEstadoApi(
+        int codigoEstado, string? codigoExterno = null)
     {
         if (codigoEstado == 5)
         {
             return (ResultadoEstadoApi.SiguePublicada, null);
         }
 
-        if (codigoEstado == 19)
+        if (codigoEstado == 16 || codigoEstado == 19)
         {
             return (ResultadoEstadoApi.Suspendida, null);
         }
 
-        if (codigoEstado == 18)
+        if (codigoEstado == 15 || codigoEstado == 18)
         {
             return (ResultadoEstadoApi.EsTerminal, EstadoFlujo.Revocada);
         }
@@ -84,7 +107,9 @@ public static class ReverificacionService
         }
 
         Console.Error.WriteLine(
-            $"[ADVERTENCIA] CodigoEstado no documentado ({codigoEstado}) en reverificación, tratado como Cerrada por defecto.");
+            $"[ADVERTENCIA] CodigoEstado no documentado ({codigoEstado})" +
+            (codigoExterno is null ? "" : $" en {codigoExterno}") +
+            " en reverificación, tratado como Cerrada por defecto.");
         return (ResultadoEstadoApi.EsTerminal, EstadoFlujo.Cerrada);
     }
 

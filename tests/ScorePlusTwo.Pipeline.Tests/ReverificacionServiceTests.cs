@@ -33,16 +33,20 @@ public class ReverificacionServiceTests
         CodigoEstado: codigoEstado,
         Fechas: fechaCierre is null ? null : new DetalleFechas(fechaCierre));
 
-    // 1. ClasificarEstadoApi: 5 -> SiguePublicada; 19 -> Suspendida;
-    // 6/7/8 -> EsTerminal con el EstadoFlujo correspondiente; 18 ->
-    // EsTerminal/Revocada; un código no documentado (15, visto en el
-    // fixture) -> EsTerminal/Cerrada (fallback conservador).
+    // 1. ClasificarEstadoApi: 5 -> SiguePublicada; 16/19 -> Suspendida;
+    // 6/7/8/15/18 -> EsTerminal con el EstadoFlujo correspondiente
+    // (15/18 -> Revocada, verificado a mano contra Mercado Público el
+    // 2026-09-30); un código no documentado (99) -> EsTerminal/Cerrada
+    // (fallback conservador).
     [Fact]
     public void ClasificarEstadoApi_MapeaLosTresResultadosSegunCodigoEstado()
     {
         Assert.Equal(
             (ReverificacionService.ResultadoEstadoApi.SiguePublicada, (EstadoFlujo?)null),
             ReverificacionService.ClasificarEstadoApi(5));
+        Assert.Equal(
+            (ReverificacionService.ResultadoEstadoApi.Suspendida, (EstadoFlujo?)null),
+            ReverificacionService.ClasificarEstadoApi(16));
         Assert.Equal(
             (ReverificacionService.ResultadoEstadoApi.Suspendida, (EstadoFlujo?)null),
             ReverificacionService.ClasificarEstadoApi(19));
@@ -57,11 +61,36 @@ public class ReverificacionServiceTests
             ReverificacionService.ClasificarEstadoApi(8));
         Assert.Equal(
             (ReverificacionService.ResultadoEstadoApi.EsTerminal, (EstadoFlujo?)EstadoFlujo.Revocada),
+            ReverificacionService.ClasificarEstadoApi(15));
+        Assert.Equal(
+            (ReverificacionService.ResultadoEstadoApi.EsTerminal, (EstadoFlujo?)EstadoFlujo.Revocada),
             ReverificacionService.ClasificarEstadoApi(18));
         Assert.Equal(
             (ReverificacionService.ResultadoEstadoApi.EsTerminal, (EstadoFlujo?)EstadoFlujo.Cerrada),
-            ReverificacionService.ClasificarEstadoApi(15));
+            ReverificacionService.ClasificarEstadoApi(99));
     }
+
+    // 9. Protege el caso real de 2369-70-LR26 por comportamiento, no solo
+    // por el mapeo: una candidata Pendiente cuyo detalle devuelve
+    // CodigoEstado 16 (Suspendida) conserva EstadoFlujo.Pendiente, no se
+    // mueve de lista (no aparece en PasaronATerminal), y queda con
+    // EstadoMp == 16.
+    [Fact]
+    public async Task ReverificarCandidatasAsync_Suspendida_ConservaEstadoFlujoYNoMueveDeLista()
+    {
+        var candidata = Candidata("2369-70-LR26");
+
+        Task<DetalleLicitacion?> Suspendida(string codigo, CancellationToken ct) =>
+            Task.FromResult<DetalleLicitacion?>(Detalle(codigo, codigoEstado: 16));
+
+        var resultado = await ReverificacionService.ReverificarCandidatasAsync(
+            Suspendida, new List<Candidata> { candidata }, new HashSet<EstadoFlujo>(), DateTime.UtcNow);
+
+        Assert.Equal(EstadoFlujo.Pendiente, candidata.EstadoFlujo);
+        Assert.Empty(resultado.PasaronATerminal);
+        Assert.Equal(16, candidata.EstadoMp);
+    }
+
 
     // 2. SeleccionarTope: (a) una candidata nunca verificada queda antes
     // que una verificada ayer aunque su FechaCierre sea más reciente; (b)

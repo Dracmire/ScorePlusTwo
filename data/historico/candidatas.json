@@ -1272,7 +1272,7 @@
     "tipo_privado": false,
     "moneda": null,
     "monto": null,
-    "estado_flujo": "cerrada",
+    "estado_flujo": "revocada",
     "notas": null,
     "cliente_asignado": null,
     "origen": "diario",
