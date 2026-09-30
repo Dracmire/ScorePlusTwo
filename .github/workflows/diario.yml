@@ -89,6 +89,11 @@ on:
         required: false
         type: boolean
         default: false
+      reverificar_vencidas:
+        description: 'true = correr --reverificar-vencidas (limpia de una sola vez el backlog de Secundarias + Tramo bajo Pendiente vencidas contra el detalle real de la API, sin tope) en vez del flujo normal. Solo con confirmación explícita — no disparar el mismo día que otro modo de mantenimiento (cuota de API compartida) ni en lunes (coincide con el barrido `activas`). Ignora "fecha" y el resto de los flags de mantenimiento.'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -118,8 +123,11 @@ jobs:
           REEVALUAR_INVENTARIO: ${{ github.event.inputs.reevaluar_inventario }}
           CONSULTAR_LICITACION: ${{ github.event.inputs.consultar_licitacion }}
           REFRESCAR_DESCRIPTIVOS: ${{ github.event.inputs.refrescar_descriptivos }}
+          REVERIFICAR_VENCIDAS: ${{ github.event.inputs.reverificar_vencidas }}
         run: |
-          if [ "$REFRESCAR_DESCRIPTIVOS" = "true" ]; then
+          if [ "$REVERIFICAR_VENCIDAS" = "true" ]; then
+            dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --reverificar-vencidas
+          elif [ "$REFRESCAR_DESCRIPTIVOS" = "true" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --refrescar-descriptivos
           elif [ -n "$CONSULTAR_LICITACION" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --consultar-licitacion "$CONSULTAR_LICITACION"

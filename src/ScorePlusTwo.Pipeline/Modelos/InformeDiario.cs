@@ -46,6 +46,21 @@ public sealed record InformeFunnel(
     int RevisionManualUnspsc = 0,
     int AhorradosPorAcumulados = 0);
 
+// ReverificadasHoy/ReverificacionesConCambioFecha/ReverificacionesATerminal/
+// ReverificacionesFallidas/CierresDetectadosEnTriage (2026-09-30, ver
+// Verificacion/ReverificacionService.cs): visibilidad del paso automático
+// de re-verificación contra el detalle real de la API — permite notar si
+// deja de funcionar sin que nadie lo note. Suman Prioritarias +
+// Secundarias/TramoBajo combinados (mismo criterio que EnriquecidosHoy:
+// hechos de ESTA corrida, no se preservan al reprocesar una fecha).
+//
+// LlamadasEnriquecimiento/LlamadasReverificacion/LlamadasBarridoActivas
+// (2026-09-30): desglose de cuota de llamadas a la API de detalle por
+// categoría — enriquecimiento (UNSPSC, diario+activas combinados),
+// re-verificación (este follow-up, Prioritarias+Secundarias/TramoBajo
+// combinados) y barrido activas (la llamada de LISTADO ObtenerActivasAsync,
+// 1 cuando corre, 0 si no) — para notar si el consumo de cuota crece de
+// forma inesperada sin sumar a mano varios contadores ya existentes.
 public sealed record InformeDiario(
     DateOnly Fecha,
     int Total,
@@ -65,4 +80,12 @@ public sealed record InformeDiario(
     int Bienes = 0,
     int SinResolverUnspsc = 0,
     int RevisionManualUnspsc = 0,
-    int AhorradosPorAcumulados = 0);
+    int AhorradosPorAcumulados = 0,
+    int ReverificadasHoy = 0,
+    int ReverificacionesConCambioFecha = 0,
+    int ReverificacionesATerminal = 0,
+    int ReverificacionesFallidas = 0,
+    int CierresDetectadosEnTriage = 0,
+    int LlamadasEnriquecimiento = 0,
+    int LlamadasReverificacion = 0,
+    int LlamadasBarridoActivas = 0);

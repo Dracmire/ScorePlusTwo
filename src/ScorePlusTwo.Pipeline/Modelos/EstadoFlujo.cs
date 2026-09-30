@@ -34,4 +34,14 @@ public enum EstadoFlujo
     // resultado automático se equivocó (Mover a Prioritarias, escribe un
     // override que gana sobre esta reclasificación).
     RevisionDegradada,
+    // Asignado por Verificacion.ReverificacionService (2026-09-30) cuando
+    // el detalle real de la API devuelve CodigoEstado 18 — mapea a
+    // ResultadoEstadoApi.EsTerminal, mismo tratamiento que Cerrada/
+    // Desierta/Adjudicada (movida a histórico si estaba Pendiente, o
+    // evento cierre_detectado_en_triage sin cambiar EstadoFlujo si ya
+    // tenía triage humano encima). Se agrega al FINAL del enum a
+    // propósito: el JsonStringEnumConverter serializa por nombre, no por
+    // valor ordinal, así que reordenar no es necesario, pero hacerlo
+    // igual invitaría a confusión al releer este archivo.
+    Revocada,
 }

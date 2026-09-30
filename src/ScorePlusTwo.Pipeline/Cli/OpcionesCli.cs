@@ -38,6 +38,19 @@ namespace ScorePlusTwo.Pipeline.Cli;
 // completas + la cola de Revisión dentro de Secundarias — NUNCA
 // reclasifica ni mueve de lista (a diferencia de --reevaluar-inventario,
 // que sí lo hace). Requiere MP_TICKET, sin --fixture.
+//
+// --reverificar-vencidas (2026-09-30), mismo patrón estructural que los
+// cuatro anteriores (ver Program.EjecutarReverificarVencidasAsync): limpia
+// de una sola vez el backlog completo de candidatas Pendiente vencidas de
+// Secundarias + Tramo bajo, re-verificando contra el detalle real de la
+// API — sin el tope diario ni el salto de "ya verificada hoy" que sí
+// aplica el paso automático de cada corrida (ver
+// Verificacion/ReverificacionService.SeleccionarTope vs
+// SeleccionarVencidasSinTope). Prioritarias no lo necesita: el flujo
+// automático ya la re-verifica completa cada noche. Requiere MP_TICKET,
+// sin --fixture. Nunca se dispara automáticamente — solo con confirmación
+// explícita del usuario (cuota de API compartida con enriquecimiento/
+// --backfill-unspsc/--reevaluar-inventario).
 public sealed record OpcionesCli(
     string? RutaFixture,
     DateOnly? Fecha,
@@ -48,7 +61,8 @@ public sealed record OpcionesCli(
     bool BackfillUnspsc,
     bool ReevaluarInventario,
     string? ConsultarLicitacion,
-    bool RefrescarDescriptivos)
+    bool RefrescarDescriptivos,
+    bool ReverificarVencidas)
 {
     public static OpcionesCli Parse(string[] args)
     {
@@ -62,6 +76,7 @@ public sealed record OpcionesCli(
         var reevaluarInventario = false;
         string? consultarLicitacion = null;
         var refrescarDescriptivos = false;
+        var reverificarVencidas = false;
 
         for (var i = 0; i < args.Length; i++)
         {
@@ -97,11 +112,14 @@ public sealed record OpcionesCli(
                 case "--refrescar-descriptivos":
                     refrescarDescriptivos = true;
                     break;
+                case "--reverificar-vencidas":
+                    reverificarVencidas = true;
+                    break;
             }
         }
 
         return new OpcionesCli(
             rutaFixture, fecha, refiltrar, rutaCriteriosAlternativos, desde, rutaSalidaRefiltrado,
-            backfillUnspsc, reevaluarInventario, consultarLicitacion, refrescarDescriptivos);
+            backfillUnspsc, reevaluarInventario, consultarLicitacion, refrescarDescriptivos, reverificarVencidas);
     }
 }

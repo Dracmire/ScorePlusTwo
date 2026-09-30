@@ -312,4 +312,40 @@ public static class FiltroLicitaciones
 
         return (null, null, false);
     }
+
+    // Extraído (2026-09-30) para que Program.FusionarLista no resucite un
+    // código ya movido a histórico como si fuera nuevo, sin duplicar la
+    // decisión en ningún otro lugar — mismo patrón de promoción que
+    // EvaluarRubro/EsRegionElegible. Caso real que motivó el fix:
+    // 5482-100-LP26, Prioritaria confirmada por override humano, cerrada
+    // (desechada) sin que ninguna corrida se enterara — de volver a
+    // aparecer en el lote diario o en `activas`, FusionarLista la trataría
+    // como nueva y AplicadorOverrides la resucitaría de inmediato en
+    // Prioritarias, ignorando su historia.
+    //
+    // Un código ya en la lista activa nunca es "nuevo" (dedupe de
+    // siempre). Uno ausente de la lista activa pero presente en histórico
+    // con un cierre CONFIRMADO por la API (Candidata.MotivoCierre == null
+    // — cubre CodigoEstado 6/7/8/18/no documentado, y también lo movido a
+    // histórico por RevalidarEstado/--reevaluar-inventario, que nunca
+    // setean este campo) tampoco es nuevo: ese cierre es un hecho
+    // verificado, no algo que un código reapareciendo en el feed deba
+    // revertir. Un cierre INFERIDO (MotivoCierre == "no_encontrada_en_api"
+    // — el código dejó de listarse en la API sin que jamás se observara un
+    // CodigoEstado de cierre real, ver ReverificacionService) NO bloquea:
+    // si vuelve a aparecer Publicada, se acepta como código nuevo de
+    // nuevo, porque el cierre original nunca fue más que una suposición.
+    public static bool EsCodigoNuevo(
+        string codigo,
+        IReadOnlySet<string> codigosExistentes,
+        IReadOnlyDictionary<string, string?> motivoCierrePorCodigoHistorico)
+    {
+        if (codigosExistentes.Contains(codigo))
+        {
+            return false;
+        }
+
+        return !motivoCierrePorCodigoHistorico.TryGetValue(codigo, out var motivoCierre)
+            || motivoCierre == "no_encontrada_en_api";
+    }
 }

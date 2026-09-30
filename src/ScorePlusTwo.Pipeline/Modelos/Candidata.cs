@@ -94,4 +94,51 @@ public sealed class Candidata
     // detalle expandible de la pestaña Revisión. Mismo default vacío que
     // CodigosProductoUnspsc para lo que nunca se enriquece.
     public List<ItemUnspscCache> ItemsUnspsc { get; set; } = new();
+
+    // UltimaVerificacion/EstadoMp/IntentosNoEncontrada/MotivoCierre
+    // (2026-09-30, ver Verificacion/ReverificacionService.cs): el dedupe
+    // (FusionarLista) nunca vuelve a tocar un código ya existente, y
+    // RevalidarEstado solo detecta un cierre si el código reaparece en el
+    // lote diario — una licitación que deja de tener "movimiento" en el
+    // feed incremental queda congelada para siempre sin este mecanismo.
+    // Estos 4 campos son el estado propio de esa re-verificación contra el
+    // detalle real de la API, poblados/actualizados ÚNICAMENTE por
+    // ReverificacionService — ninguna otra ruta de enriquecimiento los
+    // toca en este cambio.
+
+    // Último momento (hora de Chile, ver Program.AhoraChile) en que se
+    // intentó re-verificar este código con éxito (encontrado o no
+    // encontrado, nunca en un fallo de red) — null para candidatas nunca
+    // re-verificadas. Permite que la corrida sea idempotente/reanudable
+    // (SeleccionarTope salta lo ya verificado hoy) y que el tablero
+    // muestre qué tan reciente es el dato.
+    public DateTime? UltimaVerificacion { get; set; }
+
+    // Último CodigoEstado crudo que devolvió la API para este código, en
+    // una respuesta donde SÍ apareció en Listado — null para candidatas
+    // nunca re-verificadas o cuya última re-verificación no lo encontró.
+    // Hace visible en el tablero un cierre_detectado_en_triage sin tener
+    // que leer data/eventos.json.
+    public int? EstadoMp { get; set; }
+
+    // Contador de llamadas consecutivas donde la API respondió
+    // correctamente pero el código no apareció en Listado (distinto de un
+    // fallo de red, ver ReverificacionService.ReverificarCandidatasAsync).
+    // Se resetea a 0 en cuanto vuelve a encontrarse. Se cappea en 3 para
+    // que la comparación de transición del evento no_encontrada_en_api
+    // tenga sentido en un código triaged que nunca se mueve de lista.
+    public int IntentosNoEncontrada { get; set; }
+
+    // Motivo del último paso a un EstadoFlujo terminal — distingue un
+    // cierre INFERIDO (código dejó de listarse, IntentosNoEncontrada llegó
+    // a 3, nunca se observó un CodigoEstado de cierre real: valor
+    // "no_encontrada_en_api") de uno CONFIRMADO por la API (null, el
+    // default — cubre CodigoEstado 6/7/8/18/no documentado, y también lo
+    // movido a histórico por RevalidarEstado/--reevaluar-inventario, que
+    // nunca setean este campo). Usado únicamente por
+    // FiltroLicitaciones.EsCodigoNuevo (el fix de reingreso de
+    // FusionarLista): un cierre inferido no bloquea que el código
+    // reingrese si vuelve a aparecer Publicada; uno confirmado sí. No se
+    // expone en el tablero.
+    public string? MotivoCierre { get; set; }
 }

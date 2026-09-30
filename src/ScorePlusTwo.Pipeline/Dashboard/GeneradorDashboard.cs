@@ -41,7 +41,18 @@ public sealed record DashboardCandidata(
     string? Descripcion,
     string? ProhibicionContratacion,
     string? TipoPago,
-    string? SubContratacion);
+    string? SubContratacion,
+    // UltimaVerificacion/EstadoMp/IntentosNoEncontrada (2026-09-30, ver
+    // Verificacion/ReverificacionService.cs): mismo caso que los campos de
+    // arriba — ya existían en Candidata pero nunca llegaban al tablero.
+    // UltimaVerificacion se muestra discreto en el panel expandible
+    // (CAMPOS_PANEL); EstadoMp/IntentosNoEncontrada alimentan además los
+    // dos badges de la tabla compacta (ver docs/app.js) que hacen visible
+    // un cierre_detectado_en_triage o un no_encontrada_en_api sin tener
+    // que leer data/eventos.json.
+    DateTime? UltimaVerificacion,
+    int? EstadoMp,
+    int IntentosNoEncontrada);
 
 public sealed record DashboardSerieItem(DateOnly Fecha, int Total, int Prioritarias, double Tasa);
 
@@ -97,7 +108,10 @@ public static class GeneradorDashboard
                 Descripcion: c.Descripcion,
                 ProhibicionContratacion: c.ProhibicionContratacion,
                 TipoPago: c.TipoPago,
-                SubContratacion: c.SubContratacion))
+                SubContratacion: c.SubContratacion,
+                UltimaVerificacion: c.UltimaVerificacion,
+                EstadoMp: c.EstadoMp,
+                IntentosNoEncontrada: c.IntentosNoEncontrada))
             .ToList();
 
         var serie = informes
