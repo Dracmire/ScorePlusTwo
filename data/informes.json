@@ -36,7 +36,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-05",
@@ -57,7 +65,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-06",
@@ -96,7 +112,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-07",
@@ -117,7 +141,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-08",
@@ -138,7 +170,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-09",
@@ -159,7 +199,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-10",
@@ -180,7 +228,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-11",
@@ -201,7 +257,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-12",
@@ -222,7 +286,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-13",
@@ -261,7 +333,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-14",
@@ -282,7 +362,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-15",
@@ -303,7 +391,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-16",
@@ -324,7 +420,15 @@
     "bienes": 54,
     "sin_resolver_unspsc": 86,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-17",
@@ -345,7 +449,15 @@
     "bienes": 44,
     "sin_resolver_unspsc": 52,
     "revision_manual_unspsc": 3,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-18",
@@ -366,7 +478,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-19",
@@ -387,7 +507,15 @@
     "bienes": 0,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-20",
@@ -426,7 +554,15 @@
     "bienes": 1,
     "sin_resolver_unspsc": 1,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-21",
@@ -447,7 +583,15 @@
     "bienes": 90,
     "sin_resolver_unspsc": 103,
     "revision_manual_unspsc": 11,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-22",
@@ -468,7 +612,15 @@
     "bienes": 75,
     "sin_resolver_unspsc": 93,
     "revision_manual_unspsc": 7,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-23",
@@ -489,7 +641,15 @@
     "bienes": 83,
     "sin_resolver_unspsc": 75,
     "revision_manual_unspsc": 11,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-24",
@@ -510,7 +670,15 @@
     "bienes": 66,
     "sin_resolver_unspsc": 98,
     "revision_manual_unspsc": 6,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-25",
@@ -531,7 +699,15 @@
     "bienes": 88,
     "sin_resolver_unspsc": 109,
     "revision_manual_unspsc": 16,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-26",
@@ -552,7 +728,15 @@
     "bienes": 4,
     "sin_resolver_unspsc": 3,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-27",
@@ -591,7 +775,15 @@
     "bienes": 2,
     "sin_resolver_unspsc": 0,
     "revision_manual_unspsc": 0,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-28",
@@ -612,7 +804,15 @@
     "bienes": 94,
     "sin_resolver_unspsc": 100,
     "revision_manual_unspsc": 7,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 0,
+    "reverificaciones_con_cambio_fecha": 0,
+    "reverificaciones_a_terminal": 0,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 0,
+    "llamadas_reverificacion": 0,
+    "llamadas_barrido_activas": 0
   },
   {
     "fecha": "2026-09-29",
@@ -633,6 +833,14 @@
     "bienes": 105,
     "sin_resolver_unspsc": 116,
     "revision_manual_unspsc": 4,
-    "ahorrados_por_acumulados": 0
+    "ahorrados_por_acumulados": 0,
+    "reverificadas_hoy": 236,
+    "reverificaciones_con_cambio_fecha": 154,
+    "reverificaciones_a_terminal": 39,
+    "reverificaciones_fallidas": 0,
+    "cierres_detectados_en_triage": 0,
+    "llamadas_enriquecimiento": 324,
+    "llamadas_reverificacion": 236,
+    "llamadas_barrido_activas": 0
   }
 ]

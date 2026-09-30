@@ -25,7 +25,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2292-57-L126",
@@ -53,7 +57,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2961-66-L126",
@@ -81,7 +89,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3977-17-L126",
@@ -109,7 +121,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057384-138-L126",
@@ -137,7 +153,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-207-L126",
@@ -165,7 +185,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057419-27-L126",
@@ -193,7 +217,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1077908-8-L126",
@@ -221,7 +249,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1110404-185-L126",
@@ -249,7 +281,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1110404-186-L126",
@@ -277,7 +313,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1110404-187-L126",
@@ -305,7 +345,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1664-21-L126",
@@ -333,7 +377,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1665-11-L126",
@@ -361,7 +409,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1754-38-L126",
@@ -389,7 +441,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1757-7-L126",
@@ -417,7 +473,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1757-8-L126",
@@ -445,7 +505,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1978-112-L126",
@@ -473,7 +537,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1978-115-L126",
@@ -501,7 +569,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1978-116-L126",
@@ -529,7 +601,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2099-48-L126",
@@ -557,7 +633,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2200-26-L126",
@@ -585,7 +665,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2274-43-L126",
@@ -613,7 +697,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2409-95-L126",
@@ -641,7 +729,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2422-152-L126",
@@ -669,7 +761,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2424-80-L126",
@@ -697,7 +793,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-305-L126",
@@ -725,7 +825,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-307-L126",
@@ -753,7 +857,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-308-L126",
@@ -781,7 +889,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3143-40-L126",
@@ -809,7 +921,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3280-17-L126",
@@ -837,7 +953,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3280-18-L126",
@@ -865,7 +985,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3385-12-L126",
@@ -893,7 +1017,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3730-92-L126",
@@ -921,7 +1049,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3737-10-L126",
@@ -949,7 +1081,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3908-42-L126",
@@ -977,7 +1113,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3992-26-L126",
@@ -1005,7 +1145,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4055-67-L126",
@@ -1033,7 +1177,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4885-23-L126",
@@ -1061,7 +1209,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4886-30-L126",
@@ -1089,7 +1241,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5018-6-L126",
@@ -1117,7 +1273,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "507428-113-L126",
@@ -1145,7 +1305,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "594965-24-L126",
@@ -1173,7 +1337,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "636811-15-L126",
@@ -1201,7 +1369,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "643553-18-L126",
@@ -1229,7 +1401,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "848-25-L126",
@@ -1257,7 +1433,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1218393-42-L126",
@@ -1285,7 +1465,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057552-18-L126",
@@ -1313,7 +1497,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3540-62-L126",
@@ -1341,7 +1529,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2332-106-L126",
@@ -1369,7 +1561,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2292-61-L126",
@@ -1397,7 +1593,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1233822-22-L126",
@@ -1425,7 +1625,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4906-35-L126",
@@ -1453,7 +1657,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "522-32-L126",
@@ -1481,7 +1689,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "923000-18-L126",
@@ -1509,7 +1721,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3210-10-L126",
@@ -1537,7 +1753,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2467-99-L126",
@@ -1565,7 +1785,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1480067-21-L126",
@@ -1593,7 +1817,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3950-45-L126",
@@ -1621,7 +1849,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2974-72-L126",
@@ -1649,7 +1881,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057550-37-L126",
@@ -1677,7 +1913,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1072229-40-L126",
@@ -1705,7 +1945,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1209-5-L126",
@@ -1733,7 +1977,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1233600-50-L126",
@@ -1761,7 +2009,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-201-L126",
@@ -1789,7 +2041,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1660-132-L126",
@@ -1817,7 +2073,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1660-135-L126",
@@ -1845,7 +2105,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2402-78-L126",
@@ -1873,7 +2137,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2663-73-L126",
@@ -1901,7 +2169,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3122-5-L126",
@@ -1929,7 +2201,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-192-L126",
@@ -1957,7 +2233,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-193-L126",
@@ -1985,7 +2265,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3958-54-L126",
@@ -2013,7 +2297,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5349-97-L126",
@@ -2041,7 +2329,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5539-23-L126",
@@ -2069,7 +2361,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "633-55-L126",
@@ -2097,7 +2393,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "680529-1-L126",
@@ -2125,7 +2425,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "707415-31-L126",
@@ -2153,7 +2457,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "707415-32-L126",
@@ -2181,7 +2489,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "707415-33-L126",
@@ -2209,7 +2521,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "707418-44-L126",
@@ -2237,7 +2553,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "761391-135-L126",
@@ -2265,7 +2585,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-41-L126",
@@ -2293,7 +2617,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-42-L126",
@@ -2321,7 +2649,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057428-39-L126",
@@ -2349,7 +2681,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-203-L126",
@@ -2377,7 +2713,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2402-80-L126",
@@ -2405,7 +2745,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3561-40-L126",
@@ -2433,7 +2777,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-204-L126",
@@ -2461,7 +2809,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "660-12-L126",
@@ -2489,7 +2841,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "879-17-L126",
@@ -2517,7 +2873,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057428-38-L126",
@@ -2545,7 +2905,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1665-12-L126",
@@ -2573,7 +2937,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2101-147-L126",
@@ -2601,7 +2969,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2402-81-L126",
@@ -2629,7 +3001,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3540-63-L126",
@@ -2657,7 +3033,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4308-21-L126",
@@ -2685,7 +3065,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2395-49-L126",
@@ -2713,7 +3097,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "867990-85-L126",
@@ -2741,7 +3129,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "633-56-L126",
@@ -2769,7 +3161,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2408-208-L126",
@@ -2797,7 +3193,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057536-123-L126",
@@ -2825,7 +3225,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2766-135-L126",
@@ -2853,7 +3257,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2852-55-L126",
@@ -2881,7 +3289,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1211-17-L126",
@@ -2909,7 +3321,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1067476-36-L126",
@@ -2937,7 +3353,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "732515-1-L126",
@@ -2965,7 +3385,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1621-22-L126",
@@ -2993,7 +3417,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3996-37-L126",
@@ -3021,7 +3449,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3206-29-L126",
@@ -3049,7 +3481,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4455-48-L126",
@@ -3077,7 +3513,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3938-37-L126",
@@ -3105,7 +3545,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2332-112-L126",
@@ -3133,7 +3577,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "938-32-L126",
@@ -3161,7 +3609,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057384-136-L126",
@@ -3189,7 +3641,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1230848-62-L126",
@@ -3217,7 +3673,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3316-12-L126",
@@ -3245,7 +3705,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-191-L126",
@@ -3273,7 +3737,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3958-53-L126",
@@ -3301,7 +3769,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4457-73-L126",
@@ -3329,7 +3801,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4559-29-L126",
@@ -3357,7 +3833,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4885-20-L126",
@@ -3385,7 +3865,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4887-26-L126",
@@ -3413,7 +3897,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "680504-2-L126",
@@ -3441,7 +3929,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1499900-4-L126",
@@ -3469,7 +3961,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1071580-2-L126",
@@ -3497,7 +3993,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3977-18-L126",
@@ -3525,7 +4025,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5067-133-L126",
@@ -3553,7 +4057,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1626-26-L126",
@@ -3581,7 +4089,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2101-148-L126",
@@ -3609,7 +4121,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2548-84-L126",
@@ -3637,7 +4153,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4623-5-L126",
@@ -3665,7 +4185,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1626-25-L126",
@@ -3693,7 +4217,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1035-22-L126",
@@ -3721,7 +4249,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4906-34-L126",
@@ -3749,7 +4281,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1110404-196-L126",
@@ -3777,7 +4313,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1350296-83-L126",
@@ -3805,7 +4345,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2792-11-L126",
@@ -3833,7 +4377,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "552578-47-L126",
@@ -3861,7 +4409,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2101-149-L126",
@@ -3889,7 +4441,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2467-98-L126",
@@ -3917,7 +4473,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-310-L126",
@@ -3945,7 +4505,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5061-31-L126",
@@ -3973,7 +4537,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "924-26-L126",
@@ -4001,7 +4569,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1040538-16-L126",
@@ -4029,7 +4601,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2292-63-L126",
@@ -4057,7 +4633,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-210-L126",
@@ -4085,7 +4665,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3568-26-L126",
@@ -4113,7 +4697,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-212-L126",
@@ -4141,7 +4729,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2292-62-L126",
@@ -4169,7 +4761,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1562-54-L126",
@@ -4197,7 +4793,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3280-19-L126",
@@ -4225,7 +4825,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3938-35-L126",
@@ -4253,7 +4857,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3950-43-L126",
@@ -4281,7 +4889,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "483-47-L126",
@@ -4309,7 +4921,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "732868-3-L126",
@@ -4337,7 +4953,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "903031-11-L126",
@@ -4365,7 +4985,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4037-62-L126",
@@ -4393,7 +5017,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4037-63-L126",
@@ -4421,7 +5049,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3588-46-L126",
@@ -4449,7 +5081,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5558-5-L126",
@@ -4477,7 +5113,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-34-L126",
@@ -4505,7 +5145,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-36-L126",
@@ -4533,7 +5177,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-38-L126",
@@ -4561,7 +5209,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1657-17-L126",
@@ -4589,7 +5241,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1072229-41-L126",
@@ -4617,7 +5273,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4146-10-L126",
@@ -4645,7 +5305,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057461-55-L126",
@@ -4673,7 +5337,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1562-56-L126",
@@ -4701,7 +5369,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "229-97-L126",
@@ -4729,7 +5401,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3085-63-L126",
@@ -4757,7 +5433,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4596-31-L126",
@@ -4785,7 +5465,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4885-24-L126",
@@ -4813,7 +5497,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "564162-121-L126",
@@ -4841,7 +5529,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4055-69-L126",
@@ -4869,7 +5561,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4112-23-L126",
@@ -4897,7 +5593,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3540-65-L126",
@@ -4925,7 +5625,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2188-13-L126",
@@ -4953,7 +5657,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "769-83-L126",
@@ -4981,7 +5689,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "838108-11-L126",
@@ -5009,7 +5721,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-313-L126",
@@ -5037,7 +5753,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "519209-4-L126",
@@ -5065,7 +5785,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "635-146-L126",
@@ -5093,7 +5817,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1393575-15-L126",
@@ -5121,7 +5849,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2703-179-L126",
@@ -5149,7 +5881,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2730-90-L126",
@@ -5177,7 +5913,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "635-145-L126",
@@ -5205,7 +5945,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2789-30-L126",
@@ -5233,7 +5977,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4993-76-L126",
@@ -5261,7 +6009,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057508-114-L126",
@@ -5289,7 +6041,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1153624-18-L126",
@@ -5317,7 +6073,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-183-L126",
@@ -5345,7 +6105,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1491-18-L126",
@@ -5373,7 +6137,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1978-97-L126",
@@ -5401,7 +6169,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2146-67-L126",
@@ -5429,7 +6201,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2693-35-L126",
@@ -5457,7 +6233,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4210-3-L126",
@@ -5485,7 +6265,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-168-L126",
@@ -5513,7 +6297,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-169-L126",
@@ -5541,7 +6329,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-170-L126",
@@ -5569,7 +6361,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "867990-89-L126",
@@ -5597,7 +6393,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-40-L126",
@@ -5625,7 +6425,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-46-L126",
@@ -5653,7 +6457,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2409-96-L126",
@@ -5681,7 +6489,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1254658-14-L126",
@@ -5709,7 +6521,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2974-71-L126",
@@ -5737,7 +6553,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4306-33-L126",
@@ -5765,7 +6585,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1067476-37-L126",
@@ -5793,7 +6617,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2467-102-L126",
@@ -5821,7 +6649,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1108338-39-L126",
@@ -5849,7 +6681,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1621-23-L126",
@@ -5877,7 +6713,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2974-73-L126",
@@ -5905,7 +6745,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-318-L126",
@@ -5933,7 +6777,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3841-30-L126",
@@ -5961,7 +6809,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1113159-20-L126",
@@ -5989,7 +6841,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1090-12-L126",
@@ -6017,7 +6873,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1110404-193-L126",
@@ -6045,7 +6905,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1432083-30-L126",
@@ -6073,7 +6937,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1557-34-L126",
@@ -6101,7 +6969,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-312-L126",
@@ -6129,7 +7001,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3251-30-L126",
@@ -6157,7 +7033,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4285-18-L126",
@@ -6185,7 +7065,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5349-101-L126",
@@ -6213,7 +7097,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5349-102-L126",
@@ -6241,7 +7129,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "635-147-L126",
@@ -6269,7 +7161,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "867990-92-L126",
@@ -6297,7 +7193,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "986278-19-L126",
@@ -6325,7 +7225,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3416-65-L126",
@@ -6353,7 +7257,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "993-44-L126",
@@ -6381,7 +7289,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2408-215-L126",
@@ -6409,7 +7321,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1626-28-L126",
@@ -6437,7 +7353,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057385-46-L126",
@@ -6465,7 +7385,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1480209-16-L126",
@@ -6493,7 +7417,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2422-153-L126",
@@ -6521,7 +7449,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1480127-9-L126",
@@ -6549,7 +7481,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1002588-98-L126",
@@ -6577,7 +7513,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1062018-24-L126",
@@ -6605,7 +7545,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2188-14-L126",
@@ -6633,7 +7577,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2186-24-L126",
@@ -6661,7 +7609,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3416-67-L126",
@@ -6689,7 +7641,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1209-8-L126",
@@ -6717,7 +7673,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057428-40-L126",
@@ -6745,7 +7705,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "483-48-L126",
@@ -6773,7 +7737,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2125-34-L126",
@@ -6801,7 +7769,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-195-L126",
@@ -6829,7 +7801,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3117-89-L126",
@@ -6857,7 +7833,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-52-L126",
@@ -6885,7 +7865,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3328-100-L126",
@@ -6913,7 +7897,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2332-111-L126",
@@ -6941,7 +7929,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2332-110-L126",
@@ -6969,7 +7961,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1254658-15-L126",
@@ -6997,7 +7993,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2122-30-L126",
@@ -7025,7 +8025,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1398-94-L126",
@@ -7053,7 +8057,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2122-29-L126",
@@ -7081,7 +8089,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "937232-83-L126",
@@ -7109,7 +8121,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2757-12-L126",
@@ -7137,7 +8153,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1552-90-L126",
@@ -7165,7 +8185,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2409-97-L126",
@@ -7193,7 +8217,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3545-28-L126",
@@ -7221,7 +8249,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2736-36-L126",
@@ -7249,7 +8281,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1514-118-L126",
@@ -7277,7 +8313,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4887-30-L126",
@@ -7305,7 +8345,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057379-23-L126",
@@ -7333,7 +8377,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3710-88-L126",
@@ -7361,7 +8409,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3710-89-L126",
@@ -7389,7 +8441,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-197-L126",
@@ -7417,7 +8473,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "514848-36-L126",
@@ -7445,7 +8505,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-29-L126",
@@ -7473,7 +8537,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-205-L126",
@@ -7501,7 +8569,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1555-77-L126",
@@ -7529,7 +8601,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1305541-4-L126",
@@ -7557,7 +8633,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2703-189-L126",
@@ -7585,7 +8665,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1153624-19-L126",
@@ -7613,7 +8697,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "564162-122-L126",
@@ -7641,7 +8729,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "564162-124-L126",
@@ -7669,7 +8761,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1040538-15-L126",
@@ -7697,7 +8793,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4451-105-L126",
@@ -7725,7 +8825,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "564162-126-L126",
@@ -7753,7 +8857,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5067-136-L126",
@@ -7781,7 +8889,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3877-9-L126",
@@ -7809,7 +8921,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "711841-14-L126",
@@ -7837,7 +8953,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-195-L126",
@@ -7865,7 +8985,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1019-109-L126",
@@ -7893,7 +9017,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2145-61-L126",
@@ -7921,7 +9049,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2101-154-L126",
@@ -7949,7 +9081,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2402-82-L126",
@@ -7977,7 +9113,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3092-19-L126",
@@ -8005,7 +9145,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2145-63-L126",
@@ -8033,7 +9177,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1398-96-L126",
@@ -8061,7 +9209,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2101-144-L126",
@@ -8089,7 +9241,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3996-38-L126",
@@ -8117,7 +9273,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1417913-123-L126",
@@ -8145,7 +9305,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3530-20-L126",
@@ -8173,7 +9337,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2817-64-L126",
@@ -8201,7 +9369,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1464-63-L126",
@@ -8229,7 +9401,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-317-L126",
@@ -8257,7 +9433,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-319-L126",
@@ -8285,7 +9465,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3938-38-L126",
@@ -8313,7 +9497,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4993-77-L126",
@@ -8341,7 +9529,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "730566-26-L126",
@@ -8369,7 +9561,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2125-36-L126",
@@ -8397,7 +9593,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3948-41-L126",
@@ -8425,7 +9625,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3253-84-L126",
@@ -8453,7 +9657,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2408-235-L126",
@@ -8481,7 +9689,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4075-28-L126",
@@ -8509,7 +9721,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4455-52-L126",
@@ -8537,7 +9753,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "983344-8-L126",
@@ -8565,7 +9785,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "983344-9-L126",
@@ -8593,7 +9817,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-185-L126",
@@ -8621,7 +9849,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2311-39-L126",
@@ -8649,7 +9881,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3942-21-L126",
@@ -8677,7 +9913,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4844-22-L126",
@@ -8705,7 +9945,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "874750-24-L126",
@@ -8733,7 +9977,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3416-62-L126",
@@ -8761,7 +10009,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-171-L126",
@@ -8789,7 +10041,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1562-59-L126",
@@ -8817,7 +10073,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-174-L126",
@@ -8845,7 +10105,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1562-57-L126",
@@ -8873,7 +10137,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-208-L126",
@@ -8901,7 +10169,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "564162-127-L126",
@@ -8929,7 +10201,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "564162-125-L126",
@@ -8957,7 +10233,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3807-10-L126",
@@ -8985,7 +10265,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-47-L126",
@@ -9013,7 +10297,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1657-18-L126",
@@ -9041,7 +10329,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2145-62-L126",
@@ -9069,7 +10361,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3540-67-L126",
@@ -9097,7 +10393,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2766-138-L126",
@@ -9125,7 +10425,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3046-29-L126",
@@ -9153,7 +10457,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4055-73-L126",
@@ -9181,7 +10489,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4451-106-L126",
@@ -9209,7 +10521,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3540-66-L126",
@@ -9237,7 +10553,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1398-101-L126",
@@ -9265,7 +10585,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2658-316-L126",
@@ -9293,7 +10617,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2961-67-L126",
@@ -9321,7 +10649,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "635-150-L126",
@@ -9349,7 +10681,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2408-226-L126",
@@ -9377,7 +10713,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2408-228-L126",
@@ -9405,7 +10745,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2393-19-L126",
@@ -9433,7 +10777,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-201-L126",
@@ -9461,7 +10809,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-199-L126",
@@ -9489,7 +10841,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4881-39-L126",
@@ -9517,7 +10873,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2408-227-L126",
@@ -9545,7 +10905,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1398-102-L126",
@@ -9573,7 +10937,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3121-1-L126",
@@ -9601,7 +10969,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3268-28-L126",
@@ -9629,7 +11001,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1624-22-L126",
@@ -9657,7 +11033,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4906-36-L126",
@@ -9685,7 +11065,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1658-216-L126",
@@ -9713,7 +11097,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2467-100-L126",
@@ -9741,7 +11129,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4407-25-L126",
@@ -9769,7 +11161,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1111432-63-L126",
@@ -9797,7 +11193,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1736-101-L126",
@@ -9825,7 +11225,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1746-43-L126",
@@ -9853,7 +11257,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2445-119-L126",
@@ -9881,7 +11289,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2703-190-L126",
@@ -9909,7 +11321,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-172-L126",
@@ -9937,7 +11353,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4881-37-L126",
@@ -9965,7 +11385,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4881-38-L126",
@@ -9993,7 +11417,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-176-L126",
@@ -10021,7 +11449,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2445-118-L126",
@@ -10049,7 +11481,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-175-L126",
@@ -10077,7 +11513,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "revision_manual",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-173-L126",
@@ -10105,7 +11545,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-177-L126",
@@ -10133,7 +11577,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-214-L126",
@@ -10161,7 +11609,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-164-L126",
@@ -10189,7 +11641,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-179-L126",
@@ -10217,7 +11673,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-215-L126",
@@ -10245,7 +11705,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-167-L126",
@@ -10273,7 +11737,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-213-L126",
@@ -10301,7 +11769,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2445-120-L126",
@@ -10329,7 +11801,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2494-83-L126",
@@ -10357,7 +11833,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057438-18-L126",
@@ -10385,7 +11865,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1696-17-L126",
@@ -10413,7 +11897,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "635-149-L126",
@@ -10441,7 +11929,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3210-11-L126",
@@ -10469,7 +11961,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5877-35-L126",
@@ -10497,7 +11993,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4055-70-L126",
@@ -10525,7 +12025,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2548-86-L126",
@@ -10553,7 +12057,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "635-151-L126",
@@ -10581,7 +12089,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1660-137-L126",
@@ -10609,7 +12121,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1218393-44-L126",
@@ -10637,7 +12153,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4734-14-L126",
@@ -10665,7 +12185,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4055-74-L126",
@@ -10693,7 +12217,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-60-L126",
@@ -10721,7 +12249,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057448-50-L126",
@@ -10749,7 +12281,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057532-75-L126",
@@ -10777,7 +12313,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1129-7-L126",
@@ -10805,7 +12345,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5349-111-L126",
@@ -10833,7 +12377,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3710-90-L126",
@@ -10861,7 +12409,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5349-112-L126",
@@ -10889,7 +12441,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5349-110-L126",
@@ -10917,7 +12473,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1237328-67-L126",
@@ -10945,7 +12505,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2188-15-L126",
@@ -10973,7 +12537,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1624-23-L126",
@@ -11001,7 +12569,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3938-40-L126",
@@ -11029,7 +12601,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4308-22-L126",
@@ -11057,7 +12633,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4429-98-L126",
@@ -11085,7 +12665,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2548-88-L126",
@@ -11113,7 +12697,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-193-L126",
@@ -11141,7 +12729,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-211-L126",
@@ -11169,7 +12761,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2101-150-L126",
@@ -11197,7 +12793,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2378-112-L126",
@@ -11225,7 +12825,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2790-54-L126",
@@ -11253,7 +12857,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3730-93-L126",
@@ -11281,7 +12889,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "993-46-L126",
@@ -11309,7 +12921,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3117-90-L126",
@@ -11337,7 +12953,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2591-171-L126",
@@ -11365,7 +12985,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "915-4-L126",
@@ -11393,7 +13017,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4844-23-L126",
@@ -11421,7 +13049,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3889-44-L126",
@@ -11449,7 +13081,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3730-94-L126",
@@ -11477,7 +13113,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "523059-9-L126",
@@ -11505,7 +13145,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1197-21-L126",
@@ -11533,7 +13177,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1110404-199-L126",
@@ -11561,7 +13209,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-200-L126",
@@ -11589,7 +13241,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3656-159-L126",
@@ -11617,7 +13273,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1110404-198-L126",
@@ -11645,7 +13305,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "900-63-L126",
@@ -11673,7 +13337,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057374-27-L126",
@@ -11701,7 +13369,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4889-38-L126",
@@ -11729,7 +13401,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1660-138-L126",
@@ -11757,7 +13433,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2548-87-L126",
@@ -11785,7 +13465,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3968-42-L126",
@@ -11813,7 +13497,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1660-140-L126",
@@ -11841,7 +13529,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2409-98-L126",
@@ -11869,7 +13561,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1754-46-L126",
@@ -11897,7 +13593,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "948-27-L126",
@@ -11925,7 +13625,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "969221-2-L126",
@@ -11953,7 +13657,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "483-50-L126",
@@ -11981,7 +13689,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-203-L126",
@@ -12009,7 +13721,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3866-7-L126",
@@ -12037,7 +13753,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057935-19-L126",
@@ -12065,7 +13785,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1298357-13-L126",
@@ -12093,7 +13817,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-217-L126",
@@ -12121,7 +13849,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1978-123-L126",
@@ -12149,7 +13881,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2284-35-L126",
@@ -12177,7 +13913,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2446-269-L126",
@@ -12205,7 +13945,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2703-193-L126",
@@ -12233,7 +13977,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3253-85-L126",
@@ -12261,7 +14009,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3671-65-L126",
@@ -12289,7 +14041,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3934-36-L126",
@@ -12317,7 +14073,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3934-37-L126",
@@ -12345,7 +14105,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3934-38-L126",
@@ -12373,7 +14137,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3938-39-L126",
@@ -12401,7 +14169,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3951-50-L126",
@@ -12429,7 +14201,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3960-66-L126",
@@ -12457,7 +14233,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3996-39-L126",
@@ -12485,7 +14265,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "411-44-L126",
@@ -12513,7 +14297,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4939-14-L126",
@@ -12541,7 +14329,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5196-26-L126",
@@ -12569,7 +14361,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "564162-129-L126",
@@ -12597,7 +14393,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "707419-43-L126",
@@ -12625,7 +14425,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1469-220-L126",
@@ -12653,7 +14457,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2322-86-L126",
@@ -12681,7 +14489,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2402-86-L126",
@@ -12709,7 +14521,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5195-15-L126",
@@ -12737,7 +14553,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "870-10-L126",
@@ -12765,7 +14585,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2402-85-L126",
@@ -12793,7 +14617,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5067-141-L126",
@@ -12821,7 +14649,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2974-75-L126",
@@ -12849,7 +14681,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057384-147-L126",
@@ -12877,7 +14713,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2401-110-L126",
@@ -12905,7 +14745,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3959-19-L126",
@@ -12933,7 +14777,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2179-15-L126",
@@ -12961,7 +14809,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2605-12-L126",
@@ -12989,7 +14841,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1233600-54-L126",
@@ -13017,7 +14873,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1664-23-L126",
@@ -13045,7 +14905,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5877-36-L126",
@@ -13073,7 +14937,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3710-91-L126",
@@ -13101,7 +14969,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "bien",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1057384-140-L126",
@@ -13129,7 +15001,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "sin_resolver",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "643553-24-L126",
@@ -13157,7 +15033,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2730-123-L126",
@@ -13185,7 +15065,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "servicio",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2446-276-L126",
@@ -13213,7 +15097,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3085-64-L126",
@@ -13241,7 +15129,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-202-L126",
@@ -13269,7 +15161,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3890-204-L126",
@@ -13297,7 +15193,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4172-25-L126",
@@ -13325,7 +15225,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4358-34-L126",
@@ -13353,7 +15257,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4939-15-L126",
@@ -13381,7 +15289,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5060-41-L126",
@@ -13409,7 +15321,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5061-27-L126",
@@ -13437,7 +15353,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "769-89-L126",
@@ -13465,7 +15385,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1211-18-L126",
@@ -13493,7 +15417,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-178-L126",
@@ -13521,7 +15449,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2115-32-L126",
@@ -13549,7 +15481,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3085-65-L126",
@@ -13577,7 +15513,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1214103-12-L126",
@@ -13605,7 +15545,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3934-39-L126",
@@ -13633,7 +15577,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2996-30-L126",
@@ -13661,7 +15609,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2332-116-L126",
@@ -13689,7 +15641,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-181-L126",
@@ -13717,7 +15673,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2322-85-L126",
@@ -13745,7 +15705,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4469-183-L126",
@@ -13773,7 +15737,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3960-69-L126",
@@ -13801,7 +15769,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2381-71-L126",
@@ -13829,7 +15801,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1285502-8-L126",
@@ -13857,7 +15833,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2146-71-L126",
@@ -13885,7 +15865,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4055-76-L126",
@@ -13913,7 +15897,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2548-89-L126",
@@ -13941,7 +15929,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3843-33-L126",
@@ -13969,7 +15961,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3843-34-L126",
@@ -13997,7 +15993,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3621-58-L126",
@@ -14025,7 +16025,11 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4886-34-L126",
@@ -14053,6 +16057,74 @@
     "cantidad_reclamos": null,
     "unspsc_estado": "pendiente_enriquecimiento",
     "codigos_producto_unspsc": [],
-    "items_unspsc": []
+    "items_unspsc": [],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
+  },
+  {
+    "codigo": "4881-41-L126",
+    "nombre": "SERVICIO DE PRODUCCI\u00D3N SOSTENIBILIDAD TIERRA AMARILLA",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-25T15:20:00",
+    "fecha_lote": "2026-09-17",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "comuna": null,
+    "descripcion": null,
+    "prohibicion_contratacion": null,
+    "tipo_pago": null,
+    "sub_contratacion": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": [],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 6,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
+  },
+  {
+    "codigo": "4449-33-L126",
+    "nombre": "PRODUCCI\u00D3N DE TALLERES PARA EL FORTALECIMIENTO DE CAPACIDADES EN PATRIMONIO CULTURAL INMATERIAL EN BIBLIOTECAS INCLUSIVAS DE CENTROS DE TELET\u00D3N, REINSERCI\u00D3N JUVENIL Y C\u00C1RCELES",
+    "tipo": "L1",
+    "fecha_cierre": "2026-09-28T18:00:00",
+    "fecha_lote": "2026-09-23",
+    "rubro_match": null,
+    "termino_match": null,
+    "region": null,
+    "organismo": null,
+    "comuna": null,
+    "descripcion": null,
+    "prohibicion_contratacion": null,
+    "tipo_pago": null,
+    "sub_contratacion": null,
+    "tramo": "bajo",
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": null,
+    "unspsc_estado": "pendiente_enriquecimiento",
+    "codigos_producto_unspsc": [],
+    "items_unspsc": [],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 15,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   }
 ]

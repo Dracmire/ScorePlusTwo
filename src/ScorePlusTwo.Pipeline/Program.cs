@@ -812,24 +812,7 @@ public static class Program
         var informes = CargarInformesConMigracion(ruta);
 
         var existente = informes.FirstOrDefault(i => i.Fecha == informeHoy.Fecha);
-        var informeAGuardar = existente is null
-            ? informeHoy
-            : informeHoy with
-            {
-                NuevasPrioritarias = existente.NuevasPrioritarias,
-                NuevasSecundarias = existente.NuevasSecundarias,
-                NuevasTramoBajo = existente.NuevasTramoBajo,
-                BarridoActivas = informeHoy.BarridoActivas is null
-                    ? existente.BarridoActivas
-                    : existente.BarridoActivas is null
-                        ? informeHoy.BarridoActivas
-                        : informeHoy.BarridoActivas with
-                        {
-                            NuevasPrioritarias = existente.BarridoActivas.NuevasPrioritarias,
-                            NuevasSecundarias = existente.BarridoActivas.NuevasSecundarias,
-                            NuevasTramoBajo = existente.BarridoActivas.NuevasTramoBajo,
-                        },
-            };
+        var informeAGuardar = InformeDiario.Fusionar(existente, informeHoy);
 
         informes.RemoveAll(i => i.Fecha == informeHoy.Fecha);
         informes.Add(informeAGuardar);
