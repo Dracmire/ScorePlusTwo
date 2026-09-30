@@ -13,6 +13,9 @@
     "comuna",
     "sub_contratacion",
     "prohibicion_contratacion",
-    "tipo_pago"
+    "tipo_pago",
+    "ultima_verificacion",
+    "estado_mp",
+    "intentos_no_encontrada"
   ]
 }

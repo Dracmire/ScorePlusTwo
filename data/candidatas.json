@@ -33,13 +33,17 @@
         "codigo_categoria": "84111600",
         "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2020-21-LE26",
     "nombre": "MEJORA DE LA PLATAFORMA INFORM\u00C1TICA PARA LA BCN.",
     "tipo": "LE",
-    "fecha_cierre": "2026-09-23T15:01:00",
+    "fecha_cierre": "2026-09-30T15:01:00",
     "fecha_lote": "2026-09-08",
     "rubro_match": "ti",
     "termino_match": "inform\u00E1tic",
@@ -69,7 +73,11 @@
         "codigo_categoria": "81112200",
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Mantenimiento y soporte de software"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "721703-40-LP26",
@@ -105,7 +113,11 @@
         "codigo_categoria": "82121500",
         "categoria": "Servicios editoriales, de dise\u00F1o, publicidad, gr\u00E1ficos y artistas / Servicios de impresi\u00F3n y reproducci\u00F3n / Impresi\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "759-32-LP26",
@@ -141,7 +153,11 @@
         "codigo_categoria": "93151600",
         "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "761391-138-LE26",
@@ -177,7 +193,11 @@
         "codigo_categoria": "81111500",
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Ingenier\u00EDa en computaci\u00F3n e inform\u00E1tica"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "587-49-LE26",
@@ -213,13 +233,17 @@
         "codigo_categoria": "81112000",
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Servicios de datos"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1606-32-LE26",
     "nombre": "CONTRATACI\u00D3N SERVICIO DE DIAGRAMACI\u00D3N DE PIEZAS GR\u00C1FICAS Y WEB DEL PROYECTO \u201CFORTALECIMIENTO DE LAS CAPACIDADES DE LATINOAM\u00C9RICA Y EL CARIBE EN MATERIA DE CIBERSEGURIDAD\u201D FINANCIADO POR LA UNI\u00D3N EUROPEA.",
     "tipo": "LE",
-    "fecha_cierre": "2026-09-28T15:10:00",
+    "fecha_cierre": "2026-10-02T15:10:00",
     "fecha_lote": "2026-09-17",
     "rubro_match": "ti",
     "termino_match": "ciberseguridad",
@@ -249,55 +273,11 @@
         "codigo_categoria": "82121500",
         "categoria": "Servicios editoriales, de dise\u00F1o, publicidad, gr\u00E1ficos y artistas / Servicios de impresi\u00F3n y reproducci\u00F3n / Impresi\u00F3n"
       }
-    ]
-  },
-  {
-    "codigo": "1007793-15-LE26",
-    "nombre": "SOLUCI\u00D3N INFORM\u00C1TICA INSTITUCIONAL PARA EL CFT",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-07T15:30:00",
-    "fecha_lote": "2026-09-05",
-    "rubro_match": "ti",
-    "termino_match": "inform\u00E1tic",
-    "region": "Regi\u00F3n de los Lagos ",
-    "organismo": "CENTRO DE FORMACION TECNICA ESTATAL DE LA REGION DE LOS LAGOS",
-    "comuna": "Llanquihue",
-    "descripcion": "Se requiere la adquisici\u00F3n de una soluci\u00F3n inform\u00E1tica institucional para la gesti\u00F3n de iniciativas de vinculaci\u00F3n con el medio del CFT Estatal de la Regi\u00F3n de Los Lagos.",
-    "prohibicion_contratacion": "Revisar Res.Ex.98 que aprueba bases de licitaci\u00F3n.",
-    "tipo_pago": "1",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 11300000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": 16,
-    "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": [
-      43232408,
-      43232408,
-      43232408
     ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 43232408,
-        "codigo_categoria": "43232400",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
-      },
-      {
-        "codigo_producto": 43232408,
-        "codigo_categoria": "43232400",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
-      },
-      {
-        "codigo_producto": 43232408,
-        "codigo_categoria": "43232400",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
-      }
-    ]
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2770-120-LR26",
@@ -333,7 +313,11 @@
         "codigo_categoria": "43233000",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de entorno operativo"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "548874-72-LR26",
@@ -369,7 +353,11 @@
         "codigo_categoria": "43232300",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de consultas y gesti\u00F3n de datos"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "548874-74-LR26",
@@ -405,7 +393,11 @@
         "codigo_categoria": "43233200",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "548874-77-LR26",
@@ -441,13 +433,17 @@
         "codigo_categoria": "43233200",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "85-41-LE26",
     "nombre": "PLATAFORMA INTEGRAL SOPORTE TI CON CONTROL REMOTO",
     "tipo": "LE",
-    "fecha_cierre": "2026-09-23T15:01:00",
+    "fecha_cierre": "2026-09-30T15:01:00",
     "fecha_lote": "2026-09-05",
     "rubro_match": "ti",
     "termino_match": "plataforma",
@@ -477,7 +473,11 @@
         "codigo_categoria": "43232400",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "188-83-LP26",
@@ -513,13 +513,17 @@
         "codigo_categoria": "43233400",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de controladores de dispositivos y utilidades"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5482-103-LP26",
     "nombre": "PLATAFORMA DE GESTI\u00D3N TERRITORIAL Y DE RENTAS",
     "tipo": "LP",
-    "fecha_cierre": "2026-09-30T15:01:00",
+    "fecha_cierre": "2026-10-02T15:01:00",
     "fecha_lote": "2026-09-10",
     "rubro_match": "ti",
     "termino_match": "plataforma",
@@ -549,49 +553,17 @@
         "codigo_categoria": "43232400",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
-    ]
-  },
-  {
-    "codigo": "5482-100-LP26",
-    "nombre": "PLATAFORMA DE GESTI\u00D3N TERRITORIAL Y DE RENTAS",
-    "tipo": "LP",
-    "fecha_cierre": "2026-09-30T15:01:00",
-    "fecha_lote": "2026-09-10",
-    "rubro_match": "ti",
-    "termino_match": "plataforma",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "I MUNICIPALIDAD DE NUNOA",
-    "comuna": "\u00D1u\u00F1oa",
-    "descripcion": "La contrataci\u00F3n comprende siete 7 m\u00F3dulos de negocio integrados sobre seis 6 capas transversales. El proveedor adjudicado ser\u00E1 responsable del suministro, configuraci\u00F3n, parametrizaci\u00F3n, integraci\u00F3n, capacitaci\u00F3n y soporte de todos los m\u00F3dulos descritos en las bases t\u00E9cnicas.",
-    "prohibicion_contratacion": "",
-    "tipo_pago": "1",
-    "sub_contratacion": "0",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": null,
-    "monto": null,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 284,
-    "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": [
-      43232408
     ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 43232408,
-        "codigo_categoria": "43232400",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
-      }
-    ]
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5482-101-LR26",
     "nombre": "Plataforma IA para video y seguridad urbana",
     "tipo": "LR",
-    "fecha_cierre": "2026-10-13T15:01:00",
+    "fecha_cierre": "2026-10-19T15:01:00",
     "fecha_lote": "2026-09-10",
     "rubro_match": "ti",
     "termino_match": "plataforma",
@@ -627,13 +599,17 @@
         "codigo_categoria": "43232400",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3666-12-LE26",
     "nombre": "GESTION DOCUMENTAL Y DIGITAL MUNICIPALIDAD TILTIL",
     "tipo": "LE",
-    "fecha_cierre": "2026-09-29T12:00:00",
+    "fecha_cierre": "2026-10-05T17:00:00",
     "fecha_lote": "2026-09-10",
     "rubro_match": "ti",
     "termino_match": "gesti\u00F3n documental",
@@ -663,13 +639,17 @@
         "codigo_categoria": "43232200",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n de contenidos"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "591-26-LP26",
     "nombre": "PLATAFORMA DE OBSERVABILIDAD AVANZADA MULTICLOUD PARA FONASA.",
     "tipo": "LP",
-    "fecha_cierre": "2026-09-30T16:00:00",
+    "fecha_cierre": "2026-10-13T16:00:00",
     "fecha_lote": "2026-09-10",
     "rubro_match": "ti",
     "termino_match": "plataforma",
@@ -699,7 +679,11 @@
         "codigo_categoria": "43231500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "869591-12-LP26",
@@ -735,7 +719,11 @@
         "codigo_categoria": "43232200",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n de contenidos"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "29-81-LP26",
@@ -771,7 +759,11 @@
         "codigo_categoria": "86111700",
         "categoria": "Educaci\u00F3n, formaci\u00F3n, entrenamiento y capacitaci\u00F3n / Sistemas educativos complementarios / Escuelas de idiomas"
       }
-    ]
+    ],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "608-197-LR26",
@@ -807,7 +799,11 @@
         "codigo_categoria": "81111500",
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Ingenier\u00EDa en computaci\u00F3n e inform\u00E1tica"
       }
-    ]
+    ],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "885-84-LE26",
@@ -843,7 +839,11 @@
         "codigo_categoria": "81111800",
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Administraci\u00F3n de sistemas"
       }
-    ]
+    ],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "514862-125-LR26",
@@ -879,7 +879,11 @@
         "codigo_categoria": "81112000",
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Servicios de datos"
       }
-    ]
+    ],
+    "ultima_verificacion": null,
+    "estado_mp": null,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "610-19-LE26",
@@ -915,7 +919,11 @@
         "codigo_categoria": "81101700",
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios profesionales de ingenier\u00EDa / Ingenier\u00EDa el\u00E9ctrica y electr\u00F3nica"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1005498-22-LE26",
@@ -951,7 +959,11 @@
         "codigo_categoria": "43231500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1191688-70-LP26",
@@ -987,7 +999,11 @@
         "codigo_categoria": "43233500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de intercambio de informaci\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "623663-10-LE26",
@@ -1023,7 +1039,11 @@
         "codigo_categoria": "84111600",
         "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "585-9-LE26",
@@ -1059,7 +1079,11 @@
         "codigo_categoria": "43231500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "188-87-LP26",
@@ -1095,7 +1119,11 @@
         "codigo_categoria": "43231600",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "3337-16-LP26",
@@ -1137,7 +1165,11 @@
         "codigo_categoria": "43232900",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software para trabajo en redes"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "5586-148-LE26",
@@ -1173,7 +1205,11 @@
         "codigo_categoria": "43232700",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de aplicaciones de red"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1195104-19-LE26",
@@ -1209,7 +1245,11 @@
         "codigo_categoria": "43232400",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "425-67-LE26",
@@ -1245,7 +1285,11 @@
         "codigo_categoria": "43233200",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1002584-10-LE26",
@@ -1281,13 +1325,17 @@
         "codigo_categoria": "43231600",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "4768-48-LE26",
     "nombre": "MODIFICACION Y MODERNIZACION SEL SITIO WEB",
     "tipo": "LE",
-    "fecha_cierre": "2026-09-30T17:45:00",
+    "fecha_cierre": "2026-10-05T15:30:00",
     "fecha_lote": "2026-09-25",
     "rubro_match": null,
     "termino_match": null,
@@ -1317,7 +1365,11 @@
         "codigo_categoria": "43232400",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "534615-1-LE26",
@@ -1353,7 +1405,11 @@
         "codigo_categoria": "43232600",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software espec\u00EDfico para la industria"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1643-91-LP26",
@@ -1389,7 +1445,11 @@
         "codigo_categoria": "43231600",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "885-87-LE26",
@@ -1425,7 +1485,11 @@
         "codigo_categoria": "43233500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de intercambio de informaci\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "622-62-LE26",
@@ -1461,7 +1525,11 @@
         "codigo_categoria": "43231500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "463-5-LE26",
@@ -1497,7 +1565,11 @@
         "codigo_categoria": "43231500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "1221019-16-LE26",
@@ -1533,7 +1605,11 @@
         "codigo_categoria": "93151600",
         "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2784-4-LE26",
@@ -1569,7 +1645,11 @@
         "codigo_categoria": "80111700",
         "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios de recursos humanos / Contrataci\u00F3n de personal"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "568658-71-LE26",
@@ -1605,7 +1685,11 @@
         "codigo_categoria": "43232300",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de consultas y gesti\u00F3n de datos"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   },
   {
     "codigo": "2686-127-LP26",
@@ -1641,6 +1725,10 @@
         "codigo_categoria": "43231500",
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
-    ]
+    ],
+    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   }
 ]
