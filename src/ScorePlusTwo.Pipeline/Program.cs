@@ -77,6 +77,17 @@ public static class Program
                 return await EjecutarRefrescarDescriptivosAsync(repoRoot);
             }
 
+            // Otra rama completamente aparte (2026-09-30, mismo criterio
+            // estructural que las cuatro anteriores): vacía de una sola vez
+            // el backlog completo de candidatas Pendiente vencidas de
+            // Secundarias + Tramo bajo contra el detalle real de la API,
+            // sin el tope diario del paso automático. Nunca se dispara
+            // automáticamente. Ver EjecutarReverificarVencidasAsync.
+            if (opciones.ReverificarVencidas)
+            {
+                return await EjecutarReverificarVencidasAsync(repoRoot);
+            }
+
             var criterios = JsonStore.Cargar<Criterios>(
                 Path.Combine(repoRoot, "config", "criterios.json"), JsonOpciones.Config);
             var catalogoUnspsc = CatalogoUnspsc.CargarDesdeArchivo(
@@ -208,17 +219,31 @@ public static class Program
             var rutaSecundarias = Path.Combine(repoRoot, "data", "secundarias.json");
             var rutaTramoBajo = Path.Combine(repoRoot, "data", "tramo_bajo.json");
 
+            // Rutas de histórico movidas más arriba (2026-09-30, antes solo
+            // se calculaban inline más abajo para RevalidarEstado): también
+            // las necesita FusionarLista para el fix de reingreso vía
+            // overrides (ver FiltroLicitaciones.EsCodigoNuevo) — un código
+            // ya cerrado no debe tratarse como nuevo solo porque reaparece
+            // en el lote diario o en `activas`.
+            var rutaHistoricoPrioritarias = Path.Combine(repoRoot, "data", "historico", "candidatas.json");
+            var rutaHistoricoSecundarias = Path.Combine(repoRoot, "data", "historico", "secundarias.json");
+            var rutaHistoricoTramoBajo = Path.Combine(repoRoot, "data", "historico", "tramo_bajo.json");
+
+            var motivoCierrePrioritariasHistorico = CargarMotivoCierreHistorico(rutaHistoricoPrioritarias);
+            var motivoCierreSecundariasHistorico = CargarMotivoCierreHistorico(rutaHistoricoSecundarias);
+            var motivoCierreTramoBajoHistorico = CargarMotivoCierreHistorico(rutaHistoricoTramoBajo);
+
             var (todasPrioritariasSinOverride, nuevasPrioritariasDiario, nuevasPrioritariasActivas) = FusionarLista(
                 rutaPrioritarias, resultadoDiario.Prioritarias, resultadoActivas?.Prioritarias,
-                fecha, fechaActivas, tramo: null, tiposPrivados);
+                fecha, fechaActivas, tramo: null, tiposPrivados, motivoCierrePrioritariasHistorico);
 
             var (todasSecundariasSinOverride, nuevasSecundariasDiario, nuevasSecundariasActivas) = FusionarLista(
                 rutaSecundarias, resultadoDiario.Secundarias, resultadoActivas?.Secundarias,
-                fecha, fechaActivas, tramo: null, tiposPrivados);
+                fecha, fechaActivas, tramo: null, tiposPrivados, motivoCierreSecundariasHistorico);
 
             var (todasTramoBajo, nuevasTramoBajoDiario, nuevasTramoBajoActivas) = FusionarLista(
                 rutaTramoBajo, resultadoDiario.TramoBajo, resultadoActivas?.TramoBajo,
-                fecha, fechaActivas, tramo: "bajo", tiposPrivados);
+                fecha, fechaActivas, tramo: "bajo", tiposPrivados, motivoCierreTramoBajoHistorico);
 
             // Overrides humanos (ver AplicadorOverrides, data/overrides.json):
             // nunca expiran, se reaplican en cada corrida sobre las listas ya
@@ -242,18 +267,176 @@ public static class Program
             // distinto de Publicada, se mueve a data/historico/ — salvo que
             // ya tenga triage humano encima, que se respeta tal cual.
             var (prioritariasActivas, prioritariasMovidas) = RevalidarEstado(
-                rutaPrioritarias, Path.Combine(repoRoot, "data", "historico", "candidatas.json"),
-                todasPrioritarias, loteDiario);
+                rutaPrioritarias, rutaHistoricoPrioritarias, todasPrioritarias, loteDiario);
 
             var (secundariasActivas, secundariasMovidas) = RevalidarEstado(
-                rutaSecundarias, Path.Combine(repoRoot, "data", "historico", "secundarias.json"),
-                todasSecundarias, loteDiario);
+                rutaSecundarias, rutaHistoricoSecundarias, todasSecundarias, loteDiario);
 
             var (tramoBajoActivas, tramoBajoMovidas) = RevalidarEstado(
-                rutaTramoBajo, Path.Combine(repoRoot, "data", "historico", "tramo_bajo.json"),
-                todasTramoBajo, loteDiario);
+                rutaTramoBajo, rutaHistoricoTramoBajo, todasTramoBajo, loteDiario);
 
             var totalMovidasHistorico = prioritariasMovidas + secundariasMovidas + tramoBajoMovidas;
+
+            // Re-verificación contra el detalle real de la API (2026-09-30,
+            // ver Verificacion/ReverificacionService.cs): corre DESPUÉS de
+            // FusionarLista+AplicadorOverrides (para que una candidata
+            // recién movida a Prioritarias por un override hoy se
+            // re-verifique en la misma corrida) y DESPUÉS de RevalidarEstado
+            // (que sigue corriendo primero, gratis, sobre el lote diario —
+            // evita gastar una llamada de detalle en un código que el cruce
+            // gratuito ya resolvió). Antes de GeneradorDashboard.Construir,
+            // para que docs/data.json del día ya refleje los valores
+            // frescos.
+            //
+            // --fixture no tiene MP_TICKET: sin red no hay forma de llamar
+            // al detalle, así que este paso se omite por completo, nunca
+            // falla ni lo intenta (mismo chequeo que ya usa Main para omitir
+            // el barrido `activas` en ese modo).
+            var reverificadasHoy = 0;
+            var reverificacionesConCambioFecha = 0;
+            var reverificacionesATerminal = 0;
+            var reverificacionesFallidas = 0;
+            var cierresDetectadosEnTriage = 0;
+            var llamadasReverificacion = 0;
+
+            if (opciones.RutaFixture is not null)
+            {
+                Console.WriteLine("[reverificacion] omitida en modo --fixture (requiere MP_TICKET).");
+            }
+            else
+            {
+                // ahora = AhoraChile(), NUNCA DateTime.UtcNow, calculado UNA
+                // sola vez acá y pasado tal cual a SeleccionarTope/
+                // ReverificarCandidatasAsync/UltimaVerificacion: FechaCierre
+                // es hora de Chile SIN ZONA (tal cual la devuelve la API) y
+                // la corrida real aterriza entre ~22:52 y ~01:58 CLT (rango
+                // de atraso del cron ya documentado) — comparar esa fecha
+                // contra un "ahora" en UTC compararía naranjas con manzanas
+                // cerca de la medianoche, el mismo tipo de error ya
+                // corregido una vez para el cálculo de "ayer" del lote
+                // diario.
+                var ahora = AhoraChile();
+
+                var ticketReverificacion = Environment.GetEnvironmentVariable("MP_TICKET")
+                    ?? throw new MercadoPublicoApiException("Falta la variable de entorno MP_TICKET.");
+                using var httpReverificacion = new HttpClient();
+                var clienteReverificacion = new MercadoPublicoClient(httpReverificacion, ticketReverificacion);
+
+                async Task<DetalleLicitacion?> ObtenerDetalleReverificacion(string codigo, CancellationToken ctReverificacion)
+                {
+                    var respuesta = await clienteReverificacion.ObtenerDetalleAsync(codigo, ctReverificacion);
+                    return respuesta.Listado.FirstOrDefault(l => l.CodigoExterno == codigo);
+                }
+
+                // Prioritarias: TODAS las no-terminales
+                // ({Pendiente, Candidata, Scorecard, Enviada}), sin filtro
+                // de vencida ni tope — volumen bajo (~29-40 hoy), y es la
+                // lista donde la frescura importa más. Una Scorecard/
+                // Candidata/Enviada que se posterga o se declara desierta
+                // es la información más valiosa del sistema: dejarla fuera
+                // porque ya tiene triage humano escondería justo el caso
+                // que más importa vigilar (ver guardia ampliada en el
+                // follow-up que motivó este bloque).
+                var estadosTriagePrioritarias = new HashSet<EstadoFlujo>
+                {
+                    EstadoFlujo.Candidata, EstadoFlujo.Scorecard, EstadoFlujo.Enviada,
+                };
+                var prioritariasAReverificar = prioritariasActivas
+                    .Where(c => c.EstadoFlujo is EstadoFlujo.Pendiente or EstadoFlujo.Candidata
+                        or EstadoFlujo.Scorecard or EstadoFlujo.Enviada)
+                    .ToList();
+
+                var resultadoPrioritarias = await Verificacion.ReverificacionService.ReverificarCandidatasAsync(
+                    ObtenerDetalleReverificacion, prioritariasAReverificar, estadosTriagePrioritarias, ahora);
+
+                // Secundarias+TramoBajo: solo las Pendiente vencidas (o sin
+                // fecha), con tope combinado configurable
+                // (Criterios.TopeReverificacionVencidas), las de vencimiento
+                // más antiguo primero entre ambas listas juntas —
+                // estadosTriage vacío porque SeleccionarTope solo elige
+                // Pendiente por diseño.
+                var seleccionSecundariasTramoBajo = Verificacion.ReverificacionService.SeleccionarTope(
+                    secundariasActivas, tramoBajoActivas, ahora, criterios.TopeReverificacionVencidas);
+
+                var resultadoSecundariasTramoBajo = await Verificacion.ReverificacionService.ReverificarCandidatasAsync(
+                    ObtenerDetalleReverificacion, seleccionSecundariasTramoBajo, new HashSet<EstadoFlujo>(), ahora);
+
+                // PasaronATerminal de Prioritarias siempre viene de
+                // prioritariasActivas (el único camino Pendiente ahí). Las
+                // de Secundarias/TramoBajo se separan por lista de origen —
+                // SeleccionarTope las combina — cruzando por igualdad de
+                // referencia (Candidata es una clase mutable, sin Equals
+                // propio).
+                var terminalPrioritarias = resultadoPrioritarias.PasaronATerminal;
+                var terminalSecundarias = resultadoSecundariasTramoBajo.PasaronATerminal
+                    .Where(c => secundariasActivas.Contains(c))
+                    .ToList();
+                var terminalTramoBajo = resultadoSecundariasTramoBajo.PasaronATerminal
+                    .Where(c => tramoBajoActivas.Contains(c))
+                    .ToList();
+
+                if (terminalPrioritarias.Count > 0)
+                {
+                    prioritariasActivas = prioritariasActivas.Except(terminalPrioritarias).ToList();
+                    var historico = JsonStore.CargarOPredeterminado(
+                        rutaHistoricoPrioritarias, JsonOpciones.Persistencia, new List<Candidata>());
+                    historico.AddRange(terminalPrioritarias);
+                    JsonStore.Guardar(rutaHistoricoPrioritarias, historico, JsonOpciones.Persistencia);
+                }
+
+                if (terminalSecundarias.Count > 0)
+                {
+                    secundariasActivas = secundariasActivas.Except(terminalSecundarias).ToList();
+                    var historico = JsonStore.CargarOPredeterminado(
+                        rutaHistoricoSecundarias, JsonOpciones.Persistencia, new List<Candidata>());
+                    historico.AddRange(terminalSecundarias);
+                    JsonStore.Guardar(rutaHistoricoSecundarias, historico, JsonOpciones.Persistencia);
+                }
+
+                if (terminalTramoBajo.Count > 0)
+                {
+                    tramoBajoActivas = tramoBajoActivas.Except(terminalTramoBajo).ToList();
+                    var historico = JsonStore.CargarOPredeterminado(
+                        rutaHistoricoTramoBajo, JsonOpciones.Persistencia, new List<Candidata>());
+                    historico.AddRange(terminalTramoBajo);
+                    JsonStore.Guardar(rutaHistoricoTramoBajo, historico, JsonOpciones.Persistencia);
+                }
+
+                var totalVerificadas = resultadoPrioritarias.Verificadas + resultadoSecundariasTramoBajo.Verificadas;
+                if (totalVerificadas > 0)
+                {
+                    JsonStore.Guardar(rutaPrioritarias, prioritariasActivas, JsonOpciones.Persistencia);
+                    JsonStore.Guardar(rutaSecundarias, secundariasActivas, JsonOpciones.Persistencia);
+                    JsonStore.Guardar(rutaTramoBajo, tramoBajoActivas, JsonOpciones.Persistencia);
+                }
+
+                reverificadasHoy = totalVerificadas;
+                reverificacionesConCambioFecha = resultadoPrioritarias.CambiosFecha + resultadoSecundariasTramoBajo.CambiosFecha;
+                reverificacionesATerminal = terminalPrioritarias.Count + terminalSecundarias.Count + terminalTramoBajo.Count;
+                reverificacionesFallidas = resultadoPrioritarias.Fallidas + resultadoSecundariasTramoBajo.Fallidas;
+                cierresDetectadosEnTriage =
+                    resultadoPrioritarias.CierresDetectadosEnTriage + resultadoSecundariasTramoBajo.CierresDetectadosEnTriage;
+                llamadasReverificacion = resultadoPrioritarias.Verificadas + resultadoPrioritarias.Fallidas
+                    + resultadoSecundariasTramoBajo.Verificadas + resultadoSecundariasTramoBajo.Fallidas;
+
+                var eventosReverificacion = resultadoPrioritarias.Eventos.Concat(resultadoSecundariasTramoBajo.Eventos).ToList();
+                if (eventosReverificacion.Count > 0)
+                {
+                    var rutaEventos = Path.Combine(repoRoot, "data", "eventos.json");
+                    var eventos = JsonStore.CargarOPredeterminado(rutaEventos, JsonOpciones.Persistencia, new List<EventoAuditoria>());
+                    eventos.AddRange(eventosReverificacion);
+                    JsonStore.Guardar(rutaEventos, eventos, JsonOpciones.Persistencia);
+                }
+
+                Console.WriteLine(
+                    $"[reverificacion] prioritarias: verificadas={resultadoPrioritarias.Verificadas} " +
+                    $"cambios_fecha={resultadoPrioritarias.CambiosFecha} a_terminal={terminalPrioritarias.Count} " +
+                    $"triage={resultadoPrioritarias.CierresDetectadosEnTriage} fallidas={resultadoPrioritarias.Fallidas} | " +
+                    $"secundarias+tramo_bajo (tope={criterios.TopeReverificacionVencidas}, " +
+                    $"seleccionadas={seleccionSecundariasTramoBajo.Count}): verificadas={resultadoSecundariasTramoBajo.Verificadas} " +
+                    $"cambios_fecha={resultadoSecundariasTramoBajo.CambiosFecha} " +
+                    $"a_terminal={terminalSecundarias.Count + terminalTramoBajo.Count} fallidas={resultadoSecundariasTramoBajo.Fallidas}");
+            }
 
             // NOTA (sin arreglar todavía): barridoActivasFunnel queda indexado
             // bajo `fecha` — que es el día del LOTE DIARIO (ayer), no el día
@@ -274,6 +457,19 @@ public static class Program
                     resultadoActivas.Bienes, resultadoActivas.SinResolverUnspsc,
                     resultadoActivas.RevisionManualUnspsc, ahorradosPorAcumuladosActivas);
 
+            // Cuota de llamadas a la API de detalle, desglosada en tres
+            // categorías (2026-09-30) — enriquecimiento (UNSPSC, diario +
+            // activas combinados), re-verificación (Prioritarias +
+            // Secundarias/TramoBajo combinados) y barrido activas (la
+            // llamada de LISTADO ObtenerActivasAsync, 1 cuando corrió con
+            // éxito, 0 si no correspondía hoy o falló) — más el total, para
+            // notar si el consumo de cuota crece de forma inesperada sin
+            // sumar a mano varios contadores ya existentes.
+            var llamadasEnriquecimiento = enriquecidosDiarioHoy + enriquecimientosFallidosDiarioHoy
+                + enriquecidosActivasHoy + enriquecimientosFallidosActivasHoy;
+            var llamadasBarridoActivas = resultadoActivas is null ? 0 : 1;
+            var llamadasTotales = llamadasEnriquecimiento + llamadasReverificacion + llamadasBarridoActivas;
+
             var informeHoy = new InformeDiario(
                 fecha,
                 resultadoDiario.Total,
@@ -293,7 +489,15 @@ public static class Program
                 resultadoDiario.Bienes,
                 resultadoDiario.SinResolverUnspsc,
                 resultadoDiario.RevisionManualUnspsc,
-                ahorradosPorAcumuladosDiario);
+                ahorradosPorAcumuladosDiario,
+                reverificadasHoy,
+                reverificacionesConCambioFecha,
+                reverificacionesATerminal,
+                reverificacionesFallidas,
+                cierresDetectadosEnTriage,
+                llamadasEnriquecimiento,
+                llamadasReverificacion,
+                llamadasBarridoActivas);
 
             var informes = ActualizarSerieInformes(repoRoot, informeHoy);
             JsonStore.Guardar(Path.Combine(repoRoot, "data", "informes.json"), informes, JsonOpciones.Persistencia);
@@ -312,6 +516,10 @@ public static class Program
                 enriquecidosDiarioHoy, enriquecimientosFallidosDiarioHoy, ahorradosPorAcumuladosDiario,
                 estadoActivas, resultadoActivas, enriquecidosActivasHoy, enriquecimientosFallidosActivasHoy,
                 ahorradosPorAcumuladosActivas);
+
+            Console.WriteLine(
+                $"Cuota de llamadas de detalle: enriquecimiento={llamadasEnriquecimiento} " +
+                $"reverificacion={llamadasReverificacion} barrido_activas={llamadasBarridoActivas} total={llamadasTotales}");
 
             return 0;
         }
@@ -527,21 +735,29 @@ public static class Program
         DateOnly fechaDiario,
         DateOnly fechaActivas,
         string? tramo,
-        HashSet<string> tiposPrivados)
+        HashSet<string> tiposPrivados,
+        IReadOnlyDictionary<string, string?> motivoCierrePorCodigoHistorico)
     {
         var existentes = JsonStore.CargarOPredeterminado(rutaArchivo, JsonOpciones.Persistencia, new List<Candidata>());
         var codigosExistentes = existentes.Select(c => c.Codigo).ToHashSet();
         var codigosDiario = detectadasDiario.Select(c => c.Origen.CodigoExterno).ToHashSet();
 
+        // FiltroLicitaciones.EsCodigoNuevo (2026-09-30): un código ya
+        // movido a histórico con un cierre CONFIRMADO por la API no se
+        // trata como nuevo solo porque reaparece en el feed — ver el
+        // comentario de esa función para el caso real (5482-100-LP26) que
+        // motivó el fix. Un cierre INFERIDO (no_encontrada_en_api) sí
+        // permite reingresar.
         var nuevasDiario = detectadasDiario
-            .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno))
+            .Where(c => FiltroLicitaciones.EsCodigoNuevo(c.Origen.CodigoExterno, codigosExistentes, motivoCierrePorCodigoHistorico))
             .Select(c => CrearCandidata(c, fechaDiario, OrigenCandidata.Diario, tramo, tiposPrivados))
             .ToList();
 
         var nuevasActivas = detectadasActivas is null
             ? new List<Candidata>()
             : detectadasActivas
-                .Where(c => !codigosExistentes.Contains(c.Origen.CodigoExterno) && !codigosDiario.Contains(c.Origen.CodigoExterno))
+                .Where(c => FiltroLicitaciones.EsCodigoNuevo(c.Origen.CodigoExterno, codigosExistentes, motivoCierrePorCodigoHistorico)
+                    && !codigosDiario.Contains(c.Origen.CodigoExterno))
                 .Select(c => CrearCandidata(c, fechaActivas, OrigenCandidata.Activas, tramo, tiposPrivados))
                 .ToList();
 
@@ -549,6 +765,17 @@ public static class Program
 
         return (todas, nuevasDiario, nuevasActivas);
     }
+
+    // Carga data/historico/{lista}.json (o predeterminado vacío) y arma el
+    // diccionario codigo -> MotivoCierre que FusionarLista necesita para
+    // decidir si un código ausente de la lista activa es "nuevo" de verdad
+    // (ver FiltroLicitaciones.EsCodigoNuevo). GroupBy+Last: si un código
+    // apareciera más de una vez en histórico (no debería pasar hoy), se usa
+    // el registro más reciente.
+    private static Dictionary<string, string?> CargarMotivoCierreHistorico(string rutaHistorico) =>
+        JsonStore.CargarOPredeterminado(rutaHistorico, JsonOpciones.Persistencia, new List<Candidata>())
+            .GroupBy(c => c.Codigo)
+            .ToDictionary(g => g.Key, g => g.Last().MotivoCierre);
 
     // Idempotente por fecha: si ya existía una entrada para esa fecha
     // (re-corrida manual vía workflow_dispatch, o un reproceso real como el
@@ -656,7 +883,15 @@ public static class Program
         return (activas, movidas.Count);
     }
 
-    private static EstadoFlujo? MapearEstadoDeCierre(int codigoEstado) => codigoEstado switch
+    // Promovida de private a internal (2026-09-30, mismo patrón que
+    // EvaluarRubro/EsRegionElegible se promovieron a public en
+    // FiltroLicitaciones): Verificacion.ReverificacionService.
+    // ClasificarEstadoApi la reusa tal cual para 6/7/8, sin duplicar el
+    // mapeo. internal (no public) alcanza: ambos viven en el mismo
+    // ensamblado, y esta función nunca necesita ser testeable desde fuera
+    // de la solución (ClasificarEstadoApi, que sí es public, es la
+    // superficie testeable real).
+    internal static EstadoFlujo? MapearEstadoDeCierre(int codigoEstado) => codigoEstado switch
     {
         6 => EstadoFlujo.Cerrada,
         7 => EstadoFlujo.Desierta,
@@ -696,6 +931,8 @@ public static class Program
                 MigrarFormaDeInforme(informe);
                 MigrarCamposUnspsc(informe);
                 MigrarCamposRevisionManualYAcumulados(informe);
+                MigrarCamposReverificacion(informe);
+                MigrarCamposCuotaLlamadas(informe);
             }
         }
 
@@ -764,6 +1001,44 @@ public static class Program
         if (informe["barrido_activas"] is JsonObject barrido)
         {
             MigrarCamposRevisionManualYAcumulados(barrido);
+        }
+    }
+
+    // Upgrade de una sola vez para informes.json escrito antes de este
+    // follow-up (2026-09-30, ver Verificacion/ReverificacionService.cs).
+    // Guard independiente de los anteriores ("reverificadas_hoy"): una
+    // entrada puede ya tener todos los campos previos y seguir sin estos 5,
+    // que se introducen juntos acá. A diferencia de MigrarCamposUnspsc/
+    // MigrarCamposRevisionManualYAcumulados, NO recurre a barrido_activas —
+    // estos campos son de InformeDiario únicamente (la re-verificación
+    // combina Prioritarias+Secundarias/TramoBajo en un solo conteo por
+    // corrida, no por origen lote-diario-vs-activas), InformeFunnel no los
+    // declara.
+    private static void MigrarCamposReverificacion(JsonObject informe)
+    {
+        if (!informe.ContainsKey("reverificadas_hoy"))
+        {
+            informe["reverificadas_hoy"] = 0;
+            informe["reverificaciones_con_cambio_fecha"] = 0;
+            informe["reverificaciones_a_terminal"] = 0;
+            informe["reverificaciones_fallidas"] = 0;
+            informe["cierres_detectados_en_triage"] = 0;
+        }
+    }
+
+    // Upgrade de una sola vez, mismo follow-up (2026-09-30). Guard
+    // independiente ("llamadas_enriquecimiento"): el desglose de cuota de
+    // llamadas de detalle se introduce junto pero es conceptualmente
+    // distinto de los contadores de reverificación de arriba. Mismo
+    // criterio que el guard anterior: solo InformeDiario, sin recursión a
+    // barrido_activas.
+    private static void MigrarCamposCuotaLlamadas(JsonObject informe)
+    {
+        if (!informe.ContainsKey("llamadas_enriquecimiento"))
+        {
+            informe["llamadas_enriquecimiento"] = 0;
+            informe["llamadas_reverificacion"] = 0;
+            informe["llamadas_barrido_activas"] = 0;
         }
     }
 
@@ -1578,6 +1853,136 @@ public static class Program
             (llamadasIntentadas > 0
                 ? $"promedio={cronometro.Elapsed.TotalSeconds / llamadasIntentadas:F2}s/llamada"
                 : "(nada que procesar)"));
+
+        return 0;
+    }
+
+    // Modo manual (2026-09-30, mismo patrón estructural que los otros
+    // cuatro): limpia el backlog completo de Secundarias + Tramo bajo
+    // re-verificando contra el detalle real de la API TODAS las Pendiente
+    // vencidas (o sin fecha conocida), sin el tope diario del paso
+    // automático ni el salto de "ya verificada hoy" (ver
+    // Verificacion.ReverificacionService.SeleccionarVencidasSinTope vs
+    // SeleccionarTope) — es un vaciado de backlog de una sola vez, no la
+    // corrida incremental diaria: correr este modo dos veces el mismo día
+    // debe seguir procesando lo que quede pendiente. Prioritarias no lo
+    // necesita: el flujo automático ya la re-verifica completa cada noche.
+    //
+    // Requiere MP_TICKET real — no tiene equivalente a --fixture. Nunca se
+    // dispara automáticamente: solo con confirmación explícita del usuario
+    // (cuota de API compartida con enriquecimiento/--backfill-unspsc/
+    // --reevaluar-inventario — el usuario señala un límite de 10.000
+    // solicitudes/día en el ticket de Mercado Público).
+    //
+    // No toca informes.json (mismo criterio que --backfill-unspsc/
+    // --reevaluar-inventario/--refrescar-descriptivos) — sí escribe a
+    // eventos.json y regenera docs/data.json para que el tablero refleje el
+    // backlog ya limpio.
+    private static async Task<int> EjecutarReverificarVencidasAsync(string repoRoot)
+    {
+        var ticket = Environment.GetEnvironmentVariable("MP_TICKET")
+            ?? throw new MercadoPublicoApiException(
+                "Falta la variable de entorno MP_TICKET (--reverificar-vencidas requiere red real, no tiene modo --fixture).");
+
+        var rutaSecundarias = Path.Combine(repoRoot, "data", "secundarias.json");
+        var rutaTramoBajo = Path.Combine(repoRoot, "data", "tramo_bajo.json");
+        var rutaHistoricoSecundarias = Path.Combine(repoRoot, "data", "historico", "secundarias.json");
+        var rutaHistoricoTramoBajo = Path.Combine(repoRoot, "data", "historico", "tramo_bajo.json");
+
+        var secundarias = JsonStore.CargarOPredeterminado(rutaSecundarias, JsonOpciones.Persistencia, new List<Candidata>());
+        var tramoBajo = JsonStore.CargarOPredeterminado(rutaTramoBajo, JsonOpciones.Persistencia, new List<Candidata>());
+
+        using var http = new HttpClient();
+        var cliente = new MercadoPublicoClient(http, ticket);
+
+        async Task<DetalleLicitacion?> ObtenerDetalle(string codigo, CancellationToken ct)
+        {
+            var respuesta = await cliente.ObtenerDetalleAsync(codigo, ct);
+            return respuesta.Listado.FirstOrDefault(l => l.CodigoExterno == codigo);
+        }
+
+        // Mismo motivo que el paso automático (ver Main): FechaCierre es
+        // hora de Chile sin zona — se usa AhoraChile(), nunca DateTime.UtcNow.
+        var ahora = AhoraChile();
+        var seleccionadas = Verificacion.ReverificacionService.SeleccionarVencidasSinTope(secundarias, tramoBajo, ahora);
+
+        var cronometro = System.Diagnostics.Stopwatch.StartNew();
+        var resultado = await Verificacion.ReverificacionService.ReverificarCandidatasAsync(
+            ObtenerDetalle, seleccionadas, new HashSet<EstadoFlujo>(), ahora);
+        cronometro.Stop();
+
+        var terminalSecundarias = resultado.PasaronATerminal.Where(c => secundarias.Contains(c)).ToList();
+        var terminalTramoBajo = resultado.PasaronATerminal.Where(c => tramoBajo.Contains(c)).ToList();
+
+        if (terminalSecundarias.Count > 0)
+        {
+            secundarias = secundarias.Except(terminalSecundarias).ToList();
+            var historico = JsonStore.CargarOPredeterminado(rutaHistoricoSecundarias, JsonOpciones.Persistencia, new List<Candidata>());
+            historico.AddRange(terminalSecundarias);
+            JsonStore.Guardar(rutaHistoricoSecundarias, historico, JsonOpciones.Persistencia);
+        }
+
+        if (terminalTramoBajo.Count > 0)
+        {
+            tramoBajo = tramoBajo.Except(terminalTramoBajo).ToList();
+            var historico = JsonStore.CargarOPredeterminado(rutaHistoricoTramoBajo, JsonOpciones.Persistencia, new List<Candidata>());
+            historico.AddRange(terminalTramoBajo);
+            JsonStore.Guardar(rutaHistoricoTramoBajo, historico, JsonOpciones.Persistencia);
+        }
+
+        JsonStore.Guardar(rutaSecundarias, secundarias, JsonOpciones.Persistencia);
+        JsonStore.Guardar(rutaTramoBajo, tramoBajo, JsonOpciones.Persistencia);
+
+        if (resultado.Eventos.Count > 0)
+        {
+            var rutaEventos = Path.Combine(repoRoot, "data", "eventos.json");
+            var eventos = JsonStore.CargarOPredeterminado(rutaEventos, JsonOpciones.Persistencia, new List<EventoAuditoria>());
+            eventos.AddRange(resultado.Eventos);
+            JsonStore.Guardar(rutaEventos, eventos, JsonOpciones.Persistencia);
+        }
+
+        var prioritariasActuales = JsonStore.CargarOPredeterminado(
+            Path.Combine(repoRoot, "data", "candidatas.json"), JsonOpciones.Persistencia, new List<Candidata>());
+        var informesExistentes = CargarInformesConMigracion(Path.Combine(repoRoot, "data", "informes.json"));
+        var dashboard = GeneradorDashboard.Construir(prioritariasActuales, secundarias, tramoBajo, informesExistentes, DateTime.UtcNow);
+        JsonStore.Guardar(Path.Combine(repoRoot, "docs", "data.json"), dashboard, JsonOpciones.Persistencia);
+        PublicarPanelRevisionConfig(repoRoot);
+
+        // Histograma de CodigoEstado observados (pedido explícito para la
+        // primera corrida, ver el follow-up que motivó este modo): incluye
+        // cualquier valor no documentado más allá de 5/6/7/8/18/19 —
+        // evidencia real para cerrar cualquier duda sobre valores no
+        // contemplados en el diseño. Solo cuenta candidatas encontradas
+        // (EstadoMp poblado); las que nunca se encontraron no aportan un
+        // CodigoEstado real.
+        var histograma = seleccionadas
+            .Where(c => c.EstadoMp.HasValue)
+            .GroupBy(c => c.EstadoMp!.Value)
+            .OrderBy(g => g.Key)
+            .ToDictionary(g => g.Key, g => g.Count());
+
+        var publicadaPeroVencida = seleccionadas.Count(c =>
+            c.EstadoMp == 5 && c.FechaCierre is not null && c.FechaCierre.Value < ahora);
+
+        Console.WriteLine("== Resumen de --reverificar-vencidas ==");
+        Console.WriteLine($"Seleccionadas (Pendiente vencidas o sin fecha, Secundarias+Tramo bajo, sin tope): {seleccionadas.Count}");
+        Console.WriteLine(
+            $"Llamadas: verificadas={resultado.Verificadas} fallidas={resultado.Fallidas} " +
+            $"tiempo_total={cronometro.Elapsed.TotalSeconds:F1}s " +
+            (seleccionadas.Count > 0
+                ? $"promedio={cronometro.Elapsed.TotalSeconds / seleccionadas.Count:F2}s/llamada"
+                : "(nada que procesar)"));
+        Console.WriteLine(
+            $"Reverificación: cambios_fecha={resultado.CambiosFecha} " +
+            $"a_terminal={terminalSecundarias.Count + terminalTramoBajo.Count} " +
+            $"(secundarias={terminalSecundarias.Count}, tramo_bajo={terminalTramoBajo.Count}) " +
+            $"cierres_detectados_en_triage={resultado.CierresDetectadosEnTriage} " +
+            $"publicada_pero_vencida={publicadaPeroVencida}");
+        Console.WriteLine(
+            "Histograma CodigoEstado observado: " +
+            (histograma.Count == 0
+                ? "(ninguno)"
+                : string.Join(", ", histograma.Select(kv => $"{kv.Key}={kv.Value}"))));
 
         return 0;
     }

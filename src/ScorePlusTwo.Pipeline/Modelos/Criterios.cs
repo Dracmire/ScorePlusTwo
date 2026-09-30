@@ -70,4 +70,14 @@ public sealed record Criterios(
     // dígitos: si aparece evidencia de que la ambigüedad es más angosta
     // (una clase de 6 dígitos específica), se puede acotar sin tocar
     // código. Ver ClasificadorUnspsc y UnspscEstado.RevisionManual.
-    [property: JsonPropertyName("familias_unspsc_revision_manual")] List<string> FamiliasUnspscRevisionManual);
+    [property: JsonPropertyName("familias_unspsc_revision_manual")] List<string> FamiliasUnspscRevisionManual,
+    // Tope combinado (2026-09-30, ver Verificacion/ReverificacionService.cs)
+    // para cuántas candidatas Pendiente vencidas de Secundarias+TramoBajo
+    // se re-verifican contra el detalle real de la API en el paso
+    // automático de cada corrida — Prioritarias nunca aplica este tope
+    // (volumen bajo, se re-verifica completo). Default en C# (300, medido
+    // contra el pico diario real proyectado de 209 vencimientos) para que
+    // config/criterios-descartes.json, que no participa de esta lógica, no
+    // necesite tocarse — se agrega igual, explícito, a
+    // config/criterios.json para que sea editable sin tocar código.
+    [property: JsonPropertyName("tope_reverificacion_vencidas")] int TopeReverificacionVencidas = 300);

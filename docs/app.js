@@ -279,6 +279,79 @@
     return escaparHtml(etiqueta);
   }
 
+  // Etiquetas legibles para EstadoFlujo (ver Modelos/EstadoFlujo.cs) — el
+  // valor crudo llega en snake_case. Usado por renderTabla/
+  // renderTablaRevision para no mostrar el nombre técnico del enum tal
+  // cual (ej. "revision_ambigua") y, sobre todo, para que un valor nuevo
+  // como "revocada" (2026-09-30, ver ReverificacionService) tenga una
+  // etiqueta explícita en vez de caer en un fallback silencioso — mismo
+  // criterio que ya se aplicó al agregar revision_degradada a
+  // razonRevision en un follow-up anterior. Fallback: el valor crudo
+  // capitalizado, nunca vacío, por si aparece un estado no contemplado acá
+  // todavía.
+  var ETIQUETAS_ESTADO_FLUJO = {
+    pendiente: "Pendiente",
+    candidata: "Candidata",
+    scorecard: "Scorecard",
+    enviada: "Enviada",
+    tomada: "Tomada",
+    descartada: "Descartada",
+    cerrada: "Cerrada",
+    desierta: "Desierta",
+    adjudicada: "Adjudicada",
+    revision_ambigua: "Revisión ambigua",
+    revision_degradada: "Revisión degradada",
+    revocada: "Revocada",
+  };
+
+  function renderEstadoFlujo(candidata) {
+    var crudo = candidata.estado_flujo;
+    var etiqueta = ETIQUETAS_ESTADO_FLUJO[crudo];
+    if (etiqueta) return escaparHtml(etiqueta);
+    if (!crudo) return '<span class="vacio">—</span>';
+    return escaparHtml(String(crudo));
+  }
+
+  // Etiquetas legibles para CodigoEstado crudo de Mercado Público (ver
+  // Verificacion/ReverificacionService.ClasificarEstadoApi) — 5
+  // (Publicada) nunca se muestra como badge, es el estado esperado y no
+  // aporta información. Cualquier valor no listado acá (no documentado,
+  // ej. 15 visto en el fixture) cae en el fallback "Estado {n}", nunca en
+  // blanco.
+  var ETIQUETAS_ESTADO_MP = {
+    6: "Cerrada",
+    7: "Desierta",
+    8: "Adjudicada",
+    18: "Revocada",
+    19: "Suspendida",
+  };
+
+  // Badge de estado_mp (2026-09-30): visible cuando la API ya devolvió un
+  // CodigoEstado distinto de 5 (Publicada) — es lo que hace visible un
+  // cierre_detectado_en_triage (una Scorecard/Candidata/Enviada que en
+  // realidad ya se cerró/suspendió en Mercado Público, pero cuyo triage
+  // humano no se pisó) sin tener que abrir data/eventos.json.
+  function renderBadgeEstadoMp(candidata) {
+    var estadoMp = candidata.estado_mp;
+    if (estadoMp == null || estadoMp === 5) return "";
+    var etiqueta = ETIQUETAS_ESTADO_MP[estadoMp] || ("Estado " + estadoMp);
+    return '<span class="badge badge-urgente" title="CodigoEstado real de Mercado Público">' + escaparHtml(etiqueta) + "</span>";
+  }
+
+  // Badge "No encontrada en API" (2026-09-30): visible cuando
+  // intentos_no_encontrada llegó a 3 — el código dejó de aparecer en el
+  // detalle de la API sin que nunca se haya observado un CodigoEstado de
+  // cierre real. Independiente de estado_mp: puede mostrarse aunque
+  // estado_mp nunca haya llegado a poblarse.
+  function renderBadgeNoEncontrada(candidata) {
+    if ((candidata.intentos_no_encontrada || 0) < 3) return "";
+    return '<span class="badge badge-urgente" title="La API dejó de listar este código (3 intentos)">No encontrada en API</span>';
+  }
+
+  function renderBadgesReverificacion(candidata) {
+    return renderBadgeEstadoMp(candidata) + renderBadgeNoEncontrada(candidata);
+  }
+
   function renderRegion(candidata) {
     if (!candidata.region) return '<span class="vacio">—</span>';
     return escaparHtml(candidata.region);
@@ -426,6 +499,31 @@
       etiqueta: "Tipo de pago (código, sin traducir)",
       render: function (c) { return c.tipo_pago != null ? escaparHtml(c.tipo_pago) : '<span class="vacio">—</span>'; },
     },
+    // ultima_verificacion/estado_mp/intentos_no_encontrada (2026-09-30, ver
+    // Verificacion/ReverificacionService.cs): ultima_verificacion se
+    // muestra discreto acá (fecha+hora, no solo fecha — a diferencia de
+    // fecha_cierre, importa saber si fue hace unas horas o hace semanas).
+    // estado_mp/intentos_no_encontrada ya se ven como badge en la tabla
+    // compacta (ver renderBadgesReverificacion) — acá se repiten con su
+    // valor crudo para quien quiera el detalle exacto sin adivinar a
+    // partir del badge.
+    ultima_verificacion: {
+      etiqueta: "Última re-verificación contra la API",
+      render: function (c) {
+        if (!c.ultima_verificacion) return '<span class="vacio">nunca</span>';
+        return escaparHtml(new Date(c.ultima_verificacion).toLocaleString("es-CL"));
+      },
+    },
+    estado_mp: {
+      etiqueta: "CodigoEstado real (Mercado Público)",
+      render: function (c) {
+        return c.estado_mp != null ? escaparHtml(String(c.estado_mp)) : '<span class="vacio">—</span>';
+      },
+    },
+    intentos_no_encontrada: {
+      etiqueta: "Intentos sin encontrar el código en la API",
+      render: function (c) { return escaparHtml(String(c.intentos_no_encontrada || 0)); },
+    },
   };
 
   // Fallback si config/panel-revision.json todavía no se publicó (antes de
@@ -433,7 +531,10 @@
   // panel roto por un 404, mismo contenido que el archivo inicial.
   var PANEL_CONFIG_DEFAULT = {
     campos_visibles: ["descripcion", "fecha_cierre", "organismo", "region", "monto", "cantidad_reclamos"],
-    campos_ocultos_por_default: ["items_unspsc", "comuna", "sub_contratacion", "prohibicion_contratacion", "tipo_pago"],
+    campos_ocultos_por_default: [
+      "items_unspsc", "comuna", "sub_contratacion", "prohibicion_contratacion", "tipo_pago",
+      "ultima_verificacion", "estado_mp", "intentos_no_encontrada",
+    ],
   };
 
   var panelRevisionConfig = PANEL_CONFIG_DEFAULT;
@@ -688,7 +789,7 @@
         "<td>" + renderMonto(c) + "</td>" +
         "<td>" + formatearFecha(c.fecha_cierre) + "</td>" +
         "<td>" + renderDiasParaCierre(diasParaCierre(c.fecha_cierre)) + "</td>" +
-        "<td>" + escaparHtml(c.estado_flujo) + "</td>" +
+        "<td>" + renderEstadoFlujo(c) + " " + renderBadgesReverificacion(c) + "</td>" +
         "<td>" + escaparHtml(c.origen) + "</td>" +
         "<td>" + formatearFecha(c.fecha_lote) + "</td>" +
         "</tr>";
@@ -737,7 +838,7 @@
         "<td>" +
           '<button class="boton-detalle" data-toggle-detalle aria-expanded="false">▸ Ver detalle</button>' +
         "</td>" +
-        "<td>" + renderCodigo(c) + "</td>" +
+        "<td>" + renderCodigo(c) + " " + renderBadgesReverificacion(c) + "</td>" +
         "<td>" + escaparHtml(c.nombre) + "</td>" +
         "<td>" + renderRubro(c) + "</td>" +
         "<td>" + razonRevision(c) + "</td>" +
