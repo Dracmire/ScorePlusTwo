@@ -1596,17 +1596,1802 @@
     "detalle": "total=1198 prioritarias=0 secundarias=331 tramo_bajo=63 nuevas=0 movidas_historico=0"
   },
   {
-    "timestamp": "2026-09-30T18:00:00.0000000Z",
+    "timestamp": "2026-09-30T18:00:00Z",
     "actor": "usuario",
     "accion": "correccion_manual",
     "codigo": "2369-70-LR26",
-    "detalle": "El fallback de ClasificarEstadoApi trato erroneamente CodigoEstado 16 (Suspendida, verificado a mano en Mercado Publico) como no documentado y lo cerro (estado_flujo=cerrada), bloqueandolo ademas para reingreso. ClasificarEstadoApi ya esta corregido (16 -> Suspendida, no terminal). Restaurado a data/secundarias.json con estado_flujo=pendiente, estado_mp=16, motivo_cierre=null."
+    "detalle": "El fallback de ClasificarEstadoApi trato erroneamente CodigoEstado 16 (Suspendida, verificado a mano en Mercado Publico) como no documentado y lo cerro (estado_flujo=cerrada), bloqueandolo ademas para reingreso. ClasificarEstadoApi ya esta corregido (16 -\u003E Suspendida, no terminal). Restaurado a data/secundarias.json con estado_flujo=pendiente, estado_mp=16, motivo_cierre=null."
   },
   {
-    "timestamp": "2026-09-30T18:00:00.0000000Z",
+    "timestamp": "2026-09-30T18:00:00Z",
     "actor": "usuario",
     "accion": "correccion_manual",
     "codigo": null,
-    "detalle": "El fallback de ClasificarEstadoApi trato CodigoEstado 15 (Revocada, verificado a mano en Mercado Publico) como no documentado y lo cerro con estado_flujo=cerrada en vez de revocada. ClasificarEstadoApi ya esta corregido (15 -> Revocada, terminal). Corregidos in-place (sin mover de archivo, siguen terminales) 34 codigos: 1 en data/historico/candidatas.json, 32 en data/historico/secundarias.json, 1 en data/historico/tramo_bajo.json. Codigos: 1057472-119-LR26, 1057501-539-LE26, 1079454-12-LE26, 1126922-37-LP26, 1185-3-LP26, 1259850-4-LP26, 1406-8-LE26, 1412-3-LS26, 1417913-124-LE26, 1950-51-LP26, 1965-14-LE26, 2258-37-LR26, 229-96-LE26, 2415-23-LE26, 2494-81-LP26, 2656-66-LE26, 2924-19-LE26, 2924-20-LE26, 3431-5-LS26, 3453-82-LE26, 3474-54-LE26, 3477-82-LE26, 3587-19-LE26, 3794-73-LE26, 3892-30-LE26, 4037-65-LE26, 4375-105-LE26, 4449-33-L126, 4610-68-LP26, 4967-28-LP26, 5482-100-LP26, 5554-3-LE26, 707426-33-LE26, 732-14-LP26"
+    "detalle": "El fallback de ClasificarEstadoApi trato CodigoEstado 15 (Revocada, verificado a mano en Mercado Publico) como no documentado y lo cerro con estado_flujo=cerrada en vez de revocada. ClasificarEstadoApi ya esta corregido (15 -\u003E Revocada, terminal). Corregidos in-place (sin mover de archivo, siguen terminales) 34 codigos: 1 en data/historico/candidatas.json, 32 en data/historico/secundarias.json, 1 en data/historico/tramo_bajo.json. Codigos: 1057472-119-LR26, 1057501-539-LE26, 1079454-12-LE26, 1126922-37-LP26, 1185-3-LP26, 1259850-4-LP26, 1406-8-LE26, 1412-3-LS26, 1417913-124-LE26, 1950-51-LP26, 1965-14-LE26, 2258-37-LR26, 229-96-LE26, 2415-23-LE26, 2494-81-LP26, 2656-66-LE26, 2924-19-LE26, 2924-20-LE26, 3431-5-LS26, 3453-82-LE26, 3474-54-LE26, 3477-82-LE26, 3587-19-LE26, 3794-73-LE26, 3892-30-LE26, 4037-65-LE26, 4375-105-LE26, 4449-33-L126, 4610-68-LP26, 4967-28-LP26, 5482-100-LP26, 5554-3-LE26, 707426-33-LE26, 732-14-LP26"
+  },
+  {
+    "timestamp": "2026-10-01T00:05:26.909048Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2020-21-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:05:27.5509788Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "721703-40-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:05:35.5303679Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1606-32-LE26",
+    "detalle": "fecha_anterior=2026-10-02T15:10:00.0000000 fecha_nueva=2026-10-05T15:10:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:05:40.5596503Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "548874-72-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:05:46.0361198Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "85-41-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:02.9499166Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1005498-22-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:31.8957701Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "704093-124-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:32.0446994Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "935-24-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:34.6091399Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5612-9-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:34.9183502Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2548-90-L126",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:37.3479635Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5394-29-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:39.8169067Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "638-20-LE26",
+    "detalle": "fecha_anterior=2026-09-30T10:00:00.0000000 fecha_nueva=2026-10-07T10:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:42.4106346Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2369-69-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:45.0088158Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2950-44-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:45.5360869Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1274285-51-CO26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:45.7013345Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2405-142-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:48.2225223Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2322-83-LE26",
+    "detalle": "fecha_anterior=2026-09-30T10:00:00.0000000 fecha_nueva=2026-10-02T10:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:48.5566395Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2405-140-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:50.8947081Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3251-33-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:51.0686368Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4301-59-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:51.4762901Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4939-16-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:53.9172632Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1063487-35-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:54.110402Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1063487-36-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:54.5844498Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1063487-37-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:57.1244941Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1063487-38-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:57.2763254Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1063487-39-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:59.6415794Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2735-155-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:06:59.8128267Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2735-154-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:00.0459226Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1063487-34-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:02.3151679Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2428-65-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:02.6289567Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2430-77-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:05.5669967Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2430-59-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:05.9525646Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2905-42-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:06.5388259Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4072-33-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:09.4970042Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5911-4-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:09.6424224Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1725-208-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:11.9504384Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1725-209-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:12.107044Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1725-210-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:12.2536655Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "889473-52-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:14.6907394Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3015-54-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:15.0265461Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1562-62-LE26",
+    "detalle": "fecha_anterior=2026-09-30T12:00:00.0000000 fecha_nueva=2026-10-02T12:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:17.4948269Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1725-211-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:17.8120678Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2460-128-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:20.2897335Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1515304-189-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:22.5590059Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3946-33-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:22.8885608Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3847-42-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:25.1658041Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3960-68-L126",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:25.6589775Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2258-185-LP26",
+    "detalle": "fecha_anterior=2026-09-30T12:12:00.0000000 fecha_nueva=2026-10-02T12:12:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:26.1083341Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "3912-22-LE26",
+    "detalle": "fecha_anterior=2026-09-30T12:16:00.0000000 fecha_nueva=2026-10-01T12:16:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:28.3846617Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1113146-7-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:28.5470953Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2308-80-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:30.834917Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "3654-31-LE26",
+    "detalle": "fecha_anterior=2026-09-30T13:00:00.0000000 fecha_nueva=2026-10-02T13:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:30.9903391Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "685103-5-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:33.6800028Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2258-209-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:34.0817505Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4407-26-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:36.5874341Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1533461-2-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:36.7342853Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2434-16-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:36.9346086Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2950-40-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:39.3984351Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4099-25-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:39.9790542Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3751-13-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:40.357308Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1425773-12-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:42.6278527Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1012975-17-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:43.0778549Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4309-240-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:45.6068195Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1328912-2-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:46.4710811Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057490-69-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:48.7450841Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "707419-39-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:49.0646143Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2462-31-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:51.643829Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1606-29-LP26",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-07T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:53.9167793Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1077275-8-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:56.5714835Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1095439-24-LP26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:56.8958039Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2981-262-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:07:59.1709046Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4494-64-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:02.3559297Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4052-44-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:02.9985013Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2563-42-LP26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:05.3240079Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057489-285-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:07.6897105Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057492-124-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:07.8409808Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5701-16-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:08.2695005Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "299-17-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:10.725225Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2981-258-LP26",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-08T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:11.0624367Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4494-65-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:13.5811905Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3477-81-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:15.9717393Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4473-20-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:16.2081919Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4291-50-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:18.4832035Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3676-23-B226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:20.9351316Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1431841-58-LE26",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-02T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:21.1425375Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1549-77-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:23.4657487Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1782-11-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:23.8052283Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "812799-38-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:26.0923932Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1431841-64-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:26.4011985Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3656-157-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:28.8557719Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1224957-60-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:29.2050744Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2200-30-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:29.5244617Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2392-59-LE26",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-02T10:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:31.7999193Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1388961-47-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:34.2384835Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "707418-48-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:34.5644403Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "837-86-LE26",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-02T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:37.0115717Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "938-33-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:39.5486183Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2080-283-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:40.0788541Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1260504-1-LE26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:42.3891274Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1700-17-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:42.7622289Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4511-53-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:43.0794154Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1658-202-B226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:45.5719327Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057489-283-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:47.9241689Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057539-139-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:50.4023418Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1171142-104-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:52.8692988Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1485217-18-LP26",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-05T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:53.0410663Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "523524-2-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:55.7588898Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1437-14-LE26",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-01T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:56.753301Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4174-33-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:56.9167865Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5737-9-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:59.6182847Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2961-69-LE26",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-01T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:08:59.8658856Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "867990-93-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:02.1676155Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3117-94-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:04.4474997Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3730-97-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:05.1458276Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5198-29-L126",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:07.6782604Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "707419-42-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:07.912782Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1978-125-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:10.3574755Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2961-70-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:10.6011691Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2408-234-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:12.8697744Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1978-124-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:13.3686799Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1469-222-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:15.9545459Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1554-59-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:16.3441316Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "838108-12-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:18.6967839Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2766-136-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:21.2125741Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1079-1-L126",
+    "detalle": "fecha_anterior=2026-09-30T15:00:00.0000000 fecha_nueva=2026-10-01T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:21.3884565Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1301883-23-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:21.9890036Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4650-19-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:24.6785256Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3100-4-LE26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:27.2659016Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2693-37-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:28.0314534Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "979-56-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:28.4699217Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "558869-58-LE26",
+    "detalle": "fecha_anterior=2026-09-30T15:01:00.0000000 fecha_nueva=2026-10-02T15:01:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:31.0046523Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1057429-91-LE26",
+    "detalle": "fecha_anterior=2026-09-30T15:01:00.0000000 fecha_nueva=2026-10-02T15:01:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:31.1766225Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "707415-35-L126",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:33.4627747Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "707415-34-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:35.9263543Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1110404-210-L126",
+    "detalle": "fecha_anterior=2026-09-30T15:01:00.0000000 fecha_nueva=2026-10-01T15:01:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:36.0915343Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2448-136-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:38.5410074Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "584264-36-LP26",
+    "detalle": "fecha_anterior=2026-09-30T15:05:00.0000000 fecha_nueva=2026-10-05T15:05:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:39.0415864Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "299-16-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:39.2518366Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5751-31-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:41.8162384Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "584264-40-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:42.259873Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1027-15-LP26",
+    "detalle": "fecha_anterior=2026-09-30T15:10:00.0000000 fecha_nueva=2026-10-02T15:10:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:44.6452095Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1224953-26-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:47.2517777Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "587-38-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:47.4010732Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3675-6-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:49.8942654Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "750998-65-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:50.1062532Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1660-143-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:50.376161Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3117-93-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:52.8795598Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1175-72-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:53.0264155Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1952-70-LP26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:55.3252402Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1952-73-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:57.6049422Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2107-146-B226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:09:57.9508097Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1371-6-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:00.8502274Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057417-216-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:03.3541534Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057962-7-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:04.6181411Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1058085-141-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:04.9805847Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2098-136-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:08.2029134Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1658-197-LP26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:08.5857543Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "5240-98-LR26",
+    "detalle": "fecha_anterior=2026-09-30T15:30:00.0000000 fecha_nueva=2026-10-05T15:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:11.695312Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5413-72-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:11.8530753Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "609-28-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:14.3000537Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1175-78-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:14.6672269Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057434-32-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:17.2980563Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2423-61-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:17.4556991Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1515304-188-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:19.7720909Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2358-23-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:20.0969078Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1736-106-L126",
+    "detalle": "fecha_anterior=2026-09-30T15:30:00.0000000 fecha_nueva=2026-10-01T15:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:22.417536Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057501-585-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:22.7013307Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3399-19-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:25.2043576Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2958-4-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:25.3502645Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2904-21-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:27.6331157Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4134-40-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:29.9081254Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057503-136-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:30.3691064Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1393093-107-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:33.09994Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057503-135-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:35.6822132Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1723-41-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:36.2231941Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2924-18-LP26",
+    "detalle": "fecha_anterior=2026-09-30T16:00:00.0000000 fecha_nueva=2026-10-01T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:36.3718301Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "3172-70-LP26",
+    "detalle": "fecha_anterior=2026-09-30T16:00:00.0000000 fecha_nueva=2026-10-02T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:38.9036261Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1775-5-B226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:39.3141084Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1058097-23-LR26",
+    "detalle": "detalle=suspendida"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:39.6253547Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2827-59-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:42.303326Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3947-29-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:44.8137808Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4051-16-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:45.504503Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "548868-4-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:45.6536738Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5767-1-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:48.0964732Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "591-27-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:48.4488073Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1080089-41-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:50.7216523Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1422824-10-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:51.0598555Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "735-6-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:51.2700452Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3134-86-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:53.8931694Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2546-55-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:54.2059607Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1101892-5-LE26",
+    "detalle": "fecha_anterior=2026-09-30T16:00:00.0000000 fecha_nueva=2026-10-02T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:56.9318738Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1101892-4-LE26",
+    "detalle": "fecha_anterior=2026-09-30T16:00:00.0000000 fecha_nueva=2026-10-02T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:59.2127049Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "935934-8-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:10:59.369144Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "930-23-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:01.6464871Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2730-119-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:04.1842513Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057972-1-I226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:04.5094474Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057494-59-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:07.4522165Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "568658-43-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:10.0807829Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1515304-187-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:10.3807509Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1024-42-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:10.8112374Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1002584-11-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:13.0936986Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1736-107-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:15.5709134Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2697-49-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:16.0743274Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4829-51-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:16.499285Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "877-2-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:18.9651023Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "600644-5-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:19.4795449Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1551861-2-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:21.8043294Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3486-23-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:24.0881612Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1211839-69-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:26.5478679Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1058078-55-LE26",
+    "detalle": "fecha_anterior=2026-09-30T16:31:00.0000000 fecha_nueva=2026-10-07T17:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:26.7353621Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "900-57-L126",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:29.2393409Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1456836-3-LP26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:29.6568469Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1655-7-LP26",
+    "detalle": "fecha_anterior=2026-09-30T17:00:00.0000000 fecha_nueva=2026-10-02T17:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:31.9568924Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1002772-97-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:32.4325981Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "507428-114-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:34.7014988Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1058097-22-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:34.8763252Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2733-18-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:35.2515213Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057736-8-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:37.7276976Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3890-205-E226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:38.0542622Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057439-136-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:40.5013859Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "557639-87-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:42.9436567Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057439-135-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:45.3103162Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057541-41-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:45.4576581Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "5053-103-LR26",
+    "detalle": "fecha_anterior=2026-09-30T17:01:00.0000000 fecha_nueva=2026-10-08T15:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:47.9467169Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "387-57-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:48.1459232Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2157-141-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:50.4224533Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057501-551-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:53.0252649Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2658-322-E226",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:53.365936Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "4449-34-L126",
+    "detalle": "fecha_anterior=2026-09-30T17:30:00.0000000 fecha_nueva=2026-10-02T17:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:54.018428Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4887-31-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:56.3845423Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057501-579-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:57.1880958Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2258-172-LP26",
+    "detalle": "fecha_anterior=2026-09-30T17:44:00.0000000 fecha_nueva=2026-10-02T17:44:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:11:59.6973635Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057501-584-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:02.3879104Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3890-206-E226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:04.6674606Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "4099-24-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:04.9756652Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1002592-6-LP26",
+    "detalle": "fecha_anterior=2026-09-30T18:00:00.0000000 fecha_nueva=2026-10-02T18:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:07.6345811Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "757-82-LP26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:08.0622387Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "633-52-I226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:10.5218561Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057490-66-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:10.8978735Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "559511-51-LR26",
+    "detalle": "fecha_anterior=2026-09-30T18:00:00.0000000 fecha_nueva=2026-10-07T18:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:13.6452363Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1274285-52-LE26",
+    "detalle": "estado_nuevo=Desierta codigo_estado_api=7"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:15.9684781Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1057822-55-LE26",
+    "detalle": "fecha_anterior=2026-09-30T18:00:00.0000000 fecha_nueva=2026-10-01T18:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:18.2391646Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2322-87-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:21.1793303Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "218-51-LP26",
+    "detalle": "fecha_anterior=2026-09-30T18:01:00.0000000 fecha_nueva=2026-10-05T18:01:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:21.480947Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2785-86-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:21.8568176Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "5562-8-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:24.1666944Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3890-207-E226",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:24.5392328Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2908-22-L126",
+    "detalle": "fecha_anterior=2026-09-30T19:09:00.0000000 fecha_nueva=2026-10-02T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:27.4450105Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2658-320-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:27.6175938Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1340-55-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:29.9628579Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1075963-204-LR26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:30.1378404Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1057501-576-LE26",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:32.7232947Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "4062-36-LE26",
+    "detalle": "fecha_anterior=2026-09-30T20:00:00.0000000 fecha_nueva=2026-10-01T20:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:33.498309Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1628-19-L126",
+    "detalle": "estado_nuevo=Cerrada codigo_estado_api=6"
+  },
+  {
+    "timestamp": "2026-10-01T00:12:33.642646Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=1194 prioritarias=0 secundarias=331 tramo_bajo=63 nuevas=0 movidas_historico=0"
   }
 ]

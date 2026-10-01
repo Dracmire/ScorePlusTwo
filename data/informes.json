@@ -834,13 +834,13 @@
     "sin_resolver_unspsc": 116,
     "revision_manual_unspsc": 4,
     "ahorrados_por_acumulados": 0,
-    "reverificadas_hoy": 236,
-    "reverificaciones_con_cambio_fecha": 154,
-    "reverificaciones_a_terminal": 39,
+    "reverificadas_hoy": 523,
+    "reverificaciones_con_cambio_fecha": 192,
+    "reverificaciones_a_terminal": 254,
     "reverificaciones_fallidas": 0,
     "cierres_detectados_en_triage": 0,
     "llamadas_enriquecimiento": 324,
-    "llamadas_reverificacion": 236,
+    "llamadas_reverificacion": 523,
     "llamadas_barrido_activas": 0
   }
 ]

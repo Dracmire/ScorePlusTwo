@@ -34,87 +34,7 @@
         "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
-    "estado_mp": 5,
-    "intentos_no_encontrada": 0,
-    "motivo_cierre": null
-  },
-  {
-    "codigo": "2020-21-LE26",
-    "nombre": "MEJORA DE LA PLATAFORMA INFORM\u00C1TICA PARA LA BCN.",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-30T15:01:00",
-    "fecha_lote": "2026-09-08",
-    "rubro_match": "ti",
-    "termino_match": "inform\u00E1tic",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "Biblioteca del Congreso Nacional",
-    "comuna": "Santiago Centro",
-    "descripcion": "PROYECTO DE MEJORA DE LA PLATAFORMA INFORM\u00C1TICA DEL SISTEMA HISTORIA DE LA LEY Y LABOR PARLAMENTARIA PARA LA BIBLIOTECA DEL CONGRESO NACIONAL.",
-    "prohibicion_contratacion": "Seg\u00FAn restricciones establecidas en el numeral 26. Subcontrataci\u00F3n de las Bases de Licitaci\u00F3n Adjuntas.",
-    "tipo_pago": "1",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 30000000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 9,
-    "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": [
-      81112202
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 81112202,
-        "codigo_categoria": "81112200",
-        "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Mantenimiento y soporte de software"
-      }
-    ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
-    "estado_mp": 5,
-    "intentos_no_encontrada": 0,
-    "motivo_cierre": null
-  },
-  {
-    "codigo": "721703-40-LP26",
-    "nombre": "Diagramaci\u00F3n ilustraci\u00F3n y digitalizaci\u00F3n SNE y DIA 2027",
-    "tipo": "LP",
-    "fecha_cierre": "2026-09-30T15:01:00",
-    "fecha_lote": "2026-09-09",
-    "rubro_match": "ti",
-    "termino_match": "digitalizaci\u00F3n",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "AGENCIA DE CALIDAD DE LA EDUCACION",
-    "comuna": "Santiago",
-    "descripcion": "La Agencia de Calidad de la Educaci\u00F3n, en adelante la Agencia, es un servicio p\u00FAblico, funcionalmente descentralizado, con consejo exclusivo, dotado de personalidad jur\u00EDdica y patrimonio propio, que se relaciona con el Presidente de la Rep\u00FAblica por medio del Ministerio de Educaci\u00F3n.\r\n\r\nEs la responsable de elaborar y aplicar pruebas que permitan conocer los logros de aprendizaje de los estudiantes",
-    "prohibicion_contratacion": "Conforme a lo establecido en el punto 9.7 de las bases administrativas.",
-    "tipo_pago": "1",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 130132269.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "diario",
-    "cantidad_reclamos": 8,
-    "unspsc_estado": "servicio",
-    "codigos_producto_unspsc": [
-      82121501
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 82121501,
-        "codigo_categoria": "82121500",
-        "categoria": "Servicios editoriales, de dise\u00F1o, publicidad, gr\u00E1ficos y artistas / Servicios de impresi\u00F3n y reproducci\u00F3n / Impresi\u00F3n"
-      }
-    ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -154,7 +74,7 @@
         "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -194,7 +114,7 @@
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Ingenier\u00EDa en computaci\u00F3n e inform\u00E1tica"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -234,7 +154,7 @@
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios inform\u00E1ticos / Servicios de datos"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -243,7 +163,7 @@
     "codigo": "1606-32-LE26",
     "nombre": "CONTRATACI\u00D3N SERVICIO DE DIAGRAMACI\u00D3N DE PIEZAS GR\u00C1FICAS Y WEB DEL PROYECTO \u201CFORTALECIMIENTO DE LAS CAPACIDADES DE LATINOAM\u00C9RICA Y EL CARIBE EN MATERIA DE CIBERSEGURIDAD\u201D FINANCIADO POR LA UNI\u00D3N EUROPEA.",
     "tipo": "LE",
-    "fecha_cierre": "2026-10-02T15:10:00",
+    "fecha_cierre": "2026-10-05T15:10:00",
     "fecha_lote": "2026-09-17",
     "rubro_match": "ti",
     "termino_match": "ciberseguridad",
@@ -274,7 +194,7 @@
         "categoria": "Servicios editoriales, de dise\u00F1o, publicidad, gr\u00E1ficos y artistas / Servicios de impresi\u00F3n y reproducci\u00F3n / Impresi\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -314,47 +234,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de entorno operativo"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
-    "estado_mp": 5,
-    "intentos_no_encontrada": 0,
-    "motivo_cierre": null
-  },
-  {
-    "codigo": "548874-72-LR26",
-    "nombre": "SERV. DE ADMINISTRACION PLATAFORMAS TECNOLOGICAS",
-    "tipo": "LR",
-    "fecha_cierre": "2026-09-30T15:00:00",
-    "fecha_lote": "2026-09-05",
-    "rubro_match": "ti",
-    "termino_match": "plataforma",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "INSTITUTO DE PREVISION SOCIAL",
-    "comuna": "Santiago",
-    "descripcion": "SERVICIO DE ADMINISTRACION, GESTION, CONFIGURACION, RESPALDOS Y\r\nMANTENCION DE LAS PLATAFORMAS TECNOLOGICAS DE IPS\u2013 E1O2RT8",
-    "prohibicion_contratacion": "Ver bases administrativas punto 16.",
-    "tipo_pago": "1",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLF",
-    "monto": 24000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": 81,
-    "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": [
-      43232304
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 43232304,
-        "codigo_categoria": "43232300",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de consultas y gesti\u00F3n de datos"
-      }
-    ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -394,7 +274,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -434,47 +314,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
-    "estado_mp": 5,
-    "intentos_no_encontrada": 0,
-    "motivo_cierre": null
-  },
-  {
-    "codigo": "85-41-LE26",
-    "nombre": "PLATAFORMA INTEGRAL SOPORTE TI CON CONTROL REMOTO",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-30T15:01:00",
-    "fecha_lote": "2026-09-05",
-    "rubro_match": "ti",
-    "termino_match": "plataforma",
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "JUNTA NACIONAL DE AUXILIO ESCOLAR Y BECA",
-    "comuna": "Santiago Centro",
-    "descripcion": "Se requiere la adquisici\u00F3n de una soluci\u00F3n tecnol\u00F3gica centralizada, bajo la modalidad de suscripci\u00F3n plurianual por un per\u00EDodo de 36 meses, denominada Plataforma de Gesti\u00F3n de Activos TI ITAM y Administraci\u00F3n de Licenciamiento de Software SAM para JUNAEB.",
-    "prohibicion_contratacion": "SEG\u00DAN LO INDICADO EN EL T\u00CDTULO 19 DE LAS BASES ADMINISTRATIVAS.",
-    "tipo_pago": "1",
-    "sub_contratacion": "0",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": null,
-    "monto": null,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": 156,
-    "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": [
-      43232408
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 43232408,
-        "codigo_categoria": "43232400",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
-      }
-    ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -514,7 +354,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de controladores de dispositivos y utilidades"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -554,7 +394,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -600,7 +440,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -640,7 +480,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n de contenidos"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -680,7 +520,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -720,7 +560,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n de contenidos"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -920,47 +760,7 @@
         "categoria": "Servicios basados en ingenier\u00EDa, ciencias sociales y tecnolog\u00EDa de la informaci\u00F3n / Servicios profesionales de ingenier\u00EDa / Ingenier\u00EDa el\u00E9ctrica y electr\u00F3nica"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
-    "estado_mp": 5,
-    "intentos_no_encontrada": 0,
-    "motivo_cierre": null
-  },
-  {
-    "codigo": "1005498-22-LE26",
-    "nombre": "Servicio de implementaci\u00F3n de Jira o similar en modalidad Cloud ",
-    "tipo": "LE",
-    "fecha_cierre": "2026-09-30T16:00:00",
-    "fecha_lote": "2026-09-21",
-    "rubro_match": null,
-    "termino_match": null,
-    "region": "Regi\u00F3n Metropolitana de Santiago",
-    "organismo": "COMISION PARA EL MERCADO FINANCIERO",
-    "comuna": "Santiago Centro",
-    "descripcion": "servicio de implementaci\u00F3n de Jira (o similar) en modalidad Cloud para la CMF",
-    "prohibicion_contratacion": "NO SE PERMITE",
-    "tipo_pago": "1",
-    "sub_contratacion": "1",
-    "tramo": null,
-    "tipo_privado": false,
-    "moneda": "CLP",
-    "monto": 20000000.0,
-    "estado_flujo": "pendiente",
-    "notas": null,
-    "cliente_asignado": null,
-    "origen": "activas",
-    "cantidad_reclamos": 8,
-    "unspsc_estado": "revision_manual",
-    "codigos_producto_unspsc": [
-      43231507
-    ],
-    "items_unspsc": [
-      {
-        "codigo_producto": 43231507,
-        "codigo_categoria": "43231500",
-        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
-      }
-    ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1000,7 +800,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de intercambio de informaci\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1040,7 +840,7 @@
         "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1080,7 +880,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1120,7 +920,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1166,7 +966,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software para trabajo en redes"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1206,7 +1006,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de aplicaciones de red"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1246,7 +1046,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1286,7 +1086,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1326,7 +1126,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1366,7 +1166,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1406,7 +1206,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software espec\u00EDfico para la industria"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1446,7 +1246,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de planificaci\u00F3n de recursos empresariales (ERP) y contabilidad financiera"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1486,7 +1286,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de intercambio de informaci\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1526,7 +1326,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1566,7 +1366,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1606,7 +1406,7 @@
         "categoria": "Organizaciones y consultor\u00EDas pol\u00EDticas, demogr\u00E1ficas, econ\u00F3micas, sociales y de administraci\u00F3n p\u00FAblica / Administraci\u00F3n y finanzas p\u00FAblicas / Finanzas p\u00FAblicas"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1646,7 +1446,7 @@
         "categoria": "Servicios profesionales, administrativos y consultor\u00EDas de gesti\u00F3n empresarial / Servicios de recursos humanos / Contrataci\u00F3n de personal"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1686,7 +1486,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de consultas y gesti\u00F3n de datos"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
@@ -1726,7 +1526,7 @@
         "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
       }
     ],
-    "ultima_verificacion": "2026-09-30T02:31:31.7274191",
+    "ultima_verificacion": "2026-09-30T21:05:26.0849051",
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
