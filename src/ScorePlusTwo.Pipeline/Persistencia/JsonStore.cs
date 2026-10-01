@@ -46,7 +46,17 @@ public static class JsonStore
             Directory.CreateDirectory(directorio);
         }
 
+        // Escritura atómica (2026-10-01): un kill a mitad de escritura (OOM,
+        // timeout de Actions, cualquier crash no capturado) con File.
+        // WriteAllText directo sobre `ruta` podía dejar un JSON truncado en
+        // disco. Se escribe a un .tmp en el MISMO directorio (para que el
+        // Move sea un rename local, no una copia entre volúmenes — eso
+        // perdería la atomicidad) y se mueve al destino final: el archivo
+        // destino siempre queda con el contenido viejo completo o el nuevo
+        // completo, nunca a medias.
         var json = JsonSerializer.Serialize(valor, opciones);
-        File.WriteAllText(ruta, json);
+        var rutaTemporal = ruta + ".tmp";
+        File.WriteAllText(rutaTemporal, json);
+        File.Move(rutaTemporal, ruta, overwrite: true);
     }
 }

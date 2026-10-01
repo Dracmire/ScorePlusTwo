@@ -162,4 +162,59 @@ public sealed record InformeDiario(
             LlamadasBarridoActivas = existente.LlamadasBarridoActivas + nuevo.LlamadasBarridoActivas,
         };
     }
+
+    // Recupero de fechas faltantes en el flujo normal (2026-10-01): si el
+    // cron no dispara un día (atrasos de hasta 4h58 ya documentados, o un
+    // caso donde la corrida automática simplemente no apareció), ese lote
+    // diario se perdía para siempre — la API de Mercado Público sí permite
+    // pedir cualquier fecha pasada, pero el pipeline nunca se lo pedía
+    // porque solo procesaba "ayer". Esta función mira una ventana de los
+    // últimos `ventanaDias` días terminando en `ayer` y devuelve cualquier
+    // fecha ausente de `informesExistentes` dentro de ella (no solo el
+    // tramo contiguo desde la última fecha conocida — eso no detectaría un
+    // hueco intermedio, ej. existen 25, 26, 28 y falta 27).
+    //
+    // Orden: más reciente primero. `ayer` cae naturalmente al frente si
+    // falta (es el máximo de la ventana), y el resto del hueco se prioriza
+    // de más nuevo a más viejo — tras una caída larga, lo reciente importa
+    // más al negocio, y una fecha vieja que siga realmente abierta la
+    // termina cubriendo el barrido `activas` de todas formas. `tope` limita
+    // cuántas se procesan en una sola corrida (cada fecha recuperada puede
+    // costar cientos de llamadas de enriquecimiento, no es una llamada
+    // barata de listado) — una caída larga se cierra sola en varias noches
+    // sucesivas en vez de arriesgar la cuota diaria de la API o el límite
+    // de 6h de un job de Actions.
+    //
+    // `fechaManual` (--fecha) siempre gana y desactiva el recupero por
+    // completo: devuelve exactamente esa fecha, sin mirar informes.json ni
+    // la ventana — una invocación dirigida a una fecha puntual nunca
+    // dispara lógica masiva por su cuenta.
+    //
+    // Consecuencia aceptada: con informesExistentes vacío (primer run de
+    // la vida del repo), la ventana completa cuenta como "faltante" y el
+    // resultado son las `tope` fechas más RECIENTES de la ventana, no solo
+    // `[ayer]` — no aplica a este repo (ya tiene decenas de entradas
+    // reales), documentado por si se reinicia desde cero alguna vez.
+    public static IReadOnlyList<DateOnly> CalcularFechasAProcesar(
+        IReadOnlyList<InformeDiario> informesExistentes, DateOnly? fechaManual, DateOnly ayer, int ventanaDias, int tope)
+    {
+        if (fechaManual is not null)
+        {
+            return new[] { fechaManual.Value };
+        }
+
+        var fechasExistentes = informesExistentes.Select(i => i.Fecha).ToHashSet();
+        var inicioVentana = ayer.AddDays(-(ventanaDias - 1));
+
+        var faltantes = new List<DateOnly>();
+        for (var fecha = ayer; fecha >= inicioVentana; fecha = fecha.AddDays(-1))
+        {
+            if (!fechasExistentes.Contains(fecha))
+            {
+                faltantes.Add(fecha);
+            }
+        }
+
+        return faltantes.Take(tope).ToList();
+    }
 }

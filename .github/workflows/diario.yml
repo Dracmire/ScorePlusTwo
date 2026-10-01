@@ -116,6 +116,18 @@ jobs:
         run: dotnet build ScorePlusTwo.sln --configuration Release
 
       - name: Ejecutar pipeline
+        id: pipeline
+        # continue-on-error (2026-10-01, recupero de fechas faltantes en el
+        # flujo normal): Program.Main ahora puede devolver 1 de forma
+        # CONTROLADA (una fecha del recupero falló, pero las anteriores ya
+        # se persistieron con éxito y conviene commitearlas) en vez de solo
+        # 0/no-cero como antes. Para distinguir ese 1 controlado de un crash
+        # real (OOM, timeout del job, excepción no capturada — cualquiera de
+        # los cuales puede dejar un estado inconsistente en disco, aunque
+        # JsonStore.Guardar ya escribe atómico vía .tmp+Move) se captura el
+        # código de salida explícito en vez de dejar que un exit≠0 aborte el
+        # job antes del commit.
+        continue-on-error: true
         env:
           MP_TICKET: ${{ secrets.MP_TICKET }}
           FECHA_INPUT: ${{ github.event.inputs.fecha }}
@@ -125,6 +137,7 @@ jobs:
           REFRESCAR_DESCRIPTIVOS: ${{ github.event.inputs.refrescar_descriptivos }}
           REVERIFICAR_VENCIDAS: ${{ github.event.inputs.reverificar_vencidas }}
         run: |
+          set +e
           if [ "$REVERIFICAR_VENCIDAS" = "true" ]; then
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build -- --reverificar-vencidas
           elif [ "$REFRESCAR_DESCRIPTIVOS" = "true" ]; then
@@ -140,8 +153,20 @@ jobs:
           else
             dotnet run --project src/ScorePlusTwo.Pipeline --configuration Release --no-build
           fi
+          codigo=$?
+          echo "exit_code=$codigo" >> "$GITHUB_OUTPUT"
+          exit $codigo
 
       - name: Commit y push de resultados
+        # 0 = corrida completa sin errores. 1 = fallo controlado (Program.
+        # Main siempre devuelve 0 o 1 explícitamente — ej. el recupero de
+        # fechas cortó el loop en una fecha, pero lo procesado antes ya es
+        # válido y JsonStore.Guardar escribe atómico, así que es seguro
+        # commitearlo). Cualquier otro valor (vacío porque el proceso murió
+        # antes de escribir el output, 134/137/etc. por OOM o timeout, o
+        # cualquier excepción no capturada) significa que no hay garantía de
+        # que el estado en disco sea consistente — no se commitea.
+        if: steps.pipeline.outputs.exit_code == '0' || steps.pipeline.outputs.exit_code == '1'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -164,3 +189,16 @@ jobs:
             git commit -m "chore: actualización diaria del pipeline $(date -u +%F)"
             git push
           fi
+
+      - name: Marcar el job como fallido si el pipeline no terminó en 0
+        # continue-on-error en el paso "Ejecutar pipeline" deja que el job
+        # llegue hasta el commit aunque ese paso "falle" (exit_code 1) — sin
+        # este paso final, el job quedaría en verde incluso con exit_code=1,
+        # perdiendo la visibilidad roja en Actions que ya existía antes del
+        # recupero de fechas. Corre para cualquier código distinto de 0
+        # (incluido el 1 que sí se commiteó arriba, y un output vacío si el
+        # proceso murió antes de reportar).
+        if: steps.pipeline.outputs.exit_code != '0'
+        run: |
+          echo "El pipeline terminó con código de salida '${{ steps.pipeline.outputs.exit_code }}' (vacío = crash antes de reportar)."
+          exit 1

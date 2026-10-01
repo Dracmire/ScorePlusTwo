@@ -80,4 +80,20 @@ public sealed record Criterios(
     // config/criterios-descartes.json, que no participa de esta lógica, no
     // necesite tocarse — se agrega igual, explícito, a
     // config/criterios.json para que sea editable sin tocar código.
-    [property: JsonPropertyName("tope_reverificacion_vencidas")] int TopeReverificacionVencidas = 300);
+    [property: JsonPropertyName("tope_reverificacion_vencidas")] int TopeReverificacionVencidas = 300,
+    // Recupero de fechas faltantes en el flujo normal (2026-10-01, ver
+    // InformeDiario.CalcularFechasAProcesar): cuántos días hacia atrás
+    // desde "ayer" se revisan en busca de fechas ausentes en
+    // informes.json (incluyendo un hueco intermedio, no solo el tramo
+    // contiguo desde la última fecha conocida). Una fecha faltante más
+    // vieja que esta ventana no se recupera sola — se trataría a mano con
+    // --fecha. Default en C# para que criterios-descartes.json, que no
+    // participa de este flujo, no necesite tocarse.
+    [property: JsonPropertyName("ventana_recuperacion_dias")] int VentanaRecuperacionDias = 14,
+    // De las fechas faltantes detectadas dentro de la ventana, cuántas se
+    // procesan en una sola corrida — la más reciente primero (ver
+    // CalcularFechasAProcesar). Mismo razonamiento que
+    // TopeReverificacionVencidas: una caída larga se cierra sola en
+    // varias noches sucesivas en vez de arriesgar la cuota diaria de la
+    // API o el límite de 6h de un job de Actions.
+    [property: JsonPropertyName("tope_fechas_recuperacion")] int TopeFechasRecuperacion = 5);

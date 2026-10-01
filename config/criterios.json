@@ -88,5 +88,7 @@
   ],
   "tipos_privados": ["CO", "B2", "E2", "H2", "I2"],
   "familias_unspsc_revision_manual": ["4323"],
-  "tope_reverificacion_vencidas": 300
+  "tope_reverificacion_vencidas": 300,
+  "ventana_recuperacion_dias": 14,
+  "tope_fechas_recuperacion": 5
 }
