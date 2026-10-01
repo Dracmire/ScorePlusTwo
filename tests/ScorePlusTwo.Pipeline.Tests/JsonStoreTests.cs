@@ -41,4 +41,30 @@ public class JsonStoreTests
             File.Delete(ruta);
         }
     }
+
+    // Guardar (2026-10-01): escritura atómica vía .tmp + File.Move, para que
+    // un kill a mitad de escritura (OOM, timeout de Actions) nunca deje un
+    // JSON truncado en disco -- ver el commit de diario.yml que ahora corre
+    // también tras un fallo controlado del recupero de fechas. No simula un
+    // crash a mitad de escritura (no es practicable en xUnit) -- solo
+    // confirma que el patrón no deja residuos en el camino feliz.
+    [Fact]
+    public void Guardar_NoDejaArchivoTemporalResidual_YElContenidoFinalEsElGuardado()
+    {
+        var ruta = Path.GetTempFileName();
+        var rutaTemporal = ruta + ".tmp";
+        try
+        {
+            JsonStore.Guardar(ruta, new { valor = 42 }, JsonOpciones.Persistencia);
+
+            Assert.False(File.Exists(rutaTemporal));
+            var leido = JsonStore.Cargar<Dictionary<string, int>>(ruta, JsonOpciones.Persistencia);
+            Assert.Equal(42, leido["valor"]);
+        }
+        finally
+        {
+            File.Delete(ruta);
+            File.Delete(rutaTemporal);
+        }
+    }
 }

@@ -92,4 +92,111 @@ public class InformeDiarioTests
                 $"(está en descubrimiento={enDescubrimiento}, en seguimiento={enSeguimiento}).");
         }
     }
+
+    // CalcularFechasAProcesar (2026-10-01, recupero de fechas faltantes en
+    // el flujo normal): ver el follow-up correspondiente para el diseño
+    // completo. `ConSoloFecha` arma una entrada mínima de InformeDiario para
+    // cada fecha dada (los demás campos no importan para esta función, solo
+    // se usa `.Fecha`).
+    private static InformeDiario ConSoloFecha(DateOnly fecha) => new(
+        Fecha: fecha, Total: 0, TrasEstado: 0, TrasTipo: 0, TrasRegion: 0, DescarteDuro: 0,
+        Prioritarias: 0, Secundarias: 0, TramoBajo: 0, NuevasPrioritarias: 0, NuevasSecundarias: 0, NuevasTramoBajo: 0,
+        BarridoActivas: null);
+
+    // 4. informes.json vacío: la ventana completa cuenta como "faltante" y
+    // el resultado son las `tope` fechas más RECIENTES de la ventana (no
+    // las más antiguas) -- consecuencia aceptada y documentada del diseño.
+    [Fact]
+    public void CalcularFechasAProcesar_InformesVacio_DevuelveLasMasRecientesDeLaVentana()
+    {
+        var ayer = new DateOnly(2026, 10, 1);
+
+        var resultado = InformeDiario.CalcularFechasAProcesar(
+            informesExistentes: new List<InformeDiario>(), fechaManual: null, ayer, ventanaDias: 14, tope: 3);
+
+        Assert.Equal(new[] { ayer, ayer.AddDays(-1), ayer.AddDays(-2) }, resultado);
+    }
+
+    // 5. Hueco de 1 día normal (ayer ausente, el resto de la ventana
+    // presente): caso de todos los días, sin cambio de comportamiento
+    // respecto a antes de este follow-up.
+    [Fact]
+    public void CalcularFechasAProcesar_HuecoDeUnDia_DevuelveSoloAyer()
+    {
+        var ayer = new DateOnly(2026, 10, 1);
+        var existentes = Enumerable.Range(1, 13)
+            .Select(i => ConSoloFecha(ayer.AddDays(-i)))
+            .ToList();
+
+        var resultado = InformeDiario.CalcularFechasAProcesar(existentes, fechaManual: null, ayer, ventanaDias: 14, tope: 5);
+
+        Assert.Equal(new[] { ayer }, resultado);
+    }
+
+    // 6. Ya al día: toda la ventana ya tiene entrada -- no hay nada que recuperar.
+    [Fact]
+    public void CalcularFechasAProcesar_YaAlDia_DevuelveListaVacia()
+    {
+        var ayer = new DateOnly(2026, 10, 1);
+        var existentes = Enumerable.Range(0, 14)
+            .Select(i => ConSoloFecha(ayer.AddDays(-i)))
+            .ToList();
+
+        var resultado = InformeDiario.CalcularFechasAProcesar(existentes, fechaManual: null, ayer, ventanaDias: 14, tope: 5);
+
+        Assert.Empty(resultado);
+    }
+
+    // 7. Hueco intermedio (pedido explícito del usuario): existen 25, 26, 28
+    // dentro de la ventana -- max(fecha)+1..ayer nunca habría detectado esto
+    // porque 28 ya es más reciente que cualquier "última fecha" calculada
+    // así. Recupera exactamente [27].
+    [Fact]
+    public void CalcularFechasAProcesar_HuecoIntermedio_RecuperaSoloLaFechaFaltante()
+    {
+        var dia25 = new DateOnly(2026, 9, 25);
+        var dia26 = new DateOnly(2026, 9, 26);
+        var dia27 = new DateOnly(2026, 9, 27);
+        var dia28 = new DateOnly(2026, 9, 28);
+        var existentes = new List<InformeDiario> { ConSoloFecha(dia25), ConSoloFecha(dia26), ConSoloFecha(dia28) };
+
+        var resultado = InformeDiario.CalcularFechasAProcesar(existentes, fechaManual: null, ayer: dia28, ventanaDias: 4, tope: 5);
+
+        Assert.Equal(new[] { dia27 }, resultado);
+    }
+
+    // 8. Hueco de 10 días con tope=5: las 5 MÁS RECIENTES, en orden
+    // descendente (ayer, ayer-1, ayer-2, ayer-3, ayer-4) -- ajuste del
+    // usuario sobre el primer borrador (que tomaba las más antiguas): tras
+    // una caída larga lo reciente vale más, y lo viejo que siga realmente
+    // abierto lo termina cubriendo el barrido `activas`.
+    [Fact]
+    public void CalcularFechasAProcesar_HuecoDe10DiasConTope5_DevuelveLasMasRecientesDescendente()
+    {
+        var ayer = new DateOnly(2026, 10, 1);
+        // Ventana de 14 días con solo los 4 más antiguos ya existentes --
+        // deja un hueco de 10 días (ayer..ayer-9) dentro de la ventana.
+        var existentes = Enumerable.Range(10, 4)
+            .Select(i => ConSoloFecha(ayer.AddDays(-i)))
+            .ToList();
+
+        var resultado = InformeDiario.CalcularFechasAProcesar(existentes, fechaManual: null, ayer, ventanaDias: 14, tope: 5);
+
+        Assert.Equal(
+            new[] { ayer, ayer.AddDays(-1), ayer.AddDays(-2), ayer.AddDays(-3), ayer.AddDays(-4) },
+            resultado);
+    }
+
+    // 9. --fecha manual siempre gana: ignora la ventana y el hueco por completo.
+    [Fact]
+    public void CalcularFechasAProcesar_ConFechaManual_IgnoraElHueco()
+    {
+        var ayer = new DateOnly(2026, 10, 1);
+        var fechaManual = new DateOnly(2026, 8, 1);
+
+        var resultado = InformeDiario.CalcularFechasAProcesar(
+            informesExistentes: new List<InformeDiario>(), fechaManual, ayer, ventanaDias: 14, tope: 5);
+
+        Assert.Equal(new[] { fechaManual }, resultado);
+    }
 }
