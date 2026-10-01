@@ -3393,5 +3393,40 @@
     "accion": "corrida_pipeline",
     "codigo": null,
     "detalle": "total=1194 prioritarias=0 secundarias=331 tramo_bajo=63 nuevas=0 movidas_historico=0"
+  },
+  {
+    "timestamp": "2026-10-01T04:24:43.9880726Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=1200 prioritarias=0 secundarias=312 tramo_bajo=56 nuevas=368 movidas_historico=58"
+  },
+  {
+    "timestamp": "2026-10-01T04:26:03.0611019Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1641-346-LE26",
+    "detalle": "fecha_anterior=2026-09-30T16:00:00.0000000 fecha_nueva=2026-10-02T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T04:26:06.4133456Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "3130-26-LE26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-01T04:26:09.2766966Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2324-116-L126",
+    "detalle": "fecha_anterior=2026-09-30T17:00:00.0000000 fecha_nueva=2026-10-09T17:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-01T04:26:40.8876611Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=0 prioritarias=0 secundarias=0 tramo_bajo=0 nuevas=0 movidas_historico=1"
   }
 ]
