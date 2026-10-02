@@ -1492,5 +1492,45 @@
     "estado_mp": 7,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
+  },
+  {
+    "codigo": "2741-60-LE26",
+    "nombre": "SERVICIO AUDITORIA EXTERNA ESTADOS FINANCIEROS",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-01T12:00:00",
+    "fecha_lote": "2026-09-07",
+    "rubro_match": "compliance",
+    "termino_match": "auditor",
+    "region": "Regi\u00F3n de Valpara\u00EDso ",
+    "organismo": "I MUNICIPALIDAD DE SAN FELIPE",
+    "comuna": "San Felipe",
+    "descripcion": "SERVICIO AUDITORIA EXTERNA DE ESTADOS FINANCIEROS Y CONTRATOS PERIODO 2021 - 2025",
+    "prohibicion_contratacion": "Art. 11.4 de las Bases Administrativas",
+    "tipo_pago": "4",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 65000000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 477,
+    "unspsc_estado": "servicio",
+    "codigos_producto_unspsc": [
+      84111602
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 84111602,
+        "codigo_categoria": "84111600",
+        "categoria": "Servicios financieros, pensiones y seguros / Contabilidad y auditor\u00EDas / Servicios de auditor\u00EDa"
+      }
+    ],
+    "ultima_verificacion": "2026-10-01T01:24:44.0749032",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   }
 ]
