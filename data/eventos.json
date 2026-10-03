@@ -3729,5 +3729,327 @@
     "accion": "corrida_pipeline",
     "codigo": null,
     "detalle": "total=0 prioritarias=0 secundarias=0 tramo_bajo=0 nuevas=0 movidas_historico=4"
+  },
+  {
+    "timestamp": "2026-10-03T03:59:36.5598458Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=1208 prioritarias=3 secundarias=323 tramo_bajo=62 nuevas=388 movidas_historico=261"
+  },
+  {
+    "timestamp": "2026-10-03T04:00:28.2015846Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "4768-48-LE26",
+    "detalle": "fecha_anterior=2026-10-05T15:30:00.0000000 fecha_nueva=2026-10-07T15:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:06.1195282Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "4023-27-LE26",
+    "detalle": "fecha_anterior=2026-10-02T09:01:00.0000000 fecha_nueva=2026-10-06T09:01:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:10.3060374Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "653-17-LR26",
+    "detalle": "fecha_anterior=2026-10-02T10:00:00.0000000 fecha_nueva=2026-10-16T10:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:13.8187544Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1480074-14-L126",
+    "detalle": "fecha_anterior=2026-10-02T10:30:00.0000000 fecha_nueva=2026-10-06T11:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:15.9330513Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "3251-32-LE26",
+    "detalle": "fecha_anterior=2026-10-02T11:05:00.0000000 fecha_nueva=2026-10-05T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:17.9597456Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "2258-175-LR26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:19.3319769Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "3160-4-LE26",
+    "detalle": "fecha_anterior=2026-10-02T11:45:00.0000000 fecha_nueva=2026-10-05T15:05:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:22.402296Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2660-69-LP26",
+    "detalle": "fecha_anterior=2026-10-02T12:00:00.0000000 fecha_nueva=2026-10-15T12:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:26.1081949Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1038-12-LE26",
+    "detalle": "fecha_anterior=2026-10-02T12:00:00.0000000 fecha_nueva=2026-10-05T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:26.9949577Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1057509-310-LE26",
+    "detalle": "fecha_anterior=2026-10-02T13:00:00.0000000 fecha_nueva=2026-10-07T13:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:30.1652821Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "4494-68-LE26",
+    "detalle": "fecha_anterior=2026-10-02T13:30:00.0000000 fecha_nueva=2026-10-07T13:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:33.037391Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "644-4-LE26",
+    "detalle": "fecha_anterior=2026-10-02T14:00:00.0000000 fecha_nueva=2026-10-05T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:36.0226847Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2263-38-LP26",
+    "detalle": "fecha_anterior=2026-10-02T14:00:00.0000000 fecha_nueva=2026-10-06T14:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:38.903395Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1020-49-LP26",
+    "detalle": "fecha_anterior=2026-10-02T15:00:00.0000000 fecha_nueva=2026-10-14T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:41.3777174Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1020-48-LP26",
+    "detalle": "fecha_anterior=2026-10-02T15:00:00.0000000 fecha_nueva=2026-10-22T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:42.8784367Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "48-17-LP26",
+    "detalle": "fecha_anterior=2026-10-02T15:00:00.0000000 fecha_nueva=2026-10-09T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:45.8690281Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1020-38-LP26",
+    "detalle": "fecha_anterior=2026-10-02T15:00:00.0000000 fecha_nueva=2026-10-19T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:48.4271888Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1057501-570-LP26",
+    "detalle": "fecha_anterior=2026-10-02T15:00:00.0000000 fecha_nueva=2026-10-19T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:48.8635362Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "5418-16-LE26",
+    "detalle": "fecha_anterior=2026-10-02T15:00:00.0000000 fecha_nueva=2026-10-06T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:51.4295398Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1422256-3-L126",
+    "detalle": "fecha_anterior=2026-10-02T15:00:00.0000000 fecha_nueva=2026-10-05T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:54.2648984Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1056854-9-L126",
+    "detalle": "fecha_anterior=2026-10-02T15:00:00.0000000 fecha_nueva=2026-10-06T15:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:56.9639689Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "4884-24-LE26",
+    "detalle": "fecha_anterior=2026-10-02T15:01:00.0000000 fecha_nueva=2026-10-06T15:01:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:01:59.3987175Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1588-25-LR26",
+    "detalle": "fecha_anterior=2026-10-02T15:30:00.0000000 fecha_nueva=2026-10-06T15:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:02.566695Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1736-108-LE26",
+    "detalle": "fecha_anterior=2026-10-02T15:30:00.0000000 fecha_nueva=2026-10-05T15:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:04.9482913Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2413-25-LE26",
+    "detalle": "fecha_anterior=2026-10-02T15:30:00.0000000 fecha_nueva=2026-10-05T15:30:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:07.8852108Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "621-805-LP26",
+    "detalle": "fecha_anterior=2026-10-02T16:00:00.0000000 fecha_nueva=2026-10-06T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:11.0273043Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "621-810-LP26",
+    "detalle": "fecha_anterior=2026-10-02T16:00:00.0000000 fecha_nueva=2026-10-06T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:14.8325772Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "621-814-LP26",
+    "detalle": "fecha_anterior=2026-10-02T16:00:00.0000000 fecha_nueva=2026-10-06T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:17.9137014Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "425-36-LP26",
+    "detalle": "fecha_anterior=2026-10-02T16:00:00.0000000 fecha_nueva=2026-10-09T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:18.634535Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "507428-109-LE26",
+    "detalle": "fecha_anterior=2026-10-02T16:00:00.0000000 fecha_nueva=2026-10-07T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:22.3589491Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "621-780-LR26",
+    "detalle": "fecha_anterior=2026-10-02T16:00:00.0000000 fecha_nueva=2026-10-06T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:24.0117788Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1057503-127-LR26",
+    "detalle": "fecha_anterior=2026-10-02T16:00:00.0000000 fecha_nueva=2026-10-09T16:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:26.4805177Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1180730-43-LE26",
+    "detalle": "fecha_anterior=2026-10-02T16:00:00.0000000 fecha_nueva=2026-10-07T19:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:29.4272109Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1063534-7-LE26",
+    "detalle": "fecha_anterior=2026-10-02T16:10:00.0000000 fecha_nueva=2026-10-07T16:10:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:29.8752731Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2324-56-LR26",
+    "detalle": "fecha_anterior=2026-10-02T17:00:00.0000000 fecha_nueva=2026-10-16T17:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:32.4891761Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1057536-130-LE26",
+    "detalle": "fecha_anterior=2026-10-02T17:00:00.0000000 fecha_nueva=2026-10-05T17:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:34.0936232Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "4937-5-L126",
+    "detalle": "fecha_anterior=2026-10-02T18:00:00.0000000 fecha_nueva=2026-10-06T18:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:36.4987961Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1057384-146-L126",
+    "detalle": "fecha_anterior=2026-10-02T19:00:00.0000000 fecha_nueva=2026-10-08T19:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:40.6353046Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "3086-73-LE26",
+    "detalle": "fecha_anterior=2026-10-02T20:00:00.0000000 fecha_nueva=2026-10-06T20:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:41.3783853Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "1057490-70-LE26",
+    "detalle": "fecha_anterior=2026-10-02T20:00:00.0000000 fecha_nueva=2026-10-08T20:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:42.2515647Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "584105-15-LE26",
+    "detalle": "fecha_anterior=2026-10-02T15:01:00.0000000 fecha_nueva=2026-10-13T15:01:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:45.0752869Z",
+    "actor": "sistema",
+    "accion": "fecha_cierre_actualizada",
+    "codigo": "2322-83-LE26",
+    "detalle": "fecha_anterior=2026-10-02T10:00:00.0000000 fecha_nueva=2026-10-07T10:00:00.0000000"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:45.3350313Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1101892-5-LE26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-03T04:02:48.0386861Z",
+    "actor": "sistema",
+    "accion": "estado_actualizado",
+    "codigo": "1101892-4-LE26",
+    "detalle": "estado_nuevo=Revocada codigo_estado_api=15"
+  },
+  {
+    "timestamp": "2026-10-03T04:03:21.3786427Z",
+    "actor": "sistema",
+    "accion": "corrida_pipeline",
+    "codigo": null,
+    "detalle": "total=0 prioritarias=0 secundarias=0 tramo_bajo=0 nuevas=0 movidas_historico=3"
   }
 ]

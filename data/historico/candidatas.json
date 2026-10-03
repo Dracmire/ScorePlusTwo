@@ -1532,5 +1532,205 @@
     "estado_mp": 5,
     "intentos_no_encontrada": 0,
     "motivo_cierre": null
+  },
+  {
+    "codigo": "548874-74-LR26",
+    "nombre": "SERV DE PLATAFORMA SIEM NUEVA GENERACI\u00D3N SAAS IPS",
+    "tipo": "LR",
+    "fecha_cierre": "2026-10-02T15:00:00",
+    "fecha_lote": "2026-09-05",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "INSTITUTO DE PREVISION SOCIAL",
+    "comuna": "Santiago",
+    "descripcion": "E102RT8 - SERVICIO DE PLATAFORMA SIEM DE NUEVA GENERACI\u00D3N EN MODALIDAD SAAS PARA EL INSTITUTO DE PREVISI\u00D3N SOCIAL",
+    "prohibicion_contratacion": "Seg\u00FAn punto 16 de las bases",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "USD",
+    "monto": 565250.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 81,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233205
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233205,
+        "codigo_categoria": "43233200",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de seguridad y protecci\u00F3n"
+      }
+    ],
+    "ultima_verificacion": "2026-10-02T01:18:06.8298709",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
+  },
+  {
+    "codigo": "188-83-LP26",
+    "nombre": "Plataforma de Control de Proyectos COMUDEF",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-02T15:01:00",
+    "fecha_lote": "2026-09-07",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "CORP MUNICIPAL DE EDUC SALUD CULTURA Y RECREACION DE LA FLORIDA",
+    "comuna": "La Florida",
+    "descripcion": "La Corporaci\u00F3n Municipal de La Florida, en adelante tambi\u00E9n llamado \u201CCOMUDEF\u201D o \u201CLa Corporaci\u00F3n\u201D, ha elaborado las presentes Bases Administrativas, Bases T\u00E9cnicas y Anexos de Licitaci\u00F3n P\u00FAblica, las cuales contienen todas las condiciones y especificaciones t\u00E9cnicas que deber\u00E1n cumplir los oferentes para materializar la \u201CCONTRATACI\u00D3N, IMPLEMENTACI\u00D3N Y SOPORTE DE PLATAFORMA DIGITAL DE SISTEMA DE  SEGUIMIENTO Y CONTROL DE PROYECTOS, SERVICIOS Y HONORARIOS CORPORATIVOS PARA LA CORPORACI\u00D3N MUNICIPAL DE LA FLORIDA \u2013 COMUDEF\u201D, por un periodo de doce 12 meses.",
+    "prohibicion_contratacion": "Seg\u00FAn Resoluci\u00F3n N\u00B0 369-2026, punto 19, de las bases administrativas.",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 1537,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43233415
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43233415,
+        "codigo_categoria": "43233400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de controladores de dispositivos y utilidades"
+      }
+    ],
+    "ultima_verificacion": "2026-10-02T01:18:06.8298709",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
+  },
+  {
+    "codigo": "5482-103-LP26",
+    "nombre": "PLATAFORMA DE GESTI\u00D3N TERRITORIAL Y DE RENTAS",
+    "tipo": "LP",
+    "fecha_cierre": "2026-10-02T15:01:00",
+    "fecha_lote": "2026-09-10",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "I MUNICIPALIDAD DE NUNOA",
+    "comuna": "\u00D1u\u00F1oa",
+    "descripcion": "La contrataci\u00F3n comprende siete (7) m\u00F3dulos de negocio integrados sobre seis (6) capas transversales. El proveedor adjudicado ser\u00E1 responsable del suministro, configuraci\u00F3n,\r\nparametrizaci\u00F3n, integraci\u00F3n, capacitaci\u00F3n y soporte de todos los m\u00F3dulos descritos en las bases t\u00E9cnicas.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 284,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232408
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232408,
+        "codigo_categoria": "43232400",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Programas de desarrollo"
+      }
+    ],
+    "ultima_verificacion": "2026-10-02T01:18:06.8298709",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
+  },
+  {
+    "codigo": "585-9-LE26",
+    "nombre": "Adq. Licencias Para Plataforma Gesti\u00F3n de Tickes ",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-02T12:00:00",
+    "fecha_lote": "2026-09-21",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n Metropolitana de Santiago",
+    "organismo": "SERVICIO DE COOPERACION TECNICA",
+    "comuna": "Santiago Centro",
+    "descripcion": "Seg\u00FAn punto 1.2.1 de las bases",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "1",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": "CLP",
+    "monto": 14500000.0,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "activas",
+    "cantidad_reclamos": 16,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43231512
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43231512,
+        "codigo_categoria": "43231500",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software de gesti\u00F3n"
+      }
+    ],
+    "ultima_verificacion": "2026-10-02T01:18:06.8298709",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
+  },
+  {
+    "codigo": "534615-1-LE26",
+    "nombre": "Servicio plataformas KOHA y DSpace DIBRA UV",
+    "tipo": "LE",
+    "fecha_cierre": "2026-10-02T17:00:00",
+    "fecha_lote": "2026-09-25",
+    "rubro_match": "ti",
+    "termino_match": "plataforma",
+    "region": "Regi\u00F3n de Valpara\u00EDso ",
+    "organismo": "UNIVERSIDAD DE VALPARAISO",
+    "comuna": "Valpara\u00EDso",
+    "descripcion": "La necesidad de contar con \u201CServicio de alojamiento, administraci\u00F3n, soporte, mantenci\u00F3n, actualizaci\u00F3n e integraci\u00F3n de las plataformas KOHA y DSpace, sistemas tecnol\u00F3gicos utilizados por la Direcci\u00F3n de Bibliotecas y Recursos para el Aprendizaje DIBRA de la Universidad de Valpara\u00EDso\u201D, por un periodo de 24 meses.",
+    "prohibicion_contratacion": "",
+    "tipo_pago": "1",
+    "sub_contratacion": "0",
+    "tramo": null,
+    "tipo_privado": false,
+    "moneda": null,
+    "monto": null,
+    "estado_flujo": "cerrada",
+    "notas": null,
+    "cliente_asignado": null,
+    "origen": "diario",
+    "cantidad_reclamos": 2772,
+    "unspsc_estado": "revision_manual",
+    "codigos_producto_unspsc": [
+      43232609
+    ],
+    "items_unspsc": [
+      {
+        "codigo_producto": 43232609,
+        "codigo_categoria": "43232600",
+        "categoria": "Tecnolog\u00EDas de la informaci\u00F3n, telecomunicaciones y radiodifusi\u00F3n / Software / Software espec\u00EDfico para la industria"
+      }
+    ],
+    "ultima_verificacion": "2026-10-02T01:18:06.8298709",
+    "estado_mp": 5,
+    "intentos_no_encontrada": 0,
+    "motivo_cierre": null
   }
 ]
